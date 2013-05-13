@@ -32,8 +32,27 @@ h1, h2, h3, h4, h5, h6{
 .main-container{
   margin: 0 auto;
   max-width: $container-width;
+  overflow: hidden;
 }
 
 video{
+  width: 100%;
+}
+
+.node{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  color: white;
+  @include translateX(100%);
+  @include transition(all 2s);
+  &.current-node{
+    @include translateX(0%);
+  }
+}
+
+.timeline{
   width: 100%;
 }

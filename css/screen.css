@@ -85,8 +85,37 @@ h1, h2, h3, h4, h5, h6 {
 /* line 32, ../sass/screen.scss */
 .main-container {
   margin: 0 auto;
-  max-width: 980px; }
+  max-width: 980px;
+  overflow: hidden; }
 
-/* line 37, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 video {
+  width: 100%; }
+
+/* line 42, ../sass/screen.scss */
+.node {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s; }
+  /* line 51, ../sass/screen.scss */
+  .node.current-node {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%); }
+
+/* line 56, ../sass/screen.scss */
+.timeline {
   width: 100%; }

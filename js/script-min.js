@@ -1,2 +1,2 @@
-/* global Popcorn:true*/// wrap console.log
-if(window.console===undefined){window.console={};window.console.log=function(){}}$(document).ready(function(){Popcorn("#the-video")});
+/* global Popcorn:true */// wrap console.log
+if(window.console===undefined){window.console={};window.console.log=function(){}}$(document).ready(function(){var e=new Popcorn("#the-video");e.controls(!0);var t={safety:"0:02","quality-of-care":"0:05",infection:"0:20",culpability:"0:40",lawsuit:"1:00","no-improvement":"1:10"};$("#video-play").on("click",function(t){t.preventDefault();e.play()});$.each(t,function(t,n){e.cue(n,function(){$(".current-node").removeClass("current-node");$("#"+t).addClass("current-node")})})});
