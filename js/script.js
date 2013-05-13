@@ -25,16 +25,17 @@ $(document).ready(function() {
     $video.play();
   });
 
+
+  // chapter selector
   $('.chapter').on("click", function(e){
     e.preventDefault();
     var target = $(this).attr('href');
-    $video.currentTime(cue_times[target]).play();
-    // $video;
+    $video.currentTime(cue_times[target]).pause();
     $('.current-node').removeClass('current-node');
     $().addClass('current-node');
   });
 
-
+  //
   $.each(cue_times, function(key, value){
     $video.cue(value, function(){
       $('.current-node').removeClass('current-node');
