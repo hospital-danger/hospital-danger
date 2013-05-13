@@ -1,0 +1,34 @@
+@import "compass";
+@import "compass/reset";
+
+// Set base styles and fonts
+$container-width: 980px;
+
+html {
+  font-size: 100%;
+  font-family: sans-serif;
+}
+
+
+
+
+* {
+  position: relative;
+  @include box-sizing(border-box);
+}
+
+a {
+  text-decoration: underline;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: bold;
+}
