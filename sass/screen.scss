@@ -3,18 +3,14 @@
 
 // Set base styles and fonts
 $container-width: 980px;
+* {
+  position: relative;
+  @include box-sizing(border-box);
+}
 
 html {
   font-size: 100%;
   font-family: sans-serif;
-}
-
-
-
-
-* {
-  position: relative;
-  @include box-sizing(border-box);
 }
 
 a {
@@ -31,4 +27,9 @@ strong {
 
 h1, h2, h3, h4, h5, h6{
   font-weight: bold;
+}
+
+.main-container{
+  margin: 0 auto;
+  max-width: $container-width;
 }

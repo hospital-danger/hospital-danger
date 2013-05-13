@@ -54,30 +54,35 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
-/* line 7, ../sass/screen.scss */
-html {
-  font-size: 100%;
-  font-family: sans-serif; }
-
-/* line 15, ../sass/screen.scss */
+/* line 6, ../sass/screen.scss */
 * {
   position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 20, ../sass/screen.scss */
+/* line 11, ../sass/screen.scss */
+html {
+  font-size: 100%;
+  font-family: sans-serif; }
+
+/* line 16, ../sass/screen.scss */
 a {
   text-decoration: underline; }
 
-/* line 24, ../sass/screen.scss */
+/* line 20, ../sass/screen.scss */
 em {
   font-style: italic; }
 
-/* line 28, ../sass/screen.scss */
+/* line 24, ../sass/screen.scss */
 strong {
   font-weight: bold; }
 
-/* line 32, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold; }
+
+/* line 32, ../sass/screen.scss */
+.main-container {
+  margin: 0 auto;
+  max-width: 980px; }
