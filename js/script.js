@@ -151,6 +151,8 @@
           case "chapter":
             return $('.chapter-title').show().text(cue_item.title).delay(3000).fadeOut(2000);
           case "chapter_end":
+            $('.current', ".element").removeClass('current');
+            $(cue_item.target).addClass('current');
             $video.pause();
             return $play_button.addClass('paused');
         }
@@ -193,7 +195,7 @@
         }
         return count;
       };
-      return (generation = function() {
+      return generation = function() {
         var next_generation, _m, _n;
         next_generation = [];
         for (x = _m = 0; 0 <= width ? _m <= width : _m >= width; x = 0 <= width ? ++_m : --_m) {
@@ -220,7 +222,7 @@
         }
         bacteria_data = next_generation;
         return setTimeout(generation, 100);
-      })();
+      };
     })();
     $('a', '.decision-tree').on("click", function(e) {
       var target;

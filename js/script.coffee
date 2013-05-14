@@ -95,16 +95,16 @@ $ ()->
   # set css animations to cue times
   $.each cues, (i, cue_item)->
     $video.cue to_s(cue_item.time), ()->
-      # $('.current', ".element").removeClass('current');
-      # $(cue_item.target).addClass('current');
+
       switch cue_item.type
         when "citation"
           $('.citations').html "<a href='#{cue_item.target}' target='_blank'>#{cue_item.title}</a>"
         when "chapter"
           $('.chapter-title').show().text( cue_item.title).delay(3000).fadeOut(2000)
         when "chapter_end"
-          # pause between chapters, except between intro and first chapter
-
+          # pause between chapters, and open the infographic
+          $('.current', ".element").removeClass('current');
+          $(cue_item.target).addClass('current');
           $video.pause()
           $play_button.addClass('paused')
 
@@ -139,7 +139,7 @@ $ ()->
           count += 1 if (-1 < this_x < width) and (-1 < this_y < height) and bacteria_data[this_x][this_y] and ([this_x, this_y] isnt [x, y])
       count
 
-    do generation = ()->
+    generation = ()->
       next_generation = []
       for x in [0..width]
         next_generation[x] = []
