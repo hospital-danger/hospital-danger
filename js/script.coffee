@@ -23,24 +23,16 @@ $ ()->
     "#{min}:#{s}"
 
   cues = [
-    {title: "A Safe Place", target: "#safety", time: "00:10"}
-    {title: "Quality of Care", target: "#quality-of-care", time: "00:20"}
-    {title: "Deceptively Simple" , target: "#infection", time: "00:30"}
-    {title: "Deny & Defend", target: "#culpability", time: "00:40"}
-    {title: "Malpractice in Practice" , target: "#lawsuit", time: "00:50"}
-    {title: "Is It Getting Better?" , target: "#no-improvement", time: "01:00"}
+    {type:"chapter", title: "A Safe Place", target: "#safety", time: "00:10"}
+    {type:"chapter", title: "Quality of Care", target: "#quality-of-care", time: "00:20"}
+    {type:"chapter", title: "Deceptively Simple" , target: "#infection", time: "00:30"}
+    {type:"chapter", title: "Deny & Defend", target: "#culpability", time: "00:40"}
+    {type:"chapter", title: "Malpractice in Practice" , target: "#lawsuit", time: "00:50"}
+    {type:"chapter", title: "Is It Getting Better?" , target: "#no-improvement", time: "01:00"}
   ]
 
-  $('ul', '.chapter-list').append( "<li><a class='chapter-link' href='#{cue.target}'>#{cue.title}</a></li>") for cue in cues
-
-  cue_times = {
-    "#safety": 2
-    "#quality-of-care": 15
-    "#infection": 20
-    "#culpability": 40
-    "#lawsuit": 60
-    "#no-improvement": 70
-  }
+  # build chapter markers
+  $('ul', '.chapter-list').append( "<li><a href='#{cue.target}'>#{cue.title}</a></li>") for cue in cues when (cue.type is "chapter")
 
   # play-pause button
   $play_button.add('#the-video').on "click", ()->
@@ -60,7 +52,7 @@ $ ()->
 
 
   # chapter selector
-  $('.chapter-link').on "click", (e)->
+  $('a', '.chapter-list').on "click", (e)->
     e.preventDefault()
     $('.chapter').removeClass('current')
     $(this).addClass('current')

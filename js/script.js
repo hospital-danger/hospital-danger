@@ -11,7 +11,7 @@
   }
 
   $(function() {
-    var $buffer_bar, $play_button, $time_bar, $time_left, $video, cue, cue_times, cues, current_time, duration, time_line, to_clock, to_s, _i, _len;
+    var $buffer_bar, $play_button, $time_bar, $time_left, $video, cue, cues, current_time, duration, time_line, to_clock, to_s, _i, _len;
     $video = Popcorn('#the-video');
     $play_button = $('.button-play');
     $time_bar = $('.time-bar');
@@ -30,26 +30,32 @@
     };
     cues = [
       {
+        type: "chapter",
         title: "A Safe Place",
         target: "#safety",
         time: "00:10"
       }, {
+        type: "chapter",
         title: "Quality of Care",
         target: "#quality-of-care",
         time: "00:20"
       }, {
+        type: "chapter",
         title: "Deceptively Simple",
         target: "#infection",
         time: "00:30"
       }, {
+        type: "chapter",
         title: "Deny & Defend",
         target: "#culpability",
         time: "00:40"
       }, {
+        type: "chapter",
         title: "Malpractice in Practice",
         target: "#lawsuit",
         time: "00:50"
       }, {
+        type: "chapter",
         title: "Is It Getting Better?",
         target: "#no-improvement",
         time: "01:00"
@@ -57,16 +63,10 @@
     ];
     for (_i = 0, _len = cues.length; _i < _len; _i++) {
       cue = cues[_i];
-      $('ul', '.chapter-list').append("<li><a class='chapter-link' href='" + cue.target + "'>" + cue.title + "</a></li>");
+      if (cue.type === "chapter") {
+        $('ul', '.chapter-list').append("<li><a href='" + cue.target + "'>" + cue.title + "</a></li>");
+      }
     }
-    cue_times = {
-      "#safety": 2,
-      "#quality-of-care": 15,
-      "#infection": 20,
-      "#culpability": 40,
-      "#lawsuit": 60,
-      "#no-improvement": 70
-    };
     $play_button.add('#the-video').on("click", function() {
       if ($play_button.hasClass("paused")) {
         $video.play();
@@ -85,7 +85,7 @@
       left_arrow = 37;
       return right_arrow = 39;
     });
-    $('.chapter-link').on("click", function(e) {
+    $('a', '.chapter-list').on("click", function(e) {
       var cue_time, target, _j, _len1;
       e.preventDefault();
       $('.chapter').removeClass('current');
