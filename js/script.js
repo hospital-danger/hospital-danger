@@ -56,11 +56,12 @@
       }, {
         type: "chapter",
         title: "Malpractice in Practice",
-        target: "#lawsuit",
+        target: "#malpractice-in-practice",
         time: "01:59"
       }, {
         type: "chapter_end",
-        time: "02:17"
+        time: "02:17",
+        target: "#malpractice-in-practice"
       }, {
         type: "chapter",
         title: "Is It Getting Better?",
@@ -149,9 +150,9 @@
           case "citation":
             return $('.citations').html("<a href='" + cue_item.target + "' target='_blank'>" + cue_item.title + "</a>");
           case "chapter":
-            return $('.chapter-title').show().text(cue_item.title).delay(3000).fadeOut(2000);
+            $('.chapter-title').show().text(cue_item.title).delay(3000).fadeOut(2000);
+            return $('.current', ".chapter").removeClass('current');
           case "chapter_end":
-            $('.current', ".element").removeClass('current');
             $(cue_item.target).addClass('current');
             $video.pause();
             return $play_button.addClass('paused');

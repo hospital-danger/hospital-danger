@@ -71,16 +71,22 @@ video
 
 .chapter
   height: 500px
-  border: 1px solid gray
   overflow: auto
-
-  .chapter-title
-    position: absolute
-    top: 0
+  position: absolute
+  top: 0
+  left: 100%
+  width: 100%
+  height: 560px
+  &.current
     left: 0
-    font-size: 2em
-    color: white
-    text-shadow: 1px 1px 1px black
+
+.chapter-title
+  position: absolute
+  top: 0
+  left: 0
+  font-size: 2em
+  color: white
+  text-shadow: 1px 1px 1px black
 
 .chapter-list
   position: absolute
