@@ -31,6 +31,8 @@ Put together in just a few days for the Mozilla, Tribeca Film Institute, and For
 
 ## Technologies
 
-- Compass
+- [Coffeescript](http://coffeescript.org/)
+- [Compass](http://compass-style.org/)
+- [HTML5](http://www.w3.org/html/wg/)
 - [PopcornJS](http://popcornjs.org/)
-- SASS
+- [SASS](http://sass-lang.com/)
