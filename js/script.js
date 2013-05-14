@@ -11,7 +11,7 @@
   }
 
   $(function() {
-    var $buffer_bar, $play_button, $time_bar, $time_left, $video, cue, cues, current_time, duration, time_line, to_clock, to_s, _i, _len;
+    var $buffer_bar, $play_button, $time_bar, $time_left, $video, chapter_index, chapters, citations, cue, cues, current_time, duration, goto_chapter, time_line, to_clock, to_s, _i, _len;
     $video = Popcorn('#the-video');
     $play_button = $('.button-play');
     $time_bar = $('.time-bar');
@@ -19,6 +19,7 @@
     $time_left = $('.time-left');
     duration = 0;
     current_time = 0;
+    chapter_index = 0;
     to_s = Popcorn.util.toSeconds;
     to_clock = function(seconds) {
       var min, s;
@@ -61,11 +62,31 @@
         time: "01:00"
       }
     ];
-    for (_i = 0, _len = cues.length; _i < _len; _i++) {
-      cue = cues[_i];
-      if (cue.type === "chapter") {
-        $('ul', '.chapter-list').append("<li><a href='" + cue.target + "'>" + cue.title + "</a></li>");
+    chapters = (function() {
+      var _i, _len, _results;
+      _results = [];
+      for (_i = 0, _len = cues.length; _i < _len; _i++) {
+        cue = cues[_i];
+        if (cue.type === "chapter") {
+          _results.push(cue);
+        }
       }
+      return _results;
+    })();
+    citations = (function() {
+      var _i, _len, _results;
+      _results = [];
+      for (_i = 0, _len = cues.length; _i < _len; _i++) {
+        cue = cues[_i];
+        if (cue.type === "citation") {
+          _results.push(cue);
+        }
+      }
+      return _results;
+    })();
+    for (_i = 0, _len = chapters.length; _i < _len; _i++) {
+      cue = chapters[_i];
+      $('ul', '.chapter-list').append("<li><a href='" + cue.target + "'>" + cue.title + "</a></li>");
     }
     $play_button.add('#the-video').on("click", function() {
       if ($play_button.hasClass("paused")) {
@@ -80,32 +101,40 @@
       pos = e.offsetX / $(this).width();
       return $video.currentTime(pos * duration);
     });
-    $(document).on("keydown", function(e) {
-      var left_arrow, right_arrow;
-      left_arrow = 37;
-      return right_arrow = 39;
-    });
-    $('a', '.chapter-list').on("click", function(e) {
-      var cue_time, target, _j, _len1;
-      e.preventDefault();
-      $('.chapter').removeClass('current');
-      $(this).addClass('current');
-      target = $(this).attr('href');
-      for (_j = 0, _len1 = cues.length; _j < _len1; _j++) {
-        cue = cues[_j];
+    goto_chapter = function(target) {
+      var cue_time, index, _j, _len1, _ref2;
+      for (index = _j = 0, _len1 = cues.length; _j < _len1; index = ++_j) {
+        cue = cues[index];
         if (cue.target === target) {
-          cue_time = to_s(cue.time);
+          _ref2 = [index, to_s(cue.time)], chapter_index = _ref2[0], cue_time = _ref2[1];
         }
       }
-      $video.currentTime(cue_time).pause();
-      $play_button.addClass('paused');
-      $('.current-node').removeClass('current-node');
-      return $(target).addClass('current-node');
+      if (cue_time != null) {
+        $video.currentTime(cue_time).pause();
+      }
+      return $play_button.addClass('paused');
+    };
+    $('a', '.chapter-list').on("click", function(e) {
+      e.preventDefault();
+      return goto_chapter($(this).attr('href'));
+    });
+    $(document).on("keydown", function(e) {
+      var left_arrow, next_chapter, right_arrow, _ref2;
+      left_arrow = 37;
+      right_arrow = 39;
+      if (e.keyCode === left_arrow) {
+        e.preventDefault();
+        next_chapter = Math.max(0, chapter_index - 1);
+      } else if (e.keyCode === right_arrow) {
+        e.preventDefault();
+        next_chapter = Math.min(chapters.length - 1, chapter_index + 1);
+      }
+      return goto_chapter((_ref2 = chapters[next_chapter]) != null ? _ref2.target : void 0);
     });
     $.each(cues, function(i, cue_item) {
       return $video.cue(to_s(cue_item.time), function() {
-        $('.current-node').removeClass('current-node');
-        return $(target).addClass('current-node');
+        $('.current', ".element").removeClass('current');
+        return $(cue_item.target).addClass('current');
       });
     });
     return (time_line = function() {
