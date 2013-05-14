@@ -121,14 +121,20 @@ video {
   width: 100%; }
 
 /* line 60, ../sass/screen.scss */
+.time-left {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+/* line 66, ../sass/screen.scss */
 .video-controls {
   cursor: pointer; }
-  /* line 62, ../sass/screen.scss */
+  /* line 68, ../sass/screen.scss */
   .video-controls .progress {
     overflow: hidden;
     height: 20px;
     border: 1px solid black; }
-  /* line 67, ../sass/screen.scss */
+  /* line 73, ../sass/screen.scss */
   .video-controls .buffer-bar, .video-controls .time-bar {
     position: absolute;
     top: 0;
@@ -140,9 +146,9 @@ video {
     -moz-transition: left 0.5s;
     -o-transition: left 0.5s;
     transition: left 0.5s; }
-  /* line 76, ../sass/screen.scss */
+  /* line 82, ../sass/screen.scss */
   .video-controls .time-bar {
     background-color: red; }
-  /* line 79, ../sass/screen.scss */
+  /* line 85, ../sass/screen.scss */
   .video-controls .buffer-bar {
     background-color: green; }

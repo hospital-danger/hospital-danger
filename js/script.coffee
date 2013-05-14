@@ -9,6 +9,7 @@ $ ()->
   $time_bar = $('.time-bar')
   $buffer_bar = $('.buffer_bar')
   $time_left = $('.time-left')
+  $time_elapsed = $('.time-elapsed')
   duration = 0
   current_time = 0
   chapter_index = 0
@@ -24,12 +25,12 @@ $ ()->
     "#{min}:#{s}"
 
   cues = [
-    {type:"chapter", title: "A Safe Place", target: "#safety", time: "00:10"}
-    {type:"chapter", title: "Quality of Care", target: "#quality-of-care", time: "00:20"}
-    {type:"chapter", title: "Deceptively Simple" , target: "#infection", time: "00:30"}
-    {type:"chapter", title: "Deny & Defend", target: "#culpability", time: "00:40"}
-    {type:"chapter", title: "Malpractice in Practice" , target: "#lawsuit", time: "00:50"}
-    {type:"chapter", title: "Is It Getting Better?" , target: "#no-improvement", time: "01:00"}
+    {type:"chapter", title: "A Safe Place", target: "#safety", time: "00:19"}
+    {type:"chapter", title: "Quality of Care", target: "#quality-of-care", time: "00:42"}
+    {type:"chapter", title: "Deceptively Simple" , target: "#infection", time: "01:09"}
+    {type:"chapter", title: "Deny & Defend", target: "#culpability", time: "01:35"}
+    {type:"chapter", title: "Malpractice in Practice" , target: "#lawsuit", time: "01:59"}
+    {type:"chapter", title: "Is It Getting Better?" , target: "#no-improvement", time: "02:17"}
   ]
 
   chapters = (cue for cue in cues when (cue.type is "chapter"))
@@ -60,6 +61,7 @@ $ ()->
 
   # arrow keys to advance between chapters
   $(document).on "keydown", (e)->
+    # TODO toogle play/pause with spacebar
     left_arrow = 37
     right_arrow = 39
     if e.keyCode is left_arrow
@@ -82,5 +84,6 @@ $ ()->
     current_time = $video.currentTime()
     duration = $video.duration() || 0
     $time_bar.css {left: "#{current_time/duration * 100}%"}
+    $time_elapsed.text to_clock Math.floor current_time
     $time_left.text to_clock Math.floor duration - current_time
     setTimeout time_line, 200

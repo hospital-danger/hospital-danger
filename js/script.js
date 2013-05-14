@@ -11,12 +11,13 @@
   }
 
   $(function() {
-    var $buffer_bar, $play_button, $time_bar, $time_left, $video, chapter_index, chapters, citations, cue, cues, current_time, duration, goto_chapter, time_line, to_clock, to_s, _i, _len;
+    var $buffer_bar, $play_button, $time_bar, $time_elapsed, $time_left, $video, chapter_index, chapters, citations, cue, cues, current_time, duration, goto_chapter, time_line, to_clock, to_s, _i, _len;
     $video = Popcorn('#the-video');
     $play_button = $('.button-play');
     $time_bar = $('.time-bar');
     $buffer_bar = $('.buffer_bar');
     $time_left = $('.time-left');
+    $time_elapsed = $('.time-elapsed');
     duration = 0;
     current_time = 0;
     chapter_index = 0;
@@ -34,32 +35,32 @@
         type: "chapter",
         title: "A Safe Place",
         target: "#safety",
-        time: "00:10"
+        time: "00:19"
       }, {
         type: "chapter",
         title: "Quality of Care",
         target: "#quality-of-care",
-        time: "00:20"
+        time: "00:42"
       }, {
         type: "chapter",
         title: "Deceptively Simple",
         target: "#infection",
-        time: "00:30"
+        time: "01:09"
       }, {
         type: "chapter",
         title: "Deny & Defend",
         target: "#culpability",
-        time: "00:40"
+        time: "01:35"
       }, {
         type: "chapter",
         title: "Malpractice in Practice",
         target: "#lawsuit",
-        time: "00:50"
+        time: "01:59"
       }, {
         type: "chapter",
         title: "Is It Getting Better?",
         target: "#no-improvement",
-        time: "01:00"
+        time: "02:17"
       }
     ];
     chapters = (function() {
@@ -143,6 +144,7 @@
       $time_bar.css({
         left: "" + (current_time / duration * 100) + "%"
       });
+      $time_elapsed.text(to_clock(Math.floor(current_time)));
       $time_left.text(to_clock(Math.floor(duration - current_time)));
       return setTimeout(time_line, 200);
     })();
