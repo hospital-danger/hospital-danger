@@ -152,6 +152,12 @@
         }
       });
     });
+    $('a', '.decision-tree').on("click", function(e) {
+      var target;
+      e.preventDefault();
+      target = $(this).attr('href');
+      return $('.decision-tree').scrollTo(target, 1000);
+    });
     return (time_line = function() {
       current_time = $video.currentTime();
       duration = $video.duration() || 0;

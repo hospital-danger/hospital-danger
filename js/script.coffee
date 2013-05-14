@@ -111,6 +111,12 @@ $ ()->
   #   console.log  e
   #   # console.log /e.clientX, e.clientY
 
+  # scroll decision tree
+  $('a', '.decision-tree').on "click", (e)->
+    e.preventDefault()
+    target = $(this).attr('href')
+    $('.decision-tree').scrollTo(target, 1000)
+
 
 
 

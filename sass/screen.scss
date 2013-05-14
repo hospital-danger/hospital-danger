@@ -95,12 +95,13 @@ video{
 }
 
 .decision-tree{
-
+  width: 400px;
+  height: 120px;
+  overflow: scroll;
   .decision, .decision-big{
     width: 300px;
     height: 100px;
     border: 1px solid gray;
-    float: left;
   }
   .decision-end{
     width: 100%;
