@@ -61,7 +61,7 @@
       }, {
         type: "chapter_end",
         time: "02:17",
-        target: "#malpractice-in-practice"
+        target: "#malpractice-in-practice-followup"
       }, {
         type: "chapter",
         title: "Is It Getting Better?",
@@ -150,8 +150,7 @@
           case "citation":
             return $('.citations').html("<a href='" + cue_item.target + "' target='_blank'>" + cue_item.title + "</a>");
           case "chapter":
-            $('.chapter-title').show().text(cue_item.title).delay(3000).fadeOut(2000);
-            return $('.current', ".chapter").removeClass('current');
+            return $('.chapter-title').show().text(cue_item.title).delay(3000).fadeOut(2000);
           case "chapter_end":
             $(cue_item.target).addClass('current');
             $video.pause();

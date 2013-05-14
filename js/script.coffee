@@ -42,7 +42,7 @@ $ ()->
 
     {type:"chapter", title: "Malpractice in Practice" , target: "#malpractice-in-practice", time: "01:59"}
 
-    {type:"chapter_end", time:"02:17", target: "#malpractice-in-practice"}
+    {type:"chapter_end", time:"02:17", target: "#malpractice-in-practice-followup"}
 
     {type:"chapter", title: "Is It Getting Better?" , target: "#no-improvement", time: "02:17"}
   ]
@@ -101,7 +101,7 @@ $ ()->
           $('.citations').html "<a href='#{cue_item.target}' target='_blank'>#{cue_item.title}</a>"
         when "chapter"
           $('.chapter-title').show().text( cue_item.title).delay(3000).fadeOut(2000)
-          $('.current', ".chapter").removeClass('current');
+          # $('.current', ".chapter").removeClass('current');
         when "chapter_end"
           # pause between chapters, and open the infographic
           $(cue_item.target).addClass('current');
