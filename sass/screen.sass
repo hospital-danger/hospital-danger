@@ -3,7 +3,7 @@
 
 // Base.
 
-$container-width: 980px
+$container-width: 990px
 
 * 
   position: relative
@@ -26,9 +26,10 @@ h1, h2, h3, h4, h5, h6
   font-weight: bold
 
 .container
+  height: 610px
   margin: 0 auto
-  max-width: $container-width
   overflow: hidden
+  width: $container-width
 
 // Video and container.
 
@@ -73,20 +74,51 @@ video
   border: 1px solid gray
   overflow: auto
 
-// .chapter
-//   position: absolute
-//   top: 0
-//   left: 0
-//   width: 100%
+  .chapter-title
+    position: absolute
+    top: 0
+    left: 0
+    font-size: 2em
+    color: white
+    text-shadow: 1px 1px 1px black
 
-//   color: white
-//   @include translateX(100%)
-//   @include transition(all 2s)
-//   &.current-node
-//     @include translateX(0%)
+  .chapter-list
+    position: absolute
+    bottom: 50px
+    left: 0
+    float: left
+    background-color: rgba(255,255,255,.5)
+    color: white
 
 aside
+  background: #eee
   position: absolute
+  top: 0
+  right: 0
+  width: 50%
+  height: 100%
+  padding: 1em
+  border-left: 1px solid #aaa
+  @include box-shadow(#eee -5px 0 15px)
+
+  h2
+    font-size: 22px
+    margin: 0 0 0.75em 0
+
+  p
+    font-size: 14px
+    margin: 1em 0
+
+  blockquote
+    font-family: Georgia, serif
+    font-style: italic
+    margin: 1.25em 0
+
+    &:before
+      content: "“"
+      font-size: 64px
+      opacity: .5
+      padding: 0 .2em 0 0
 
 // Animated elements.
 
@@ -100,9 +132,10 @@ aside
 .decision-tree
   width: 400px
   height: 120px
-  overflow: scroll
+  overflow: hidden
 
-  .decision, .decision-big
+  .decision,
+  .decision-big
     width: 300px
     height: 100px
     border: 1px solid gray
