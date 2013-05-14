@@ -1,6 +1,10 @@
 @import "compass"
 @import "compass/reset"
 
+// Variables
+
+$yellow: #ffd91f
+
 // Base.
 
 $container-width: 990px
@@ -10,6 +14,7 @@ $container-width: 990px
   @include box-sizing(border-box)
 
 html
+  background: #000
   font-size: 100%
   font-family: sans-serif
 
@@ -26,10 +31,17 @@ h1, h2, h3, h4, h5, h6
   font-weight: bold
 
 .container
-  height: 610px
+  height: 700px
   margin: 0 auto
   overflow: hidden
   max-width: $container-width
+
+// Layout
+
+header
+  background: $yellow
+  padding: .75em 0
+  text-align: center
 
 // Video and container.
 
@@ -49,10 +61,12 @@ video
 
   .progress
     overflow: hidden
-    height: 20px
-    border: 1px solid black
+    height: 30px
+    padding: .5em
+    font-weight: bold
 
-  .buffer-bar, .time-bar
+  .buffer-bar,
+  .time-bar
     position: absolute
     top: 0
     left: 0
@@ -62,10 +76,10 @@ video
     @include transition(left .5s)
 
   .time-bar
-    background-color: red
+    background-color: $yellow
 
   .buffer-bar
-    background-color: green
+    background-color: #333
 
 // Layout.
 
@@ -90,12 +104,24 @@ video
 
 .chapter-list
   position: absolute
-  bottom: 60px
+  bottom: 31px
   left: 0
   float: left
-  background-color: rgba(255,255,255,.5)
+  padding: .5em 1em
+  background-color: rgba(255,255,255,.75)
+  width: 100%
+
+  li
+    float: left
+    margin: 0 .75em
+
   a
     color: black
+    font-size: 13px
+    font-weight: bold
+    display: block
+    padding: .25em 0
+    text-transform: uppercase
 
 
 aside
