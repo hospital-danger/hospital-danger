@@ -60,7 +60,7 @@
         time: "01:59"
       }, {
         type: "chapter_end",
-        time: "02:17",
+        time: "02:16",
         target: "#malpractice-in-practice-followup"
       }, {
         type: "chapter",
@@ -150,7 +150,8 @@
           case "citation":
             return $('.citations').html("<a href='" + cue_item.target + "' target='_blank'>" + cue_item.title + "</a>");
           case "chapter":
-            return $('.chapter-title').show().text(cue_item.title).delay(3000).fadeOut(2000);
+            $('.chapter-title').show().text(cue_item.title).delay(3000).fadeOut(2000);
+            return $(".current.chapter").removeClass('current');
           case "chapter_end":
             $(cue_item.target).addClass('current');
             $video.pause();
@@ -229,6 +230,10 @@
       e.preventDefault();
       target = $(this).attr('href');
       return $('.decision-tree').scrollTo(target, 1000);
+    });
+    $('#end-decision-tree').on("click", function(e) {
+      e.preventDefault();
+      return $video.play();
     });
     return (time_line = function() {
       current_time = $video.currentTime();
