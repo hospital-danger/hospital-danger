@@ -13,31 +13,30 @@
 <body>
   <div class="main-container">
     <video id="the-video">
-      <source src="mp4/legacy.mp4" />
+      <source src="video/mp4/video.mp4" />
+      <source src="video/webm/video.webm" />
     </video>
     <div class="video-controls">
-      <div class="timeline">
-
+      <div class="button-play paused" title="Play/Pause video">Play/pause</div>
+      <div class="progress">
+        <div class="buffer-bar"></div>
+        <div class="time-bar"></div>
+        <div class="time-left">00:00</div>
       </div>
-      <nav class="chapter-list">
-        <header>Chapters</header>
-        <ul>
-          <li><a class="chapter" href="#safety">A Safe Place</a></li>
-          <li><a class="chapter" href="#quality-of-care">Quality of Care</a></li>
-          <li><a class="chapter" href="#infection">A Simple Procedure</a></li>
-          <li><a class="chapter" href="#culpability">Deny &amp; Defend</a></li>
-          <li><a class="chapter" href="#lawsuit">Restitution</a></li>
-          <li><a class="chapter" href="#no-improvement">Getting Better?</a></li>
-        </ul>
-      </nav>
-      <button class="play-pause" id="video-play">
-        Play
-      </button>
-      <!-- custom timeline controls,etc -->
     </div>
     <div class="footnotes">
       <!-- citation needed -->
     </div>
+    <nav class="chapter-list">
+      <ul>
+        <li><a class="chapter" href="#safety">A Safe Place</a></li>
+        <li><a class="chapter" href="#quality-of-care">Quality of Care</a></li>
+        <li><a class="chapter" href="#infection">A Simple Procedure</a></li>
+        <li><a class="chapter" href="#culpability">Deny &amp; Defend</a></li>
+        <li><a class="chapter" href="#lawsuit">Restitution</a></li>
+        <li><a class="chapter" href="#no-improvement">Getting Better?</a></li>
+      </ul>
+    </nav>
     <section id="safety" class="node">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
