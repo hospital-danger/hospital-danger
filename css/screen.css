@@ -54,64 +54,64 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
-/* line 6, ../sass/screen.scss */
+/* line 8, ../sass/screen.sass */
 * {
   position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 11, ../sass/screen.scss */
+/* line 12, ../sass/screen.sass */
 html {
   font-size: 100%;
   font-family: sans-serif; }
 
-/* line 16, ../sass/screen.scss */
+/* line 16, ../sass/screen.sass */
 a {
   text-decoration: underline; }
 
-/* line 20, ../sass/screen.scss */
+/* line 19, ../sass/screen.sass */
 em {
   font-style: italic; }
 
-/* line 24, ../sass/screen.scss */
+/* line 22, ../sass/screen.sass */
 strong {
   font-weight: bold; }
 
-/* line 28, ../sass/screen.scss */
+/* line 25, ../sass/screen.sass */
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold; }
 
-/* line 32, ../sass/screen.scss */
+/* line 28, ../sass/screen.sass */
 .container {
   margin: 0 auto;
-  width: 990px;
+  max-width: 980px;
   height: 610px;
   overflow: hidden; }
 
-/* line 39, ../sass/screen.scss */
+/* line 36, ../sass/screen.sass */
 video {
   width: 100%; }
 
-/* line 43, ../sass/screen.scss */
+/* line 39, ../sass/screen.sass */
 .timeline {
   width: 100%; }
 
-/* line 47, ../sass/screen.scss */
+/* line 42, ../sass/screen.sass */
 .time-left {
   position: absolute;
   top: 0;
   right: 0; }
 
-/* line 53, ../sass/screen.scss */
+/* line 47, ../sass/screen.sass */
 .video-controls {
   cursor: pointer; }
-  /* line 55, ../sass/screen.scss */
+  /* line 50, ../sass/screen.sass */
   .video-controls .progress {
     overflow: hidden;
     height: 20px;
     border: 1px solid black; }
-  /* line 60, ../sass/screen.scss */
+  /* line 55, ../sass/screen.sass */
   .video-controls .buffer-bar, .video-controls .time-bar {
     position: absolute;
     top: 0;
@@ -123,20 +123,20 @@ video {
     -moz-transition: left 0.5s;
     -o-transition: left 0.5s;
     transition: left 0.5s; }
-  /* line 69, ../sass/screen.scss */
+  /* line 64, ../sass/screen.sass */
   .video-controls .time-bar {
     background-color: red; }
-  /* line 72, ../sass/screen.scss */
+  /* line 67, ../sass/screen.sass */
   .video-controls .buffer-bar {
     background-color: green; }
 
-/* line 78, ../sass/screen.scss */
+/* line 72, ../sass/screen.sass */
 .chapter {
   height: 500px;
   border: 1px solid gray;
   overflow: auto; }
 
-/* line 84, ../sass/screen.scss */
+/* line 77, ../sass/screen.sass */
 .chapter-title {
   position: absolute;
   top: 0;
@@ -145,7 +145,7 @@ video {
   color: white;
   text-shadow: 1px 1px 1px black; }
 
-/* line 93, ../sass/screen.scss */
+/* line 85, ../sass/screen.sass */
 .chapter-list {
   position: absolute;
   bottom: 50px;
@@ -154,7 +154,11 @@ video {
   background-color: rgba(255, 255, 255, 0.5);
   color: white; }
 
-/* line 102, ../sass/screen.scss */
+/* line 93, ../sass/screen.sass */
+aside {
+  position: absolute; }
+
+/* line 98, ../sass/screen.sass */
 #bacteria {
   position: absolute;
   top: 0;
@@ -162,16 +166,16 @@ video {
   width: 100%;
   height: 100%; }
 
-/* line 110, ../sass/screen.scss */
+/* line 105, ../sass/screen.sass */
 .decision-tree {
   width: 400px;
   height: 120px;
   overflow: scroll; }
-  /* line 114, ../sass/screen.scss */
+  /* line 110, ../sass/screen.sass */
   .decision-tree .decision, .decision-tree .decision-big {
     width: 300px;
     height: 100px;
     border: 1px solid gray; }
-  /* line 119, ../sass/screen.scss */
+  /* line 115, ../sass/screen.sass */
   .decision-tree .decision-end {
     width: 100%; }
