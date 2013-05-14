@@ -31,5 +31,6 @@ Put together in just a few days for the Mozilla, Tribeca Film Institute, and For
 
 ## Technologies
 
-- SASS
 - Compass
+- [PopcornJS](http://popcornjs.org/)
+- SASS
