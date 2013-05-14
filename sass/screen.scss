@@ -3,18 +3,14 @@
 
 // Set base styles and fonts
 $container-width: 980px;
+* {
+  position: relative;
+  @include box-sizing(border-box);
+}
 
 html {
   font-size: 100%;
   font-family: sans-serif;
-}
-
-
-
-
-* {
-  position: relative;
-  @include box-sizing(border-box);
 }
 
 a {
@@ -31,4 +27,32 @@ strong {
 
 h1, h2, h3, h4, h5, h6{
   font-weight: bold;
+}
+
+.main-container{
+  margin: 0 auto;
+  max-width: $container-width;
+  overflow: hidden;
+}
+
+video{
+  width: 100%;
+}
+
+.node{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  color: white;
+  @include translateX(100%);
+  @include transition(all 2s);
+  &.current-node{
+    @include translateX(0%);
+  }
+}
+
+.timeline{
+  width: 100%;
 }
