@@ -92,30 +92,6 @@ h1, h2, h3, h4, h5, h6 {
 video {
   width: 100%; }
 
-/* line 42, ../sass/screen.scss */
-.chapter {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  color: white;
-  -webkit-transform: translateX(100%);
-  -moz-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  -o-transform: translateX(100%);
-  transform: translateX(100%);
-  -webkit-transition: all 2s;
-  -moz-transition: all 2s;
-  -o-transition: all 2s;
-  transition: all 2s; }
-  /* line 51, ../sass/screen.scss */
-  .chapter.current-node {
-    -webkit-transform: translateX(0%);
-    -moz-transform: translateX(0%);
-    -ms-transform: translateX(0%);
-    -o-transform: translateX(0%);
-    transform: translateX(0%); }
-
 /* line 56, ../sass/screen.scss */
 .timeline {
   width: 100%; }
@@ -152,3 +128,19 @@ video {
   /* line 85, ../sass/screen.scss */
   .video-controls .buffer-bar {
     background-color: green; }
+
+/* line 91, ../sass/screen.scss */
+.chapter {
+  height: 500px;
+  border: 1px solid gray;
+  overflow: auto; }
+
+/* line 99, ../sass/screen.scss */
+.decision-tree .decision, .decision-tree .decision-big {
+  width: 300px;
+  height: 100px;
+  border: 1px solid gray;
+  float: left; }
+/* line 105, ../sass/screen.scss */
+.decision-tree .decision-end {
+  width: 100%; }

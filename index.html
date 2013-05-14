@@ -12,6 +12,9 @@
 
 <body>
   <div class="container">
+    <header>
+      <h1>Hospitals May Be Hazardous to Your Health</h1>
+    </header>
     <video id="the-video">
       <source src="video/mp4/video.mp4" />
       <source src="video/webm/video.webm" />
@@ -25,7 +28,7 @@
         <div class="time-left">00:00</div>
       </div>
     </div>
-    <div class="footnotes">
+    <div class="citations">
       <!-- citation needed -->
     </div>
     <nav class="chapter-list">
@@ -37,10 +40,10 @@
       <h2>A Safe Place?</h2>
       <div class="element" id="million">million</div>
       <div class="element" id="people">
-        <div></div> <!-- person icon, which will be duplicated -->
+        <!-- person icon, which will be duplicated -->
       </div>
       <div class="element" id="causes-of-death">
-        <dic class="citation">http://www.cdc.gov/nchs/fastats/lcod.htm</div> <!-- TODO: how to represent our citations and external resources -->
+        <div class="citation">http://www.cdc.gov/nchs/fastats/lcod.htm</div> <!-- TODO: how to represent our citations and external resources -->
         <ul> <!-- Taken from http://www.cdc.gov/nchs/data/dvs/deaths_2010_release.pdf, starting on page 14 -->
           <li>Heart Disease</li>
           <li>Cancer</li>
@@ -110,9 +113,7 @@
     <section id="malpractice-in-practice" class="chapter">
       <h2>Malpractice in Practice</h2>
       <div class="element" id="lawsuits">
-        <div class="lawsuit" id="lawsuit-1"></div> <!-- lawsuit icon; one rectangle is drawn, then we replicate 49 times and cross out 49 of the 50 -->
-        <div class="lawsuit" id="lawsuit-2"></div>
-        <div class="lawsuit" id="lawsuit-3"></div>
+        <!-- lawsuit icon; one rectangle is drawn, then we replicate 49 times and cross out 49 of the 50 -->
       </div>
       <aside>
         <h2>Can you sue?</h2>
@@ -120,8 +121,43 @@
         <blockquote>
           Quote from the study.
         </blockquote>
-        <div>
-          Decision tree!
+        <div class="decision-tree">
+          <div class="decision" id="decision-1">
+            <p>
+              What happened to you?
+            </p>
+            <a href="#decision-2">Infection</a>
+            <a href="#decision-3">Medication error</a>
+            <a href="#decision-3">Surgical error</a>
+          </div>
+          <div class="decision" id="decision-3">
+            <p>What is your identity?</p>
+            <a href="#decision-2">Low Income</a>
+            <a href="#decision-2">Elderly</a>
+            <a href="#decision-2">Non-white</a>
+            <a href="#decision-4">Upper-class white male</a>
+          </div>
+          <div class="decision" id-"decision-4">
+            <p>How severe was the injury?</p>
+            <a href="#decision-2">Emotional distress</a>
+            <a href="#decision-2">Minor injury</a>
+            <a href="#decision-2">Permanent injury</a>
+            <a href="#decision-5">Death</a>
+          </div>
+          <div class="decision-end" id="#decision-2">
+            <p>No case.</p>
+            <a href="#decision-1">Try again</a>
+            <a href="#" id="end-decision-tree">Continue</a>
+          </div>
+          <div class="decision-end" id="#decision-5">
+            <p>Congratulations! You might have a case.</p>
+            <a href="#decision-1">Try again</a>
+            <a href="#" id="end-decision-tree">Continue</a>
+          </div>
+
+          <footer>
+            <a href="#">Next section &raquo;</a>
+          </footer>
         </div>
       </aside>
     </section>
@@ -139,6 +175,7 @@
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="js/popcorn.js"></script>
+  <script src="js/scrollTo.js"></script>
   <script src="js/script.js"></script>
 </body>
 

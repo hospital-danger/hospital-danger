@@ -39,19 +39,19 @@ video{
   width: 100%;
 }
 
-.chapter{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+// .chapter{
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
 
-  color: white;
-  @include translateX(100%);
-  @include transition(all 2s);
-  &.current-node{
-    @include translateX(0%);
-  }
-}
+//   color: white;
+//   @include translateX(100%);
+//   @include transition(all 2s);
+//   &.current-node{
+//     @include translateX(0%);
+//   }
+// }
 
 .timeline{
   width: 100%;
@@ -87,3 +87,27 @@ video{
   }
 
 }
+
+.chapter{
+  height: 500px;
+  border: 1px solid gray;
+  overflow: auto;
+}
+
+.decision-tree{
+
+  .decision, .decision-big{
+    width: 300px;
+    height: 100px;
+    border: 1px solid gray;
+    float: left;
+  }
+  .decision-end{
+    width: 100%;
+    // float: none;
+  }
+
+}
+
+
+
