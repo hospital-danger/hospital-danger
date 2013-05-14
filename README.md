@@ -1,8 +1,8 @@
-# This Hospital Will Kill You
+# Hospitals May Be Hazardous to Your Health
 
-An interactive web presentation on the real and present danger of in-hospital injury.
+An interactive web presentation on the dangers of in-hospital injury.
 
-Put together in just a few days for the Mozilla + Tribeca Film Foundation **Storytelling Innovation Lab**.
+Put together in just a few days for the Mozilla, Tribeca Film Institute, and Ford Foundation **Tribeca Hacks: Storytelling Innovation Lab**.
 
 ## Team
 
