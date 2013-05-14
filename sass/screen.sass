@@ -9,9 +9,17 @@ $container-width: 990px
   position: relative
   @include box-sizing(border-box)
 
+html,
+body
+  min-height: 100%
+
 html
   font-size: 100%
   font-family: sans-serif
+
+body
+  background: url(../img/background.jpg)
+  background-size: cover
 
 a
   text-decoration: underline
@@ -30,6 +38,14 @@ h1, h2, h3, h4, h5, h6
   margin: 0 auto
   overflow: hidden
   max-width: $container-width
+
+// Layout
+
+header
+  background: #ffd91f
+  padding: .75em 0
+  text-align: center
+  @include box-shadow(#eee 0 10px 15px)
 
 // Video and container.
 
