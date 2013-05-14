@@ -143,14 +143,15 @@ video {
     font-size: 2em;
     color: white;
     text-shadow: 1px 1px 1px black; }
-  /* line 85, ../sass/screen.sass */
-  .chapter .chapter-list {
-    position: absolute;
-    bottom: 50px;
-    left: 0;
-    float: left;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: white; }
+
+/* line 85, ../sass/screen.sass */
+.chapter-list {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  float: left;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: white; }
 
 /* line 93, ../sass/screen.sass */
 aside {
