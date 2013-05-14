@@ -5,21 +5,21 @@
 
 $container-width: 990px
 
-* 
+*
   position: relative
   @include box-sizing(border-box)
 
-html 
+html
   font-size: 100%
   font-family: sans-serif
 
-a 
+a
   text-decoration: underline
 
-em 
+em
   font-style: italic
 
-strong 
+strong
   font-weight: bold
 
 h1, h2, h3, h4, h5, h6
@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6
   height: 610px
   margin: 0 auto
   overflow: hidden
-  width: $container-width
+  max-width: $container-width
 
 // Video and container.
 
@@ -47,11 +47,11 @@ video
 .video-controls
   cursor: pointer
 
-  .progress 
+  .progress
     overflow: hidden
     height: 20px
     border: 1px solid black
- 
+
   .buffer-bar, .time-bar
     position: absolute
     top: 0
@@ -60,10 +60,10 @@ video
     height: 100%
     width: 100%
     @include transition(left .5s)
- 
+
   .time-bar
     background-color: red
- 
+
   .buffer-bar
     background-color: green
 
@@ -139,7 +139,7 @@ aside
     width: 300px
     height: 100px
     border: 1px solid gray
- 
+
   .decision-end
     width: 100%
     // float: none
