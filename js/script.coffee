@@ -54,7 +54,7 @@ $ ()->
   $('ul', '.chapter-list').append( "<li><a href='#{cue.target}'>#{cue.title}</a></li>") for cue in chapters
 
   toggle_play = ()->
-    console.log $play_button.hasClass("paused")
+
     if $play_button.hasClass("paused") then $video.play() else $video.pause()
     $play_button.toggleClass("paused")
 
@@ -111,11 +111,57 @@ $ ()->
   #   console.log  e
   #   # console.log /e.clientX, e.clientY
 
+  # animate bacteria
+  do ()->
+    $bacteria = $("#bacteria")
+    $parent = $bacteria.parent()
+    $bacteria.attr('width', $parent.width() ).attr('height', $parent.height())
+    bacteria_canvas = $bacteria[0]
+    ctx = bacteria_canvas.getContext "2d"
+    width = $bacteria.width() / 4
+    height = $bacteria.height() / 4
+    # initialize data
+    bacteria_data = []
+    for x in [0.. width]
+      bacteria_data[x] = []
+      for y in [0.. height]
+        bacteria_data[x][y] = false
+    # set initial infection
+    for coords in [ [1,0],[2,1],[0,2],[1,2],[2,2], [4,0] ]
+      bacteria_data[ coords[0]+ 10 ][coords[1] + 10] = true
+
+    neighbor_count = (x,y)->
+      count = 0
+      for this_x in [x - 1, x, x + 1]
+        for this_y in [y - 1, y, y + 1]
+          count += 1 if (this_x > -1) and (this_x < width) and this_y > -1 and this_y < height and bacteria_data[this_x][this_y] and ([this_x, this_y] isnt [x, y])
+      count
+
+    do generation = ()->
+      next_generation = []
+      for x in [0..width]
+        next_generation[x] = []
+        for y in [0..height]
+          switch neighbor_count(x,y)
+            when 2,4 then next_generation[x][y] = bacteria_data[x][y]
+            when 3 then next_generation[x][y] = true
+            else
+              if bacteria_data[x][y] then ctx.clearRect(x*4, y*4, 4, 4)
+              next_generation[x][y] = false
+
+          ctx.fillRect(x*4, y*4, 4, 4) if next_generation[x][y] and not bacteria_data[x][y]
+
+      bacteria_data = next_generation
+      setTimeout generation, 100
+
   # scroll decision tree
   $('a', '.decision-tree').on "click", (e)->
     e.preventDefault()
     target = $(this).attr('href')
     $('.decision-tree').scrollTo(target, 1000)
+
+
+
 
 
 

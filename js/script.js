@@ -92,7 +92,6 @@
       $('ul', '.chapter-list').append("<li><a href='" + cue.target + "'>" + cue.title + "</a></li>");
     }
     toggle_play = function() {
-      console.log($play_button.hasClass("paused"));
       if ($play_button.hasClass("paused")) {
         $video.play();
       } else {
@@ -152,6 +151,72 @@
         }
       });
     });
+    (function() {
+      var $bacteria, $parent, bacteria_canvas, bacteria_data, coords, ctx, generation, height, neighbor_count, width, x, y, _j, _k, _l, _len1, _ref2;
+      $bacteria = $("#bacteria");
+      $parent = $bacteria.parent();
+      $bacteria.attr('width', $parent.width()).attr('height', $parent.height());
+      bacteria_canvas = $bacteria[0];
+      ctx = bacteria_canvas.getContext("2d");
+      width = $bacteria.width() / 4;
+      height = $bacteria.height() / 4;
+      bacteria_data = [];
+      for (x = _j = 0; 0 <= width ? _j <= width : _j >= width; x = 0 <= width ? ++_j : --_j) {
+        bacteria_data[x] = [];
+        for (y = _k = 0; 0 <= height ? _k <= height : _k >= height; y = 0 <= height ? ++_k : --_k) {
+          bacteria_data[x][y] = false;
+        }
+      }
+      _ref2 = [[1, 0], [2, 1], [0, 2], [1, 2], [2, 2], [4, 0]];
+      for (_l = 0, _len1 = _ref2.length; _l < _len1; _l++) {
+        coords = _ref2[_l];
+        bacteria_data[coords[0] + 10][coords[1] + 10] = true;
+      }
+      neighbor_count = function(x, y) {
+        var count, this_x, this_y, _len2, _len3, _m, _n, _ref3, _ref4;
+        count = 0;
+        _ref3 = [x - 1, x, x + 1];
+        for (_m = 0, _len2 = _ref3.length; _m < _len2; _m++) {
+          this_x = _ref3[_m];
+          _ref4 = [y - 1, y, y + 1];
+          for (_n = 0, _len3 = _ref4.length; _n < _len3; _n++) {
+            this_y = _ref4[_n];
+            if ((this_x > -1) && (this_x < width) && this_y > -1 && this_y < height && bacteria_data[this_x][this_y] && ([this_x, this_y] !== [x, y])) {
+              count += 1;
+            }
+          }
+        }
+        return count;
+      };
+      return (generation = function() {
+        var next_generation, _m, _n;
+        next_generation = [];
+        for (x = _m = 0; 0 <= width ? _m <= width : _m >= width; x = 0 <= width ? ++_m : --_m) {
+          next_generation[x] = [];
+          for (y = _n = 0; 0 <= height ? _n <= height : _n >= height; y = 0 <= height ? ++_n : --_n) {
+            switch (neighbor_count(x, y)) {
+              case 2:
+              case 4:
+                next_generation[x][y] = bacteria_data[x][y];
+                break;
+              case 3:
+                next_generation[x][y] = true;
+                break;
+              default:
+                if (bacteria_data[x][y]) {
+                  ctx.clearRect(x * 4, y * 4, 4, 4);
+                }
+                next_generation[x][y] = false;
+            }
+            if (next_generation[x][y] && !bacteria_data[x][y]) {
+              ctx.fillRect(x * 4, y * 4, 4, 4);
+            }
+          }
+        }
+        bacteria_data = next_generation;
+        return setTimeout(generation, 100);
+      })();
+    })();
     $('a', '.decision-tree').on("click", function(e) {
       var target;
       e.preventDefault();
