@@ -22,6 +22,17 @@ $ ()->
     s = if s > 9 then "#{s}" else "0#{s}"
     "#{min}:#{s}"
 
+  cues = [
+    {title: "A Safe Place", target: "#safety", time: "00:10"}
+    {title: "Quality of Care", target: "#quality-of-care", time: "00:20"}
+    {title: "Deceptively Simple" , target: "#infection", time: "00:30"}
+    {title: "Deny & Defend", target: "#culpability", time: "00:40"}
+    {title: "Malpractice in Practice" , target: "#lawsuit", time: "00:50"}
+    {title: "Is It Getting Better?" , target: "#no-improvement", time: "01:00"}
+  ]
+
+  $('ul', '.chapter-list').append( "<li><a class='chapter-link' href='#{cue.target}'>#{cue.title}</a></li>") for cue in cues
+
   cue_times = {
     "#safety": 2
     "#quality-of-care": 15
@@ -41,20 +52,32 @@ $ ()->
     pos = e.offsetX / $(this).width()
     $video.currentTime( pos * duration )
 
-  # chapter selector
-  $('.chapter').on "click", (e)->
-    e.preventDefault()
-    target = $(this).attr 'href'
+  # arrow keys to advance between chapters
+  $(document).on "keydown", (e)->
+    left_arrow = 37
+    right_arrow = 39
 
-    $video.currentTime( cue_times[target] ).pause()
+
+
+  # chapter selector
+  $('.chapter-link').on "click", (e)->
+    e.preventDefault()
+    $('.chapter').removeClass('current')
+    $(this).addClass('current')
+
+    target = $(this).attr 'href'
+    cue_time = to_s(cue.time) for cue in cues when (cue.target is target)
+
+
+    $video.currentTime( cue_time ).pause()
     $play_button.addClass('paused')
 
     $('.current-node').removeClass('current-node')
     $(target).addClass('current-node')
 
   # set css animations to cue times
-  $.each cue_times, (target,value)->
-    $video.cue value, ()->
+  $.each cues, (i, cue_item)->
+    $video.cue to_s(cue_item.time), ()->
       $('.current-node').removeClass('current-node');
       $(target).addClass('current-node');
 

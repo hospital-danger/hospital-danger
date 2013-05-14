@@ -11,7 +11,7 @@
   }
 
   $(function() {
-    var $buffer_bar, $play_button, $time_bar, $time_left, $video, cue_times, current_time, duration, time_line, to_clock, to_s;
+    var $buffer_bar, $play_button, $time_bar, $time_left, $video, cue, cue_times, cues, current_time, duration, time_line, to_clock, to_s, _i, _len;
     $video = Popcorn('#the-video');
     $play_button = $('.button-play');
     $time_bar = $('.time-bar');
@@ -28,6 +28,37 @@
       s = s > 9 ? "" + s : "0" + s;
       return "" + min + ":" + s;
     };
+    cues = [
+      {
+        title: "A Safe Place",
+        target: "#safety",
+        time: "00:10"
+      }, {
+        title: "Quality of Care",
+        target: "#quality-of-care",
+        time: "00:20"
+      }, {
+        title: "Deceptively Simple",
+        target: "#infection",
+        time: "00:30"
+      }, {
+        title: "Deny & Defend",
+        target: "#culpability",
+        time: "00:40"
+      }, {
+        title: "Malpractice in Practice",
+        target: "#lawsuit",
+        time: "00:50"
+      }, {
+        title: "Is It Getting Better?",
+        target: "#no-improvement",
+        time: "01:00"
+      }
+    ];
+    for (_i = 0, _len = cues.length; _i < _len; _i++) {
+      cue = cues[_i];
+      $('ul', '.chapter-list').append("<li><a class='chapter-link' href='" + cue.target + "'>" + cue.title + "</a></li>");
+    }
     cue_times = {
       "#safety": 2,
       "#quality-of-care": 15,
@@ -49,17 +80,30 @@
       pos = e.offsetX / $(this).width();
       return $video.currentTime(pos * duration);
     });
-    $('.chapter').on("click", function(e) {
-      var target;
+    $(document).on("keydown", function(e) {
+      var left_arrow, right_arrow;
+      left_arrow = 37;
+      return right_arrow = 39;
+    });
+    $('.chapter-link').on("click", function(e) {
+      var cue_time, target, _j, _len1;
       e.preventDefault();
+      $('.chapter').removeClass('current');
+      $(this).addClass('current');
       target = $(this).attr('href');
-      $video.currentTime(cue_times[target]).pause();
+      for (_j = 0, _len1 = cues.length; _j < _len1; _j++) {
+        cue = cues[_j];
+        if (cue.target === target) {
+          cue_time = to_s(cue.time);
+        }
+      }
+      $video.currentTime(cue_time).pause();
       $play_button.addClass('paused');
       $('.current-node').removeClass('current-node');
       return $(target).addClass('current-node');
     });
-    $.each(cue_times, function(target, value) {
-      return $video.cue(value, function() {
+    $.each(cues, function(i, cue_item) {
+      return $video.cue(to_s(cue_item.time), function() {
         $('.current-node').removeClass('current-node');
         return $(target).addClass('current-node');
       });

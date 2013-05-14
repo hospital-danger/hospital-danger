@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold; }
 
 /* line 32, ../sass/screen.scss */
-.main-container {
+.container {
   margin: 0 auto;
   max-width: 980px;
   overflow: hidden; }
@@ -93,7 +93,7 @@ video {
   width: 100%; }
 
 /* line 42, ../sass/screen.scss */
-.node {
+.chapter {
   position: absolute;
   top: 0;
   left: 0;
@@ -109,7 +109,7 @@ video {
   -o-transition: all 2s;
   transition: all 2s; }
   /* line 51, ../sass/screen.scss */
-  .node.current-node {
+  .chapter.current-node {
     -webkit-transform: translateX(0%);
     -moz-transform: translateX(0%);
     -ms-transform: translateX(0%);
