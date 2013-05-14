@@ -57,6 +57,12 @@ video{
   width: 100%;
 }
 
+.time-left{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .video-controls{
   cursor: pointer;
   .progress {

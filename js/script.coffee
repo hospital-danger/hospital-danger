@@ -9,8 +9,10 @@ $ ()->
   $time_bar = $('.time-bar')
   $buffer_bar = $('.buffer_bar')
   $time_left = $('.time-left')
+  $time_elapsed = $('.time-elapsed')
   duration = 0
   current_time = 0
+  chapter_index = 0
 
   # shortcut to timestamp-to-seconds
   to_s = Popcorn.util.toSeconds
@@ -22,14 +24,20 @@ $ ()->
     s = if s > 9 then "#{s}" else "0#{s}"
     "#{min}:#{s}"
 
-  cue_times = {
-    "#safety": 2
-    "#quality-of-care": 15
-    "#infection": 20
-    "#culpability": 40
-    "#lawsuit": 60
-    "#no-improvement": 70
-  }
+  cues = [
+    {type:"chapter", title: "A Safe Place", target: "#safety", time: "00:19"}
+    {type:"chapter", title: "Quality of Care", target: "#quality-of-care", time: "00:42"}
+    {type:"chapter", title: "Deceptively Simple" , target: "#infection", time: "01:09"}
+    {type:"chapter", title: "Deny & Defend", target: "#culpability", time: "01:35"}
+    {type:"chapter", title: "Malpractice in Practice" , target: "#lawsuit", time: "01:59"}
+    {type:"chapter", title: "Is It Getting Better?" , target: "#no-improvement", time: "02:17"}
+  ]
+
+  chapters = (cue for cue in cues when (cue.type is "chapter"))
+  citations = (cue for cue in cues when (cue.type is "citation"))
+
+  # build chapter markers
+  $('ul', '.chapter-list').append( "<li><a href='#{cue.target}'>#{cue.title}</a></li>") for cue in chapters
 
   # play-pause button
   $play_button.add('#the-video').on "click", ()->
@@ -41,29 +49,41 @@ $ ()->
     pos = e.offsetX / $(this).width()
     $video.currentTime( pos * duration )
 
-  # chapter selector
-  $('.chapter').on "click", (e)->
-    e.preventDefault()
-    target = $(this).attr 'href'
-
-    $video.currentTime( cue_times[target] ).pause()
+  goto_chapter = (target)->
+    [chapter_index, cue_time] = [index, to_s(cue.time)] for cue, index in cues when (cue.target is target)
+    $video.currentTime( cue_time ).pause() if cue_time?
     $play_button.addClass('paused')
 
-    $('.current-node').removeClass('current-node')
-    $(target).addClass('current-node')
+  # chapter selector
+  $('a', '.chapter-list').on "click", (e)->
+    e.preventDefault()
+    goto_chapter $(this).attr 'href'
+
+  # arrow keys to advance between chapters
+  $(document).on "keydown", (e)->
+    # TODO toogle play/pause with spacebar
+    left_arrow = 37
+    right_arrow = 39
+    if e.keyCode is left_arrow
+      e.preventDefault()
+      next_chapter = Math.max 0, chapter_index - 1
+    else if e.keyCode is right_arrow
+      e.preventDefault()
+      next_chapter = Math.min chapters.length - 1, chapter_index + 1
+
+    goto_chapter chapters[next_chapter]?.target
 
   # set css animations to cue times
-  $.each cue_times, (target,value)->
-    $video.cue value, ()->
-      $('.current-node').removeClass('current-node');
-      $(target).addClass('current-node');
+  $.each cues, (i, cue_item)->
+    $video.cue to_s(cue_item.time), ()->
+      $('.current', ".element").removeClass('current');
+      $(cue_item.target).addClass('current');
 
   # timeline progress
   do time_line = ()->
     current_time = $video.currentTime()
-    # b = $video.buffered()
     duration = $video.duration() || 0
     $time_bar.css {left: "#{current_time/duration * 100}%"}
-    # $buffer_bar.css {left: "#{b/d * 100}%"}
+    $time_elapsed.text to_clock Math.floor current_time
     $time_left.text to_clock Math.floor duration - current_time
     setTimeout time_line, 200
