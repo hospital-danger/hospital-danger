@@ -121,33 +121,36 @@
         </blockquote>
         <div class="decision-tree">
           <div class="decision" id="decision-1">
-            <p>
-              What happened to you?
-            </p>
-            <a href="#decision-2">Infection</a>
+            <p>What happened to you?</p>
+            <a href="#outcome-negative">Infection</a>
             <a href="#decision-3">Medication error</a>
             <a href="#decision-3">Surgical error</a>
           </div>
           <div class="decision" id="decision-3">
             <p>What is your identity?</p>
-            <a href="#decision-2">Low Income</a>
-            <a href="#decision-2">Elderly</a>
-            <a href="#decision-2">Non-white</a>
+            <a href="#outcome-negative">Low Income</a>
+            <a href="#outcome-negative">Elderly</a>
+            <a href="#outcome-negative">Non-white</a>
             <a href="#decision-4">Upper-class white male</a>
           </div>
           <div class="decision" id-"decision-4">
             <p>How severe was the injury?</p>
-            <a href="#decision-2">Emotional distress</a>
-            <a href="#decision-2">Minor injury</a>
-            <a href="#decision-2">Permanent injury</a>
-            <a href="#decision-5">Death</a>
+            <a href="#outcome-negative">Emotional distress</a>
+            <a href="#outcome-negative">Minor injury</a>
+            <a href="#outcome-positive">Permanent injury</a>
+            <a href="#outcome-negative">Death</a>
           </div>
-          <div class="decision-end" id="decision-2">
+          <div class="decision" id="decision-5">
+            <p>What state are you from?</p>
+            <a href="#outcome-negative">TODO: lenient states]</a>
+            <a href="#outcome-positive">Any other state</a>
+          </div>
+          <div class="outcome" id="outcome-negative">
             <p>No case.</p>
             <a href="#decision-1">Try again</a>
             <a href="#" id="end-decision-tree">Continue</a>
           </div>
-          <div class="decision-end" id="decision-5">
+          <div class="outcome" id="outcome-positive">
             <p>Congratulations! You might have a case.</p>
             <a href="#decision-1">Try again</a>
             <a href="#" id="end-decision-tree">Continue</a>
