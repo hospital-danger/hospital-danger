@@ -56,3 +56,28 @@ video{
 .timeline{
   width: 100%;
 }
+
+.video-controls{
+  cursor: pointer;
+  .progress {
+    overflow: hidden;
+    height: 20px;
+    border: 1px solid black;
+  }
+  .buffer-bar, .time-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -100%;
+    height: 100%;
+    width: 100%;
+    @include transition(left .5s);
+  }
+  .time-bar{
+    background-color: red;
+  }
+  .buffer-bar{
+    background-color: green;
+  }
+
+}
