@@ -2,7 +2,7 @@
 @import "compass/reset";
 
 // Set base styles and fonts
-$container-width: 980px;
+$container-width: 990px;
 * {
   position: relative;
   @include box-sizing(border-box);
@@ -31,27 +31,14 @@ h1, h2, h3, h4, h5, h6{
 
 .container{
   margin: 0 auto;
-  max-width: $container-width;
+  width: $container-width;
+  height: 610px;
   overflow: hidden;
 }
 
 video{
   width: 100%;
 }
-
-// .chapter{
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-
-//   color: white;
-//   @include translateX(100%);
-//   @include transition(all 2s);
-//   &.current-node{
-//     @include translateX(0%);
-//   }
-// }
 
 .timeline{
   width: 100%;
@@ -92,6 +79,24 @@ video{
   height: 500px;
   border: 1px solid gray;
   overflow: auto;
+}
+
+.chapter-title{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2em;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.chapter-list{
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  float: left;
+  background-color: rgba(255,255,255,.5);
+  color: white;
 }
 
 #bacteria{

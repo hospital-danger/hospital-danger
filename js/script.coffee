@@ -40,9 +40,9 @@ $ ()->
 
 
 
-    {type:"chapter", title: "Malpractice in Practice" , target: "#lawsuit", time: "01:58"}
+    {type:"chapter", title: "Malpractice in Practice" , target: "#lawsuit", time: "01:59"}
 
-
+    {type:"chapter_end", time:"02:17"}
 
     {type:"chapter", title: "Is It Getting Better?" , target: "#no-improvement", time: "02:17"}
   ]
@@ -68,8 +68,8 @@ $ ()->
 
   goto_chapter = (target)->
     [chapter_index, cue_time] = [index, to_s(cue.time)] for cue, index in cues when (cue.target is target)
-    $video.currentTime( cue_time ).pause() if cue_time?
-    $play_button.addClass('paused')
+    $video.currentTime( cue_time ).play() if cue_time?
+    $play_button.removeClass('paused')
 
   # chapter selector
   $('a', '.chapter-list').on "click", (e)->
@@ -90,7 +90,7 @@ $ ()->
       e.preventDefault()
       next_chapter = Math.min chapters.length - 1, chapter_index + 1
 
-    goto_chapter chapters[next_chapter]?.target
+    if next_chapter then goto_chapter chapters[next_chapter]?.target
 
   # set css animations to cue times
   $.each cues, (i, cue_item)->
@@ -100,11 +100,13 @@ $ ()->
       switch cue_item.type
         when "citation"
           $('.citations').html "<a href='#{cue_item.target}' target='_blank'>#{cue_item.title}</a>"
+        when "chapter"
+          $('.chapter-title').show().text( cue_item.title).delay(3000).fadeOut(2000)
         when "chapter_end"
           # pause between chapters, except between intro and first chapter
-          unless cue_item.target is "#safety"
-            $video.pause()
-            $play_button.addClass('paused')
+
+          $video.pause()
+          $play_button.addClass('paused')
 
   # bacteria track cursor
   # $(document).on "mousemove", (e)->
@@ -134,7 +136,7 @@ $ ()->
       count = 0
       for this_x in [x - 1, x, x + 1]
         for this_y in [y - 1, y, y + 1]
-          count += 1 if (this_x > -1) and (this_x < width) and this_y > -1 and this_y < height and bacteria_data[this_x][this_y] and ([this_x, this_y] isnt [x, y])
+          count += 1 if (-1 < this_x < width) and (-1 < this_y < height) and bacteria_data[this_x][this_y] and ([this_x, this_y] isnt [x, y])
       count
 
     do generation = ()->
@@ -144,12 +146,12 @@ $ ()->
         for y in [0..height]
           switch neighbor_count(x,y)
             when 2,4 then next_generation[x][y] = bacteria_data[x][y]
-            when 3 then next_generation[x][y] = true
+            when 3
+              next_generation[x][y] = true
+              ctx.fillRect(x*4, y*4, 4, 4) if not bacteria_data[x][y]
             else
-              if bacteria_data[x][y] then ctx.clearRect(x*4, y*4, 4, 4)
               next_generation[x][y] = false
-
-          ctx.fillRect(x*4, y*4, 4, 4) if next_generation[x][y] and not bacteria_data[x][y]
+              if bacteria_data[x][y] then ctx.clearRect(x*4, y*4, 4, 4)
 
       bacteria_data = next_generation
       setTimeout generation, 100
@@ -159,15 +161,6 @@ $ ()->
     e.preventDefault()
     target = $(this).attr('href')
     $('.decision-tree').scrollTo(target, 1000)
-
-
-
-
-
-
-
-
-
 
   # timeline progress
   do time_line = ()->

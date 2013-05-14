@@ -57,7 +57,10 @@
         type: "chapter",
         title: "Malpractice in Practice",
         target: "#lawsuit",
-        time: "01:58"
+        time: "01:59"
+      }, {
+        type: "chapter_end",
+        time: "02:17"
       }, {
         type: "chapter",
         title: "Is It Getting Better?",
@@ -114,9 +117,9 @@
         }
       }
       if (cue_time != null) {
-        $video.currentTime(cue_time).pause();
+        $video.currentTime(cue_time).play();
       }
-      return $play_button.addClass('paused');
+      return $play_button.removeClass('paused');
     };
     $('a', '.chapter-list').on("click", function(e) {
       e.preventDefault();
@@ -136,18 +139,20 @@
         e.preventDefault();
         next_chapter = Math.min(chapters.length - 1, chapter_index + 1);
       }
-      return goto_chapter((_ref2 = chapters[next_chapter]) != null ? _ref2.target : void 0);
+      if (next_chapter) {
+        return goto_chapter((_ref2 = chapters[next_chapter]) != null ? _ref2.target : void 0);
+      }
     });
     $.each(cues, function(i, cue_item) {
       return $video.cue(to_s(cue_item.time), function() {
         switch (cue_item.type) {
           case "citation":
             return $('.citations').html("<a href='" + cue_item.target + "' target='_blank'>" + cue_item.title + "</a>");
+          case "chapter":
+            return $('.chapter-title').show().text(cue_item.title).delay(3000).fadeOut(2000);
           case "chapter_end":
-            if (cue_item.target !== "#safety") {
-              $video.pause();
-              return $play_button.addClass('paused');
-            }
+            $video.pause();
+            return $play_button.addClass('paused');
         }
       });
     });
@@ -181,7 +186,7 @@
           _ref4 = [y - 1, y, y + 1];
           for (_n = 0, _len3 = _ref4.length; _n < _len3; _n++) {
             this_y = _ref4[_n];
-            if ((this_x > -1) && (this_x < width) && this_y > -1 && this_y < height && bacteria_data[this_x][this_y] && ([this_x, this_y] !== [x, y])) {
+            if (((-1 < this_x && this_x < width)) && ((-1 < this_y && this_y < height)) && bacteria_data[this_x][this_y] && ([this_x, this_y] !== [x, y])) {
               count += 1;
             }
           }
@@ -201,15 +206,15 @@
                 break;
               case 3:
                 next_generation[x][y] = true;
+                if (!bacteria_data[x][y]) {
+                  ctx.fillRect(x * 4, y * 4, 4, 4);
+                }
                 break;
               default:
+                next_generation[x][y] = false;
                 if (bacteria_data[x][y]) {
                   ctx.clearRect(x * 4, y * 4, 4, 4);
                 }
-                next_generation[x][y] = false;
-            }
-            if (next_generation[x][y] && !bacteria_data[x][y]) {
-              ctx.fillRect(x * 4, y * 4, 4, 4);
             }
           }
         }
