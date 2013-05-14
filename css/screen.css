@@ -73,64 +73,60 @@ html {
 
 /* line 20, ../sass/screen.sass */
 body {
-  background: url(../img/background.jpg);
-  background-size: cover; }
+  background: black; }
 
-/* line 24, ../sass/screen.sass */
+/* line 23, ../sass/screen.sass */
 a {
   text-decoration: underline; }
 
-/* line 27, ../sass/screen.sass */
+/* line 26, ../sass/screen.sass */
 em {
   font-style: italic; }
 
-/* line 30, ../sass/screen.sass */
+/* line 29, ../sass/screen.sass */
 strong {
   font-weight: bold; }
 
-/* line 33, ../sass/screen.sass */
+/* line 32, ../sass/screen.sass */
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold; }
 
-/* line 36, ../sass/screen.sass */
+/* line 35, ../sass/screen.sass */
 .container {
   height: 610px;
   margin: 0 auto;
   overflow: hidden;
   max-width: 990px; }
 
-/* line 44, ../sass/screen.sass */
+/* line 43, ../sass/screen.sass */
 header {
   background: #ffd91f;
   padding: 0.75em 0;
-  text-align: center;
-  -webkit-box-shadow: #eeeeee 0 10px 15px;
-  -moz-box-shadow: #eeeeee 0 10px 15px;
-  box-shadow: #eeeeee 0 10px 15px; }
+  text-align: center; }
 
-/* line 52, ../sass/screen.sass */
+/* line 50, ../sass/screen.sass */
 video {
   width: 100%; }
 
-/* line 55, ../sass/screen.sass */
+/* line 53, ../sass/screen.sass */
 .timeline {
   width: 100%; }
 
-/* line 58, ../sass/screen.sass */
+/* line 56, ../sass/screen.sass */
 .time-left {
   position: absolute;
   top: 0;
   right: 0; }
 
-/* line 63, ../sass/screen.sass */
+/* line 61, ../sass/screen.sass */
 .video-controls {
   cursor: pointer; }
-  /* line 66, ../sass/screen.sass */
+  /* line 64, ../sass/screen.sass */
   .video-controls .progress {
     overflow: hidden;
     height: 20px;
     border: 1px solid black; }
-  /* line 71, ../sass/screen.sass */
+  /* line 69, ../sass/screen.sass */
   .video-controls .buffer-bar, .video-controls .time-bar {
     position: absolute;
     top: 0;
@@ -142,19 +138,19 @@ video {
     -moz-transition: left 0.5s;
     -o-transition: left 0.5s;
     transition: left 0.5s; }
-  /* line 80, ../sass/screen.sass */
+  /* line 78, ../sass/screen.sass */
   .video-controls .time-bar {
     background-color: red; }
-  /* line 83, ../sass/screen.sass */
+  /* line 81, ../sass/screen.sass */
   .video-controls .buffer-bar {
     background-color: green; }
 
-/* line 88, ../sass/screen.sass */
+/* line 86, ../sass/screen.sass */
 .chapter {
   height: 500px;
   border: 1px solid gray;
   overflow: auto; }
-  /* line 93, ../sass/screen.sass */
+  /* line 91, ../sass/screen.sass */
   .chapter .chapter-title {
     position: absolute;
     top: 0;
@@ -163,18 +159,18 @@ video {
     color: white;
     text-shadow: 1px 1px 1px black; }
 
-/* line 101, ../sass/screen.sass */
+/* line 99, ../sass/screen.sass */
 .chapter-list {
   position: absolute;
   bottom: 60px;
   left: 0;
   float: left;
   background-color: rgba(255, 255, 255, 0.5); }
-  /* line 107, ../sass/screen.sass */
+  /* line 105, ../sass/screen.sass */
   .chapter-list a {
     color: black; }
 
-/* line 111, ../sass/screen.sass */
+/* line 109, ../sass/screen.sass */
 aside {
   background: #eeeeee;
   position: absolute;
@@ -187,27 +183,27 @@ aside {
   -webkit-box-shadow: #eeeeee -5px 0 15px;
   -moz-box-shadow: #eeeeee -5px 0 15px;
   box-shadow: #eeeeee -5px 0 15px; }
-  /* line 122, ../sass/screen.sass */
+  /* line 120, ../sass/screen.sass */
   aside h2 {
     font-size: 22px;
     margin: 0 0 0.75em 0; }
-  /* line 126, ../sass/screen.sass */
+  /* line 124, ../sass/screen.sass */
   aside p {
     font-size: 14px;
     margin: 1em 0; }
-  /* line 130, ../sass/screen.sass */
+  /* line 128, ../sass/screen.sass */
   aside blockquote {
     font-family: Georgia, serif;
     font-style: italic;
     margin: 1.25em 0; }
-    /* line 135, ../sass/screen.sass */
+    /* line 133, ../sass/screen.sass */
     aside blockquote:before {
       content: "“";
       font-size: 64px;
       opacity: 0.5;
       padding: 0 0.2em 0 0; }
 
-/* line 143, ../sass/screen.sass */
+/* line 141, ../sass/screen.sass */
 #bacteria {
   position: absolute;
   top: 0;
@@ -215,17 +211,17 @@ aside {
   width: 100%;
   height: 100%; }
 
-/* line 150, ../sass/screen.sass */
+/* line 148, ../sass/screen.sass */
 .decision-tree {
   width: 400px;
   height: 120px;
   overflow: hidden; }
-  /* line 155, ../sass/screen.sass */
+  /* line 153, ../sass/screen.sass */
   .decision-tree .decision,
   .decision-tree .decision-big {
     width: 300px;
     height: 100px;
     border: 1px solid gray; }
-  /* line 161, ../sass/screen.sass */
+  /* line 159, ../sass/screen.sass */
   .decision-tree .decision-end {
     width: 100%; }
