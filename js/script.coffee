@@ -148,6 +148,17 @@ $ ()->
 
   node_callbacks = {}
 
+  do ()->
+    $judy = $('#judy-gaines')
+    $images = $('.image-container', $judy)
+    height = $('.text-inner', $judy).height() - $judy.height()
+    $('.text-container', $judy).on "scroll", ()->
+      pos = $(this).scrollTop()
+      index = Math.floor( pos / height * 4)
+      # $('.current-image')
+      $('img', $images).removeClass('current-image').eq(index).addClass('current-image')
+
+
   # scroll decision tree
   $('a', '.decision-tree').on "click", (e)->
     e.preventDefault()

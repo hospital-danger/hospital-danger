@@ -344,6 +344,37 @@ aside {
   border: 1px solid #ffd91f; }
 
 /* line 247, ../sass/screen.sass */
+#judy-gaines {
+  padding: 20px; }
+  /* line 249, ../sass/screen.sass */
+  #judy-gaines .image-container, #judy-gaines .text-container {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute; }
+    /* line 255, ../sass/screen.sass */
+    #judy-gaines .image-container img, #judy-gaines .text-container img {
+      width: 100%;
+      position: absolute;
+      opacity: 0;
+      -webkit-transition: opacity 1s;
+      -moz-transition: opacity 1s;
+      -o-transition: opacity 1s;
+      transition: opacity 1s; }
+      /* line 260, ../sass/screen.sass */
+      #judy-gaines .image-container img.current-image, #judy-gaines .text-container img.current-image {
+        opacity: 1; }
+    /* line 262, ../sass/screen.sass */
+    #judy-gaines .image-container p, #judy-gaines .text-container p {
+      margin-left: 200px;
+      color: white;
+      line-height: 2em; }
+  /* line 266, ../sass/screen.sass */
+  #judy-gaines .text-container {
+    overflow: auto; }
+
+/* line 273, ../sass/screen.sass */
 #lawsuits {
   width: 100px;
   height: 100px;
@@ -351,25 +382,25 @@ aside {
   top: 80px;
   left: 570px; }
 
-/* line 254, ../sass/screen.sass */
+/* line 280, ../sass/screen.sass */
 .decision-tree {
   border: 2px solid black;
   width: 100%;
   height: 150px;
   overflow: hidden; }
-  /* line 260, ../sass/screen.sass */
+  /* line 286, ../sass/screen.sass */
   .decision-tree .decision,
   .decision-tree .decision-big {
     height: 150px;
     border: 1px solid gray;
     overflow: hidden; }
-    /* line 266, ../sass/screen.sass */
+    /* line 292, ../sass/screen.sass */
     .decision-tree .decision p,
     .decision-tree .decision-big p {
       font-size: 16px;
       font-weight: bold;
       margin: 0.5em 0.25em 0.25em 0.5em; }
-    /* line 271, ../sass/screen.sass */
+    /* line 297, ../sass/screen.sass */
     .decision-tree .decision a,
     .decision-tree .decision-big a {
       background: #dddddd;
@@ -377,26 +408,26 @@ aside {
       margin: 0.5em;
       padding: 0.5em;
       width: 200px; }
-  /* line 278, ../sass/screen.sass */
+  /* line 304, ../sass/screen.sass */
   .decision-tree .decision-end {
     width: 100%; }
-  /* line 281, ../sass/screen.sass */
+  /* line 307, ../sass/screen.sass */
   .decision-tree .outcome {
     padding: 1em;
     height: 150px; }
-    /* line 285, ../sass/screen.sass */
+    /* line 311, ../sass/screen.sass */
     .decision-tree .outcome p {
       font-size: 18px;
       font-style: italic;
       font-weight: bold; }
-    /* line 290, ../sass/screen.sass */
+    /* line 316, ../sass/screen.sass */
     .decision-tree .outcome a {
       float: left;
       font-weight: bold;
       width: 50%; }
-  /* line 295, ../sass/screen.sass */
+  /* line 321, ../sass/screen.sass */
   .decision-tree #outcome-positive {
     background: lightgreen; }
-  /* line 298, ../sass/screen.sass */
+  /* line 324, ../sass/screen.sass */
   .decision-tree #outcome-negative {
     background: pink; }
