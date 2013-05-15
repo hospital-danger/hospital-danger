@@ -25,27 +25,27 @@ $ ()->
   chapter_index = 0
 
   cues = [
-    {type: "chapter", title: "A Safe Place", target: "#safety", time: "00:19"}
-    {type: "element", target: "#people", time: "00:28"}
-    {type: "element-next", target: "#people", time: "00:33"}
-    {type: "element", target: "#causes-of-death", time: "00:36"}
-    {type: "chapter_end", time: "00:41"}
-                         
-    {type: "chapter", title: "Quality of Care", target: "#quality-of-care", time: "00:42"}
-    {type: "chapter_end", time: "01:08"}
-                        
-    {type: "chapter", title: "Deceptively Simple", target: "#infection", time: "01:09"}
-    {type: "element", target: "#bacteria", callback: "bacteria", time: "01:18"}
-    {type: "chapter_end", time: "01:33"}
- 
-    {type: "chapter", title: "Deny & Defend", target: "#culpability", time: "01:34"}
-    {type: "chapter_end", time: "01:58"}
- 
-    {type: "chapter", title: "Malpractice in Practice" , target: "#malpractice-in-practice", time: "01:59"}
-    {type: "element", target: "#lawsuits", time: "02:07"}
-    {type: "chapter_end", time:"02:16"}
+    {type: "chapter", title: "A Safe Place", target: "#safety", time: "00:20"}
+    {type: "element", target: "#people", time: "00:33"}
+    {type: "element-next", target: "#people", time: "00:40"}
+    {type: "element", target: "#causes-of-death", time: "00:42"}
+    {type: "chapter_end", time: "00:45"}
 
-    {type:"chapter", title: "Is It Getting Better?" , target: "#no-improvement", time: "02:17"}
+    {type: "chapter", title: "Quality of Care", target: "#quality-of-care", time: "00:46"}
+    {type: "chapter_end", time: "01:21"}
+
+    {type: "chapter", title: "Deceptively Simple", target: "#infection", time: "01:22"}
+    {type: "element", target: "#bacteria", callback: "bacteria", time: "01:32"}
+    {type: "chapter_end", time: "01:53"}
+
+    {type: "chapter", title: "Deny & Defend", target: "#culpability", time: "01:54"}
+    {type: "chapter_end", time: "02:23"}
+
+    {type: "chapter", title: "Malpractice in Practice" , target: "#malpractice-in-practice", time: "02:24"}
+    # {type: "element", target: "#lawsuits", time: "02:07"}
+    {type: "chapter_end", time:"02:43"}
+
+    {type:"chapter", title: "Is It Getting Better?" , target: "#no-improvement", time: "02:44"}
   ]
 
   chapters = (cue for cue in cues when (cue.type is "chapter"))
@@ -152,6 +152,7 @@ $ ()->
     $bacteria.attr('width', $parent.width() ).attr('height', $parent.height())
     bacteria_canvas = $bacteria[0]
     ctx = bacteria_canvas.getContext "2d"
+    ctx.clearRect(0,0,bacteria_canvas.width,bacteria_canvas.height)
     width = $bacteria.width() / 4
     height = $bacteria.height() / 4
     # initialize data
@@ -162,7 +163,7 @@ $ ()->
         bacteria_data[x][y] = false
     # set initial infection
     for coords in [ [1,0],[2,1],[0,2],[1,2],[2,2], [4,0] ]
-      bacteria_data[ coords[0]+ 200 ][coords[1] + 20] = true
+      bacteria_data[ coords[0]+ 185 ][coords[1] + 57] = true
 
     neighbor_count = (x,y)->
       count = 0
@@ -186,7 +187,7 @@ $ ()->
               if bacteria_data[x][y] then ctx.clearRect(x*4, y*4, 4, 4)
 
       bacteria_data = next_generation
-      setTimeout generation, 100
+      setTimeout generation, 150
 
 
 
