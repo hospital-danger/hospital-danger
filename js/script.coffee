@@ -31,6 +31,8 @@ $ ()->
 
     {type:"chapter", title: "Deceptively Simple" , target: "#infection", time: "01:09"}
 
+    {type:"element", target: "#bacteria", callback: "bacteria", time: "01:18"}
+
     {type:"chapter", title: "Deny & Defend", target: "#culpability", time: "01:34"}
 
     {type:"chapter", title: "Malpractice in Practice" , target: "#malpractice-in-practice", time: "01:59"}
@@ -111,8 +113,11 @@ $ ()->
         when "chapter"
           $('.current').removeClass("current")
           $('.chapter-title').show().text( cue_item.title).delay(3000).fadeOut(2000)
+          $('.current-chapter').removeClass "current-chapter"
+          $("[href='#{target}']").addClass "current-chapter"
         when "element"
           $(cue_item.target).addClass('current')
+          node_callbacks[cue_item.callback]?()
         when "chapter_end"
           # pause between chapters
           $video.pause()
@@ -131,15 +136,10 @@ $ ()->
 
   # Nodes
 
-
-
-  # bacteria track cursor
-  # $(document).on "mousemove", (e)->
-  #   console.log  e
-  #   # console.log /e.clientX, e.clientY
+  node_callbacks = {}
 
   # animate bacteria
-  do ()->
+  node_callbacks.bacteria = ()->
     $bacteria = $("#bacteria")
     $parent = $bacteria.parent()
     $bacteria.attr('width', $parent.width() ).attr('height', $parent.height())
@@ -155,7 +155,7 @@ $ ()->
         bacteria_data[x][y] = false
     # set initial infection
     for coords in [ [1,0],[2,1],[0,2],[1,2],[2,2], [4,0] ]
-      bacteria_data[ coords[0]+ 10 ][coords[1] + 10] = true
+      bacteria_data[ coords[0]+ 200 ][coords[1] + 20] = true
 
     neighbor_count = (x,y)->
       count = 0
@@ -164,7 +164,7 @@ $ ()->
           count += 1 if (-1 < this_x < width) and (-1 < this_y < height) and bacteria_data[this_x][this_y] and ([this_x, this_y] isnt [x, y])
       count
 
-    generation = ()->
+    do generation = ()->
       next_generation = []
       for x in [0..width]
         next_generation[x] = []

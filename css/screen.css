@@ -1,4 +1,4 @@
-/* line 17, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,38 +19,38 @@ time, mark, audio, video {
   font-size: 100%;
   vertical-align: baseline; }
 
-/* line 22, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1; }
 
-/* line 24, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none; }
 
-/* line 26, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 28, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle; }
 
-/* line 30, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none; }
-  /* line 103, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  /* line 103, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
   q:before, q:after, blockquote:before, blockquote:after {
     content: "";
     content: none; }
 
-/* line 32, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none; }
 
-/* line 116, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
@@ -245,11 +245,11 @@ aside {
 #bacteria {
   position: absolute;
   top: 0;
-  left: 100%;
+  left: 0;
   width: 100%;
-  height: 100%; }
+  height: 540px; }
 
-/* line 175, ../sass/screen.sass */
+/* line 176, ../sass/screen.sass */
 #lawsuits {
   width: 100px;
   height: 100px;
@@ -257,25 +257,25 @@ aside {
   top: 80px;
   left: 570px; }
 
-/* line 182, ../sass/screen.sass */
+/* line 183, ../sass/screen.sass */
 .decision-tree {
   border: 2px solid black;
   width: 100%;
   height: 150px;
   overflow: hidden; }
-  /* line 188, ../sass/screen.sass */
+  /* line 189, ../sass/screen.sass */
   .decision-tree .decision,
   .decision-tree .decision-big {
     height: 150px;
     border: 1px solid gray;
     overflow: hidden; }
-    /* line 194, ../sass/screen.sass */
+    /* line 195, ../sass/screen.sass */
     .decision-tree .decision p,
     .decision-tree .decision-big p {
       font-size: 16px;
       font-weight: bold;
       margin: 0.5em 0.25em 0.25em 0.5em; }
-    /* line 199, ../sass/screen.sass */
+    /* line 200, ../sass/screen.sass */
     .decision-tree .decision a,
     .decision-tree .decision-big a {
       background: #dddddd;
@@ -283,26 +283,26 @@ aside {
       margin: 0.5em;
       padding: 0.5em;
       width: 200px; }
-  /* line 206, ../sass/screen.sass */
+  /* line 207, ../sass/screen.sass */
   .decision-tree .decision-end {
     width: 100%; }
-  /* line 209, ../sass/screen.sass */
+  /* line 210, ../sass/screen.sass */
   .decision-tree .outcome {
     padding: 1em;
     height: 150px; }
-    /* line 213, ../sass/screen.sass */
+    /* line 214, ../sass/screen.sass */
     .decision-tree .outcome p {
       font-size: 18px;
       font-style: italic;
       font-weight: bold; }
-    /* line 218, ../sass/screen.sass */
+    /* line 219, ../sass/screen.sass */
     .decision-tree .outcome a {
       float: left;
       font-weight: bold;
       width: 50%; }
-  /* line 223, ../sass/screen.sass */
+  /* line 224, ../sass/screen.sass */
   .decision-tree #outcome-positive {
     background: lightgreen; }
-  /* line 226, ../sass/screen.sass */
+  /* line 227, ../sass/screen.sass */
   .decision-tree #outcome-negative {
     background: pink; }
