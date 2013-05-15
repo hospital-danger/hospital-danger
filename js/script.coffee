@@ -27,22 +27,18 @@ $ ()->
   cues = [
     {type:"chapter", title: "A Safe Place", target: "#safety", time: "00:19"}
 
-
     {type:"chapter", title: "Quality of Care", target: "#quality-of-care", time: "00:42"}
-
-
 
     {type:"chapter", title: "Deceptively Simple" , target: "#infection", time: "01:09"}
 
-
-
     {type:"chapter", title: "Deny & Defend", target: "#culpability", time: "01:34"}
-
-
 
     {type:"chapter", title: "Malpractice in Practice" , target: "#malpractice-in-practice", time: "01:59"}
 
-    {type:"chapter_end", time:"02:16", target: "#malpractice-in-practice-followup"}
+    {type:"element", target: "#lawsuits", time: "02:07"}
+
+
+    {type:"chapter_end", time:"02:16"}
 
     {type:"chapter", title: "Is It Getting Better?" , target: "#no-improvement", time: "02:17"}
   ]
@@ -53,10 +49,14 @@ $ ()->
   # build chapter markers
   $('ul', '.chapter-list').append( "<li><a href='#{cue.target}'>#{cue.title}</a></li>") for cue in chapters
 
-  toggle_play = ()->
+  $video.on "play", ()->
+    $play_button.removeClass("paused")
 
+  $video.on "pause", ()->
+    $play_button.addClass("paused")
+
+  toggle_play = ()->
     if $play_button.hasClass("paused") then $video.play() else $video.pause()
-    $play_button.toggleClass("paused")
 
   # play-pause button
   $play_button.add('#the-video').on "click", toggle_play
@@ -69,7 +69,6 @@ $ ()->
   goto_chapter = (target)->
     [chapter_index, cue_time] = [index, to_s(cue.time)] for cue, index in cues when (cue.target is target)
     $video.currentTime( cue_time ).play() if cue_time?
-    $play_button.removeClass('paused')
 
   # chapter selector
   $('a', '.chapter-list').on "click", (e)->
@@ -92,21 +91,45 @@ $ ()->
 
     if next_chapter then goto_chapter chapters[next_chapter]?.target
 
+  # timeline progress
+  do time_line = ()->
+    current_time = $video.currentTime()
+    duration = $video.duration() || 0
+    $time_bar.css {left: "#{current_time/duration * 100}%"}
+    $time_elapsed.text to_clock Math.floor current_time
+    $time_left.text to_clock Math.floor duration - current_time
+    setTimeout time_line, 200
+
   # set css animations to cue times
   $.each cues, (i, cue_item)->
     $video.cue to_s(cue_item.time), ()->
-
       switch cue_item.type
-        when "citation"
-          $('.citations').html "<a href='#{cue_item.target}' target='_blank'>#{cue_item.title}</a>"
+        # when "citation"
+        #   $('.citations').html "<a href='#{cue_item.target}' target='_blank'>#{cue_item.title}</a>"
         when "chapter"
+          $('.current').removeClass("current")
           $('.chapter-title').show().text( cue_item.title).delay(3000).fadeOut(2000)
-          $(".current.chapter").removeClass('current');
+        when "element"
+          $(cue_item.target).addClass('current')
         when "chapter_end"
-          # pause between chapters, and open the infographic
-          $(cue_item.target).addClass('current');
+          # pause between chapters
           $video.pause()
-          $play_button.addClass('paused')
+
+  $(".element").on "click", (e)->
+    e.preventDefault()
+    $video.pause()
+    target = $(this).attr "href"
+    $(target).addClass("current")
+
+
+  $(".close-aside").on "click", (e)->
+    e.preventDefault()
+    $(this).closest('aside').removeClass("current")
+    $video.play()
+
+  # Nodes
+
+
 
   # bacteria track cursor
   # $(document).on "mousemove", (e)->
@@ -156,6 +179,10 @@ $ ()->
       bacteria_data = next_generation
       setTimeout generation, 100
 
+
+
+
+
   # scroll decision tree
   $('a', '.decision-tree').on "click", (e)->
     e.preventDefault()
@@ -163,14 +190,7 @@ $ ()->
     $('.decision-tree').scrollTo(target, 1000)
 
   $('#end-decision-tree').on "click", (e)->
+
     e.preventDefault()
     $video.play()
 
-  # timeline progress
-  do time_line = ()->
-    current_time = $video.currentTime()
-    duration = $video.duration() || 0
-    $time_bar.css {left: "#{current_time/duration * 100}%"}
-    $time_elapsed.text to_clock Math.floor current_time
-    $time_left.text to_clock Math.floor duration - current_time
-    setTimeout time_line, 200

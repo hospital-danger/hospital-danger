@@ -88,11 +88,9 @@ video
   overflow: auto
   position: absolute
   top: 0
-  left: 100%
+  left: 0
   width: 100%
   height: 560px
-  &.current
-    left: 0
 
 .chapter-title
   position: absolute
@@ -134,6 +132,7 @@ aside
   padding: 1em
   border-left: 1px solid #aaa
   @include box-shadow(#eee -5px 0 15px)
+  @include transition(transform 1s)
 
   h2
     font-size: 22px
@@ -154,14 +153,30 @@ aside
       opacity: .5
       padding: 0 .2em 0 0
 
+.close-aside
+  font-size: 32px
+
 // Animated elements.
+.element, aside
+  display: block
+  position: absolute
+  @include translateX(2000px)
+  &.current
+    @include translateX(0)
 
 #bacteria
   position: absolute
   top: 0
-  left: 0
+  left: 100%
   width: 100%
   height: 100%
+
+#lawsuits
+  width: 100px
+  height: 100px
+  border: 2px solid yellow
+  top: 80px
+  left: 570px
 
 .decision-tree
   width: 400px

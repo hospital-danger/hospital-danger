@@ -59,9 +59,12 @@
         target: "#malpractice-in-practice",
         time: "01:59"
       }, {
+        type: "element",
+        target: "#lawsuits",
+        time: "02:07"
+      }, {
         type: "chapter_end",
-        time: "02:16",
-        target: "#malpractice-in-practice-followup"
+        time: "02:16"
       }, {
         type: "chapter",
         title: "Is It Getting Better?",
@@ -95,13 +98,18 @@
       cue = chapters[_i];
       $('ul', '.chapter-list').append("<li><a href='" + cue.target + "'>" + cue.title + "</a></li>");
     }
+    $video.on("play", function() {
+      return $play_button.removeClass("paused");
+    });
+    $video.on("pause", function() {
+      return $play_button.addClass("paused");
+    });
     toggle_play = function() {
       if ($play_button.hasClass("paused")) {
-        $video.play();
+        return $video.play();
       } else {
-        $video.pause();
+        return $video.pause();
       }
-      return $play_button.toggleClass("paused");
     };
     $play_button.add('#the-video').on("click", toggle_play);
     $('.progress').on("click", function(e) {
@@ -118,9 +126,8 @@
         }
       }
       if (cue_time != null) {
-        $video.currentTime(cue_time).play();
+        return $video.currentTime(cue_time).play();
       }
-      return $play_button.removeClass('paused');
     };
     $('a', '.chapter-list').on("click", function(e) {
       e.preventDefault();
@@ -144,20 +151,40 @@
         return goto_chapter((_ref2 = chapters[next_chapter]) != null ? _ref2.target : void 0);
       }
     });
+    (time_line = function() {
+      current_time = $video.currentTime();
+      duration = $video.duration() || 0;
+      $time_bar.css({
+        left: "" + (current_time / duration * 100) + "%"
+      });
+      $time_elapsed.text(to_clock(Math.floor(current_time)));
+      $time_left.text(to_clock(Math.floor(duration - current_time)));
+      return setTimeout(time_line, 200);
+    })();
     $.each(cues, function(i, cue_item) {
       return $video.cue(to_s(cue_item.time), function() {
         switch (cue_item.type) {
-          case "citation":
-            return $('.citations').html("<a href='" + cue_item.target + "' target='_blank'>" + cue_item.title + "</a>");
           case "chapter":
-            $('.chapter-title').show().text(cue_item.title).delay(3000).fadeOut(2000);
-            return $(".current.chapter").removeClass('current');
+            $('.current').removeClass("current");
+            return $('.chapter-title').show().text(cue_item.title).delay(3000).fadeOut(2000);
+          case "element":
+            return $(cue_item.target).addClass('current');
           case "chapter_end":
-            $(cue_item.target).addClass('current');
-            $video.pause();
-            return $play_button.addClass('paused');
+            return $video.pause();
         }
       });
+    });
+    $(".element").on("click", function(e) {
+      var target;
+      e.preventDefault();
+      $video.pause();
+      target = $(this).attr("href");
+      return $(target).addClass("current");
+    });
+    $(".close-aside").on("click", function(e) {
+      e.preventDefault();
+      $(this).closest('aside').removeClass("current");
+      return $video.play();
     });
     (function() {
       var $bacteria, $parent, bacteria_canvas, bacteria_data, coords, ctx, generation, height, neighbor_count, width, x, y, _j, _k, _l, _len1, _ref2;
@@ -231,20 +258,10 @@
       target = $(this).attr('href');
       return $('.decision-tree').scrollTo(target, 1000);
     });
-    $('#end-decision-tree').on("click", function(e) {
+    return $('#end-decision-tree').on("click", function(e) {
       e.preventDefault();
       return $video.play();
     });
-    return (time_line = function() {
-      current_time = $video.currentTime();
-      duration = $video.duration() || 0;
-      $time_bar.css({
-        left: "" + (current_time / duration * 100) + "%"
-      });
-      $time_elapsed.text(to_clock(Math.floor(current_time)));
-      $time_left.text(to_clock(Math.floor(duration - current_time)));
-      return setTimeout(time_line, 200);
-    })();
   });
 
 }).call(this);

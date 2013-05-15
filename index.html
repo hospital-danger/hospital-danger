@@ -29,146 +29,130 @@
       </div>
     </div>
     <h1 class="chapter-title"></h1>
-    <div class="citations">
-      <!-- citation needed -->
-    </div>
     <nav class="chapter-list">
       <ul>
         <!-- append chapters here -->
       </ul>
     </nav>
-    <section id="a-safe-place" class="chapter">
-      <h2>A Safe Place?</h2>
-      <div class="element" id="million">million</div>
-      <div class="element" id="people">
-        <!-- person icon, which will be duplicated -->
-      </div>
-      <div class="element" id="causes-of-death">
-        <div class="citation">http://www.cdc.gov/nchs/fastats/lcod.htm</div> <!-- TODO: how to represent our citations and external resources -->
-        <ul> <!-- Taken from http://www.cdc.gov/nchs/data/dvs/deaths_2010_release.pdf, starting on page 14 -->
-          <li>Heart Disease</li>
-          <li>Cancer</li>
-          <li id="hospital-injury-insertion-point"></li> <!-- Here we will insert 'Hospital injury' -->
-          <li>Chronic lower respiratory disease</li>
-          <li>Stroke</li>
-          <li>Accidents</li>
-          <li>Alzheimer&rsquo;s disease</li>
-          <li>Diabetes</li>
-          <li>Influenza and Pneumonia</li>
-          <li>Intentional self-harm</li>
-          <li>Septicemia</li>
-          <li>Chronic liver disease and cirrhosis</li>
-          <li>Essential hypertension and hypertensive renal disease</li>
-          <li>Parkinson&rsquo;s disease</li>
-          <li>Pneumonitis</li>
-          <li>Salmonella infections</li>
-          <li>Shigellosis and amebiasis</li>
-          <li>Certain other intestinal infections</li>
-          <li>Tuberculosis</li>
-          <li>Respiratory tuberculosis</li>
-          <li>Other tuberculosis</li>
-          <li>Whooping cough</li>
-          <li>Scarlet fever and erysipelas</li>
-          <li>Meningococcal infection</li>
-          <li>Septicemia</li>
-          <li>Syphilis</li>
-          <li>Acute poliomyelitis</li>
-          <li>Arthropod-borne viral encephalitis</li>
-          <li>Measles</li>
-          <li>Viral hepatitis</li>
-          <li>Human immunodeficiency virus </li>
-          <li>Malaria</li>
-          <li>Other and unspecified infectious and parasitic disease</li>
-          <li>Malignant neoplasm</li>
-        </ul>
-      </div>
-    </section>
-    <section id="quality-of-care" class="chapter">
-      <h2>Quality of Care</h2>
-      <div class="element" id="report-cards">
-        <div class="report-card" id="report-card-1"></div> <!-- report icon; three are drawn, then we replicate 147 times -->
-        <div class="report-card" id="report-card-2"></div>
-        <div class="report-card" id="report-card-3"></div>
-      </div>
-      <div class="element" id="us-map">
-        <!-- US map created from the report card squares -->
-      </div>
-    </section>
-    <section id="deceptively-simple" class="chapter">
-      <h2>Deceptively Simple</h2>
-      <canvas class="element" id="bacteria"> <!-- bacteria; three are drawn, then we replicate and animate -->
 
-      </canvas>
-    </section>
-    <section id="deny-and-defend" class="chapter">
-      <h2>Deny &amp; Defend</h2>
-      <div class="element" id="slashed-circle">
-        <!-- represents "deny and defend"; we can show those words on either side or animate other things into the slashed circle -->
-      </div>
-      <div class="element" id="open-circle">
-        <!-- represents the hospitals that are trying to take responsibility; we'll show a logo or a map here... -->
-      </div>
-    </section>
-    <section id="malpractice-in-practice-followup" class="chapter">
-      <div class="element" id="lawsuits">
-        <!-- lawsuit icon; one rectangle is drawn, then we replicate 49 times and cross out 49 of the 50 -->
-      </div>
-      <aside>
-        <h2>Can you sue?</h2>
-        <p>Probably not.</p>
-        <blockquote>
-          Quote from the study.
-        </blockquote>
-        <div class="decision-tree">
-          <div class="decision" id="decision-1">
-            <p>What happened to you?</p>
-            <a href="#outcome-negative">Infection</a>
-            <a href="#decision-3">Medication error</a>
-            <a href="#decision-3">Surgical error</a>
-          </div>
-          <div class="decision" id="decision-3">
-            <p>What is your identity?</p>
-            <a href="#outcome-negative">Low Income</a>
-            <a href="#outcome-negative">Elderly</a>
-            <a href="#outcome-negative">Non-white</a>
-            <a href="#decision-4">Upper-class white male</a>
-          </div>
-          <div class="decision" id-"decision-4">
-            <p>How severe was the injury?</p>
-            <a href="#outcome-negative">Emotional distress</a>
-            <a href="#outcome-negative">Minor injury</a>
-            <a href="#outcome-positive">Permanent injury</a>
-            <a href="#outcome-negative">Death</a>
-          </div>
-          <div class="decision" id="decision-5">
-            <p>What state are you from?</p>
-            <a href="#outcome-negative">TODO: lenient states]</a>
-            <a href="#outcome-positive">Any other state</a>
-          </div>
-          <div class="outcome" id="outcome-negative">
-            <p>No case.</p>
-            <a href="#decision-1">Try again</a>
-            <a id="end-decision-tree">Continue</a>
-          </div>
-          <div class="outcome" id="outcome-positive">
-            <p>Congratulations! You might have a case.</p>
-            <a href="#decision-1">Try again</a>
-            <a id="end-decision-tree">Continue</a>
-          </div>
+    <!-- A SAFE PLACE -->
+    <div class="element" id="million">million</div>
+    <div class="element" id="people">
+      <!-- person icon, which will be duplicated -->
+    </div>
+    <div class="element" id="causes-of-death">
+      <div class="citation">http://www.cdc.gov/nchs/fastats/lcod.htm</div> <!-- TODO: how to represent our citations and external resources -->
+      <ul> <!-- Taken from http://www.cdc.gov/nchs/data/dvs/deaths_2010_release.pdf, starting on page 14 -->
+        <li>Heart Disease</li>
+        <li>Cancer</li>
+        <li id="hospital-injury-insertion-point"></li> <!-- Here we will insert 'Hospital injury' -->
+        <li>Chronic lower respiratory disease</li>
+        <li>Stroke</li>
+        <li>Accidents</li>
+        <li>Alzheimer&rsquo;s disease</li>
+        <li>Diabetes</li>
+        <li>Influenza and Pneumonia</li>
+        <li>Intentional self-harm</li>
+        <li>Septicemia</li>
+        <li>Chronic liver disease and cirrhosis</li>
+        <li>Essential hypertension and hypertensive renal disease</li>
+        <li>Parkinson&rsquo;s disease</li>
+        <li>Pneumonitis</li>
+        <li>Salmonella infections</li>
+        <li>Shigellosis and amebiasis</li>
+        <li>Certain other intestinal infections</li>
+        <li>Tuberculosis</li>
+        <li>Respiratory tuberculosis</li>
+        <li>Other tuberculosis</li>
+        <li>Whooping cough</li>
+        <li>Scarlet fever and erysipelas</li>
+        <li>Meningococcal infection</li>
+        <li>Septicemia</li>
+        <li>Syphilis</li>
+        <li>Acute poliomyelitis</li>
+        <li>Arthropod-borne viral encephalitis</li>
+        <li>Measles</li>
+        <li>Viral hepatitis</li>
+        <li>Human immunodeficiency virus </li>
+        <li>Malaria</li>
+        <li>Other and unspecified infectious and parasitic disease</li>
+        <li>Malignant neoplasm</li>
+      </ul>
+    </div>
+    <!-- QUALITY OF CARE -->
+    <div class="element" id="report-cards">
+      <!-- report icon; three are drawn, then we replicate 147 times -->
+    </div>
+    <div class="element" id="us-map">
+      <!-- US map created from the report card squares -->
+    </div>
+    <!-- DECEPTIVELY SIMPLE -->
+    <canvas class="element" id="bacteria"></canvas> <!-- bacteria; three are drawn, then we replicate and animate -->
+    <!-- DENY AND DEFEND -->
+    <div class="element" id="slashed-circle">
+      <!-- represents "deny and defend"; we can show those words on either side or animate other things into the slashed circle -->
+    </div>
+    <div class="element" id="open-circle">
+      <!-- represents the hospitals that are trying to take responsibility; we'll show a logo or a map here... -->
+    </div>
+    <!-- MALPRACTICE IN PRACTICE -->
+    <a class="element" href="#can-you-sue" id="lawsuits">
+      <!-- lawsuit icon; one rectangle is drawn, then we replicate 49 times and cross out 49 of the 50 -->
+    </a>
+    <aside id="can-you-sue">
+      <a href="#" class="close-aside">&times;</a>
+      <h2>Can you sue?</h2>
+      <p>Probably not.</p>
+      <blockquote>
+        Quote from the study.
+      </blockquote>
+      <div class="decision-tree">
+        <div class="decision" id="decision-1">
+          <p>What happened to you?</p>
+          <a href="#outcome-negative">Infection</a>
+          <a href="#decision-3">Medication error</a>
+          <a href="#decision-3">Surgical error</a>
         </div>
-      </aside>
-    </section>
-    <section id="is-it-getting-better" class="chapter">
-      <h2>Is It Getting Better?</h2>
-      <div class="element" id="dollar-sign">
-        <!-- represents "penny pinching"; the dollar sign is shrunken or squeezed -->
+        <div class="decision" id="decision-3">
+          <p>What is your identity?</p>
+          <a href="#outcome-negative">Low Income</a>
+          <a href="#outcome-negative">Elderly</a>
+          <a href="#outcome-negative">Non-white</a>
+          <a href="#decision-4">Upper-class white male</a>
+        </div>
+        <div class="decision" id-"decision-4">
+          <p>How severe was the injury?</p>
+          <a href="#outcome-negative">Emotional distress</a>
+          <a href="#outcome-negative">Minor injury</a>
+          <a href="#outcome-positive">Permanent injury</a>
+          <a href="#outcome-negative">Death</a>
+        </div>
+        <div class="decision" id="decision-5">
+          <p>What state are you from?</p>
+          <a href="#outcome-negative">TODO: lenient states]</a>
+          <a href="#outcome-positive">Any other state</a>
+        </div>
+        <div class="outcome" id="outcome-negative">
+          <p>No case.</p>
+          <a href="#decision-1">Try again</a>
+          <a id="end-decision-tree">Continue</a>
+        </div>
+        <div class="outcome" id="outcome-positive">
+          <p>Congratulations! You might have a case.</p>
+          <a href="#decision-1">Try again</a>
+          <a id="end-decision-tree">Continue</a>
+        </div>
       </div>
-      <div class="element" id="dirty-hand">
-        <!-- represents "hand washing" or the lack thereof; we trace a line around the hand and then bring our bacteria back to crawl all over it -->
-        <div class="hand"></div> <!-- outline of hand -->
-        <div class="hand-bacterium"></div> <!-- one of many -->
-      </div>
-    </section>
+    </aside>
+    <!-- IS IT GETTING BETTER? -->
+    <div class="element" id="dollar-sign">
+      <!-- represents "penny pinching"; the dollar sign is shrunken or squeezed -->
+    </div>
+    <div class="element" id="dirty-hand">
+      <!-- represents "hand washing" or the lack thereof; we trace a line around the hand and then bring our bacteria back to crawl all over it -->
+      <div class="hand"></div> <!-- outline of hand -->
+      <div class="hand-bacterium"></div> <!-- one of many -->
+    </div>
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="js/popcorn.js"></script>
