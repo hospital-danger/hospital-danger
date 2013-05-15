@@ -10,3 +10,4 @@ fonts_dir = "fonts"
 output_style = :nested
 color_output = false
 preferred_syntax = :sass
+relative_assets = true

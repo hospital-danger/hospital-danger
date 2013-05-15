@@ -32,6 +32,9 @@ html
   background: #000
   font-size: 100%
 
+body
+  margin: 0
+
 a
   text-decoration: none
   color: inherit
@@ -42,48 +45,56 @@ em
 strong
   font-weight: bold
 
+header
+  background: $yellow
+  padding: .75em 0
+
+  img
+    display: block
+    margin: 0 auto
+
+// Video and container.
+
 .container
-  height: 615px
+  background: red
+  height: 800px
   margin: 0 auto
   overflow: hidden
   max-width: $container-width
 
-// Layout.
-
-header
-  background: $yellow
-  padding: .75em 0
-  text-align: center
-
-// Video and container.
-
 video
+  position: relative
   width: 100%
+  z-index: 1
   @include transform(scaleX(-1))
 
 .timeline
   width: 100%
 
-.time-left
-  position: absolute
-  top: 0
-  right: 0
-
 .video-controls
   cursor: pointer
+  margin-top: -60px
+  position: relative
+  z-index: 2
 
   .playpause
-    background-size: scale
+    background-size: contain
+    position: absolute
+    left: 15px
+    top: 0
+    width: 75px
+    height: 45px
 
     &.playing
-      background: image-url("play.png")
+      background-image: image-url("pause.png")
 
     &.paused
-      background: image-url("paused.png")
+      background-image: image-url("play.png")
 
   .progress
     overflow: hidden
     height: 30px
+    margin-left: 100px
     padding: .5em
     font-weight: bold
 
