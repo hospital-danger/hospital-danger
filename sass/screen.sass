@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6
   font-weight: bold
 
 .container
-  height: 700px
+  height: 615px
   margin: 0 auto
   overflow: hidden
   max-width: $container-width
@@ -121,14 +121,13 @@ video
     padding: .25em 0
     text-transform: uppercase
 
-
 aside
   background: #eee
   position: absolute
   top: 0
   right: 0
   width: 50%
-  height: 100%
+  height: 550px
   padding: 1em
   border-left: 1px solid #aaa
   @include box-shadow(#eee -5px 0 15px)
@@ -179,16 +178,48 @@ aside
   left: 570px
 
 .decision-tree
-  width: 400px
-  height: 120px
+  border: 2px solid #000
+  width: 100%
+  height: 150px
   overflow: hidden
 
   .decision,
   .decision-big
-    width: 300px
-    height: 100px
+    height: 150px
     border: 1px solid gray
+    overflow: hidden
+
+    p
+      font-size: 16px
+      font-weight: bold
+      margin: .5em .25em .25em .5em
+
+    a
+      background: #ddd
+      float: left
+      margin: .5em
+      padding: .5em
+      width: 200px
 
   .decision-end
     width: 100%
-    // float: none
+
+  .outcome
+    padding: 1em
+    height: 150px
+
+    p
+      font-size: 18px
+      font-style: italic
+      font-weight: bold
+
+    a
+      float: left
+      font-weight: bold
+      width: 50%
+
+  #outcome-positive
+    background: lightgreen
+
+  #outcome-negative
+    background: pink
