@@ -279,12 +279,13 @@ aside {
 .element, aside {
   display: block;
   position: absolute;
+  z-index: 1;
   -webkit-transform: translateX(2000px);
   -moz-transform: translateX(2000px);
   -ms-transform: translateX(2000px);
   -o-transform: translateX(2000px);
   transform: translateX(2000px); }
-  /* line 201, ../sass/screen.sass */
+  /* line 202, ../sass/screen.sass */
   .element.current, aside.current {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
@@ -292,48 +293,48 @@ aside {
     -o-transform: translateX(0);
     transform: translateX(0); }
 
-/* line 204, ../sass/screen.sass */
+/* line 205, ../sass/screen.sass */
 #people {
   position: absolute;
   width: 100%;
   top: 300px;
   left: 0; }
-  /* line 210, ../sass/screen.sass */
+  /* line 211, ../sass/screen.sass */
   #people .person {
     min-width: 50px;
     min-height: 50px;
     float: left;
     border: 1px solid yellow; }
-    /* line 216, ../sass/screen.sass */
+    /* line 217, ../sass/screen.sass */
     #people .person blockquote {
       position: absolute;
       width: 200px;
       background-color: white;
       display: none; }
-  /* line 222, ../sass/screen.sass */
+  /* line 223, ../sass/screen.sass */
   #people .person:hover blockquote {
     display: block; }
-  /* line 225, ../sass/screen.sass */
+  /* line 226, ../sass/screen.sass */
   #people.current-2 .dead {
     border-color: red; }
 
-/* line 228, ../sass/screen.sass */
+/* line 229, ../sass/screen.sass */
 #causes-of-death {
   position: absolute;
   right: 0;
   bottom: 0; }
-  /* line 233, ../sass/screen.sass */
+  /* line 234, ../sass/screen.sass */
   #causes-of-death.current {
     bottom: 100%; }
 
-/* line 236, ../sass/screen.sass */
+/* line 237, ../sass/screen.sass */
 #bacteria {
   position: absolute;
   top: 0;
   left: 440px;
   width: 550px;
   height: 530px;
-  pointer-events: none; }
+  border: 1px solid #ffd91f; }
 
 /* line 245, ../sass/screen.sass */
 #lawsuits {

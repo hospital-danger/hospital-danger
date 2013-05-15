@@ -86,7 +86,7 @@
     </aside>
 
     <!-- DECEPTIVELY SIMPLE -->
-    <canvas class="element" id="bacteria" href="#judy-gaines" width="550" height="530"></canvas> <!-- bacteria; three are drawn, then we replicate and animate -->
+    <a class="element" id="bacteria" href="#judy-gaines"></a> <!-- bacteria; three are drawn, then we replicate and animate -->
 
     <aside id="judy-gaines">
       <a href="#" class="close-aside">&times;</a>

@@ -197,6 +197,7 @@ aside
 .element, aside
   display: block
   position: absolute
+  z-index: 1
   @include translateX(2000px)
   &.current
     @include translateX(0)
@@ -239,8 +240,7 @@ aside
   left: $container-width - 550px
   width: 550px
   height: 530px
-  pointer-events: none
-  // border: 1px solid $yellow
+  border: 1px solid $yellow
 
 #lawsuits
   width: 100px
