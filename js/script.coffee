@@ -25,6 +25,8 @@ $ ()->
   chapter_index = 0
 
   cues = [
+    {type: "chapter", title: "Intro", target: "#intro", time: "00:00", hide_title: true}
+
     {type: "chapter", title: "A Safe Place", target: "#safety", time: "00:20"}
     {type: "element", target: "#people", time: "00:33"}
     {type: "element-next", target: "#people", time: "00:40"}
@@ -45,7 +47,9 @@ $ ()->
     # {type: "element", target: "#lawsuits", time: "02:07"}
     {type: "chapter_end", time:"02:43"}
 
-    {type:"chapter", title: "Is It Getting Better?" , target: "#no-improvement", time: "02:44"}
+    {type: "chapter", title: "Getting Better?" , target: "#no-improvement", time: "02:44"}
+
+    {type: "chapter", title: "End", target: "#end", time: "03:30", hide_title: true}
   ]
 
   chapters = (cue for cue in cues when (cue.type is "chapter"))
@@ -115,7 +119,7 @@ $ ()->
         when "chapter"
           $('.current').removeClass("current")
           $('.current-2').removeClass("current-2")
-          $('.chapter-title').show().text( cue_item.title).delay(3000).fadeOut(2000)
+          $('.chapter-title').show().text( cue_item.title).delay(3000).fadeOut(2000) unless cue_item.hide_title
           $('.current-chapter').removeClass "current-chapter"
           $("[href='#{cue_item.target}']").addClass "current-chapter"
         when "element"
