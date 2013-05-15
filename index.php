@@ -16,8 +16,8 @@
   </header>
   <div class="container">
     <video id="the-video">
-      <source src="video/mp4/video.mp4" />
-      <source src="video/webm/video.webm" />
+      <source src="video/video.mp4" />
+      <source src="video/video.webm" />
     </video>
     <div class="video-controls">
       <div class="button-play paused" title="Play/Pause video">Play/pause</div>
