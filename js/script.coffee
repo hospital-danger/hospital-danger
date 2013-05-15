@@ -35,7 +35,7 @@ $ ()->
 
     {type:"chapter", title: "Deceptively Simple" , target: "#infection", time: "01:09"}
     {type:"element", target: "#bacteria", callback: "bacteria", time: "01:18"}
-    {type:"chapter_end", time: "01:34"}
+    {type:"chapter_end", time: "01:33"}
 
     {type:"chapter", title: "Deny & Defend", target: "#culpability", time: "01:34"}
     {type:"chapter_end", time: "01:58"}
