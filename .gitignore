@@ -12,5 +12,4 @@ Thumbs.db
 .sass-cache/
 
 # Project files
-video/webm/
-video/mp4/
+video/
