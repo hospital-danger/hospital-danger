@@ -1,4 +1,4 @@
-# Hospitals May Be Hazardous to Your Health
+# Your Hospital May Be Hazardous to Your Health
 
 An interactive web presentation on the dangers of in-hospital injury.
 
