@@ -22,7 +22,7 @@ h4
 
 // Base.
 
-$container-width: 980px
+$container-width: 960px
 
 *
   position: relative
@@ -65,7 +65,6 @@ video
   position: relative
   width: 100%
   z-index: 1
-  @include transform(scaleX(-1))
 
 .timeline
   width: 100%
@@ -101,11 +100,11 @@ video
     top: 0
     left: 0
     margin-left: -100%
-    width: 98.1%
+    width: 98.5%
     @include transition(left .5s)
 
   .time-bar
-    top: 27px
+    top: 30px
     border-top: 3px solid rgba(255, 255, 255, .5)
 
   .buffer-bar
@@ -114,15 +113,15 @@ video
 .chapter-list
   position: absolute
   z-index: 3
-  bottom: 23px
-  left: 75px
+  bottom: 31px
+  left: 76px
   float: left
   padding: .5em 1em
   width: 100%
 
   li
     float: left
-    margin: 0 .57em
+    margin: 0 .5em
 
   a
     background: rgba(255, 255, 255, .5)
@@ -131,9 +130,10 @@ video
     font-weight: bold
     display: block
     letter-spacing: -1px
-    padding: .25em .5em
+    padding: .4em .5em .25em .5em
     text-transform: uppercase
     @include border-radius(5px 5px 0 0)
+    @include transition(color .1s)
 
   a:hover,
   .current-chapter
