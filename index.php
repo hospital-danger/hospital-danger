@@ -4,6 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- <title>Could this hospital kill you?</title> -->
+  <!-- <title>Hospitals: basically graveyards</title> -->
+  <!-- <title>Hospitals: a prescription for death</title> -->
+  <!-- <title>This hospital will make orphans of our children</title> -->
   <title>Your Hospital May Be Hazardous to Your Health</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/screen.css">
@@ -82,7 +86,7 @@
     </aside>
 
     <!-- DECEPTIVELY SIMPLE -->
-    <canvas class="element" id="bacteria" href="#judy-gaines"></canvas> <!-- bacteria; three are drawn, then we replicate and animate -->
+    <canvas class="element" id="bacteria" href="#judy-gaines" width="550" height="530"></canvas> <!-- bacteria; three are drawn, then we replicate and animate -->
 
     <aside id="judy-gaines">
       <a href="#" class="close-aside">&times;</a>

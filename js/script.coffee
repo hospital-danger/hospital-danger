@@ -103,13 +103,12 @@ $ ()->
     if next_chapter then goto_chapter chapters[next_chapter]?.target
 
   # timeline progress
-  do time_line = ()->
+  $video.on "timeupdate", ()->
     current_time = $video.currentTime()
     duration = $video.duration() || 0
     $time_bar.css {left: "#{current_time/duration * 100}%"}
     $time_elapsed.text to_clock Math.floor current_time
     $time_left.text to_clock Math.floor duration - current_time
-    setTimeout time_line, 200
 
   # set css animations to cue times
   $.each cues, (i, cue_item)->
@@ -152,13 +151,12 @@ $ ()->
   # animate bacteria
   node_callbacks.bacteria = ()->
     $bacteria = $("#bacteria")
-    $parent = $bacteria.parent()
-    $bacteria.attr('width', $parent.width() ).attr('height', $parent.height())
     bacteria_canvas = $bacteria[0]
     ctx = bacteria_canvas.getContext "2d"
     ctx.clearRect(0,0,bacteria_canvas.width,bacteria_canvas.height)
-    width = $bacteria.width() / 4
-    height = $bacteria.height() / 4
+    width = bacteria_canvas.width / 4
+    height = bacteria_canvas.height / 4
+    generation_count = 0
     # initialize data
     bacteria_data = []
     for x in [0.. width]
@@ -167,7 +165,8 @@ $ ()->
         bacteria_data[x][y] = false
     # set initial infection
     for coords in [ [1,0],[2,1],[0,2],[1,2],[2,2], [4,0] ]
-      bacteria_data[ coords[0]+ 185 ][coords[1] + 57] = true
+      console.log bacteria_data[coords[0]][coords[1]]
+      bacteria_data[ coords[0] + 75 ][ coords[1] + 55 ] = true
 
     neighbor_count = (x,y)->
       count = 0
@@ -177,15 +176,22 @@ $ ()->
       count
 
     do generation = ()->
+      generation_count += 1
       next_generation = []
       for x in [0..width]
         next_generation[x] = []
         for y in [0..height]
           switch neighbor_count(x,y)
-            when 2,4 then next_generation[x][y] = bacteria_data[x][y]
+            when 4 then next_generation[x][y] = bacteria_data[x][y]
             when 3
               next_generation[x][y] = true
               ctx.fillRect(x*4, y*4, 4, 4) if not bacteria_data[x][y]
+            when 2
+              if generation_count < 150 or generation_count % 3 is 0
+                next_generation[x][y] = bacteria_data[x][y]
+              else
+                next_generation[x][y] = false
+                if bacteria_data[x][y] then ctx.clearRect(x*4, y*4, 4, 4)
             else
               next_generation[x][y] = false
               if bacteria_data[x][y] then ctx.clearRect(x*4, y*4, 4, 4)
