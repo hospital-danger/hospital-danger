@@ -110,10 +110,12 @@
     </aside>
 
     <!-- DECEPTIVELY SIMPLE -->
-    <canvas class="element" id="bacteria"></canvas> <!-- bacteria; three are drawn, then we replicate and animate -->
+    <canvas class="element" id="bacteria" href="#judy-gaines"></canvas> <!-- bacteria; three are drawn, then we replicate and animate -->
 
-    <aside id="infection-stories">
+    <aside id="judy-gaines">
       <a href="#" class="close-aside">&times;</a>
+      <div>insert video here</div>
+      <h2>Judy's story</h2>
       <p>Woman missing knee supplementary material</p>
     </aside>
 
