@@ -15,7 +15,7 @@ to_clock = (seconds)->
 $ ()->
   $video = Popcorn('#the-video')
 
-  $play_button = $('.button-play')
+  $play_button = $('.playpause')
   $time_bar = $('.time-bar')
   $buffer_bar = $('.buffer_bar')
   $time_left = $('.time-left')
