@@ -146,10 +146,10 @@ video {
     background-size: scale; }
     /* line 78, ../sass/screen.sass */
     .video-controls .playpause.playing {
-      background: url('/img/play.png'); }
+      background: url('../img/play_button.png?1368643440'); }
     /* line 81, ../sass/screen.sass */
     .video-controls .playpause.paused {
-      background: url('/img/paused.png'); }
+      background: url('../img/pause_button.png?1368643440'); }
   /* line 84, ../sass/screen.sass */
   .video-controls .progress {
     overflow: hidden;
@@ -318,12 +318,12 @@ aside {
 #bacteria {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 540px;
+  left: 440px;
+  width: 550px;
+  height: 530px;
   pointer-events: none; }
 
-/* line 234, ../sass/screen.sass */
+/* line 235, ../sass/screen.sass */
 #lawsuits {
   width: 100px;
   height: 100px;
@@ -331,25 +331,25 @@ aside {
   top: 80px;
   left: 570px; }
 
-/* line 241, ../sass/screen.sass */
+/* line 242, ../sass/screen.sass */
 .decision-tree {
   border: 2px solid black;
   width: 100%;
   height: 150px;
   overflow: hidden; }
-  /* line 247, ../sass/screen.sass */
+  /* line 248, ../sass/screen.sass */
   .decision-tree .decision,
   .decision-tree .decision-big {
     height: 150px;
     border: 1px solid gray;
     overflow: hidden; }
-    /* line 253, ../sass/screen.sass */
+    /* line 254, ../sass/screen.sass */
     .decision-tree .decision p,
     .decision-tree .decision-big p {
       font-size: 16px;
       font-weight: bold;
       margin: 0.5em 0.25em 0.25em 0.5em; }
-    /* line 258, ../sass/screen.sass */
+    /* line 259, ../sass/screen.sass */
     .decision-tree .decision a,
     .decision-tree .decision-big a {
       background: #dddddd;
@@ -357,26 +357,26 @@ aside {
       margin: 0.5em;
       padding: 0.5em;
       width: 200px; }
-  /* line 265, ../sass/screen.sass */
+  /* line 266, ../sass/screen.sass */
   .decision-tree .decision-end {
     width: 100%; }
-  /* line 268, ../sass/screen.sass */
+  /* line 269, ../sass/screen.sass */
   .decision-tree .outcome {
     padding: 1em;
     height: 150px; }
-    /* line 272, ../sass/screen.sass */
+    /* line 273, ../sass/screen.sass */
     .decision-tree .outcome p {
       font-size: 18px;
       font-style: italic;
       font-weight: bold; }
-    /* line 277, ../sass/screen.sass */
+    /* line 278, ../sass/screen.sass */
     .decision-tree .outcome a {
       float: left;
       font-weight: bold;
       width: 50%; }
-  /* line 282, ../sass/screen.sass */
+  /* line 283, ../sass/screen.sass */
   .decision-tree #outcome-positive {
     background: lightgreen; }
-  /* line 285, ../sass/screen.sass */
+  /* line 286, ../sass/screen.sass */
   .decision-tree #outcome-negative {
     background: pink; }
