@@ -150,6 +150,9 @@ $ ()->
     setTimeout ()->
       $video.play()
     , 1000
+    setTimeout ()->
+      $('.introduction').hide()
+    , 5000
 
   # Nodes
 
@@ -162,7 +165,6 @@ $ ()->
     $('.text-container', $judy).on "scroll", ()->
       pos = $(this).scrollTop()
       index = Math.floor( pos / height * 4)
-      # $('.current-image')
       $('img', $images).removeClass('current-image').eq(index).addClass('current-image')
 
 
