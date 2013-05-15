@@ -21,7 +21,7 @@
       <source src="video/video.webm" />
     </video>
     <div class="video-controls">
-      <div class="button-play paused" title="Play/Pause video">Play/pause</div>
+      <div class="playpause paused" title="Play/Pause video"></div>
       <div class="progress">
         <div class="buffer-bar"></div>
         <div class="time-bar"></div>
@@ -64,32 +64,6 @@
         <li>Accidents</li>
         <li>Alzheimer&rsquo;s disease</li>
         <li>Diabetes</li>
-        <li>Influenza and Pneumonia</li>
-        <li>Intentional self-harm</li>
-        <li>Septicemia</li>
-        <li>Chronic liver disease and cirrhosis</li>
-        <li>Essential hypertension and hypertensive renal disease</li>
-        <li>Parkinson&rsquo;s disease</li>
-        <li>Pneumonitis</li>
-        <li>Salmonella infections</li>
-        <li>Shigellosis and amebiasis</li>
-        <li>Certain other intestinal infections</li>
-        <li>Tuberculosis</li>
-        <li>Respiratory tuberculosis</li>
-        <li>Other tuberculosis</li>
-        <li>Whooping cough</li>
-        <li>Scarlet fever and erysipelas</li>
-        <li>Meningococcal infection</li>
-        <li>Septicemia</li>
-        <li>Syphilis</li>
-        <li>Acute poliomyelitis</li>
-        <li>Arthropod-borne viral encephalitis</li>
-        <li>Measles</li>
-        <li>Viral hepatitis</li>
-        <li>Human immunodeficiency virus </li>
-        <li>Malaria</li>
-        <li>Other and unspecified infectious and parasitic disease</li>
-        <li>Malignant neoplasm</li>
       </ul>
     </div>
     <aside id="safe-place">
