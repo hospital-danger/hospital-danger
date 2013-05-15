@@ -48,7 +48,8 @@ strong
 // Layout.
 
 .container
-  height: 590px
+  background: red
+  height: 594px
   margin: 0 auto
   overflow: hidden
   max-width: $container-width
@@ -60,15 +61,6 @@ header
   img
     display: block
     margin: 0 auto
-
-// Video and container.
-
-.container
-  background: red
-  height: 800px
-  margin: 0 auto
-  overflow: hidden
-  max-width: $container-width
 
 video
   position: relative
@@ -122,7 +114,31 @@ video
   .buffer-bar
     background-color: #333
 
-// Layout.
+.chapter-list
+  position: absolute
+  bottom: 0
+  left: 0
+  background-color: $yellow
+  float: left
+  padding: .5em 1em
+  width: 100%
+
+  li
+    float: left
+    margin: 0 .75em
+
+  a
+    color: black
+    font-size: 13px
+    font-weight: bold
+    display: block
+    padding: .25em 0
+    text-transform: uppercase
+
+  .current-chapter
+    color: $yellow
+
+// Chapters.
 
 .chapter
   height: 500px
@@ -142,30 +158,6 @@ video
   text-align: right
   text-shadow: 1px 1px 3px black
   width: 40%
-
-.chapter-list
-  position: absolute
-  bottom: 31px
-  left: 0
-  float: left
-  padding: .5em 1em
-  background-color: rgba(255,255,255,.75)
-  width: 100%
-
-  li
-    float: left
-    margin: 0 .75em
-
-  a
-    color: black
-    font-size: 13px
-    font-weight: bold
-    display: block
-    padding: .25em 0
-    text-transform: uppercase
-
-  .current-chapter
-    color: $yellow
 
 aside
   background: #eee
