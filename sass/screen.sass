@@ -1,9 +1,24 @@
 @import "compass"
 @import "compass/reset"
 
-// Variables
+@import "fonts"
+
+// Variables.
 
 $yellow: #ffd91f
+
+// Type.
+
+html
+  font-family: 'Open Sans', sans-serif
+  -webkit-font-smoothing: antialiased
+
+h1,
+h2,
+h3,
+h4
+  font-family: 'League Gothic'
+  text-transform: uppercase
 
 // Base.
 
@@ -16,10 +31,10 @@ $container-width: 990px
 html
   background: #000
   font-size: 100%
-  font-family: sans-serif
 
 a
-  text-decoration: underline
+  text-decoration: none
+  color: inherit
 
 em
   font-style: italic
@@ -36,7 +51,7 @@ h1, h2, h3, h4, h5, h6
   overflow: hidden
   max-width: $container-width
 
-// Layout
+// Layout.
 
 header
   background: $yellow
@@ -158,6 +173,7 @@ aside
   font-size: 32px
 
 // Animated elements.
+
 .element, aside
   display: block
   position: absolute
