@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+s<!DOCTYPE html>
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
@@ -17,8 +17,8 @@
   </header>
   <div class="container">
     <video id="the-video">
-      <source src="video/video.mp4" />
-      <source src="video/video.webm" />
+      <source src="video/hazardoushospitals.mp4" />
+      <source src="video/hazardoushospitals.webm" />
     </video>
     <div class="video-controls">
       <div class="playpause paused" title="Play/Pause video"></div>
