@@ -350,25 +350,39 @@ aside {
   top: 80px;
   left: 570px; }
 
-/* line 254, ../sass/screen.sass */
+/* line 255, ../sass/screen.sass */
+#map .state {
+  position: relative; }
+  /* line 258, ../sass/screen.sass */
+  #map .state:hover {
+    -webkit-transform: scale;
+    -moz-transform: scale;
+    -ms-transform: scale;
+    -o-transform: scale;
+    transform: scale; }
+  /* line 261, ../sass/screen.sass */
+  #map .state .blurb {
+    position: absolute; }
+
+/* line 264, ../sass/screen.sass */
 .decision-tree {
   border: 2px solid black;
   width: 100%;
   height: 150px;
   overflow: hidden; }
-  /* line 260, ../sass/screen.sass */
+  /* line 270, ../sass/screen.sass */
   .decision-tree .decision,
   .decision-tree .decision-big {
     height: 150px;
     border: 1px solid gray;
     overflow: hidden; }
-    /* line 266, ../sass/screen.sass */
+    /* line 276, ../sass/screen.sass */
     .decision-tree .decision p,
     .decision-tree .decision-big p {
       font-size: 16px;
       font-weight: bold;
       margin: 0.5em 0.25em 0.25em 0.5em; }
-    /* line 271, ../sass/screen.sass */
+    /* line 281, ../sass/screen.sass */
     .decision-tree .decision a,
     .decision-tree .decision-big a {
       background: #dddddd;
@@ -376,26 +390,26 @@ aside {
       margin: 0.5em;
       padding: 0.5em;
       width: 200px; }
-  /* line 278, ../sass/screen.sass */
+  /* line 288, ../sass/screen.sass */
   .decision-tree .decision-end {
     width: 100%; }
-  /* line 281, ../sass/screen.sass */
+  /* line 291, ../sass/screen.sass */
   .decision-tree .outcome {
     padding: 1em;
     height: 150px; }
-    /* line 285, ../sass/screen.sass */
+    /* line 295, ../sass/screen.sass */
     .decision-tree .outcome p {
       font-size: 18px;
       font-style: italic;
       font-weight: bold; }
-    /* line 290, ../sass/screen.sass */
+    /* line 300, ../sass/screen.sass */
     .decision-tree .outcome a {
       float: left;
       font-weight: bold;
       width: 50%; }
-  /* line 295, ../sass/screen.sass */
+  /* line 305, ../sass/screen.sass */
   .decision-tree #outcome-positive {
     background: lightgreen; }
-  /* line 298, ../sass/screen.sass */
+  /* line 308, ../sass/screen.sass */
   .decision-tree #outcome-negative {
     background: pink; }

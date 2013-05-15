@@ -14,15 +14,6 @@
       "fileType" : 2,
       "debugStyle" : 0
     },
-    "\/index.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/css\/screen.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -31,6 +22,15 @@
       "inputAbbreviatedPath" : "\/css\/screen.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
+    },
+    "\/index.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/index.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/js\/jquery.scrollTo.js" : {
       "ignoreWasSetByUser" : 0,
@@ -77,17 +77,6 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/js\/jquery.mousewheel.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.mousewheel.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery.mousewheel-min.js",
-      "fileType" : 64
-    },
     "\/img\/background.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -98,6 +87,17 @@
       "outputAbbreviatedPath" : "\/img\/background.jpg",
       "initialSize" : 114485,
       "fileType" : 4096
+    },
+    "\/js\/jquery.mousewheel.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/jquery.mousewheel.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/jquery.mousewheel-min.js",
+      "fileType" : 64
     },
     "\/img\/pause.png" : {
       "ignoreWasSetByUser" : 0,
