@@ -126,8 +126,10 @@
         }
       }
       if (cue_time != null) {
-        return $video.currentTime(cue_time).play();
+        $video.currentTime(cue_time).play();
       }
+      $('.current-chapter').removeClass("current-chapter");
+      return $("[href='" + target + "']").addClass("current-chapter");
     };
     $('a', '.chapter-list').on("click", function(e) {
       e.preventDefault();

@@ -69,6 +69,8 @@ $ ()->
   goto_chapter = (target)->
     [chapter_index, cue_time] = [index, to_s(cue.time)] for cue, index in cues when (cue.target is target)
     $video.currentTime( cue_time ).play() if cue_time?
+    $('.current-chapter').removeClass "current-chapter"
+    $("[href='#{target}']").addClass "current-chapter"
 
   # chapter selector
   $('a', '.chapter-list').on "click", (e)->
