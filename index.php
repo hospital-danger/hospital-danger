@@ -16,8 +16,14 @@
 </head>
 
 <body>
-  <header>
-    <img src="img/header.png">
+  <div class="introduction">
+    <video autoplay="autoplay" loop="loop">
+      <source src="video/background_loop_blur.mp4" />
+      <source src="video/background_loop_blur.webm" />
+    </video>
+  </div>
+  <header class="intro">
+    <img src="img/header.png" >
   </header>
   <div class="container">
     <video id="the-video">

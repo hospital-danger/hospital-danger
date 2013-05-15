@@ -144,6 +144,13 @@ $ ()->
     $(this).closest('aside').removeClass("current")
     $video.play()
 
+  $('header.intro').on "click", ()->
+    $(this).removeClass('intro')
+    $('.introduction').addClass('finished')
+    setTimeout ()->
+      $video.play()
+    , 1000
+
   # Nodes
 
   node_callbacks = {}
