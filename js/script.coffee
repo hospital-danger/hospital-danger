@@ -26,20 +26,20 @@ $ ()->
 
   cues = [
     {type:"chapter", title: "A Safe Place", target: "#safety", time: "00:19"}
+    {type:"chapter_end", time: "00:41"}
 
     {type:"chapter", title: "Quality of Care", target: "#quality-of-care", time: "00:42"}
+    {type:"chapter_end", time: "01:08"}
 
     {type:"chapter", title: "Deceptively Simple" , target: "#infection", time: "01:09"}
-
     {type:"element", target: "#bacteria", callback: "bacteria", time: "01:18"}
+    {type:"chapter_end", time: "01:34"}
 
     {type:"chapter", title: "Deny & Defend", target: "#culpability", time: "01:34"}
+    {type:"chapter_end", time: "01:58"}
 
     {type:"chapter", title: "Malpractice in Practice" , target: "#malpractice-in-practice", time: "01:59"}
-
     {type:"element", target: "#lawsuits", time: "02:07"}
-
-
     {type:"chapter_end", time:"02:16"}
 
     {type:"chapter", title: "Is It Getting Better?" , target: "#no-improvement", time: "02:17"}
@@ -114,7 +114,7 @@ $ ()->
           $('.current').removeClass("current")
           $('.chapter-title').show().text( cue_item.title).delay(3000).fadeOut(2000)
           $('.current-chapter').removeClass "current-chapter"
-          $("[href='#{target}']").addClass "current-chapter"
+          $("[href='#{cue_item.target}']").addClass "current-chapter"
         when "element"
           $(cue_item.target).addClass('current')
           node_callbacks[cue_item.callback]?()

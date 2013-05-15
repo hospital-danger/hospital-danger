@@ -79,6 +79,11 @@
         <li>Malignant neoplasm</li>
       </ul>
     </div>
+    <aside id="safe-place">
+      <a href="#" class="close-aside">&times;</a>
+      <h2>Interactive element for list of horrible diseases</h2>
+
+    </aside>
     <!-- QUALITY OF CARE -->
     <div class="element" id="report-cards">
       <!-- report icon; three are drawn, then we replicate 147 times -->
