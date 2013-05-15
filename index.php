@@ -16,8 +16,8 @@
   </header>
   <div class="container">
     <video id="the-video">
-      <source src="video/mp4/video.mp4" />
-      <source src="video/webm/video.webm" />
+      <source src="video/video.mp4" />
+      <source src="video/video.webm" />
     </video>
     <div class="video-controls">
       <div class="button-play paused" title="Play/Pause video">Play/pause</div>
@@ -120,7 +120,7 @@
           <a href="#outcome-negative">Non-white</a>
           <a href="#decision-4">Upper-class white male</a>
         </div>
-        <div class="decision" id-"decision-4">
+        <div class="decision" id="decision-4">
           <p>How severe was the injury?</p>
           <a href="#outcome-negative">Emotional distress</a>
           <a href="#outcome-negative">Minor injury</a>
