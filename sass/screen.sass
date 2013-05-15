@@ -42,9 +42,6 @@ em
 strong
   font-weight: bold
 
-h1, h2, h3, h4, h5, h6
-  font-weight: bold
-
 .container
   height: 615px
   margin: 0 auto
@@ -73,6 +70,15 @@ video
 
 .video-controls
   cursor: pointer
+
+  .playpause
+    background-size: scale
+
+    &.playing
+      background: image-url("play.png")
+
+    &.paused
+      background: image-url("paused.png")
 
   .progress
     overflow: hidden
@@ -109,11 +115,13 @@ video
 
 .chapter-title
   position: absolute
-  top: 0
-  left: 0
-  font-size: 2em
+  top: 40%
+  right: 3%
+  font-size: 5em
   color: white
+  text-align: right
   text-shadow: 1px 1px 1px black
+  width: 40%
 
 .chapter-list
   position: absolute

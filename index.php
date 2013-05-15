@@ -21,7 +21,7 @@
       <source src="video/video.webm" />
     </video>
     <div class="video-controls">
-      <div class="button-play paused" title="Play/Pause video">Play/pause</div>
+      <div class="playpause paused" title="Play/Pause video"></div>
       <div class="progress">
         <div class="buffer-bar"></div>
         <div class="time-bar"></div>
@@ -51,9 +51,6 @@
           This person died a horrible death
         </blockquote>
       </div>
-
-
-
       <!-- person icon, which will be duplicated -->
     </div>
     <div class="element" id="causes-of-death">
