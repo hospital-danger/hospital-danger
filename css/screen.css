@@ -1,39 +1,402 @@
-/*
-Syntax error: Invalid mixin "======".
-        on line 49 of /Users/matthewmcvickar/Sites/ocupop/hazardoushospitals/sass/screen.sass
+/* line 17, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
 
-Backtrace:
-/Users/matthewmcvickar/Sites/ocupop/hazardoushospitals/sass/screen.sass:49
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../../scss/lib/sass/../sass/engine.rb:839:in `parse_mixin_definition'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../../scss/lib/sass/../sass/engine.rb:570:in `parse_line'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../../scss/lib/sass/../sass/engine.rb:471:in `build_tree'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../../scss/lib/sass/../sass/engine.rb:490:in `append_children'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../../scss/lib/sass/../sass/engine.rb:489:in `each'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../../scss/lib/sass/../sass/engine.rb:489:in `append_children'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../../scss/lib/sass/../sass/engine.rb:345:in `_to_tree'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../../scss/lib/sass/../sass/engine.rb:315:in `_render'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../../scss/lib/sass/../sass/engine.rb:262:in `render'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../lib/compass/compiler.rb:140:in `compile'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../lib/compass/compiler.rb:126:in `timed'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../lib/compass/compiler.rb:139:in `compile'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../lib/compass/logger.rb:45:in `red'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../lib/compass/compiler.rb:138:in `compile'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../lib/compass/compiler.rb:118:in `compile_if_required'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../lib/compass/compiler.rb:103:in `run'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../lib/compass/compiler.rb:101:in `each'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../lib/compass/compiler.rb:101:in `run'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../lib/compass/compiler.rb:126:in `timed'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../lib/compass/compiler.rb:100:in `run'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../lib/compass/commands/update_project.rb:45:in `perform'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../lib/compass/commands/base.rb:18:in `execute'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../lib/compass/commands/project_base.rb:19:in `execute'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/../lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/compass:43
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/compass:57:in `call'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/compass:57
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid mixin \"======\".\A         on line 49 of /Users/matthewmcvickar/Sites/ocupop/hazardoushospitals/sass/screen.sass"; }
+/* line 22, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+@font-face {
+  font-family: "League Gothic";
+  src: url("../fonts/leaguegothic-italic-webfont.eot");
+  src: url("../fonts/leaguegothic-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/leaguegothic-italic-webfont.woff") format("woff"), url("../fonts/leaguegothic-italic-webfont.ttf") format("truetype"), url("../fonts/leaguegothic-italic-webfont.svg#league_gothic_italicregular") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: "League Gothic";
+  src: url("../fonts/leaguegothic-regular-webfont.eot");
+  src: url("../fonts/leaguegothic-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/leaguegothic-regular-webfont.woff") format("woff"), url("../fonts/leaguegothic-regular-webfont.ttf") format("truetype"), url("../fonts/leaguegothic-regular-webfont.svg#league_gothicregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 12, ../sass/screen.sass */
+html {
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+/* line 16, ../sass/screen.sass */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "League Gothic";
+  text-transform: uppercase; }
+
+/* line 27, ../sass/screen.sass */
+* {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 31, ../sass/screen.sass */
+html {
+  background: black;
+  font-size: 100%; }
+
+/* line 35, ../sass/screen.sass */
+body {
+  margin: 0; }
+
+/* line 38, ../sass/screen.sass */
+a {
+  text-decoration: none;
+  color: inherit; }
+
+/* line 42, ../sass/screen.sass */
+em {
+  font-style: italic; }
+
+/* line 45, ../sass/screen.sass */
+strong {
+  font-weight: bold; }
+
+/* line 50, ../sass/screen.sass */
+.container {
+  height: 590px;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 990px; }
+
+/* line 56, ../sass/screen.sass */
+header {
+  background: #ffd91f;
+  padding: 0.75em 0; }
+  /* line 60, ../sass/screen.sass */
+  header img {
+    display: block;
+    margin: 0 auto; }
+
+/* line 66, ../sass/screen.sass */
+.container {
+  background: red;
+  height: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 990px; }
+
+/* line 73, ../sass/screen.sass */
+video {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1); }
+
+/* line 79, ../sass/screen.sass */
+.timeline {
+  width: 100%; }
+
+/* line 82, ../sass/screen.sass */
+.video-controls {
+  cursor: pointer;
+  margin-top: -60px;
+  position: relative;
+  z-index: 2; }
+  /* line 88, ../sass/screen.sass */
+  .video-controls .playpause {
+    background-size: contain;
+    position: absolute;
+    left: 15px;
+    top: 0;
+    width: 75px;
+    height: 45px; }
+    /* line 96, ../sass/screen.sass */
+    .video-controls .playpause.playing {
+      background-image: url('../img/pause.png?1368635926'); }
+    /* line 99, ../sass/screen.sass */
+    .video-controls .playpause.paused {
+      background-image: url('../img/play.png?1368635603'); }
+  /* line 102, ../sass/screen.sass */
+  .video-controls .progress {
+    overflow: hidden;
+    height: 30px;
+    margin-left: 100px;
+    padding: 0.5em;
+    font-weight: bold; }
+  /* line 109, ../sass/screen.sass */
+  .video-controls .buffer-bar,
+  .video-controls .time-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -100%;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: left 0.5s;
+    -moz-transition: left 0.5s;
+    -o-transition: left 0.5s;
+    transition: left 0.5s; }
+  /* line 119, ../sass/screen.sass */
+  .video-controls .time-bar {
+    background-color: #ffd91f; }
+  /* line 122, ../sass/screen.sass */
+  .video-controls .buffer-bar {
+    background-color: #333333; }
+
+/* line 127, ../sass/screen.sass */
+.chapter {
+  height: 500px;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 560px; }
+
+/* line 136, ../sass/screen.sass */
+.chapter-title {
+  position: absolute;
+  top: 40%;
+  right: 3%;
+  font-size: 5em;
+  color: white;
+  text-align: right;
+  text-shadow: 1px 1px 3px black;
+  width: 40%; }
+
+/* line 146, ../sass/screen.sass */
+.chapter-list {
+  position: absolute;
+  bottom: 31px;
+  left: 0;
+  float: left;
+  padding: 0.5em 1em;
+  background-color: rgba(255, 255, 255, 0.75);
+  width: 100%; }
+  /* line 155, ../sass/screen.sass */
+  .chapter-list li {
+    float: left;
+    margin: 0 0.75em; }
+  /* line 159, ../sass/screen.sass */
+  .chapter-list a {
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+    display: block;
+    padding: 0.25em 0;
+    text-transform: uppercase; }
+  /* line 167, ../sass/screen.sass */
+  .chapter-list .current-chapter {
+    color: #ffd91f; }
+
+/* line 170, ../sass/screen.sass */
+aside {
+  background: #eeeeee;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 550px;
+  padding: 1em;
+  border-left: 1px solid #aaaaaa;
+  -webkit-box-shadow: #eeeeee -5px 0 15px;
+  -moz-box-shadow: #eeeeee -5px 0 15px;
+  box-shadow: #eeeeee -5px 0 15px;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+  transition: transform 1s; }
+  /* line 182, ../sass/screen.sass */
+  aside h2 {
+    font-size: 22px;
+    margin: 0 0 0.75em 0; }
+  /* line 186, ../sass/screen.sass */
+  aside p {
+    font-size: 14px;
+    margin: 1em 0; }
+  /* line 190, ../sass/screen.sass */
+  aside blockquote {
+    font-family: Georgia, serif;
+    font-style: italic;
+    margin: 1.25em 0; }
+    /* line 195, ../sass/screen.sass */
+    aside blockquote:before {
+      content: "“";
+      font-size: 64px;
+      opacity: 0.5;
+      padding: 0 0.2em 0 0; }
+
+/* line 201, ../sass/screen.sass */
+.close-aside {
+  font-size: 32px; }
+
+/* line 206, ../sass/screen.sass */
+.element, aside {
+  display: block;
+  position: absolute;
+  -webkit-transform: translateX(2000px);
+  -moz-transform: translateX(2000px);
+  -ms-transform: translateX(2000px);
+  -o-transform: translateX(2000px);
+  transform: translateX(2000px); }
+  /* line 210, ../sass/screen.sass */
+  .element.current, aside.current {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); }
+
+/* line 213, ../sass/screen.sass */
+#people {
+  position: absolute;
+  width: 100%;
+  top: 300px;
+  left: 0; }
+  /* line 219, ../sass/screen.sass */
+  #people .person {
+    min-width: 50px;
+    min-height: 50px;
+    float: left;
+    border: 1px solid yellow; }
+    /* line 225, ../sass/screen.sass */
+    #people .person blockquote {
+      position: absolute;
+      width: 200px;
+      background-color: white;
+      display: none; }
+  /* line 231, ../sass/screen.sass */
+  #people .person:hover blockquote {
+    display: block; }
+  /* line 234, ../sass/screen.sass */
+  #people.current-2 .dead {
+    border-color: red; }
+
+/* line 237, ../sass/screen.sass */
+#causes-of-death {
+  position: absolute;
+  right: 0;
+  bottom: 0; }
+  /* line 242, ../sass/screen.sass */
+  #causes-of-death.current {
+    bottom: 100%; }
+
+/* line 245, ../sass/screen.sass */
+#bacteria {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 540px;
+  pointer-events: none; }
+
+/* line 253, ../sass/screen.sass */
+#lawsuits {
+  width: 100px;
+  height: 100px;
+  border: 2px solid yellow;
+  top: 80px;
+  left: 570px; }
+
+/* line 260, ../sass/screen.sass */
+.decision-tree {
+  border: 2px solid black;
+  width: 100%;
+  height: 150px;
+  overflow: hidden; }
+  /* line 266, ../sass/screen.sass */
+  .decision-tree .decision,
+  .decision-tree .decision-big {
+    height: 150px;
+    border: 1px solid gray;
+    overflow: hidden; }
+    /* line 272, ../sass/screen.sass */
+    .decision-tree .decision p,
+    .decision-tree .decision-big p {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0.5em 0.25em 0.25em 0.5em; }
+    /* line 277, ../sass/screen.sass */
+    .decision-tree .decision a,
+    .decision-tree .decision-big a {
+      background: #dddddd;
+      float: left;
+      margin: 0.5em;
+      padding: 0.5em;
+      width: 200px; }
+  /* line 284, ../sass/screen.sass */
+  .decision-tree .decision-end {
+    width: 100%; }
+  /* line 287, ../sass/screen.sass */
+  .decision-tree .outcome {
+    padding: 1em;
+    height: 150px; }
+    /* line 291, ../sass/screen.sass */
+    .decision-tree .outcome p {
+      font-size: 18px;
+      font-style: italic;
+      font-weight: bold; }
+    /* line 296, ../sass/screen.sass */
+    .decision-tree .outcome a {
+      float: left;
+      font-weight: bold;
+      width: 50%; }
+  /* line 301, ../sass/screen.sass */
+  .decision-tree #outcome-positive {
+    background: lightgreen; }
+  /* line 304, ../sass/screen.sass */
+  .decision-tree #outcome-negative {
+    background: pink; }
