@@ -38,6 +38,21 @@
     <!-- A SAFE PLACE -->
     <div class="element" id="million">million</div>
     <div class="element" id="people">
+      <div class="person">
+        Person!
+        <blockquote>
+          Lorem ipsum dolor sit amet.
+        </blockquote>
+      </div>
+      <div class="person dead">
+        Person!
+        <blockquote>
+          This person died a horrible death
+        </blockquote>
+      </div>
+
+
+
       <!-- person icon, which will be duplicated -->
     </div>
     <div class="element" id="causes-of-death">
@@ -82,8 +97,8 @@
     <aside id="safe-place">
       <a href="#" class="close-aside">&times;</a>
       <h2>Interactive element for list of horrible diseases</h2>
-
     </aside>
+
     <!-- QUALITY OF CARE -->
     <div class="element" id="report-cards">
       <!-- report icon; three are drawn, then we replicate 147 times -->
@@ -91,15 +106,31 @@
     <div class="element" id="us-map">
       <!-- US map created from the report card squares -->
     </div>
+    <aside id="map-detail">
+      <a href="#" class="close-aside">&times;</a>
+      <p>Quality of care map goes here.</p>
+    </aside>
+
     <!-- DECEPTIVELY SIMPLE -->
     <canvas class="element" id="bacteria"></canvas> <!-- bacteria; three are drawn, then we replicate and animate -->
+
+    <aside id="infection-stories">
+      <a href="#" class="close-aside">&times;</a>
+      <p>Woman missing knee supplementary material</p>
+    </aside>
+
     <!-- DENY AND DEFEND -->
-    <div class="element" id="slashed-circle">
+    <a class="element" id="slashed-circle" href="#deny-and-defend">
       <!-- represents "deny and defend"; we can show those words on either side or animate other things into the slashed circle -->
-    </div>
+    </a>
     <div class="element" id="open-circle">
       <!-- represents the hospitals that are trying to take responsibility; we'll show a logo or a map here... -->
     </div>
+    <aside id="deny-and-defend">
+      <a href="#" class="close-aside">&times;</a>
+      <p>Letter from hospital legal department or something</p>
+    </aside>
+
     <!-- MALPRACTICE IN PRACTICE -->
     <a class="element" href="#can-you-sue" id="lawsuits">
       <!-- lawsuit icon; one rectangle is drawn, then we replicate 49 times and cross out 49 of the 50 -->
@@ -149,6 +180,7 @@
         </div>
       </div>
     </aside>
+
     <!-- IS IT GETTING BETTER? -->
     <div class="element" id="dollar-sign">
       <!-- represents "penny pinching"; the dollar sign is shrunken or squeezed -->
@@ -158,6 +190,11 @@
       <div class="hand"></div> <!-- outline of hand -->
       <div class="hand-bacterium"></div> <!-- one of many -->
     </div>
+    <aside id="conclusion">
+      <a href="#" class="close-aside">&times;</a>
+      <p>Getting better aside</p>
+    </aside>
+
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="js/popcorn.js"></script>

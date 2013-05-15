@@ -26,6 +26,8 @@ $ ()->
 
   cues = [
     {type:"chapter", title: "A Safe Place", target: "#safety", time: "00:19"}
+    {type:"element", target:"#people", time: "00:28"}
+    {type:"element-next", target:"#people", time: "00:33"}
     {type:"chapter_end", time: "00:41"}
 
     {type:"chapter", title: "Quality of Care", target: "#quality-of-care", time: "00:42"}
@@ -108,15 +110,19 @@ $ ()->
   $.each cues, (i, cue_item)->
     $video.cue to_s(cue_item.time), ()->
       switch cue_item.type
-        # when "citation"
-        #   $('.citations').html "<a href='#{cue_item.target}' target='_blank'>#{cue_item.title}</a>"
+        when "citation"
+          $('.citations').html "<a href='#{cue_item.target}' target='_blank'>#{cue_item.title}</a>"
         when "chapter"
           $('.current').removeClass("current")
+          $('.current-2').removeClass("current-2")
           $('.chapter-title').show().text( cue_item.title).delay(3000).fadeOut(2000)
           $('.current-chapter').removeClass "current-chapter"
           $("[href='#{cue_item.target}']").addClass "current-chapter"
         when "element"
           $(cue_item.target).addClass('current')
+          node_callbacks[cue_item.callback]?()
+        when "element-next"
+          $(cue_item.target).addClass('current-2')
           node_callbacks[cue_item.callback]?()
         when "chapter_end"
           # pause between chapters
@@ -126,7 +132,7 @@ $ ()->
     e.preventDefault()
     $video.pause()
     target = $(this).attr "href"
-    $(target).addClass("current")
+    if target then $(target).addClass("current")
 
 
   $(".close-aside").on "click", (e)->

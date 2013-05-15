@@ -242,6 +242,31 @@ aside {
     transform: translateX(0); }
 
 /* line 168, ../sass/screen.sass */
+#people {
+  position: absolute;
+  width: 100%;
+  top: 300px;
+  left: 0; }
+  /* line 174, ../sass/screen.sass */
+  #people .person {
+    min-width: 50px;
+    min-height: 50px;
+    float: left;
+    border: 1px solid yellow; }
+    /* line 180, ../sass/screen.sass */
+    #people .person blockquote {
+      position: absolute;
+      width: 200px;
+      background-color: white;
+      display: none; }
+  /* line 186, ../sass/screen.sass */
+  #people .person:hover blockquote {
+    display: block; }
+  /* line 189, ../sass/screen.sass */
+  #people.current-2 .dead {
+    border-color: red; }
+
+/* line 195, ../sass/screen.sass */
 #bacteria {
   position: absolute;
   top: 0;
@@ -249,7 +274,7 @@ aside {
   width: 100%;
   height: 540px; }
 
-/* line 176, ../sass/screen.sass */
+/* line 203, ../sass/screen.sass */
 #lawsuits {
   width: 100px;
   height: 100px;
@@ -257,25 +282,25 @@ aside {
   top: 80px;
   left: 570px; }
 
-/* line 183, ../sass/screen.sass */
+/* line 210, ../sass/screen.sass */
 .decision-tree {
   border: 2px solid black;
   width: 100%;
   height: 150px;
   overflow: hidden; }
-  /* line 189, ../sass/screen.sass */
+  /* line 216, ../sass/screen.sass */
   .decision-tree .decision,
   .decision-tree .decision-big {
     height: 150px;
     border: 1px solid gray;
     overflow: hidden; }
-    /* line 195, ../sass/screen.sass */
+    /* line 222, ../sass/screen.sass */
     .decision-tree .decision p,
     .decision-tree .decision-big p {
       font-size: 16px;
       font-weight: bold;
       margin: 0.5em 0.25em 0.25em 0.5em; }
-    /* line 200, ../sass/screen.sass */
+    /* line 227, ../sass/screen.sass */
     .decision-tree .decision a,
     .decision-tree .decision-big a {
       background: #dddddd;
@@ -283,26 +308,26 @@ aside {
       margin: 0.5em;
       padding: 0.5em;
       width: 200px; }
-  /* line 207, ../sass/screen.sass */
+  /* line 234, ../sass/screen.sass */
   .decision-tree .decision-end {
     width: 100%; }
-  /* line 210, ../sass/screen.sass */
+  /* line 237, ../sass/screen.sass */
   .decision-tree .outcome {
     padding: 1em;
     height: 150px; }
-    /* line 214, ../sass/screen.sass */
+    /* line 241, ../sass/screen.sass */
     .decision-tree .outcome p {
       font-size: 18px;
       font-style: italic;
       font-weight: bold; }
-    /* line 219, ../sass/screen.sass */
+    /* line 246, ../sass/screen.sass */
     .decision-tree .outcome a {
       float: left;
       font-weight: bold;
       width: 50%; }
-  /* line 224, ../sass/screen.sass */
+  /* line 251, ../sass/screen.sass */
   .decision-tree #outcome-positive {
     background: lightgreen; }
-  /* line 227, ../sass/screen.sass */
+  /* line 254, ../sass/screen.sass */
   .decision-tree #outcome-negative {
     background: pink; }
