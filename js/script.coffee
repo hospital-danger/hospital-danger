@@ -25,6 +25,8 @@ $ ()->
   chapter_index = 0
 
   cues = [
+    {type: "chapter", title: "Intro", target: "#intro", time: "00:00"}
+
     {type: "chapter", title: "A Safe Place", target: "#safety", time: "00:20"}
     {type: "element", target: "#people", time: "00:33"}
     {type: "element-next", target: "#people", time: "00:40"}
@@ -45,7 +47,9 @@ $ ()->
     # {type: "element", target: "#lawsuits", time: "02:07"}
     {type: "chapter_end", time:"02:43"}
 
-    {type:"chapter", title: "Is It Getting Better?" , target: "#no-improvement", time: "02:44"}
+    {type: "chapter", title: "Getting Better?" , target: "#no-improvement", time: "02:44"}
+ 
+    {type: "chapter", title: "End", target: "#end", time: "03:30"}
   ]
 
   chapters = (cue for cue in cues when (cue.type is "chapter"))

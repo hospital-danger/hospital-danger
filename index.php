@@ -30,7 +30,7 @@
     <h1 class="chapter-title"></h1>
     <nav class="chapter-list">
       <ul>
-        <!-- append chapters here -->
+        <!-- Chapters added automatically here. -->
       </ul>
     </nav>
 
