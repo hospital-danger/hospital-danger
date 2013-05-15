@@ -204,7 +204,7 @@ video {
     margin: 0 0.75em; }
   /* line 130, ../sass/screen.sass */
   .chapter-list a {
-    color: black;
+    color: #666666;
     font-size: 13px;
     font-weight: bold;
     display: block;
@@ -212,7 +212,7 @@ video {
     text-transform: uppercase; }
   /* line 138, ../sass/screen.sass */
   .chapter-list .current-chapter {
-    color: #ffd91f; }
+    color: black; }
 
 /* line 143, ../sass/screen.sass */
 .chapter {
@@ -233,7 +233,8 @@ video {
   color: white;
   text-align: right;
   text-shadow: 1px 1px 3px black;
-  width: 40%; }
+  width: 40%;
+  z-index: 1; }
 
 /* line 162, ../sass/screen.sass */
 aside {
