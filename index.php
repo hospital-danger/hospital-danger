@@ -29,8 +29,6 @@
       <div class="progress">
         <div class="buffer-bar"></div>
         <div class="time-bar"></div>
-        <div class="time-elapsed">00:00</div>
-        <div class="time-left">00:00</div>
       </div>
     </div>
     <h1 class="chapter-title"></h1>
