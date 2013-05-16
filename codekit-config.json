@@ -14,15 +14,6 @@
       "fileType" : 2,
       "debugStyle" : 0
     },
-    "\/index.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/css\/screen.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -31,6 +22,15 @@
       "inputAbbreviatedPath" : "\/css\/screen.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
+    },
+    "\/index.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/index.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/img\/content\/judy-1.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -88,17 +88,6 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/js\/jquery.mousewheel.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.mousewheel.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery.mousewheel-min.js",
-      "fileType" : 64
-    },
     "\/img\/background.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -109,6 +98,17 @@
       "outputAbbreviatedPath" : "\/img\/background.jpg",
       "initialSize" : 114485,
       "fileType" : 4096
+    },
+    "\/js\/jquery.mousewheel.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/jquery.mousewheel.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/jquery.mousewheel-min.js",
+      "fileType" : 64
     },
     "\/img\/pause.png" : {
       "ignoreWasSetByUser" : 0,
@@ -140,7 +140,7 @@
       "inputAbbreviatedPath" : "\/img\/header.png",
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/header.png",
-      "initialSize" : 8695,
+      "initialSize" : 17917,
       "fileType" : 8192
     },
     "\/js\/bacteria.coffee" : {
@@ -249,16 +249,16 @@
       "outputAbbreviatedPath" : "\/js\/parallax-min-min.js",
       "fileType" : 64
     },
-    "\/img\/content\/judy-3.jpg" : {
+    "\/js\/raf-polyfill.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/content\/judy-3.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/content\/judy-3.jpg",
-      "initialSize" : 37503,
-      "fileType" : 4096
+      "inputAbbreviatedPath" : "\/js\/raf-polyfill.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/raf-polyfill-min.js",
+      "fileType" : 64
     },
     "\/js\/popcorn.js" : {
       "ignoreWasSetByUser" : 0,
@@ -282,16 +282,16 @@
       "outputAbbreviatedPath" : "\/js\/script-min.js",
       "fileType" : 64
     },
-    "\/js\/raf-polyfill.js" : {
+    "\/img\/content\/judy-3.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/raf-polyfill.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/raf-polyfill-min.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/img\/content\/judy-3.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/content\/judy-3.jpg",
+      "initialSize" : 37503,
+      "fileType" : 4096
     },
     "\/img\/content\/judy-2.jpg" : {
       "ignoreWasSetByUser" : 0,
