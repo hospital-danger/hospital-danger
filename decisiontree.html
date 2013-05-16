@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Your Hospital May Be Hazardous to Your Health</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/screen.css">
+  <script src="js/modernizr.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body class="decisiondemo">
+
+  <div class="decision-tree">
+    <div class="decision" id="decision-1">
+      <p>What happened to you?</p>
+      <a href="#outcome-negative">Infection</a>
+      <a href="#decision-3">Medication error</a>
+      <a href="#decision-3">Surgical error</a>
+    </div>
+    <div class="decision" id="decision-3">
+      <p>What is your identity?</p>
+      <a href="#outcome-negative">Low Income</a>
+      <a href="#outcome-negative">Elderly</a>
+      <a href="#outcome-negative">Non-white</a>
+      <a href="#decision-4">Upper-class white male</a>
+    </div>
+    <div class="decision" id="decision-4">
+      <p>How severe was the injury?</p>
+      <a href="#outcome-negative">Emotional distress</a>
+      <a href="#outcome-negative">Minor injury</a>
+      <a href="#outcome-positive">Permanent injury</a>
+      <a href="#outcome-negative">Death</a>
+    </div>
+    <div class="decision" id="decision-5">
+      <p>What state are you from?</p>
+      <a href="#outcome-negative"></a>
+      <a href="#outcome-positive">Any other state</a>
+    </div>
+    <div class="outcome" id="outcome-negative">
+      <p>No case.</p>
+      <a href="#decision-1">Try again</a>
+      <a id="end-decision-tree">Continue</a>
+    </div>
+    <div class="outcome" id="outcome-positive">
+      <p>Congratulations! You might have a case.</p>
+      <a href="#decision-1">Try again</a>
+      <a id="end-decision-tree">Continue</a>
+    </div>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/popcorn.js"></script>
+  <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

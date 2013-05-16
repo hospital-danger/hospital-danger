@@ -130,6 +130,10 @@
         target: "#outro",
         time: "03:58",
         hide_title: true
+      }, {
+        type: "element",
+        target: "#now-what",
+        time: "03:59"
       }
     ];
     chapters = (function() {
@@ -338,14 +342,13 @@
       });
     })();
     (function() {
-      var $container, $deny, $papers, $quotes, papers_count, pos, prefix, scroll_amount, width;
+      var $container, $deny, $papers, $quotes, papers_count, pos, prefix, width;
       $deny = $('#deny-and-defend');
-      $container = $('.papers-container', $papers);
+      $container = $('.aside-content', $deny);
       $papers = $('.papers', $deny);
       $quotes = $('.quotes', $deny);
-      width = $papers.width();
+      width = 6850;
       pos = 0;
-      scroll_amount = 1;
       prefix = Modernizr.prefixed('transform');
       $.fn.parallax = function(rate) {
         var $this, update;

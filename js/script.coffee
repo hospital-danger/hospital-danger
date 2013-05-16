@@ -55,6 +55,7 @@ $ ()->
     {type: "element", target: "#wash-hands", time: "03:48"}
 
     {type: "chapter", title: "&diams;", target: "#outro", time: "03:58", hide_title: true}
+    {type: "element", target: "#now-what", time: "03:59"}
   ]
 
   chapters = (cue for cue in cues when (cue.type is "chapter"))
@@ -213,13 +214,12 @@ $ ()->
 
   do ()->
     $deny = $('#deny-and-defend')
-    $container = $('.papers-container', $papers)
+    $container = $('.aside-content', $deny)
     $papers = $('.papers', $deny)
     $quotes = $('.quotes', $deny)
-    width = $papers.width()
+    width = 6850
 
     pos = 0
-    scroll_amount = 1
 
     prefix = Modernizr.prefixed('transform')
     $.fn.parallax = (rate)->

@@ -181,40 +181,69 @@ video
   z-index: 1
 
 aside
-  background: #eee
   position: absolute
   top: 0
   right: 0
   width: 50%
   height: 542px
-  padding: 1em
   z-index: 10
-  overflow: hidden
-  @include box-shadow(#eee -5px 0 15px)
-  @include transition(transform 1s)
 
-  h2
-    font-size: 48px
-    margin: 0 0 0.5em 0
+  .aside-content
+    background: rgba(0, 0, 0, .85)
+    color: #fff
+    overflow: auto
+    padding: 20px
+    height: 542px
+    @include box-shadow(rgba(0, 0, 0, .5) -5px 0 15px)
+    @include transition(transform 1s)
 
-  p
-    font-size: 14px
+    &.bleed
+      padding: 0
+
+    h2
+      font-size: 48px
+      margin: 0 0 0.5em 0
+
+    p
+      font-size: 14px
+      font-weight: bold
+      margin: 1em 0
+
+    blockquote
+      font-family: Georgia, serif
+      font-style: italic
+      margin: 1.25em 0
+
+      &:before
+        content: "“"
+        font-size: 64px
+        opacity: .5
+        padding: 0 .2em 0 0
+
+  .close-aside
+    background: rgba(0, 0, 0, .85)
+    position: absolute
+    left: -30px
+    top: 6px
+    width: 30px
+    height: 30px
+    font-size: 38px
     font-weight: bold
-    margin: 1em 0
+    @include box-shadow(rgba(0, 0, 0, .5) -2px 2px 15px)
+    @include border-radius(4px 0 0 4px)
 
-  blockquote
-    font-family: Georgia, serif
-    font-style: italic
-    margin: 1.25em 0
+    span
+      color: #fff
+      display: block
+      position: absolute
+      left: 5px
+      top: -5px
+      @include transition(opacity .2s)
+      @include opacity(.5)
 
-    &:before
-      content: "“"
-      font-size: 64px
-      opacity: .5
-      padding: 0 .2em 0 0
+    &:hover span
+      @include opacity(1)
 
-.close-aside
-  font-size: 32px
 
 // Animated elements.
 
@@ -357,7 +386,11 @@ aside
   left: 650px
 
 #deny-and-defend
-
+  .aside-content
+    height: 550px
+    overflow: auto
+    padding: 0
+    margin: 0
   .prev,
   .next
     width: 25%
@@ -373,37 +406,47 @@ aside
     right: 0
 
   .papers-container
-    overflow: auto
-    height: 100%
+    width: 6850px
+    height: 450px
 
     &.finished
       display: none
 
+    .intro
+      width: 400px
+      float: left
+
     .papers
+      width: 6000px
       height: 100%
-      width: 4000px
+      float: left
 
       img
         position: absolute
         top: 0
         left: 0
-        height: 100%
 
   .quotes
-
+    position: absolute
+    top: 0
+    left: 0
+    height: 1px
+    overflow: hidden
     blockquote
-      display: none
+      background-color: red
+      margin: 100px
+      @include translateY(2000px)
 
       &.current-quote
-        display: block
+        // @include translateY(0)
 
-  .hospital-envelope
-    opacity: 0
-    &.visible
-      opacity: 1
+  #hospital-envelope
+    float: left
+    margin-top: 80px
 
   .hospital-response
-    @include translateY(-1000px)
+    @include translateY(-2000px)
+
     &.visible
       @include translateY(0)
 
@@ -414,16 +457,16 @@ aside
   top: 80px
   left: 570px
 
+.decisiondemo
+  background: #fff
+
 .decision-tree
-  border: 2px solid #000
   width: 100%
-  height: 150px
-  overflow: hidden
+  // height: 150px
+  // overflow: hidden
 
   .decision,
   .decision-big
-    height: 150px
-    border: 1px solid gray
     overflow: hidden
 
     p
@@ -432,7 +475,7 @@ aside
       margin: .5em .25em .25em .5em
 
     a
-      background: #ddd
+      background: $yellow
       float: left
       margin: .5em
       padding: .5em
@@ -460,3 +503,12 @@ aside
 
   #outcome-negative
     background: pink
+
+#now-what
+  position: absolute
+  left: 0
+  top: 0
+  opacity: 0
+
+  &.current
+    opacity: 1
