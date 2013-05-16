@@ -216,7 +216,7 @@ $ ()->
     $container = $('.papers-container', $papers)
     $papers = $('.papers', $deny)
     $quotes = $('.quotes', $deny)
-    width = $papers.width() - $deny.width()
+    width = $papers.width()
 
     pos = 0
     scroll_amount = 1
@@ -228,26 +228,32 @@ $ ()->
       do update = ()->
         window.requestAnimationFrame update
         next_css = if Modernizr.csstransforms3d
-          "translate3d(0,#{pos * rate}px, 0)"
+          "translate3d(#{pos * rate}px, 0, 0)"
         else
-          "translateY(#{pos * rate}px)"
+          "translateX(#{pos * rate}px)"
+        $this.css(prefix, next_css)
 
+    $('img', $papers).each (index)->
+      $(this).parallax(index * 0.1)
+      $(this).css({left: index * 100})
 
     # scroll thru papers with hover on first and last third of section
-    do bind_scroll = ()->
-      $('.prev', $container).on "hover", ()->
-        $container.scrollLeft pos - 1
-        $(this).off "hover"
-        setTimeout bind_scroll, 100
-      $('.next', $container).on "hover", ()->
-        $container.scrollLeft pos + 1
-        $(this).off "hover"
-        setTimeout bind_scroll, 100
+    $('.prev', $deny).hover (e)->
+      $container.scrollTo({top: 0, left: 0}, 7000)
+    , ()->
+      $container.stop()
+
+    $('.next', $deny).hover (e)->
+      $container.scrollTo({top: 0, left: width}, 7000)
+    , ()->
+      $container.stop()
 
     papers_count = $('img', $papers).length
 
     $container.on "scroll", ()->
       pos = $container.scrollLeft()
+      index = 0
+
 
       if index is papers_count
         # when the user scrolls to end of section, fade out papers

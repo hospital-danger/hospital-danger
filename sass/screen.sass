@@ -358,32 +358,54 @@ aside
 
 #deny-and-defend
 
+  .prev,
+  .next
+    width: 25%
+    height: 100%
+    position: absolute
+    top: 0
+    z-index: 10
+
+  .prev
+    left: 0
+
+  .next
+    right: 0
+
   .papers-container
+    overflow: auto
+    height: 100%
 
     &.finished
-
-    .prev
-
-    .next
+      display: none
 
     .papers
+      height: 100%
+      width: 4000px
 
       img
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
 
   .quotes
 
     blockquote
+      display: none
 
       &.current-quote
+        display: block
 
   .hospital-envelope
-
+    opacity: 0
     &.visible
+      opacity: 1
 
   .hospital-response
-
+    @include translateY(-1000px)
     &.visible
-
+      @include translateY(0)
 
 #lawsuits
   width: 100px

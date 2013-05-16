@@ -338,12 +338,12 @@
       });
     })();
     (function() {
-      var $container, $deny, $papers, $quotes, bind_scroll, papers_count, pos, prefix, scroll_amount, width;
+      var $container, $deny, $papers, $quotes, papers_count, pos, prefix, scroll_amount, width;
       $deny = $('#deny-and-defend');
       $container = $('.papers-container', $papers);
       $papers = $('.papers', $deny);
       $quotes = $('.quotes', $deny);
-      width = $papers.width() - $deny.width();
+      width = $papers.width();
       pos = 0;
       scroll_amount = 1;
       prefix = Modernizr.prefixed('transform');
@@ -353,24 +353,37 @@
         return (update = function() {
           var next_css;
           window.requestAnimationFrame(update);
-          return next_css = Modernizr.csstransforms3d ? "translate3d(0," + (pos * rate) + "px, 0)" : "translateY(" + (pos * rate) + "px)";
+          next_css = Modernizr.csstransforms3d ? "translate3d(" + (pos * rate) + "px, 0, 0)" : "translateX(" + (pos * rate) + "px)";
+          return $this.css(prefix, next_css);
         })();
       };
-      (bind_scroll = function() {
-        $('.prev', $container).on("hover", function() {
-          $container.scrollLeft(pos - 1);
-          $(this).off("hover");
-          return setTimeout(bind_scroll, 100);
+      $('img', $papers).each(function(index) {
+        $(this).parallax(index * 0.1);
+        return $(this).css({
+          left: index * 100
         });
-        return $('.next', $container).on("hover", function() {
-          $container.scrollLeft(pos + 1);
-          $(this).off("hover");
-          return setTimeout(bind_scroll, 100);
-        });
-      })();
+      });
+      $('.prev', $deny).hover(function(e) {
+        return $container.scrollTo({
+          top: 0,
+          left: 0
+        }, 7000);
+      }, function() {
+        return $container.stop();
+      });
+      $('.next', $deny).hover(function(e) {
+        return $container.scrollTo({
+          top: 0,
+          left: width
+        }, 7000);
+      }, function() {
+        return $container.stop();
+      });
       papers_count = $('img', $papers).length;
       return $container.on("scroll", function() {
+        var index;
         pos = $container.scrollLeft();
+        index = 0;
         if (index === papers_count) {
           $container.addClass("finished");
           return $('.hospital-envelope').addClass("visible").on("click", function() {
