@@ -173,11 +173,6 @@
       }
     };
     $play_button.add('#the-video').on("click", toggle_play);
-    $('.progress').on("click", function(e) {
-      var pos;
-      pos = e.offsetX / $(this).width();
-      return $video.currentTime(pos * duration);
-    });
     goto_chapter = function(target) {
       var cue_time, index, _j, _len1, _ref2;
       for (index = _j = 0, _len1 = cues.length; _j < _len1; index = ++_j) {
@@ -195,24 +190,6 @@
     $('a', '.chapter-list').on("click", function(e) {
       e.preventDefault();
       return goto_chapter($(this).attr('href'));
-    });
-    $(document).on("keydown", function(e) {
-      var left_arrow, next_chapter, right_arrow, space_bar, _ref2;
-      space_bar = 32;
-      left_arrow = 37;
-      right_arrow = 39;
-      if (e.keyCode === space_bar) {
-
-      } else if (e.keyCode === left_arrow) {
-        e.preventDefault();
-        next_chapter = Math.max(0, chapter_index - 1);
-      } else if (e.keyCode === right_arrow) {
-        e.preventDefault();
-        next_chapter = Math.min(chapters.length - 1, chapter_index + 1);
-      }
-      if (next_chapter) {
-        return goto_chapter((_ref2 = chapters[next_chapter]) != null ? _ref2.target : void 0);
-      }
     });
     $video.on("timeupdate", function() {
       current_time = $video.currentTime();
@@ -300,29 +277,46 @@
       });
     })();
     (function() {
-      var $container, $deny, $papers, $quotes, papers_count, width;
+      var $container, $deny, $papers, $quotes, bind_scroll, papers_count, pos, prefix, scroll_amount, width;
       $deny = $('#deny-and-defend');
       $container = $('.papers-container', $papers);
       $papers = $('.papers', $deny);
       $quotes = $('.quotes', $deny);
       width = $papers.width() - $deny.width();
-      $('.prev', $container).on("hover", function() {
-        return console.log("");
-      });
-      $('.next', $container).on("hover", function() {
-        return console.log("");
-      });
+      pos = 0;
+      scroll_amount = 1;
+      prefix = Modernizr.prefixed('transform');
+      $.fn.parallax = function(rate) {
+        var $this, update;
+        $this = $(this);
+        return (update = function() {
+          var next_css;
+          window.requestAnimationFrame(update);
+          return next_css = Modernizr.csstransforms3d ? "translate3d(0," + (pos * rate) + "px, 0)" : "translateY(" + (pos * rate) + "px)";
+        })();
+      };
+      (bind_scroll = function() {
+        $('.prev', $container).on("hover", function() {
+          $container.scrollLeft(pos - 1);
+          $(this).off("hover");
+          return setTimeout(bind_scroll, 100);
+        });
+        return $('.next', $container).on("hover", function() {
+          $container.scrollLeft(pos + 1);
+          $(this).off("hover");
+          return setTimeout(bind_scroll, 100);
+        });
+      })();
       papers_count = $('img', $papers).length;
       return $container.on("scroll", function() {
-        var index, pos;
         pos = $container.scrollLeft();
-        index = Math.floor(pos / width * papers_count);
         if (index === papers_count) {
           $container.addClass("finished");
           return $('.hospital-envelope').addClass("visible").on("click", function() {
             return $('.hospital-response').addClass("visible").on("click", function() {
               $('.visible', $deny).removeClass('visible');
-              return $('.finished').removeClass("finished");
+              $('.finished').removeClass("finished");
+              return $video.play();
             });
           });
         } else {
