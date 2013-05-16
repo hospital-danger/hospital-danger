@@ -173,7 +173,7 @@
       "inputAbbreviatedPath" : "\/img\/header.png",
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/header.png",
-      "initialSize" : 4601,
+      "initialSize" : 8695,
       "fileType" : 8192
     },
     "\/js\/jquery.localScroll.js" : {
@@ -199,15 +199,6 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/config.rb" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/config.rb",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 32768
-    },
     "\/js\/modernizr.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -218,6 +209,24 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/modernizr-min.js",
       "fileType" : 64
+    },
+    "\/config.rb" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/config.rb",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 32768
+    },
+    "\/css\/print.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/print.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/img\/full_screen.png" : {
       "ignoreWasSetByUser" : 0,
@@ -240,15 +249,6 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/raf-polyfill-min.js",
       "fileType" : 64
-    },
-    "\/css\/print.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/print.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/js\/parallax-min.js" : {
       "ignoreWasSetByUser" : 0,
@@ -487,7 +487,7 @@
   "projectAttributes" : {
     "bourbonEnabled" : 0,
     "displayValue" : "hazardoushospitals",
-    "displayValueWasSetByUser" : 1,
+    "displayValueWasSetByUser" : 0,
     "compassEnabled" : 1
   }
 }
