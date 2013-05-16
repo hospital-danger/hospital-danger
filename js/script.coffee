@@ -150,6 +150,7 @@ $ ()->
     $video.play()
 
   $('header.intro').on "click", ()->
+    $('#noise').remove()
     $(this).removeClass('intro')
     $('.introduction').addClass('finished')
     setTimeout ()->
