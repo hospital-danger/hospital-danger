@@ -176,6 +176,7 @@ video
   text-shadow: 1px 1px 3px black
   width: 40%
   z-index: 1
+
 aside
   background: #eee
   position: absolute
@@ -184,16 +185,16 @@ aside
   width: 50%
   height: 550px
   padding: 1em
-  border-left: 1px solid #aaa
   @include box-shadow(#eee -5px 0 15px)
   @include transition(transform 1s)
 
   h2
-    font-size: 22px
-    margin: 0 0 0.75em 0
+    font-size: 48px
+    margin: 0 0 0.5em 0
 
   p
     font-size: 14px
+    font-weight: bold
     margin: 1em 0
 
   blockquote
@@ -212,11 +213,13 @@ aside
 
 // Animated elements.
 
-.element, aside
+.element,
+aside
   display: block
   position: absolute
-  z-index: 1
+  z-index: 4
   @include translateX(2000px)
+
   &.current
     @include translateX(0)
 
@@ -262,25 +265,48 @@ aside
 
 #judy-gaines
   padding: 20px
-  .image-container, .text-container
+
+  .image-container,
+  .text-container
     width: 100%
     height: 100%
     top: 0
     left: 0
     position: absolute
+
     img
       width: 100%
       position: absolute
       opacity: 0
+
       @include transition(opacity 1s)
+
       &.current-image
         opacity: 1
+
     p
-      margin-left: 200px
-      color: white
+      color: #333
       line-height: 2em
+
+      &.paragraph-left,
+      &.paragraph-right
+        clear: both
+        margin: 3em 0
+        width: 40%
+
+        &:first-child
+          margin-top: 0
+
+      &.paragraph-left
+        float: left
+
+      &.paragraph-right
+        float: right
+
   .text-container
     overflow: auto
+    top: 1em
+    left: 1em
 
 #lawsuits
   width: 100px

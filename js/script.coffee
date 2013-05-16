@@ -34,8 +34,7 @@ $ ()->
     {type: "chapter_end", time: "00:48"}
 
     {type: "chapter", title: "Quality of Care", target: "#quality-of-care", time: "00:52"}
-    {type: "element", target: "#states", time: "01:11"}
-    # 121 only 3
+    {type: "element", target: "#us-map", time: "01:11"}
     {type: "chapter_end", time: "01:29"}
 
     {type: "chapter", title: "Deceptively Simple", target: "#infection", time: "01:33"}
@@ -82,7 +81,7 @@ $ ()->
     $video.currentTime( pos * duration )
 
   goto_chapter = (target)->
-    [chapter_index, cue_time] = [index, cue.time] for cue, index in cues when (cue.target is target)
+    [chapter_index, cue_time] = [index, to_s(cue.time)] for cue, index in cues when (cue.target is target)
     $video.currentTime( cue_time ).play() if cue_time?
     $('.current-chapter').removeClass "current-chapter"
     $("[href='#{target}']").addClass "current-chapter"
@@ -170,7 +169,7 @@ $ ()->
     height = $('.text-inner', $judy).height() - $judy.height()
     $('.text-container', $judy).on "scroll", ()->
       pos = $(this).scrollTop()
-      index = Math.floor( pos / height * 4)
+      index = Math.floor(pos / height * 4)
       $('img', $images).removeClass('current-image').eq(index).addClass('current-image')
 
   do ()->
