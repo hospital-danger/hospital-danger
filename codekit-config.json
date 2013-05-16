@@ -14,15 +14,6 @@
       "fileType" : 2,
       "debugStyle" : 0
     },
-    "\/index.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/css\/screen.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -31,6 +22,15 @@
       "inputAbbreviatedPath" : "\/css\/screen.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
+    },
+    "\/index.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/index.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/img\/content\/judy-1.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -140,7 +140,7 @@
       "inputAbbreviatedPath" : "\/img\/header.png",
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/header.png",
-      "initialSize" : 4601,
+      "initialSize" : 8695,
       "fileType" : 8192
     },
     "\/js\/bacteria.coffee" : {
@@ -166,15 +166,6 @@
       "initialSize" : 26259,
       "fileType" : 4096
     },
-    "\/config.rb" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/config.rb",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 32768
-    },
     "\/js\/modernizr.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -185,6 +176,15 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/modernizr-min.js",
       "fileType" : 64
+    },
+    "\/config.rb" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/config.rb",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 32768
     },
     "\/img\/content\/judy-4.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -197,15 +197,6 @@
       "initialSize" : 26219,
       "fileType" : 4096
     },
-    "\/css\/print.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/print.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/img\/full_screen.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -216,6 +207,17 @@
       "outputAbbreviatedPath" : "\/img\/full_screen.png",
       "initialSize" : 1353,
       "fileType" : 8192
+    },
+    "\/js\/raf-polyfill.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/raf-polyfill.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/raf-polyfill-min.js",
+      "fileType" : 64
     },
     "\/sass\/screen.sass" : {
       "ignoreWasSetByUser" : 0,
@@ -238,17 +240,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/js\/raf-polyfill.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/raf-polyfill.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/raf-polyfill-min.js",
-      "fileType" : 64
-    },
     "\/img\/content\/judy-3.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -259,6 +250,17 @@
       "outputAbbreviatedPath" : "\/img\/content\/judy-3.jpg",
       "initialSize" : 37503,
       "fileType" : 4096
+    },
+    "\/js\/parallax-min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/parallax-min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/parallax-min-min.js",
+      "fileType" : 64
     },
     "\/js\/popcorn.js" : {
       "ignoreWasSetByUser" : 0,
@@ -282,16 +284,14 @@
       "outputAbbreviatedPath" : "\/js\/script-min.js",
       "fileType" : 64
     },
-    "\/js\/parallax-min.js" : {
+    "\/css\/print.css" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/parallax-min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/parallax-min-min.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/css\/print.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/img\/content\/judy-2.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -487,7 +487,7 @@
   "projectAttributes" : {
     "bourbonEnabled" : 0,
     "displayValue" : "hazardoushospitals",
-    "displayValueWasSetByUser" : 1,
+    "displayValueWasSetByUser" : 0,
     "compassEnabled" : 1
   }
 }
