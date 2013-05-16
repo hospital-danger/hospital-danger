@@ -118,12 +118,8 @@
         time: "03:10"
       }, {
         type: "element",
-        target: "#pinch-pennies",
+        target: "#dollar",
         time: "03:28"
-      }, {
-        type: "element",
-        target: "#wash-hands",
-        time: "03:48"
       }, {
         type: "chapter",
         title: "&diams;",
@@ -244,6 +240,7 @@
       return $video.play();
     });
     $('header.intro').on("click", function() {
+      $('#noise').remove();
       $(this).removeClass('intro');
       $('.introduction').addClass('finished');
       setTimeout(function() {

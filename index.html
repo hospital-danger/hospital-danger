@@ -13,6 +13,11 @@
 
 <body>
 
+  <audio autoplay loop id="noise">
+    <source src="video/hospital_audio.ogg">
+    <source src="video/hospital_audio.mp3">
+  </audio>
+
   <div class="introduction">
     <video autoplay="autoplay" loop="loop">
       <source src="video/background_loop_blur.mp4" />
@@ -20,7 +25,9 @@
     </video>
   </div>
 
-  <header class="intro"></header>
+  <header class="intro">
+    <p>An interactive investigation into patient harm.</p>
+  </header>
 
   <div class="container">
 
@@ -253,27 +260,27 @@
           <div class="decision" id="decision-1">
             <p>What happened to you?</p>
             <a href="#outcome-negative">Infection</a>
-            <a href="#decision-3">Medication error</a>
-            <a href="#decision-3">Surgical error</a>
+            <a href="#decision-2">Medication error</a>
+            <a href="#decision-2">Surgical error</a>
           </div>
-          <div class="decision" id="decision-3">
-            <p>Who are you?</p>
+          <div class="decision" id="decision-2">
+            <p>What is your identity?</p>
             <a href="#outcome-negative">Low Income</a>
             <a href="#outcome-negative">Elderly</a>
             <a href="#outcome-negative">Non-white</a>
-            <a href="#decision-4">Upper-class white male</a>
+            <a href="#decision-3">Upper-class white male</a>
           </div>
-          <div class="decision" id="decision-4">
+          <div class="decision" id="decision-3">
             <p>How severe was the injury?</p>
             <a href="#outcome-negative">Emotional distress</a>
             <a href="#outcome-negative">Minor injury</a>
-            <a href="#outcome-positive">Permanent injury</a>
+            <a href="#decision-4">Permanent injury</a>
             <a href="#outcome-negative">Death</a>
           </div>
-          <div class="decision" id="decision-5">
-            <p>What state are you from?</p>
-            <a href="#outcome-negative">TODO: lenient states]</a>
-            <a href="#outcome-positive">Any other state</a>
+          <div class="decision" id="decision-4">
+            <p>Some states have passed laws that limit the amount of money patients can receive in malpractice cases. Do you live in one of these states?</p>
+            <a href="#outcome-negative">Yes</a>
+            <a href="#outcome-positive">No</a>
           </div>
           <div class="outcome" id="outcome-negative">
             <p>No case.</p>
@@ -286,30 +293,32 @@
             <a id="end-decision-tree">Continue</a>
           </div>
         </div>
-      </div>
     </aside>
 
 <!--
     ######  #######  #####  #     # #     #######       ######     #    ####### ### ####### #     # #######    #     #    #    ######  #     #
     #     # #       #     # #     # #        #          #     #   # #      #     #  #       ##    #    #       #     #   # #   #     # ##   ##
-    #     # #       #       #     # #        #          #     #  #   #     #     #  #       # #   #    #       #     #  #   #  #     # # # # #
-    ######  #####    #####  #     # #        #   #      ######  #     #    #     #  #####   #  #  #    #       ####### #     # ######  #  #  #
+    #     # #       #       #     # #        #    #     #     #  #   #     #     #  #       # #   #    #       #     #  #   #  #     # # # # #
+    ######  #####    #####  #     # #        #          ######  #     #    #     #  #####   #  #  #    #       ####### #     # ######  #  #  #
     #   #   #             # #     # #        #          #       #######    #     #  #       #   # #    #       #     # ####### #   #   #     #
-    #    #  #       #     # #     # #        #   #      #       #     #    #     #  #       #    ##    #       #     # #     # #    #  #     #
+    #    #  #       #     # #     # #        #    #     #       #     #    #     #  #       #    ##    #       #     # #     # #    #  #     #
     #     # #######  #####   #####  ######   #          #       #     #    #    ### ####### #     #    #       #     # #     # #     # #     #
 -->
-    <div class="element" id="dollar-sign">
-      <!-- represents "penny pinching"; the dollar sign is shrunken or squeezed -->
-    </div>
-    <div class="element" id="dirty-hand">
-      <!-- represents "hand washing" or the lack thereof; we trace a line around the hand and then bring our bacteria back to crawl all over it -->
-      <div class="hand"></div> <!-- outline of hand -->
-      <div class="hand-bacterium"></div> <!-- one of many -->
-    </div>
+    <a class="element" href="#by-the-numbers" id="dollar">
+      <!-- dollar icon -->
+    </a>
     <aside id="by-the-numbers">
       <a href="#" class="close-aside"><span>&times;</span></a>
       <div class="aside-content">
-        <p>Getting better aside</p>
+        <h2>By the Numbers</h2>
+        <p>At an average hospital&hellip;</p>
+        <ul>
+          <li><strong>25%</strong> of workers say staff do not freely speak up if they see something that could hurt a patient.</li>
+          <li><strong>47%</strong> of workers say staff work longer hours than is best for patient care.</li>
+          <li><strong>39%</strong> of workers say the management is only interested in patient safety after something goes wrong.</li>
+          <li><strong>24%</strong> of workers say their supervisor &ldquo;overlooks patient safety problems that happen over and over.&rdquo;</li>
+          <li><strong>36%</strong> of workers say patient safety is sacrificed to get more work done.</li>
+        </ul>
       </div>
     </aside>
 
