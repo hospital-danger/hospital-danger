@@ -12,10 +12,13 @@ Put together in just a few days for the Mozilla, Tribeca Film Institute, and For
 - Tom Jennings
 - Sabrina Shankman
 - Mindy Yuen
+- Fola Akinola
 
 ### ProPublica
 
 - Marshall Alan
+- Kirsten Berg
+- Blair Hickman
 - Olga Pierce
 
 ### MX
@@ -36,3 +39,4 @@ Put together in just a few days for the Mozilla, Tribeca Film Institute, and For
 - [HTML5](http://www.w3.org/html/wg/)
 - [PopcornJS](http://popcornjs.org/)
 - [SASS](http://sass-lang.com/)
+- [jQuery](http://jquery.com/)
