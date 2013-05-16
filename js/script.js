@@ -250,31 +250,67 @@
       }, 5000);
     });
     node_callbacks = {};
-    setTimeout(function() {
-      var state, states, _j, _len1, _ref2, _results;
+    $(window).load(function() {
+      var data, state, states, _j, _len1, _ref2, _results;
+      console.log("window loaded");
+      data = window.state_data;
       states = $('#us-map')[0].contentDocument;
       _ref2 = states.getElementsByClassName("state");
       _results = [];
       for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
         state = _ref2[_j];
         $(state).on("mouseenter", function(e) {
-          var left_offset;
-          left_offset = e.offsetX;
-          console.log(left_offset);
-          if (left_offset > 400) {
-            left_offset += 150;
+          var key, left_offset, negative, positive, state_info, top_offset, value, _k, _len2, _ref3;
+          _ref3 = data.states;
+          for (_k = 0, _len2 = _ref3.length; _k < _len2; _k++) {
+            state = _ref3[_k];
+            if (state.state_abbreviation === this.id) {
+              state_info = state;
+            }
           }
-          return $("#state-info").show().css({
-            top: e.offsetY - 50,
+          positive = (function() {
+            var _results1;
+            _results1 = [];
+            for (key in state_info) {
+              value = state_info[key];
+              if (value === 2 && key !== "score") {
+                _results1.push("<li>" + data.state_information_flags[key][value] + "</li>");
+              }
+            }
+            return _results1;
+          })();
+          negative = (function() {
+            var _results1;
+            _results1 = [];
+            for (key in state_info) {
+              value = state_info[key];
+              if (value === 1 && key !== "score") {
+                _results1.push("<li>" + data.state_information_flags[key][value] + "</li>");
+              }
+            }
+            return _results1;
+          })();
+          left_offset = e.offsetX;
+          if (left_offset > 400) {
+            left_offset += 50;
+          }
+          top_offset = e.offsetY;
+          if (top_offset > 300) {
+            top_offset -= 200;
+          }
+          $("#state-info").show().css({
+            top: top_offset,
             left: left_offset
-          }).find('#state-abbr').text(this.id);
+          }).find('#state-name').text(state_info.state_title);
+          $('#state-positive').html(positive.join(""));
+          return $('#state-negative').html(negative.join(""));
         });
         _results.push($(state).on("mouseleave", function() {
           return $('#state-info').hide();
         }));
       }
       return _results;
-    }, 5000);
+    });
     (function() {
       var $images, $judy, heights, image_count;
       $judy = $('#judy-gaines');

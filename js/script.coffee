@@ -163,24 +163,34 @@ $ ()->
 
   node_callbacks = {}
 
-  setTimeout ()->
+  #
+
+  $(window).load ()->
+    console.log "window loaded"
+    data = window.state_data
+
     states = $('#us-map')[0].contentDocument
-
-
     for state in states.getElementsByClassName "state"
       $(state).on "mouseenter", (e)->
+        state_info = state for state in data.states when (state.state_abbreviation is @id)
+        positive = ("<li>#{data.state_information_flags[key][value]}</li>" for key, value of state_info when (value is 2 and key isnt "score"))
+        negative = ("<li>#{data.state_information_flags[key][value]}</li>" for key, value of state_info when (value is 1 and key isnt "score"))
+
+
         left_offset = e.offsetX
-        console.log left_offset
-        left_offset += 150 if left_offset > 400
+        left_offset += 50 if left_offset > 400
+        top_offset = e.offsetY
+        if top_offset > 300 then top_offset -= 200 #else top_offset += 100
         $("#state-info")
           .show()
-          .css({top: e.offsetY - 50, left: left_offset })
-          .find('#state-abbr').text(this.id)
+          .css({top: top_offset, left: left_offset })
+          .find('#state-name').text(state_info.state_title)
+
+        $('#state-positive').html positive.join ""
+        $('#state-negative').html negative.join ""
 
       $(state).on "mouseleave", ()->
         $('#state-info').hide()
-  , 5000
-
 
 
 

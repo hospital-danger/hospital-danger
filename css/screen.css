@@ -379,7 +379,7 @@ aside {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   width: 780px;
-  height: 600px; }
+  height: 540px; }
   /* line 278, ../sass/screen.sass */
   #us-map.current {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -388,14 +388,21 @@ aside {
 
 /* line 282, ../sass/screen.sass */
 #state-info {
+  font-size: 0.8em;
   display: none;
   z-index: 20;
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  min-height: 100px;
   background-color: white; }
+  /* line 291, ../sass/screen.sass */
+  #state-info #state-positive {
+    color: green; }
+  /* line 294, ../sass/screen.sass */
+  #state-info #state-negative {
+    color: red; }
 
-/* line 292, ../sass/screen.sass */
+/* line 298, ../sass/screen.sass */
 #bacteria {
   position: absolute;
   top: 0;
@@ -404,10 +411,10 @@ aside {
   height: 480px;
   border: 1px solid #ffd91f; }
 
-/* line 300, ../sass/screen.sass */
+/* line 306, ../sass/screen.sass */
 #judy-gaines {
   padding: 20px; }
-  /* line 303, ../sass/screen.sass */
+  /* line 309, ../sass/screen.sass */
   #judy-gaines .image-container,
   #judy-gaines .text-container {
     width: 100%;
@@ -415,7 +422,7 @@ aside {
     top: 0;
     left: 0;
     position: absolute; }
-    /* line 311, ../sass/screen.sass */
+    /* line 317, ../sass/screen.sass */
     #judy-gaines .image-container img,
     #judy-gaines .text-container img {
       width: 100%;
@@ -425,42 +432,42 @@ aside {
       -moz-transition: opacity 1s;
       -o-transition: opacity 1s;
       transition: opacity 1s; }
-      /* line 318, ../sass/screen.sass */
+      /* line 324, ../sass/screen.sass */
       #judy-gaines .image-container img.current-image,
       #judy-gaines .text-container img.current-image {
         opacity: 1; }
-    /* line 321, ../sass/screen.sass */
+    /* line 327, ../sass/screen.sass */
     #judy-gaines .image-container p,
     #judy-gaines .text-container p {
       color: #333333;
       line-height: 2em; }
-      /* line 325, ../sass/screen.sass */
+      /* line 331, ../sass/screen.sass */
       #judy-gaines .image-container p.paragraph-left, #judy-gaines .image-container p.paragraph-right,
       #judy-gaines .text-container p.paragraph-left,
       #judy-gaines .text-container p.paragraph-right {
         clear: both;
         margin: 3em 0;
         width: 40%; }
-        /* line 331, ../sass/screen.sass */
+        /* line 337, ../sass/screen.sass */
         #judy-gaines .image-container p.paragraph-left:first-child, #judy-gaines .image-container p.paragraph-right:first-child,
         #judy-gaines .text-container p.paragraph-left:first-child,
         #judy-gaines .text-container p.paragraph-right:first-child {
           margin-top: 0; }
-      /* line 334, ../sass/screen.sass */
+      /* line 340, ../sass/screen.sass */
       #judy-gaines .image-container p.paragraph-left,
       #judy-gaines .text-container p.paragraph-left {
         float: left; }
-      /* line 337, ../sass/screen.sass */
+      /* line 343, ../sass/screen.sass */
       #judy-gaines .image-container p.paragraph-right,
       #judy-gaines .text-container p.paragraph-right {
         float: right; }
-  /* line 340, ../sass/screen.sass */
+  /* line 346, ../sass/screen.sass */
   #judy-gaines .text-container {
     overflow: auto;
     top: 1em;
     left: 1em; }
 
-/* line 345, ../sass/screen.sass */
+/* line 351, ../sass/screen.sass */
 #slashed-circle {
   width: 200px;
   height: 200px;
@@ -468,7 +475,7 @@ aside {
   top: 60px;
   left: 650px; }
 
-/* line 381, ../sass/screen.sass */
+/* line 387, ../sass/screen.sass */
 #lawsuits {
   width: 100px;
   height: 100px;
@@ -476,25 +483,25 @@ aside {
   top: 80px;
   left: 570px; }
 
-/* line 388, ../sass/screen.sass */
+/* line 394, ../sass/screen.sass */
 .decision-tree {
   border: 2px solid black;
   width: 100%;
   height: 150px;
   overflow: hidden; }
-  /* line 394, ../sass/screen.sass */
+  /* line 400, ../sass/screen.sass */
   .decision-tree .decision,
   .decision-tree .decision-big {
     height: 150px;
     border: 1px solid gray;
     overflow: hidden; }
-    /* line 400, ../sass/screen.sass */
+    /* line 406, ../sass/screen.sass */
     .decision-tree .decision p,
     .decision-tree .decision-big p {
       font-size: 16px;
       font-weight: bold;
       margin: 0.5em 0.25em 0.25em 0.5em; }
-    /* line 405, ../sass/screen.sass */
+    /* line 411, ../sass/screen.sass */
     .decision-tree .decision a,
     .decision-tree .decision-big a {
       background: #dddddd;
@@ -502,26 +509,26 @@ aside {
       margin: 0.5em;
       padding: 0.5em;
       width: 200px; }
-  /* line 412, ../sass/screen.sass */
+  /* line 418, ../sass/screen.sass */
   .decision-tree .decision-end {
     width: 100%; }
-  /* line 415, ../sass/screen.sass */
+  /* line 421, ../sass/screen.sass */
   .decision-tree .outcome {
     padding: 1em;
     height: 150px; }
-    /* line 419, ../sass/screen.sass */
+    /* line 425, ../sass/screen.sass */
     .decision-tree .outcome p {
       font-size: 18px;
       font-style: italic;
       font-weight: bold; }
-    /* line 424, ../sass/screen.sass */
+    /* line 430, ../sass/screen.sass */
     .decision-tree .outcome a {
       float: left;
       font-weight: bold;
       width: 50%; }
-  /* line 429, ../sass/screen.sass */
+  /* line 435, ../sass/screen.sass */
   .decision-tree #outcome-positive {
     background: lightgreen; }
-  /* line 432, ../sass/screen.sass */
+  /* line 438, ../sass/screen.sass */
   .decision-tree #outcome-negative {
     background: pink; }

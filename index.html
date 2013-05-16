@@ -105,16 +105,14 @@
     #    ## #     #      #     # #    ## #          #  #  # #     #    #    #     # #     #  #  #    ## #     #
     #     # #######      ####### #     # #######     ## ##  #     #    #     #####  #     # ### #     #  #####
 -->
-    <a class="element" id="show-map" href="#us-map" >
-
-    </a>
+    <a class="element" id="show-map" href="#us-map" ></a>
 
     <object id="us-map" type="image/svg+xml" data="img/usa_map.svg"></object>
 
     <div id="state-info">
-      <h2 id="state-name">{{state name}}</h2>
-
-      <p>{{state rating info}}</p>
+      <h2 id="state-name"></h2>
+      <ul id="state-positive"></ul>
+      <ul id="state-negative"></ul>
     </div>
 
 <!--
@@ -168,10 +166,10 @@
         <div class="prev">&nbsp;</div>
         <div class="next">&nbsp;</div>
         <div class="papers">
-          <img src="img/content/documents-1.png">
-          <img src="img/content/documents-2.png">
-          <img src="img/content/documents-3.png">
-          <img src="img/content/documents-4.png">
+          <img src="img/content/putten-documents-1.png">
+          <img src="img/content/putten-documents-2.png">
+          <img src="img/content/putten-documents-3.png">
+          <img src="img/content/putten-documents-4.png">
         </div>
       </div>
       <div class="quotes">
@@ -311,6 +309,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="js/popcorn.js"></script>
   <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/state_info.js"></script>
   <script src="js/script.js"></script>
 </body>
 
