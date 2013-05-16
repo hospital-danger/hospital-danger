@@ -51,8 +51,7 @@ $ ()->
     {type: "chapter_end", time:"03:06"}
 
     {type: "chapter", title: "Result: Patient Harm" , target: "#chapter6", time: "03:10"}
-    {type: "element", target: "#pinch-pennies", time: "03:28"}
-    {type: "element", target: "#wash-hands", time: "03:48"}
+    {type: "element", target: "#dollar", time: "03:28"}
 
     {type: "chapter", title: "&diams;", target: "#outro", time: "03:58", hide_title: true}
     {type: "element", target: "#now-what", time: "03:59"}
