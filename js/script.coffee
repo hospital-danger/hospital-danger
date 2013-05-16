@@ -143,7 +143,6 @@ $ ()->
     target = $(this).attr "href"
     if target then $(target).addClass("current")
 
-
   $(".close-aside").on "click", (e)->
     e.preventDefault()
     $(this).closest('aside').removeClass("current")
@@ -219,4 +218,3 @@ $ ()->
 
     e.preventDefault()
     $video.play()
-
