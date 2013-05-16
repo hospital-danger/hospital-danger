@@ -119,7 +119,7 @@ strong {
 
 /* line 58, ../sass/screen.sass */
 header {
-  background: #ffd91f url('../img/header.png?1368714449') center no-repeat;
+  background: #ffd91f url('../img/header.png?1368724677') center no-repeat;
   border-bottom: 4px solid #b59200;
   padding: 0.75em 0;
   z-index: 100;
@@ -524,3 +524,13 @@ aside {
   /* line 433, ../sass/screen.sass */
   .decision-tree #outcome-negative {
     background: pink; }
+
+/* line 436, ../sass/screen.sass */
+#now-what {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0; }
+  /* line 442, ../sass/screen.sass */
+  #now-what.current {
+    opacity: 1; }
