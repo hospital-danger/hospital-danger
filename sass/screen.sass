@@ -181,40 +181,69 @@ video
   z-index: 1
 
 aside
-  background: #eee
   position: absolute
   top: 0
   right: 0
   width: 50%
   height: 542px
-  padding: 1em
   z-index: 10
-  overflow: hidden
-  @include box-shadow(#eee -5px 0 15px)
-  @include transition(transform 1s)
 
-  h2
-    font-size: 48px
-    margin: 0 0 0.5em 0
+  .aside-content
+    background: rgba(0, 0, 0, .85)
+    color: #fff
+    overflow: auto
+    padding: 20px
+    height: 542px
+    @include box-shadow(rgba(0, 0, 0, .5) -5px 0 15px)
+    @include transition(transform 1s)
 
-  p
-    font-size: 14px
+    &.bleed
+      padding: 0
+
+    h2
+      font-size: 48px
+      margin: 0 0 0.5em 0
+
+    p
+      font-size: 14px
+      font-weight: bold
+      margin: 1em 0
+
+    blockquote
+      font-family: Georgia, serif
+      font-style: italic
+      margin: 1.25em 0
+
+      &:before
+        content: "“"
+        font-size: 64px
+        opacity: .5
+        padding: 0 .2em 0 0
+
+  .close-aside
+    background: rgba(0, 0, 0, .85)
+    position: absolute
+    left: -30px
+    top: 6px
+    width: 30px
+    height: 30px
+    font-size: 38px
     font-weight: bold
-    margin: 1em 0
+    @include box-shadow(rgba(0, 0, 0, .5) -2px 2px 15px)
+    @include border-radius(4px 0 0 4px)
 
-  blockquote
-    font-family: Georgia, serif
-    font-style: italic
-    margin: 1.25em 0
+    span
+      color: #fff
+      display: block
+      position: absolute
+      left: 5px
+      top: -5px
+      @include transition(opacity .2s)
+      @include opacity(.5)
 
-    &:before
-      content: "“"
-      font-size: 64px
-      opacity: .5
-      padding: 0 .2em 0 0
+    &:hover span
+      @include opacity(1)
 
-.close-aside
-  font-size: 32px
 
 // Animated elements.
 
