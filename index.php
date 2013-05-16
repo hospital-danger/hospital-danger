@@ -4,11 +4,6 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <!-- <title>Could this hospital kill you?</title> -->
-  <!-- <title>Hospitals: basically graveyards</title> -->
-  <!-- <title>Hospitals: a prescription for death</title> -->
-  <!-- <title>This hospital will make orphans of our children</title> -->
-  <!-- <title>Death Hospital: the hospital that eats -->
   <title>Your Hospital May Be Hazardous to Your Health</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/screen.css">
