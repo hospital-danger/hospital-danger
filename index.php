@@ -22,9 +22,7 @@
       <source src="video/background_loop_blur.webm" />
     </video>
   </div>
-  <header class="intro">
-    <img src="img/header.png" >
-  </header>
+  <header class="intro"></header>
   <div class="container">
     <video id="the-video">
       <source src="video/hazardoushospitals.mp4" />

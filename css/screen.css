@@ -110,7 +110,30 @@ em {
 strong {
   font-weight: bold; }
 
-/* line 49, ../sass/screen.sass */
+/* line 50, ../sass/screen.sass */
+.container {
+  height: 553px;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 960px; }
+
+/* line 56, ../sass/screen.sass */
+header {
+  background: #ffd91f url('../img/header.png?1368663867') center no-repeat;
+  padding: 0.75em 0;
+  z-index: 100;
+  height: 125px;
+  top: 0;
+  -webkit-transition: top 1s;
+  -moz-transition: top 1s;
+  -o-transition: top 1s;
+  transition: top 1s; }
+  /* line 64, ../sass/screen.sass */
+  header.intro {
+    top: 350px;
+    cursor: pointer; }
+
+/* line 68, ../sass/screen.sass */
 .introduction {
   position: absolute;
   width: 100%;
@@ -122,54 +145,28 @@ strong {
   -moz-transition: opacity 3s ease 1s;
   -o-transition: opacity 3s ease 1s;
   transition: opacity 3s ease 1s; }
-  /* line 56, ../sass/screen.sass */
+  /* line 76, ../sass/screen.sass */
   .introduction.finished {
     opacity: 0;
     pointer-events: none; }
 
-/* line 60, ../sass/screen.sass */
-.container {
-  height: 553px;
-  margin: 0 auto;
-  overflow: hidden;
-  max-width: 960px; }
-
-/* line 66, ../sass/screen.sass */
-header {
-  background: #ffd91f;
-  padding: 0.75em 0;
-  z-index: 100;
-  top: 0;
-  -webkit-transition: top 1s;
-  -moz-transition: top 1s;
-  -o-transition: top 1s;
-  transition: top 1s; }
-  /* line 72, ../sass/screen.sass */
-  header.intro {
-    top: 350px;
-    cursor: pointer; }
-  /* line 77, ../sass/screen.sass */
-  header img {
-    display: block;
-    margin: 0 auto; }
-
-/* line 81, ../sass/screen.sass */
+/* line 80, ../sass/screen.sass */
 video {
   position: relative;
   width: 100%;
   z-index: 1; }
 
-/* line 86, ../sass/screen.sass */
+/* line 85, ../sass/screen.sass */
 .timeline {
   width: 100%; }
 
-/* line 89, ../sass/screen.sass */
+/* line 88, ../sass/screen.sass */
 .video-controls {
   cursor: pointer;
   margin-top: -60px;
   position: relative;
   z-index: 2; }
-  /* line 95, ../sass/screen.sass */
+  /* line 94, ../sass/screen.sass */
   .video-controls .playpause {
     background-size: contain;
     background-image: url('../img/pause.png?1368635926');
@@ -178,17 +175,17 @@ video {
     top: 0;
     width: 75px;
     height: 45px; }
-    /* line 104, ../sass/screen.sass */
+    /* line 103, ../sass/screen.sass */
     .video-controls .playpause.paused {
       background-image: url('../img/play.png?1368635603'); }
-  /* line 107, ../sass/screen.sass */
+  /* line 106, ../sass/screen.sass */
   .video-controls .progress {
     overflow: hidden;
     height: 50px;
     margin-left: 100px;
     padding: 0.5em;
     font-weight: bold; }
-  /* line 114, ../sass/screen.sass */
+  /* line 113, ../sass/screen.sass */
   .video-controls .buffer-bar,
   .video-controls .time-bar {
     position: absolute;
@@ -200,15 +197,15 @@ video {
     -moz-transition: left 0.5s;
     -o-transition: left 0.5s;
     transition: left 0.5s; }
-  /* line 123, ../sass/screen.sass */
+  /* line 122, ../sass/screen.sass */
   .video-controls .time-bar {
     top: 30px;
     border-top: 3px solid rgba(255, 255, 255, 0.5); }
-  /* line 127, ../sass/screen.sass */
+  /* line 126, ../sass/screen.sass */
   .video-controls .buffer-bar {
     background-color: #333333; }
 
-/* line 130, ../sass/screen.sass */
+/* line 129, ../sass/screen.sass */
 .chapter-list {
   position: absolute;
   z-index: 3;
@@ -217,11 +214,11 @@ video {
   float: left;
   padding: 0.5em 1em;
   width: 100%; }
-  /* line 139, ../sass/screen.sass */
+  /* line 138, ../sass/screen.sass */
   .chapter-list li {
     float: left;
     margin: 0 0.5em; }
-  /* line 143, ../sass/screen.sass */
+  /* line 142, ../sass/screen.sass */
   .chapter-list a {
     background: rgba(255, 255, 255, 0.5);
     color: rgba(255, 255, 255, 0.5);
@@ -240,12 +237,12 @@ video {
     -moz-transition: color 0.1s;
     -o-transition: color 0.1s;
     transition: color 0.1s; }
-  /* line 155, ../sass/screen.sass */
+  /* line 154, ../sass/screen.sass */
   .chapter-list a:hover,
   .chapter-list .current-chapter {
     color: #333333; }
 
-/* line 161, ../sass/screen.sass */
+/* line 160, ../sass/screen.sass */
 .chapter {
   height: 500px;
   overflow: auto;
@@ -255,7 +252,7 @@ video {
   width: 100%;
   height: 560px; }
 
-/* line 170, ../sass/screen.sass */
+/* line 169, ../sass/screen.sass */
 .chapter-title {
   position: absolute;
   top: 40%;
@@ -267,7 +264,7 @@ video {
   width: 40%;
   z-index: 1; }
 
-/* line 180, ../sass/screen.sass */
+/* line 179, ../sass/screen.sass */
 aside {
   background: #eeeeee;
   position: absolute;
@@ -284,31 +281,31 @@ aside {
   -moz-transition: -moz-transform 1s;
   -o-transition: -o-transform 1s;
   transition: transform 1s; }
-  /* line 192, ../sass/screen.sass */
+  /* line 191, ../sass/screen.sass */
   aside h2 {
     font-size: 22px;
     margin: 0 0 0.75em 0; }
-  /* line 196, ../sass/screen.sass */
+  /* line 195, ../sass/screen.sass */
   aside p {
     font-size: 14px;
     margin: 1em 0; }
-  /* line 200, ../sass/screen.sass */
+  /* line 199, ../sass/screen.sass */
   aside blockquote {
     font-family: Georgia, serif;
     font-style: italic;
     margin: 1.25em 0; }
-    /* line 205, ../sass/screen.sass */
+    /* line 204, ../sass/screen.sass */
     aside blockquote:before {
       content: "“";
       font-size: 64px;
       opacity: 0.5;
       padding: 0 0.2em 0 0; }
 
-/* line 211, ../sass/screen.sass */
+/* line 210, ../sass/screen.sass */
 .close-aside {
   font-size: 32px; }
 
-/* line 216, ../sass/screen.sass */
+/* line 215, ../sass/screen.sass */
 .element, aside {
   display: block;
   position: absolute;
@@ -318,7 +315,7 @@ aside {
   -ms-transform: translateX(2000px);
   -o-transform: translateX(2000px);
   transform: translateX(2000px); }
-  /* line 221, ../sass/screen.sass */
+  /* line 220, ../sass/screen.sass */
   .element.current, aside.current {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
@@ -326,41 +323,41 @@ aside {
     -o-transform: translateX(0);
     transform: translateX(0); }
 
-/* line 224, ../sass/screen.sass */
+/* line 223, ../sass/screen.sass */
 #people {
   position: absolute;
   width: 100%;
   top: 300px;
   left: 0; }
-  /* line 230, ../sass/screen.sass */
+  /* line 229, ../sass/screen.sass */
   #people .person {
     min-width: 50px;
     min-height: 50px;
     float: left;
     border: 1px solid yellow; }
-    /* line 236, ../sass/screen.sass */
+    /* line 235, ../sass/screen.sass */
     #people .person blockquote {
       position: absolute;
       width: 200px;
       background-color: white;
       display: none; }
-  /* line 242, ../sass/screen.sass */
+  /* line 241, ../sass/screen.sass */
   #people .person:hover blockquote {
     display: block; }
-  /* line 245, ../sass/screen.sass */
+  /* line 244, ../sass/screen.sass */
   #people.current-2 .dead {
     border-color: red; }
 
-/* line 248, ../sass/screen.sass */
+/* line 247, ../sass/screen.sass */
 #causes-of-death {
   position: absolute;
   right: 0;
   bottom: 0; }
-  /* line 253, ../sass/screen.sass */
+  /* line 252, ../sass/screen.sass */
   #causes-of-death.current {
     bottom: 100%; }
 
-/* line 256, ../sass/screen.sass */
+/* line 255, ../sass/screen.sass */
 #bacteria {
   position: absolute;
   top: 0;
@@ -369,17 +366,17 @@ aside {
   height: 530px;
   border: 1px solid #ffd91f; }
 
-/* line 264, ../sass/screen.sass */
+/* line 263, ../sass/screen.sass */
 #judy-gaines {
   padding: 20px; }
-  /* line 266, ../sass/screen.sass */
+  /* line 265, ../sass/screen.sass */
   #judy-gaines .image-container, #judy-gaines .text-container {
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     position: absolute; }
-    /* line 272, ../sass/screen.sass */
+    /* line 271, ../sass/screen.sass */
     #judy-gaines .image-container img, #judy-gaines .text-container img {
       width: 100%;
       position: absolute;
@@ -388,19 +385,19 @@ aside {
       -moz-transition: opacity 1s;
       -o-transition: opacity 1s;
       transition: opacity 1s; }
-      /* line 277, ../sass/screen.sass */
+      /* line 276, ../sass/screen.sass */
       #judy-gaines .image-container img.current-image, #judy-gaines .text-container img.current-image {
         opacity: 1; }
-    /* line 279, ../sass/screen.sass */
+    /* line 278, ../sass/screen.sass */
     #judy-gaines .image-container p, #judy-gaines .text-container p {
       margin-left: 200px;
       color: white;
       line-height: 2em; }
-  /* line 283, ../sass/screen.sass */
+  /* line 282, ../sass/screen.sass */
   #judy-gaines .text-container {
     overflow: auto; }
 
-/* line 286, ../sass/screen.sass */
+/* line 285, ../sass/screen.sass */
 #lawsuits {
   width: 100px;
   height: 100px;
@@ -408,25 +405,25 @@ aside {
   top: 80px;
   left: 570px; }
 
-/* line 293, ../sass/screen.sass */
+/* line 292, ../sass/screen.sass */
 .decision-tree {
   border: 2px solid black;
   width: 100%;
   height: 150px;
   overflow: hidden; }
-  /* line 299, ../sass/screen.sass */
+  /* line 298, ../sass/screen.sass */
   .decision-tree .decision,
   .decision-tree .decision-big {
     height: 150px;
     border: 1px solid gray;
     overflow: hidden; }
-    /* line 305, ../sass/screen.sass */
+    /* line 304, ../sass/screen.sass */
     .decision-tree .decision p,
     .decision-tree .decision-big p {
       font-size: 16px;
       font-weight: bold;
       margin: 0.5em 0.25em 0.25em 0.5em; }
-    /* line 310, ../sass/screen.sass */
+    /* line 309, ../sass/screen.sass */
     .decision-tree .decision a,
     .decision-tree .decision-big a {
       background: #dddddd;
@@ -434,26 +431,26 @@ aside {
       margin: 0.5em;
       padding: 0.5em;
       width: 200px; }
-  /* line 317, ../sass/screen.sass */
+  /* line 316, ../sass/screen.sass */
   .decision-tree .decision-end {
     width: 100%; }
-  /* line 320, ../sass/screen.sass */
+  /* line 319, ../sass/screen.sass */
   .decision-tree .outcome {
     padding: 1em;
     height: 150px; }
-    /* line 324, ../sass/screen.sass */
+    /* line 323, ../sass/screen.sass */
     .decision-tree .outcome p {
       font-size: 18px;
       font-style: italic;
       font-weight: bold; }
-    /* line 329, ../sass/screen.sass */
+    /* line 328, ../sass/screen.sass */
     .decision-tree .outcome a {
       float: left;
       font-weight: bold;
       width: 50%; }
-  /* line 334, ../sass/screen.sass */
+  /* line 333, ../sass/screen.sass */
   .decision-tree #outcome-positive {
     background: lightgreen; }
-  /* line 337, ../sass/screen.sass */
+  /* line 336, ../sass/screen.sass */
   .decision-tree #outcome-negative {
     background: pink; }

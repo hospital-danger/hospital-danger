@@ -46,16 +46,6 @@ strong
   font-weight: bold
 
 // Layout.
-.introduction
-  position: absolute
-  width: 100%
-  height: 100%
-  z-index: 100
-  opacity: 1
-  @include transition(opacity 3s ease 1s)
-  &.finished
-    opacity: 0
-    pointer-events: none
 
 .container
   height: 553px
@@ -64,19 +54,28 @@ strong
   max-width: $container-width
 
 header
-  background: $yellow
+  background: $yellow image-url("header.png") center no-repeat
   padding: .75em 0
   z-index: 100
+  height: 125px
   top: 0
   @include transition(top 1s)
+
   &.intro
     top: 350px
     cursor: pointer
 
+.introduction
+  position: absolute
+  width: 100%
+  height: 100%
+  z-index: 100
+  opacity: 1
+  @include transition(opacity 3s ease 1s)
 
-  img
-    display: block
-    margin: 0 auto
+  &.finished
+    opacity: 0
+    pointer-events: none
 
 video
   position: relative

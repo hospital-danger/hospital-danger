@@ -14,15 +14,6 @@
       "fileType" : 2,
       "debugStyle" : 0
     },
-    "\/index.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/css\/screen.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -31,6 +22,15 @@
       "inputAbbreviatedPath" : "\/css\/screen.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
+    },
+    "\/index.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/index.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/img\/content\/judy-1.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -54,17 +54,6 @@
       "outputAbbreviatedPath" : "\/js\/jquery.scrollTo-min.js",
       "fileType" : 64
     },
-    "\/js\/parallax.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/parallax.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/parallax-min.js",
-      "fileType" : 64
-    },
     "\/img\/content\/judy-5.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -75,6 +64,17 @@
       "outputAbbreviatedPath" : "\/img\/content\/judy-5.png",
       "initialSize" : 2528294,
       "fileType" : 8192
+    },
+    "\/js\/parallax.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/parallax.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/parallax-min.js",
+      "fileType" : 64
     },
     "\/img\/play.png" : {
       "ignoreWasSetByUser" : 0,
@@ -110,6 +110,17 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
+    "\/img\/background.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/background.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/background.jpg",
+      "initialSize" : 114485,
+      "fileType" : 4096
+    },
     "\/js\/jquery.mousewheel.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -120,17 +131,6 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/jquery.mousewheel-min.js",
       "fileType" : 64
-    },
-    "\/img\/content\/judy-3.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/content\/judy-3.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/content\/judy-3.png",
-      "initialSize" : 5384544,
-      "fileType" : 8192
     },
     "\/img\/pause.png" : {
       "ignoreWasSetByUser" : 0,
@@ -143,27 +143,16 @@
       "initialSize" : 821,
       "fileType" : 8192
     },
-    "\/img\/background.jpg" : {
+    "\/img\/content\/judy-3.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/background.jpg",
+      "inputAbbreviatedPath" : "\/img\/content\/judy-3.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/background.jpg",
-      "initialSize" : 114485,
-      "fileType" : 4096
-    },
-    "\/js\/jquery.localScroll.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.localScroll.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery.localScroll-min.js",
-      "fileType" : 64
+      "outputAbbreviatedPath" : "\/img\/content\/judy-3.png",
+      "initialSize" : 5384544,
+      "fileType" : 8192
     },
     "\/img\/content\/judy-2.png" : {
       "ignoreWasSetByUser" : 0,
@@ -184,8 +173,19 @@
       "inputAbbreviatedPath" : "\/img\/header.png",
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/header.png",
-      "initialSize" : 4601,
+      "initialSize" : 8695,
       "fileType" : 8192
+    },
+    "\/js\/jquery.localScroll.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/jquery.localScroll.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/jquery.localScroll-min.js",
+      "fileType" : 64
     },
     "\/js\/bacteria.coffee" : {
       "ignoreWasSetByUser" : 0,
@@ -219,6 +219,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 32768
     },
+    "\/css\/print.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/print.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/img\/full_screen.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -241,12 +250,23 @@
       "outputAbbreviatedPath" : "\/js\/raf-polyfill-min.js",
       "fileType" : 64
     },
-    "\/css\/print.css" : {
+    "\/js\/parallax-min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/parallax-min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/parallax-min-min.js",
+      "fileType" : 64
+    },
+    "\/css\/ie.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/print.css",
+      "inputAbbreviatedPath" : "\/css\/ie.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
@@ -261,26 +281,6 @@
       "outputAbbreviatedPath" : "\/css\/screen.css",
       "fileType" : 2,
       "debugStyle" : 0
-    },
-    "\/css\/ie.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/ie.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/js\/parallax-min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/parallax-min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/parallax-min-min.js",
-      "fileType" : 64
     },
     "\/js\/popcorn.js" : {
       "ignoreWasSetByUser" : 0,
