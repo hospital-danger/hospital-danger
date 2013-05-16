@@ -31,26 +31,31 @@ $ ()->
     {type: "element", target: "#people", time: "00:33"}
     {type: "element-next", target: "#people", time: "00:40"}
     {type: "element", target: "#causes-of-death", time: "00:42"}
-    {type: "chapter_end", time: "00:45"}
+    {type: "chapter_end", time: "00:47"}
 
-    {type: "chapter", title: "Quality of Care", target: "#quality-of-care", time: "00:46"}
-    {type: "chapter_end", time: "01:21"}
+    {type: "chapter", title: "Quality of Care", target: "#quality-of-care", time: "00:52"}
+    {type: "element", target: "#states", time: "01:11"}
+    # 121 only 3
+    {type: "chapter_end", time: "01:29"}
 
-    {type: "chapter", title: "Deceptively Simple", target: "#infection", time: "01:22"}
-    {type: "element", target: "#bacteria", time: "01:32"}
-    {type: "chapter_end", time: "01:53"}
+    {type: "chapter", title: "Deceptively Simple", target: "#infection", time: "01:33"}
+    {type: "element", target: "#bacteria", time: "01:43"}
+    {type: "chapter_end", time: "02:08"}
 
-    {type: "chapter", title: "Deny & Defend", target: "#culpability", time: "01:54"}
-    {type: "element", target: "#deny-and-defend", time: "2:10"}
-    {type: "chapter_end", time: "02:23"}
+    {type: "chapter", title: "Deny & Defend", target: "#culpability", time: "02:10"}
+    {type: "element", target: "#deny-and-defend", time: "02:22"}
+    {type: "element", target: "#take-responsibility", time: "02:34"}
+    {type: "chapter_end", time: "02:41"}
 
-    {type: "chapter", title: "Malpractice in Practice" , target: "#malpractice-in-practice", time: "02:24"}
-    # {type: "element", target: "#lawsuits", time: "02:07"}
-    {type: "chapter_end", time:"02:43"}
+    {type: "chapter", title: "Malpractice in Practice" , target: "#malpractice-in-practice", time: "02:44"}
+    {type: "element", target: "#lawsuits", time: "02:52"}
+    {type: "chapter_end", time:"03:06"}
 
-    {type: "chapter", title: "Getting Better?" , target: "#no-improvement", time: "02:44"}
+    {type: "chapter", title: "Getting Better?" , target: "#no-improvement", time: "03:10"}
+    {type: "element", target: "#pinch-pennies", time: "03:28"}
+    {type: "element", target: "#wash-hands", time: "03:48"}
 
-    {type: "chapter", title: "End", target: "#end", time: "03:30", hide_title: true}
+    {type: "chapter", title: "End", target: "#end", time: "03:58", hide_title: true}
   ]
 
   chapters = (cue for cue in cues when (cue.type is "chapter"))
