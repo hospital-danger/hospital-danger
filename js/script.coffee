@@ -65,6 +65,7 @@ $ ()->
 
   $video.on "play", ()->
     $play_button.removeClass("paused")
+    $('aside.current').removeClass('current')
 
   $video.on "pause", ()->
     $play_button.addClass("paused")
