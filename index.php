@@ -95,14 +95,14 @@
     <aside id="judy-gaines">
       <a href="#" class="close-aside">&times;</a>
       <div class="image-container">
-        <img class="current-image" src="http://placekitten.com/650/650">
-        <img src="http://placekitten.com/650/550">
-        <img src="http://placekitten.com/650/650">
-        <img src="http://placekitten.com/650/750">
-        <img src="http://placekitten.com/650/650">
+        <img src="img/content/judy-1.jpg" class="current-image">
+        <img src="img/content/judy-2.jpg">
+        <img src="img/content/judy-3.jpg">
+        <img src="img/content/judy-4.jpg">
+        <img src="img/content/judy-5.jpg">
       </div>
       <div class="text-container">
-        <h2>Judy's story</h2>
+        <h2>Judy&rsquo;s Story</h2>
         <div class="text-inner">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
