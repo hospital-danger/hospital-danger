@@ -274,20 +274,26 @@ aside
   height: 500px
   @include opacity(0)
   width: 780px
-  height: 600px
+  height: 540px
 
   &.current
     @include opacity(1)
     z-index: 10
 
 #state-info
+  font-size: .8em
   display: none
   z-index: 20
   position: absolute
-  width: 100px
-  height: 100px
+  width: 200px
+  min-height: 100px
   background-color: white
 
+  #state-positive
+    color: green
+
+  #state-negative
+    color: red
 
 
 #bacteria
