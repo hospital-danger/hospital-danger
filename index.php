@@ -112,7 +112,7 @@
     <object id="us-map" type="image/svg+xml" data="img/usa_map.svg"></object>
 
     <div id="state-info">
-      <h2 id="state-name"><span id="state-abbr"></span> {{state name}}</h2>
+      <h2 id="state-name">{{state name}}</h2>
 
       <p>{{state rating info}}</p>
     </div>
@@ -168,10 +168,10 @@
         <div class="prev">&nbsp;</div>
         <div class="next">&nbsp;</div>
         <div class="papers">
-          <img src="#" id="papers-1">
-          <img src="#" id="papers-2">
-          <img src="#" id="papers-3">
-          <img src="#" id="papers-4">
+          <img src="img/content/documents-1.png">
+          <img src="img/content/documents-2.png">
+          <img src="img/content/documents-3.png">
+          <img src="img/content/documents-4.png">
         </div>
       </div>
       <div class="quotes">
