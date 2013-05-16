@@ -65,6 +65,7 @@ $ ()->
 
   $video.on "play", ()->
     $play_button.removeClass("paused")
+    $('aside.current').removeClass('current')
 
   $video.on "pause", ()->
     $play_button.addClass("paused")
@@ -76,9 +77,9 @@ $ ()->
   $play_button.add('#the-video').on "click", toggle_play
 
   # scrub timeline
-  $('.progress').on "click", (e)->
-    pos = e.offsetX / $(this).width()
-    $video.currentTime( pos * duration )
+  # $('.progress').on "click", (e)->
+  #   pos = e.offsetX / $(this).width()
+  #   $video.currentTime( pos * duration )
 
   goto_chapter = (target)->
     [chapter_index, cue_time] = [index, to_s(cue.time)] for cue, index in cues when (cue.target is target)
@@ -92,20 +93,20 @@ $ ()->
     goto_chapter $(this).attr 'href'
 
   # arrow keys to advance between chapters
-  $(document).on "keydown", (e)->
-    space_bar = 32
-    left_arrow = 37
-    right_arrow = 39
-    if e.keyCode is space_bar
-      # todo -- toggle play
-    else if e.keyCode is left_arrow
-      e.preventDefault()
-      next_chapter = Math.max 0, chapter_index - 1
-    else if e.keyCode is right_arrow
-      e.preventDefault()
-      next_chapter = Math.min chapters.length - 1, chapter_index + 1
+  # $(document).on "keydown", (e)->
+  #   space_bar = 32
+  #   left_arrow = 37
+  #   right_arrow = 39
+  #   if e.keyCode is space_bar
+  #     # todo -- toggle play
+  #   else if e.keyCode is left_arrow
+  #     e.preventDefault()
+  #     next_chapter = Math.max 0, chapter_index - 1
+  #   else if e.keyCode is right_arrow
+  #     e.preventDefault()
+  #     next_chapter = Math.min chapters.length - 1, chapter_index + 1
 
-    if next_chapter then goto_chapter chapters[next_chapter]?.target
+  #   if next_chapter then goto_chapter chapters[next_chapter]?.target
 
   # timeline progress
   $video.on "timeupdate", ()->
@@ -164,12 +165,19 @@ $ ()->
 
   do ()->
     $judy = $('#judy-gaines')
-    $images = $('.image-container', $judy)
-    height = $('.text-inner', $judy).height() - $judy.height()
+    $images = $('img', $judy)
+    image_count = $images.length
+    # get heights of all paragraphs
+    heights = [0]
+    $('.text-container', $judy).find('p').map (index)->
+      heights.push $(this).height() + heights[index]
+
     $('.text-container', $judy).on "scroll", ()->
       pos = $(this).scrollTop()
-      index = Math.floor(pos / height * 4)
-      $('img', $images).removeClass('current-image').eq(index).addClass('current-image')
+
+      index = (i for h, i in heights when ( (heights[i - 1] || 0 ) < pos < h )) ? (image_count - 1)
+
+      $images.removeClass('current-image').eq(index - 1).addClass('current-image')
 
   do ()->
     $deny = $('#deny-and-defend')
@@ -178,19 +186,36 @@ $ ()->
     $quotes = $('.quotes', $deny)
     width = $papers.width() - $deny.width()
 
+    pos = 0
+    scroll_amount = 1
+
+    prefix = Modernizr.prefixed('transform')
+    $.fn.parallax = (rate)->
+      $this = $(this)
+
+      do update = ()->
+        window.requestAnimationFrame update
+        next_css = if Modernizr.csstransforms3d
+          "translate3d(0,#{pos * rate}px, 0)"
+        else
+          "translateY(#{pos * rate}px)"
+
+
     # scroll thru papers with hover on first and last third of section
-    $('.prev', $container).on "hover", ()->
-      # scroll back
-      console.log ""
-    $('.next', $container).on "hover", ()->
-      # scroll forward
-      console.log ""
+    do bind_scroll = ()->
+      $('.prev', $container).on "hover", ()->
+        $container.scrollLeft pos - 1
+        $(this).off "hover"
+        setTimeout bind_scroll, 100
+      $('.next', $container).on "hover", ()->
+        $container.scrollLeft pos + 1
+        $(this).off "hover"
+        setTimeout bind_scroll, 100
 
     papers_count = $('img', $papers).length
 
     $container.on "scroll", ()->
       pos = $container.scrollLeft()
-      index = Math.floor pos / width * (papers_count)
 
       if index is papers_count
         # when the user scrolls to end of section, fade out papers
@@ -201,7 +226,7 @@ $ ()->
           $('.hospital-response').addClass("visible").on "click", ()->
             $('.visible', $deny).removeClass('visible')
             $('.finished').removeClass("finished")
-            # resume video
+            $video.play()
 
       else
         # parallax scrolling goes here
