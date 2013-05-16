@@ -16,18 +16,23 @@
 </head>
 
 <body>
+
   <div class="introduction">
     <video autoplay="autoplay" loop="loop">
       <source src="video/background_loop_blur.mp4" />
       <source src="video/background_loop_blur.webm" />
     </video>
   </div>
+
   <header class="intro"></header>
+
   <div class="container">
+
     <video id="the-video">
       <source src="video/hazardoushospitals.mp4" />
       <source src="video/hazardoushospitals.webm" />
     </video>
+
     <div class="video-controls">
       <div class="playpause paused" title="Play/Pause video"></div>
       <div class="progress">
@@ -35,14 +40,32 @@
         <div class="time-bar"></div>
       </div>
     </div>
-    <h1 class="chapter-title"></h1>
-    <nav class="chapter-list">
-      <ul>
-        <!-- Chapters added automatically here. -->
-      </ul>
-    </nav>
 
-    <!-- A SAFE PLACE -->
+    <h1 class="chapter-title"></h1>
+
+    <nav class="chapter-list"><ul></ul></nav>
+
+<!--
+    ### #     # ####### ######  ####### 
+     #  ##    #    #    #     # #     # 
+     #  # #   #    #    #     # #     # 
+     #  #  #  #    #    ######  #     # 
+     #  #   # #    #    #   #   #     # 
+     #  #    ##    #    #    #  #     # 
+    ### #     #    #    #     # ####### 
+-->
+    <div id="intro">
+    </div>
+
+    <!--
+       #        #####     #    ####### #######    ######  #          #     #####  #######  #####  
+      # #      #     #   # #   #       #          #     # #         # #   #     # #       #     # 
+     #   #     #        #   #  #       #          #     # #        #   #  #       #             # 
+    #     #     #####  #     # #####   #####      ######  #       #     # #       #####      ###  
+    #######          # ####### #       #          #       #       ####### #       #          #    
+    #     #    #     # #     # #       #          #       #       #     # #     # #               
+    #     #     #####  #     # #       #######    #       ####### #     #  #####  #######    #    
+    -->
     <div class="element" id="million">million</div>
     <div class="element" id="people">
       <div class="person">
@@ -77,12 +100,28 @@
       <h2>Interactive element for list of horrible diseases</h2>
     </aside>
 
-    <!-- QUALITY OF CARE -->
+<!--
+    #     # #######    ####### #     # #######    #     #    #    #######  #####  #     # ### #     #  #####  
+    ##    # #     #    #     # ##    # #          #  #  #   # #      #    #     # #     #  #  ##    # #     # 
+    # #   # #     #    #     # # #   # #          #  #  #  #   #     #    #       #     #  #  # #   # #       
+    #  #  # #     #    #     # #  #  # #####      #  #  # #     #    #    #       #######  #  #  #  # #  #### 
+    #   # # #     #    #     # #   # # #          #  #  # #######    #    #       #     #  #  #   # # #     # 
+    #    ## #     #    #     # #    ## #          #  #  # #     #    #    #     # #     #  #  #    ## #     # 
+    #     # #######    ####### #     # #######     ## ##  #     #    #     #####  #     # ### #     #  #####                                                                                         
+-->
     <div class="element" id="us-map">
       <object type="image/svg+xml" data="img/usa_map.svg"></object>
     </div>
 
-    <!-- DECEPTIVELY SIMPLE -->
+<!--
+    #     # #######     #####  ### #     # ######  #       #######     #####  #     # ######   #####  ####### ######  #     # 
+    ##    # #     #    #     #  #  ##   ## #     # #       #          #     # #     # #     # #     # #       #     #  #   #  
+    # #   # #     #    #        #  # # # # #     # #       #          #       #     # #     # #       #       #     #   # #   
+    #  #  # #     #     #####   #  #  #  # ######  #       #####       #####  #     # ######  #  #### #####   ######     #    
+    #   # # #     #          #  #  #     # #       #       #                # #     # #   #   #     # #       #   #      #    
+    #    ## #     #    #     #  #  #     # #       #       #          #     # #     # #    #  #     # #       #    #     #    
+    #     # #######     #####  ### #     # #       ####### #######     #####   #####  #     #  #####  ####### #     #    #    
+-->
     <a class="element" id="bacteria" href="#judy-gaines"></a> <!-- bacteria; three are drawn, then we replicate and animate -->
 
     <aside id="judy-gaines">
@@ -106,7 +145,15 @@
       </div>
     </aside>
 
-    <!-- DENY AND DEFEND -->
+<!--
+    ######  ####### #     # #     #      ##       ######  ####### ####### ####### #     # ######  
+    #     # #       ##    #  #   #      #  #      #     # #       #       #       ##    # #     # 
+    #     # #       # #   #   # #        ##       #     # #       #       #       # #   # #     # 
+    #     # #####   #  #  #    #        ###       #     # #####   #####   #####   #  #  # #     # 
+    #     # #       #   # #    #       #   # #    #     # #       #       #       #   # # #     # 
+    #     # #       #    ##    #       #    #     #     # #       #       #       #    ## #     # 
+    ######  ####### #     #    #        ###  #    ######  ####### #       ####### #     # ######                                                                                          
+-->
     <a class="element" id="slashed-circle" href="#deny-and-defend">
       <!-- represents "deny and defend"; we can show those words on either side or animate other things into the slashed circle -->
     </a>
@@ -165,7 +212,15 @@
       </div>
     </aside>
 
-    <!-- MALPRACTICE IN PRACTICE -->
+<!--
+    ####### #     # #######    #     #    #    #       ######  ######     #     #####  ####### ###  #####  #######    #     # #     # ####### #     # 
+       #    #     # #          ##   ##   # #   #       #     # #     #   # #   #     #    #     #  #     # #          ##   ##  #   #     #    #     # 
+       #    #     # #          # # # #  #   #  #       #     # #     #  #   #  #          #     #  #       #          # # # #   # #      #    #     # 
+       #    ####### #####      #  #  # #     # #       ######  ######  #     # #          #     #  #       #####      #  #  #    #       #    ####### 
+       #    #     # #          #     # ####### #       #       #   #   ####### #          #     #  #       #          #     #    #       #    #     # 
+       #    #     # #          #     # #     # #       #       #    #  #     # #     #    #     #  #     # #          #     #    #       #    #     # 
+       #    #     # #######    #     # #     # ####### #       #     # #     #  #####     #    ###  #####  #######    #     #    #       #    #     # 
+-->
     <a class="element" href="#can-you-sue" id="lawsuits">
       <!-- lawsuit icon; one rectangle is drawn, then we replicate 49 times and cross out 49 of the 50 -->
     </a>
@@ -215,7 +270,15 @@
       </div>
     </aside>
 
-    <!-- IS IT GETTING BETTER? -->
+<!--
+    ######  #######  #####  #     # #       #######        ######     #    ####### ### ####### #     # #######    #     #    #    ######  #     # 
+    #     # #       #     # #     # #          #           #     #   # #      #     #  #       ##    #    #       #     #   # #   #     # ##   ## 
+    #     # #       #       #     # #          #           #     #  #   #     #     #  #       # #   #    #       #     #  #   #  #     # # # # # 
+    ######  #####    #####  #     # #          #     #     ######  #     #    #     #  #####   #  #  #    #       ####### #     # ######  #  #  # 
+    #   #   #             # #     # #          #           #       #######    #     #  #       #   # #    #       #     # ####### #   #   #     # 
+    #    #  #       #     # #     # #          #     #     #       #     #    #     #  #       #    ##    #       #     # #     # #    #  #     # 
+    #     # #######  #####   #####  #######    #           #       #     #    #    ### ####### #     #    #       #     # #     # #     # #     # 
+-->
     <div class="element" id="dollar-sign">
       <!-- represents "penny pinching"; the dollar sign is shrunken or squeezed -->
     </div>
@@ -224,10 +287,23 @@
       <div class="hand"></div> <!-- outline of hand -->
       <div class="hand-bacterium"></div> <!-- one of many -->
     </div>
-    <aside id="conclusion">
+    <aside id="by-the-numbers">
       <a href="#" class="close-aside">&times;</a>
       <p>Getting better aside</p>
     </aside>
+
+<!--
+    ####### #     # ####### ######  ####### 
+    #     # #     #    #    #     # #     # 
+    #     # #     #    #    #     # #     # 
+    #     # #     #    #    ######  #     # 
+    #     # #     #    #    #   #   #     # 
+    #     # #     #    #    #    #  #     # 
+    #######  #####     #    #     # ####### 
+-->
+    <div id="outro">
+
+    </div>
 
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
