@@ -35,14 +35,14 @@
     cues = [
       {
         type: "chapter",
-        title: "Intro",
+        title: "&diams;",
         target: "#intro",
         time: "00:00",
         hide_title: true
       }, {
         type: "chapter",
-        title: "A Safe Place",
-        target: "#safety",
+        title: "A Safe Place?",
+        target: "#chapter1",
         time: "00:20"
       }, {
         type: "element",
@@ -61,8 +61,8 @@
         time: "00:48"
       }, {
         type: "chapter",
-        title: "Quality of Care",
-        target: "#quality-of-care",
+        title: "No One Watching",
+        target: "#chapter2",
         time: "00:52"
       }, {
         type: "element",
@@ -73,8 +73,8 @@
         time: "01:29"
       }, {
         type: "chapter",
-        title: "Deceptively Simple",
-        target: "#infection",
+        title: "No Simple Surgery",
+        target: "#chapter3",
         time: "01:33"
       }, {
         type: "element",
@@ -86,7 +86,7 @@
       }, {
         type: "chapter",
         title: "Deny & Defend",
-        target: "#culpability",
+        target: "#chapter4",
         time: "02:10"
       }, {
         type: "element",
@@ -101,8 +101,8 @@
         time: "02:41"
       }, {
         type: "chapter",
-        title: "Malpractice in Practice",
-        target: "#malpractice-in-practice",
+        title: "The Malpractice Myth",
+        target: "#chapter5",
         time: "02:44"
       }, {
         type: "element",
@@ -113,8 +113,8 @@
         time: "03:06"
       }, {
         type: "chapter",
-        title: "Getting Better?",
-        target: "#no-improvement",
+        title: "Result: Patient Harm",
+        target: "#chapter6",
         time: "03:10"
       }, {
         type: "element",
@@ -126,8 +126,8 @@
         time: "03:48"
       }, {
         type: "chapter",
-        title: "End",
-        target: "#end",
+        title: "&diams;",
+        target: "#outro",
         time: "03:58",
         hide_title: true
       }

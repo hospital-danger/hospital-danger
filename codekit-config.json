@@ -140,7 +140,7 @@
       "inputAbbreviatedPath" : "\/img\/header.png",
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/header.png",
-      "initialSize" : 4601,
+      "initialSize" : 17917,
       "fileType" : 8192
     },
     "\/js\/bacteria.coffee" : {
@@ -217,6 +217,17 @@
       "initialSize" : 1353,
       "fileType" : 8192
     },
+    "\/js\/raf-polyfill.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/raf-polyfill.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/raf-polyfill-min.js",
+      "fileType" : 64
+    },
     "\/sass\/screen.sass" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -238,6 +249,7 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
+<<<<<<< HEAD
     "\/img\/content\/judy-3.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -258,6 +270,17 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/raf-polyfill-min.js",
+=======
+    "\/js\/parallax-min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/parallax-min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/parallax-min-min.js",
+>>>>>>> 18a4e1da8fd55771b9dcdffdd71c46084b213268
       "fileType" : 64
     },
     "\/js\/popcorn.js" : {
@@ -282,16 +305,16 @@
       "outputAbbreviatedPath" : "\/js\/script-min.js",
       "fileType" : 64
     },
-    "\/js\/parallax-min.js" : {
+    "\/img\/content\/judy-3.jpg" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/parallax-min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/parallax-min-min.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/img\/content\/judy-3.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/content\/judy-3.jpg",
+      "initialSize" : 37503,
+      "fileType" : 4096
     },
     "\/img\/content\/judy-2.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -487,7 +510,7 @@
   "projectAttributes" : {
     "bourbonEnabled" : 0,
     "displayValue" : "hazardoushospitals",
-    "displayValueWasSetByUser" : 1,
+    "displayValueWasSetByUser" : 0,
     "compassEnabled" : 1
   }
 }

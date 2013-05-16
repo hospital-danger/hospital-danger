@@ -56,9 +56,10 @@ strong
 
 header
   background: $yellow image-url("header.png") center no-repeat
+  border-bottom: 4px solid #B59200
   padding: .75em 0
   z-index: 100
-  height: 125px
+  height: 80px
   top: 0
   @include transition(top 1s)
 
@@ -257,6 +258,20 @@ aside
 
   &.current
     bottom: 100%
+
+#us-map
+  position: absolute
+  top: -60px
+  left: 100px
+  height: 500px
+  @include opacity(0)
+
+  object
+    width: 780px
+    height: 600px
+
+  &.current
+    @include opacity(1)
 
 #bacteria
   position: absolute

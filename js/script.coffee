@@ -25,36 +25,36 @@ $ ()->
   chapter_index = 0
 
   cues = [
-    {type: "chapter", title: "Intro", target: "#intro", time: "00:00", hide_title: true}
+    {type: "chapter", title: "&diams;", target: "#intro", time: "00:00", hide_title: true}
 
-    {type: "chapter", title: "A Safe Place", target: "#safety", time: "00:20"}
+    {type: "chapter", title: "A Safe Place?", target: "#chapter1", time: "00:20"}
     {type: "element", target: "#people", time: "00:33"}
     {type: "element-next", target: "#people", time: "00:40"}
     {type: "element", target: "#causes-of-death", time: "00:42"}
     {type: "chapter_end", time: "00:48"}
 
-    {type: "chapter", title: "Quality of Care", target: "#quality-of-care", time: "00:52"}
+    {type: "chapter", title: "No One Watching", target: "#chapter2", time: "00:52"}
     {type: "element", target: "#us-map", time: "01:11"}
     {type: "chapter_end", time: "01:29"}
 
-    {type: "chapter", title: "Deceptively Simple", target: "#infection", time: "01:33"}
+    {type: "chapter", title: "No Simple Surgery", target: "#chapter3", time: "01:33"}
     {type: "element", target: "#bacteria", time: "01:43"}
     {type: "chapter_end", time: "02:08"}
 
-    {type: "chapter", title: "Deny & Defend", target: "#culpability", time: "02:10"}
+    {type: "chapter", title: "Deny & Defend", target: "#chapter4", time: "02:10"}
     {type: "element", target: "#deny-and-defend", time: "02:22"}
     {type: "element", target: "#take-responsibility", time: "02:34"}
     {type: "chapter_end", time: "02:41"}
 
-    {type: "chapter", title: "Malpractice in Practice" , target: "#malpractice-in-practice", time: "02:44"}
+    {type: "chapter", title: "The Malpractice Myth" , target: "#chapter5", time: "02:44"}
     {type: "element", target: "#lawsuits", time: "02:52"}
     {type: "chapter_end", time:"03:06"}
 
-    {type: "chapter", title: "Getting Better?" , target: "#no-improvement", time: "03:10"}
+    {type: "chapter", title: "Result: Patient Harm" , target: "#chapter6", time: "03:10"}
     {type: "element", target: "#pinch-pennies", time: "03:28"}
     {type: "element", target: "#wash-hands", time: "03:48"}
 
-    {type: "chapter", title: "End", target: "#end", time: "03:58", hide_title: true}
+    {type: "chapter", title: "&diams;", target: "#outro", time: "03:58", hide_title: true}
   ]
 
   chapters = (cue for cue in cues when (cue.type is "chapter"))
