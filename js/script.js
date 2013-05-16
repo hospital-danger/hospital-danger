@@ -66,7 +66,7 @@
         time: "00:52"
       }, {
         type: "element",
-        target: "#us-map",
+        target: "#show-map",
         time: "01:11"
       }, {
         type: "chapter_end",
@@ -90,7 +90,7 @@
         time: "02:10"
       }, {
         type: "element",
-        target: "#deny-and-defend",
+        target: "#slashed-circle",
         time: "02:22"
       }, {
         type: "element",
@@ -250,6 +250,31 @@
       }, 5000);
     });
     node_callbacks = {};
+    setTimeout(function() {
+      var state, states, _j, _len1, _ref2, _results;
+      states = $('#us-map')[0].contentDocument;
+      _ref2 = states.getElementsByClassName("state");
+      _results = [];
+      for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
+        state = _ref2[_j];
+        $(state).on("mouseenter", function(e) {
+          var left_offset;
+          left_offset = e.offsetX;
+          console.log(left_offset);
+          if (left_offset > 400) {
+            left_offset += 150;
+          }
+          return $("#state-info").show().css({
+            top: e.offsetY - 50,
+            left: left_offset
+          }).find('#state-abbr').text(this.id);
+        });
+        _results.push($(state).on("mouseleave", function() {
+          return $('#state-info').hide();
+        }));
+      }
+      return _results;
+    }, 5000);
     (function() {
       var $images, $judy, heights, image_count;
       $judy = $('#judy-gaines');

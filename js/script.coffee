@@ -34,7 +34,7 @@ $ ()->
     {type: "chapter_end", time: "00:48"}
 
     {type: "chapter", title: "No One Watching", target: "#chapter2", time: "00:52"}
-    {type: "element", target: "#us-map", time: "01:11"}
+    {type: "element", target: "#show-map", time: "01:11"}
     {type: "chapter_end", time: "01:29"}
 
     {type: "chapter", title: "No Simple Surgery", target: "#chapter3", time: "01:33"}
@@ -42,7 +42,7 @@ $ ()->
     {type: "chapter_end", time: "02:08"}
 
     {type: "chapter", title: "Deny & Defend", target: "#chapter4", time: "02:10"}
-    {type: "element", target: "#deny-and-defend", time: "02:22"}
+    {type: "element", target: "#slashed-circle", time: "02:22"}
     {type: "element", target: "#take-responsibility", time: "02:34"}
     {type: "chapter_end", time: "02:41"}
 
@@ -162,6 +162,28 @@ $ ()->
   # Nodes
 
   node_callbacks = {}
+
+  setTimeout ()->
+    states = $('#us-map')[0].contentDocument
+
+
+    for state in states.getElementsByClassName "state"
+      $(state).on "mouseenter", (e)->
+        left_offset = e.offsetX
+        console.log left_offset
+        left_offset += 150 if left_offset > 400
+        $("#state-info")
+          .show()
+          .css({top: e.offsetY - 50, left: left_offset })
+          .find('#state-abbr').text(this.id)
+
+      $(state).on "mouseleave", ()->
+        $('#state-info').hide()
+  , 5000
+
+
+
+
 
   do ()->
     $judy = $('#judy-gaines')

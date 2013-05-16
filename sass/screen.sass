@@ -259,19 +259,34 @@ aside
   &.current
     bottom: 100%
 
+#show-map
+  width: 300px
+  height: 300px
+  border: 2px solid yellow
+  top: 30px
+  left: 580px
+
 #us-map
   position: absolute
   top: -60px
   left: 100px
   height: 500px
   @include opacity(0)
-
-  object
-    width: 780px
-    height: 600px
+  width: 780px
+  height: 600px
 
   &.current
     @include opacity(1)
+    z-index: 10
+
+#state-info
+  z-index: 20
+  position: absolute
+  width: 100px
+  height: 100px
+  background-color: white
+
+
 
 #bacteria
   position: absolute
@@ -325,6 +340,42 @@ aside
     overflow: auto
     top: 1em
     left: 1em
+
+#slashed-circle
+  width: 200px
+  height: 200px
+  border: 2px solid yellow
+  top: 60px
+  left: 650px
+
+#deny-and-defend
+
+  .papers-container
+
+    &.finished
+
+    .prev
+
+    .next
+
+    .papers
+
+      img
+
+  .quotes
+
+    blockquote
+
+      &.current-quote
+
+  .hospital-envelope
+
+    &.visible
+
+  .hospital-response
+
+    &.visible
+
 
 #lawsuits
   width: 100px
