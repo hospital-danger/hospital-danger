@@ -34,7 +34,7 @@ $ ()->
     {type: "chapter_end", time: "00:47"}
 
     {type: "chapter", title: "Quality of Care", target: "#quality-of-care", time: "00:52"}
-    {type: "element", target: "#states", time: "01:11"}
+    {type: "element", target: "#us-map", time: "01:11"}
     # 121 only 3
     {type: "chapter_end", time: "01:29"}
 
@@ -144,7 +144,6 @@ $ ()->
     target = $(this).attr "href"
     if target then $(target).addClass("current")
 
-
   $(".close-aside").on "click", (e)->
     e.preventDefault()
     $(this).closest('aside').removeClass("current")
@@ -191,4 +190,3 @@ $ ()->
 
     e.preventDefault()
     $video.play()
-
