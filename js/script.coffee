@@ -31,7 +31,7 @@ $ ()->
     {type: "element", target: "#people", time: "00:33"}
     {type: "element-next", target: "#people", time: "00:40"}
     {type: "element", target: "#causes-of-death", time: "00:42"}
-    {type: "chapter_end", time: "00:47"}
+    {type: "chapter_end", time: "00:48"}
 
     {type: "chapter", title: "Quality of Care", target: "#quality-of-care", time: "00:52"}
     {type: "element", target: "#states", time: "01:11"}
@@ -82,7 +82,7 @@ $ ()->
     $video.currentTime( pos * duration )
 
   goto_chapter = (target)->
-    [chapter_index, cue_time] = [index, to_s(cue.time)] for cue, index in cues when (cue.target is target)
+    [chapter_index, cue_time] = [index, cue.time] for cue, index in cues when (cue.target is target)
     $video.currentTime( cue_time ).play() if cue_time?
     $('.current-chapter').removeClass "current-chapter"
     $("[href='#{target}']").addClass "current-chapter"
@@ -174,12 +174,41 @@ $ ()->
       $('img', $images).removeClass('current-image').eq(index).addClass('current-image')
 
   do ()->
+    $deny = $('#deny-and-defend')
+    $container = $('.papers-container', $papers)
+    $papers = $('.papers', $deny)
+    $quotes = $('.quotes', $deny)
+    width = $papers.width() - $deny.width()
+
     # scroll thru papers with hover on first and last third of section
-    # papers scroll at diff'rent speeds
-    # relevant block quotes pop up at certain points
-    # when the user scrolls to end of section, fade out papers
-    # slide down response from hospital
-    # something cheesy like askew paper with courier text
+    $('.prev', $container).on "hover", ()->
+      # scroll back
+      console.log ""
+    $('.next', $container).on "hover", ()->
+      # scroll forward
+      console.log ""
+
+    papers_count = $('img', $papers).length
+
+    $container.on "scroll", ()->
+      pos = $container.scrollLeft()
+      index = Math.floor pos / width * (papers_count)
+
+      if index is papers_count
+        # when the user scrolls to end of section, fade out papers
+        $container.addClass("finished")
+        $('.hospital-envelope').addClass("visible").on "click", ()->
+          # slide down response from hospital
+          # something cheesy like askew paper with courier text
+          $('.hospital-response').addClass("visible").on "click", ()->
+            $('.visible', $deny).removeClass('visible')
+            $('.finished').removeClass("finished")
+            # resume video
+
+      else
+        # parallax scrolling goes here
+        # relevant block quotes pop up at certain points
+        $('blockquote', $quotes).removeClass('current-quote').eq(index).addClass('current-quote')
 
   # scroll decision tree
   $('a', '.decision-tree').on "click", (e)->

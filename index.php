@@ -142,6 +142,8 @@
     <aside id="deny-and-defend">
       <a href="#" class="close-aside">&times;</a>
       <div class="papers-container">
+        <div class="prev">&nbsp;</div>
+        <div class="next">&nbsp;</div>
         <div class="papers">
           <img src="#" id="papers-1">
           <img src="#" id="papers-2">
