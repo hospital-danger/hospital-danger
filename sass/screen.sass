@@ -23,6 +23,7 @@ h4
 // Base.
 
 $container-width: 960px
+$container-height: 553px
 
 *
   position: relative
@@ -48,7 +49,7 @@ strong
 // Layout.
 
 .container
-  height: 553px
+  height: $container-height
   margin: 0 auto
   overflow: hidden
   max-width: $container-width
@@ -183,8 +184,10 @@ aside
   top: 0
   right: 0
   width: 50%
-  height: 550px
+  height: 542px
   padding: 1em
+  z-index: 10
+  overflow: hidden
   @include box-shadow(#eee -5px 0 15px)
   @include transition(transform 1s)
 
@@ -260,7 +263,7 @@ aside
   top: 0
   left: $container-width - 550px
   width: 550px
-  height: 530px
+  height: 480px
   border: 1px solid $yellow
 
 #judy-gaines

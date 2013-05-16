@@ -165,12 +165,19 @@ $ ()->
 
   do ()->
     $judy = $('#judy-gaines')
-    $images = $('.image-container', $judy)
-    height = $('.text-inner', $judy).height() - $judy.height()
+    $images = $('img', $judy)
+    image_count = $images.length
+    # get heights of all paragraphs
+    heights = [0]
+    $('.text-container', $judy).find('p').map (index)->
+      heights.push $(this).height() + heights[index]
+
     $('.text-container', $judy).on "scroll", ()->
       pos = $(this).scrollTop()
-      index = Math.floor(pos / height * 4)
-      $('img', $images).removeClass('current-image').eq(index).addClass('current-image')
+
+      index = (i for h, i in heights when ( (heights[i - 1] || 0 ) < pos < h )) ? (image_count - 1)
+
+      $images.removeClass('current-image').eq(index - 1).addClass('current-image')
 
   do ()->
     $deny = $('#deny-and-defend')
