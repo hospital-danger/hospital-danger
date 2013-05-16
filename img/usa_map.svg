@@ -16,11 +16,6 @@
           transition: all .1s ease-in-out;
 }
 
-.state:hover
-{
-	fill: #ffd91f;
-}
-
 .state.rating-one
 {
 	fill: gray;
@@ -34,6 +29,11 @@
 .state.rating-three
 {
 	fill: green;
+}
+
+.state:hover
+{
+	fill: #ffd91f !important;
 }
 </style>
 <path class="state rating-two" id="HI" d="M224.081,523.11l1.883-3.469l2.197-0.316l0.314,0.789l-2.04,2.996H224.081z M233.967,519.483
