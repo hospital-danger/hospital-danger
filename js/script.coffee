@@ -149,9 +149,9 @@ $ ()->
     $(this).closest('aside').removeClass("current")
     $video.play()
 
-  $('header.intro').on "click", ()->
+  $('header.intro, .introduction').on "click", ()->
     $('#noise').remove()
-    $(this).removeClass('intro')
+    $('header').removeClass('intro')
     $('.introduction').addClass('finished')
     setTimeout ()->
       $video.play()

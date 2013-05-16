@@ -239,9 +239,9 @@
       $(this).closest('aside').removeClass("current");
       return $video.play();
     });
-    $('header.intro').on("click", function() {
+    $('header.intro, .introduction').on("click", function() {
       $('#noise').remove();
-      $(this).removeClass('intro');
+      $('header').removeClass('intro');
       $('.introduction').addClass('finished');
       setTimeout(function() {
         return $video.play();
