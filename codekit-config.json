@@ -217,27 +217,24 @@
       "initialSize" : 1353,
       "fileType" : 8192
     },
-    "\/sass\/screen.sass" : {
+    "\/css\/ie.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/screen.sass",
-      "outputStyle" : 3,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/screen.css",
-      "fileType" : 2,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/css\/ie.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
-    "\/js\/raf-polyfill.js" : {
+    "\/js\/parallax-min.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/raf-polyfill.js",
+      "inputAbbreviatedPath" : "\/js\/parallax-min.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/raf-polyfill-min.js",
+      "outputAbbreviatedPath" : "\/js\/parallax-min-min.js",
       "fileType" : 64
     },
     "\/img\/content\/judy-3.jpg" : {
@@ -251,16 +248,17 @@
       "initialSize" : 37503,
       "fileType" : 4096
     },
-    "\/js\/parallax-min.js" : {
+    "\/sass\/screen.sass" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/parallax-min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/parallax-min-min.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/sass\/screen.sass",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/screen.css",
+      "fileType" : 2,
+      "debugStyle" : 0
     },
     "\/js\/popcorn.js" : {
       "ignoreWasSetByUser" : 0,
@@ -284,14 +282,16 @@
       "outputAbbreviatedPath" : "\/js\/script-min.js",
       "fileType" : 64
     },
-    "\/css\/ie.css" : {
+    "\/js\/raf-polyfill.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/ie.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "inputAbbreviatedPath" : "\/js\/raf-polyfill.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/raf-polyfill-min.js",
+      "fileType" : 64
     },
     "\/img\/content\/judy-2.jpg" : {
       "ignoreWasSetByUser" : 0,

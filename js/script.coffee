@@ -170,7 +170,7 @@ $ ()->
     height = $('.text-inner', $judy).height() - $judy.height()
     $('.text-container', $judy).on "scroll", ()->
       pos = $(this).scrollTop()
-      index = Math.floor( pos / height * 4)
+      index = Math.floor(pos / height * 4)
       $('img', $images).removeClass('current-image').eq(index).addClass('current-image')
 
   do ()->
