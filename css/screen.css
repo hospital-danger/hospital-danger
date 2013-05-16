@@ -537,9 +537,7 @@ aside {
 
 /* line 437, ../sass/screen.sass */
 .decision-tree {
-  width: 100%;
-  height: 150px;
-  overflow: hidden; }
+  width: 100%; }
   /* line 442, ../sass/screen.sass */
   .decision-tree .decision,
   .decision-tree .decision-big {
