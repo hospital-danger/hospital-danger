@@ -54,17 +54,6 @@
       "outputAbbreviatedPath" : "\/js\/jquery.scrollTo-min.js",
       "fileType" : 64
     },
-    "\/img\/content\/judy-5.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/content\/judy-5.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/content\/judy-5.png",
-      "initialSize" : 2528294,
-      "fileType" : 8192
-    },
     "\/js\/parallax.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -75,6 +64,17 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/parallax-min.js",
       "fileType" : 64
+    },
+    "\/img\/content\/judy-5.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/content\/judy-5.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/content\/judy-5.png",
+      "initialSize" : 2528294,
+      "fileType" : 8192
     },
     "\/img\/play.png" : {
       "ignoreWasSetByUser" : 0,
@@ -154,6 +154,17 @@
       "initialSize" : 114485,
       "fileType" : 4096
     },
+    "\/js\/jquery.localScroll.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/jquery.localScroll.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/jquery.localScroll-min.js",
+      "fileType" : 64
+    },
     "\/img\/content\/judy-2.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -176,17 +187,6 @@
       "initialSize" : 4601,
       "fileType" : 8192
     },
-    "\/js\/jquery.localScroll.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.localScroll.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery.localScroll-min.js",
-      "fileType" : 64
-    },
     "\/js\/bacteria.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -199,15 +199,6 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/config.rb" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/config.rb",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 32768
-    },
     "\/js\/modernizr.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -219,14 +210,14 @@
       "outputAbbreviatedPath" : "\/js\/modernizr-min.js",
       "fileType" : 64
     },
-    "\/css\/print.css" : {
+    "\/config.rb" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/print.css",
+      "inputAbbreviatedPath" : "\/config.rb",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "fileType" : 32768
     },
     "\/img\/full_screen.png" : {
       "ignoreWasSetByUser" : 0,
@@ -250,6 +241,27 @@
       "outputAbbreviatedPath" : "\/js\/raf-polyfill-min.js",
       "fileType" : 64
     },
+    "\/css\/print.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/print.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/sass\/screen.sass" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/sass\/screen.sass",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/screen.css",
+      "fileType" : 2,
+      "debugStyle" : 0
+    },
     "\/css\/ie.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -269,18 +281,6 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/parallax-min-min.js",
       "fileType" : 64
-    },
-    "\/sass\/screen.sass" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/screen.sass",
-      "outputStyle" : 3,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/screen.css",
-      "fileType" : 2,
-      "debugStyle" : 0
     },
     "\/js\/popcorn.js" : {
       "ignoreWasSetByUser" : 0,

@@ -46,6 +46,16 @@ strong
   font-weight: bold
 
 // Layout.
+.introduction
+  position: absolute
+  width: 100%
+  height: 100%
+  z-index: 100
+  opacity: 1
+  @include transition(opacity 3s ease 1s)
+  &.finished
+    opacity: 0
+    pointer-events: none
 
 .container
   height: 553px
@@ -56,6 +66,13 @@ strong
 header
   background: $yellow
   padding: .75em 0
+  z-index: 100
+  top: 0
+  @include transition(top 1s)
+  &.intro
+    top: 350px
+    cursor: pointer
+
 
   img
     display: block

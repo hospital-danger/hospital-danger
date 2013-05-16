@@ -41,6 +41,7 @@ $ ()->
     {type: "chapter_end", time: "01:53"}
 
     {type: "chapter", title: "Deny & Defend", target: "#culpability", time: "01:54"}
+    {type: "element", target: "#deny-and-defend", time: "2:10"}
     {type: "chapter_end", time: "02:23"}
 
     {type: "chapter", title: "Malpractice in Practice" , target: "#malpractice-in-practice", time: "02:24"}
@@ -144,6 +145,16 @@ $ ()->
     $(this).closest('aside').removeClass("current")
     $video.play()
 
+  $('header.intro').on "click", ()->
+    $(this).removeClass('intro')
+    $('.introduction').addClass('finished')
+    setTimeout ()->
+      $video.play()
+    , 1000
+    setTimeout ()->
+      $('.introduction').hide()
+    , 5000
+
   # Nodes
 
   node_callbacks = {}
@@ -155,9 +166,15 @@ $ ()->
     $('.text-container', $judy).on "scroll", ()->
       pos = $(this).scrollTop()
       index = Math.floor( pos / height * 4)
-      # $('.current-image')
       $('img', $images).removeClass('current-image').eq(index).addClass('current-image')
 
+  do ()->
+    # scroll thru papers with hover on first and last third of section
+    # papers scroll at diff'rent speeds
+    # relevant block quotes pop up at certain points
+    # when the user scrolls to end of section, fade out papers
+    # slide down response from hospital
+    # something cheesy like askew paper with courier text
 
   # scroll decision tree
   $('a', '.decision-tree').on "click", (e)->
