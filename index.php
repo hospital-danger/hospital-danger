@@ -78,16 +78,9 @@
     </aside>
 
     <!-- QUALITY OF CARE -->
-    <div class="element" id="report-cards">
-      <!-- report icon; three are drawn, then we replicate 147 times -->
-    </div>
     <div class="element" id="us-map">
-      <!-- US map created from the report card squares -->
+      <object type="image/svg+xml" data="img/usa_map.svg"></object>
     </div>
-    <aside id="map-detail">
-      <a href="#" class="close-aside">&times;</a>
-      <p>Quality of care map goes here.</p>
-    </aside>
 
     <!-- DECEPTIVELY SIMPLE -->
     <a class="element" id="bacteria" href="#judy-gaines"></a> <!-- bacteria; three are drawn, then we replicate and animate -->
