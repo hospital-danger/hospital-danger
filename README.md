@@ -6,37 +6,43 @@ Put together in just a few days for the Mozilla, Tribeca Film Institute, and For
 
 ## Team
 
-### Frontline PBS
+- **DIRECTOR**: Thomas Jennings, 2over10 for PBS/Frontline
+- **PRODUCER**: Sabrina Shankman, 2over10 for PBS/Frontline
+- **REPORTERS**: Marshall Allen and Olga Pierce, ProPublica
+- **NARRATOR**: Marshall Allen, ProPublica
+- **CREATIVE DIRECTOR**: Michael Nieling, Ocupop
+- **DIRECTOR OF DEVELOPMENT**: Sam Bailey, Entropy Media for PBS/Frontline
+- **SENIOR ART DIRECTOR**: Matthew McVickar, Ocupop
+- **DEVELOPER**: Justin Falcone, Ocupop
+- **JUNIOR ART DIRECTOR**: Nick Krusick, Ocupop
+- **ANIMATOR**: Fola Akinola, Nomad Motion LLC
+- **CAMERA**: Thomas Jennings, 2over10 for PBS/Frontline
+- **EDITOR (Video)**: Sonja Bozic
+- **PRODUCTION ASSISTANT**: Mindy Yuen, 2over10 for PBS/Frontline
+- **ADDITIONAL CAMERA**: Andrew Burton, Jon Groat and Jen Heck
+- **MUSIC**: Justin Falcone, Ocupop
 
-- Sam Bailey
-- Tom Jennings
-- Sabrina Shankman
-- Mindy Yuen
-- Fola Akinola
-
-### ProPublica
-
-- Marshall Alan
-- Kirsten Berg
-- Blair Hickman
-- Olga Pierce
-
-### MX
-
-- Jeremiah Grant
-
-### Ocupop
-
-- Justin Falcone
-- Nick Krusick
-- Matthew McVickar
-- Michael Nieling
+### For Frontline
+ 
+- **DIRECTOR, DIGITAL MEDIA/SENIOR EDITOR**: Andrew Golis
+- **ASSISTANT MANAGING EDITOR, DIGITAL**: Sarah Moughty
+ 
+### For ProPublica
+ 
+- **SENIOR EDITOR**: Tom Detzel
+- **SENIOR EDITOR, NEWS APPLICATIONS**: Scott Klein
+- **NEWS APPLICATIONS DEVELOPER**: Al Shaw
+- **COMMUNITY EDITOR**: Blair Hickman
+- **RESEARCH**: Kirsten Berg
 
 ## Technologies
 
 - [Coffeescript](http://coffeescript.org/)
 - [Compass](http://compass-style.org/)
 - [HTML5](http://www.w3.org/html/wg/)
-- [PopcornJS](http://popcornjs.org/)
-- [SASS](http://sass-lang.com/)
 - [jQuery](http://jquery.com/)
+- [Modernizr](http://modernizr.com/)
+- [PopcornJS](http://popcornjs.org/)
+- [RAF Polyfill](https://gist.github.com/paulirish/1579671)
+- [SASS](http://sass-lang.com/)
+- [ScrollTo](http://flesler.blogspot.com/2007/10/jqueryscrollto.html)
