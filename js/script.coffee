@@ -209,7 +209,7 @@ $ ()->
     $('.sections', $judy).on "scroll", ()->
       pos = $(this).scrollTop()
 
-      index = (i for h, i in heights when ( (heights[i - 1] || 0 ) < pos < h )) ? (image_count - 1)
+      index = (i for h, i in heights when ( (heights[i - 1] || 0 ) < (pos + 300) < h )) ? (image_count - 1)
 
       $images.removeClass('current-image').eq(index - 1).addClass('current-image')
 

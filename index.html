@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Your Hospital May Be Hazardous to Your Health</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/screen.css">
   <script src="js/vendor/modernizr.js"></script>
 </head>
@@ -19,8 +18,8 @@
 
   <div class="introduction">
     <video autoplay="autoplay" loop="loop">
-      <source src="video/background_loop_blur.mp4" />
-      <source src="video/background_loop_blur.webm" />
+      <source src="video/background_loop_blur.mp4" type="video/mp4"/>
+      <source src="video/background_loop_blur.webm" type="video/webm"/>
     </video>
   </div>
 
@@ -31,8 +30,8 @@
   <div class="container">
 
     <video id="the-video">
-      <source src="video/hazardoushospitals.mp4" />
-      <source src="video/hazardoushospitals.webm" />
+      <source src="video/hazardoushospitals.mp4" type="video/mp4"/>
+      <source src="video/hazardoushospitals.webm" type="video/webm"/>
     </video>
 
     <div class="video-controls">
@@ -46,6 +45,8 @@
     <h1 class="chapter-title"></h1>
 
     <nav class="chapter-list"><ul></ul></nav>
+
+    <div class="next-chapter">Next Chapter &raquo;</div>
 
 <!--
     ### #     # ####### ######  #######
