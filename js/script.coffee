@@ -271,9 +271,7 @@ $ ()->
   $('a', '.decision-tree').on "click", (e)->
     e.preventDefault()
     target = $(this).attr('href')
-    $('.decision-tree').scrollTo(target, 1000)
+    $('.decision-tree-container').scrollTo(target, 1000)
 
-  $('#end-decision-tree').on "click", (e)->
-
-    e.preventDefault()
-    $video.play()
+  # start decision tree at the right coords
+  $('.decision-tree-container').scrollTo('#decision-1', 0)

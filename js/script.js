@@ -382,12 +382,9 @@
       var target;
       e.preventDefault();
       target = $(this).attr('href');
-      return $('.decision-tree').scrollTo(target, 1000);
+      return $('.decision-tree-container').scrollTo(target, 1000);
     });
-    return $('#end-decision-tree').on("click", function(e) {
-      e.preventDefault();
-      return $video.play();
-    });
+    return $('.decision-tree-container').scrollTo('#decision-1', 0);
   });
 
 }).call(this);
