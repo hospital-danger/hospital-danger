@@ -170,7 +170,7 @@ $ ()->
     $('header').removeClass('intro')
     $('.introduction').addClass('finished')
     music = $('#the-music')[0]
-    # music.volume = 0.3
+    music.volume = 0.3
     music.play()
 
     setTimeout ()->
