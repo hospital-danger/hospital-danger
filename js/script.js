@@ -240,7 +240,8 @@
       $(".next-chapter").removeClass("show-next");
       $(".instruction").removeClass("show-instruction");
       $play_button.removeClass("paused");
-      return $('aside.current').removeClass('current');
+      $('aside.current').removeClass('current');
+      return $('#now-what').removeClass('current');
     });
     $video.on("pause", function() {
       return $play_button.addClass("paused");
@@ -387,7 +388,7 @@
           return $('#state-info').hide();
         });
         _results.push($(state).on("click", function() {
-          $('.instruction').removeClass('show-instruction');
+          $('.instruction').removeClass('show-instructionzx');
           if ($('#us-map').hasClass('expanded')) {
             $video.play();
           } else {

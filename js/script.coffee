@@ -86,6 +86,7 @@ $ ()->
     $(".instruction").removeClass("show-instruction")
     $play_button.removeClass("paused")
     $('aside.current').removeClass('current')
+    $('#now-what').removeClass('current')
 
   $video.on "pause", ()->
     $play_button.addClass("paused")
@@ -162,6 +163,7 @@ $ ()->
     $(this).closest('aside').removeClass("current")
     $video.play()
 
+
   $('header.intro, .introduction').on "click", ()->
     $('#noise').remove()
     $('header').removeClass('intro')
@@ -209,7 +211,7 @@ $ ()->
         $('#state-info').hide()
 
       $(state).on "click", ()->
-        $('.instruction').removeClass('show-instruction')
+        $('.instruction').removeClass('show-instructionzx')
         if $('#us-map').hasClass('expanded') then $video.play() else $video.pause()
         $video.pause()
         $('#us-map').toggleClass("expanded")
