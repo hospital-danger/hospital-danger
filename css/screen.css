@@ -1396,6 +1396,11 @@ aside {
       padding-bottom: 10px; }
 
 /* line 1116, ../sass/screen.sass */
+.go-to-credits-container {
+  width: 960px;
+  margin: 0 auto; }
+
+/* line 1120, ../sass/screen.sass */
 #go-to-credits {
   display: block;
   clear: both;
@@ -1403,10 +1408,10 @@ aside {
   font-family: "Open Sans Bold";
   font-size: 13px;
   margin-top: 1em;
-  text-align: center;
+  text-align: right;
   text-transform: uppercase; }
 
-/* line 1126, ../sass/screen.sass */
+/* line 1130, ../sass/screen.sass */
 #credits {
   background: white;
   position: absolute;
@@ -1417,18 +1422,18 @@ aside {
   padding: 20px;
   z-index: 99;
   display: none; }
-  /* line 1137, ../sass/screen.sass */
+  /* line 1141, ../sass/screen.sass */
   #credits h2 {
     font-size: 64px; }
-  /* line 1140, ../sass/screen.sass */
+  /* line 1144, ../sass/screen.sass */
   #credits p {
     margin: 1em 0; }
-    /* line 1143, ../sass/screen.sass */
+    /* line 1147, ../sass/screen.sass */
     #credits p strong {
       display: block;
       margin-top: 2em; }
 
-/* line 1147, ../sass/screen.sass */
+/* line 1151, ../sass/screen.sass */
 #close-credits {
   z-index: 10;
   position: absolute;
