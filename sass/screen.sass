@@ -139,29 +139,25 @@ video
   &:hover .playpause
     @include opacity(1)
 
+  .time,
   .progress
-    overflow: hidden
-    height: 50px
-    margin-left: 100px
-    padding: .5em
-    font-weight: bold
-
-  .buffer-bar,
-  .time-bar
     position: absolute
+    height: 7px
+
+  .time
+    top: 43px
+    background: rgba(255, 255, 255, .25)
+    overflow: hidden
+    margin-left: 100px
+    width: 845px
+
+  .progress
     top: 0
-    left: 0
+    background: rgba(255, 255, 255, .5)
     margin-left: -100%
     width: 100%
     @include transition(left .5s)
-
-  .time-bar
-    top: 43px
-    border-top: 7px solid rgba(255, 255, 255, .5)
     @include opacity(.5)
-
-  .buffer-bar
-    background-color: $dark
 
 .chapter-list
   position: absolute

@@ -16,10 +16,7 @@ $ ()->
   $video = Popcorn('#the-video')
 
   $play_button = $('.playpause')
-  $time_bar = $('.time-bar')
-  $buffer_bar = $('.buffer_bar')
-  $time_left = $('.time-left')
-  $time_elapsed = $('.time-elapsed')
+  $progess = $('.progress')
   duration = 0
   current_time = 0
   chapter_index = 0
@@ -115,9 +112,7 @@ $ ()->
   $video.on "timeupdate", ()->
     current_time = $video.currentTime()
     duration = $video.duration() || 0
-    $time_bar.css {left: "#{current_time/duration * 100}%"}
-    $time_elapsed.text to_clock Math.floor current_time
-    $time_left.text to_clock Math.floor duration - current_time
+    $progess.css {left: "#{current_time/duration * 100}%"}
 
   # set css animations to cue times
   $.each cues, (i, cue_item)->
