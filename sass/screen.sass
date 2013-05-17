@@ -590,6 +590,10 @@ aside
   left: 650px
 
 #deny-and-defend
+  a
+    text-decoration: underline
+
+
   .aside-content
     height: 550px
     overflow: auto
@@ -620,6 +624,8 @@ aside
     .intro
       width: 400px
       float: left
+      padding: 5px
+
 
     .papers
       width: 6000px
@@ -635,16 +641,28 @@ aside
     position: absolute
     top: 0
     left: 0
+    height: 550px
+    width: 400px
     .event
+      font-size: .9em
+      border-radius: 2px
+      padding: 10px
+      @include bottom-triangle(6px, white, down)
+      box-shadow: 0 0 10px #666
       position: absolute
-      background-color: red
+      bottom: 0
+      background-color: white
       margin: 100px
       width: 300px
+      height: 150px
+      z-index: 10
       @include transition(transform 1s)
       @include translateY(2000px)
 
-      q
+      blockquote
         display: block
+        font-style: italic
+        margin: 3px 0
 
 
       &.current-event
@@ -661,9 +679,20 @@ aside
     height: 500px
     width: 400px
     padding: 100px 40px
+    z-index: 20
     background-image: image-url("content/putten-doctor_letter.png")
     @include translateY(-2000px)
     @include transition(transform 3s)
+    p
+      margin-bottom: 2em
+      font-family: "Courier New", monospace
+      font-weight: bold
+      font-size: .9em
+      line-height: 2
+    cite
+      display: block
+      font-size: .8em
+      text-align: right
 
     &.visible
       @include translateY(0)
