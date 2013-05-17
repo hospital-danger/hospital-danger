@@ -22,31 +22,20 @@
   };
 
   $(function() {
-    var $buffer_bar, $play_button, $time_bar, $time_elapsed, $time_left, $video, build_chapter_markers, chapter, chapter_index, chapters, citations, cue, cues, current_time, duration, goto_chapter, node_callbacks, toggle_play, _i, _len;
+    var $play_button, $progess, $video, build_chapter_markers, chapter, chapter_index, chapters, citations, cue, cues, current_time, duration, goto_chapter, node_callbacks, toggle_play, _i, _len;
     $video = Popcorn('#the-video');
     $play_button = $('.playpause');
-    $time_bar = $('.time-bar');
-    $buffer_bar = $('.buffer_bar');
-    $time_left = $('.time-left');
-    $time_elapsed = $('.time-elapsed');
+    $progess = $('.progress');
     duration = 0;
     current_time = 0;
     chapter_index = 0;
     cues = [
       {
         type: "chapter",
-        title: "",
-        target: "#intro",
-        time: "00:00",
-        hide_title: true,
-        image: '#'
-      }, {
-        type: "chapter",
         title: "A Safe Place?",
         target: "#chapter1",
         time: "00:20",
-        image: '#',
-        no_pause: true
+        image: 'img/chapter-1.png'
       }, {
         type: "element",
         target: "#people",
@@ -60,7 +49,7 @@
         title: "No One Watching",
         target: "#chapter2",
         time: "00:52",
-        image: '#'
+        image: 'img/chapter-2.png'
       }, {
         type: "element",
         target: "#show-map",
@@ -70,7 +59,7 @@
         title: "No Simple Surgery",
         target: "#chapter3",
         time: "01:33",
-        image: '#'
+        image: 'img/chapter-3.png'
       }, {
         type: "element",
         target: "#bacteria",
@@ -80,7 +69,7 @@
         title: "Deny & Defend",
         target: "#chapter4",
         time: "02:10",
-        image: '#'
+        image: 'img/chapter-4.png'
       }, {
         type: "element",
         target: "#slashed-circle",
@@ -94,7 +83,7 @@
         title: "The Malpractice Myth",
         target: "#chapter5",
         time: "02:44",
-        image: '#'
+        image: 'img/chapter-5.png'
       }, {
         type: "element",
         target: "#lawsuits",
@@ -104,22 +93,11 @@
         title: "Result: Patient Harm",
         target: "#chapter6",
         time: "03:10",
-        image: '#'
+        image: 'img/chapter-6.png'
       }, {
         type: "element",
         target: "#dollar",
         time: "03:28"
-      }, {
-        type: "chapter",
-        title: "",
-        target: "#outro",
-        time: "03:58",
-        hide_title: true,
-        image: '#'
-      }, {
-        type: "element",
-        target: "#now-what",
-        time: "03:59"
       }
     ];
     chapters = (function() {
@@ -201,11 +179,9 @@
     $video.on("timeupdate", function() {
       current_time = $video.currentTime();
       duration = $video.duration() || 0;
-      $time_bar.css({
+      return $progess.css({
         left: "" + (current_time / duration * 100) + "%"
       });
-      $time_elapsed.text(to_clock(Math.floor(current_time)));
-      return $time_left.text(to_clock(Math.floor(duration - current_time)));
     });
     $.each(cues, function(i, cue_item) {
       return $video.cue(to_s(cue_item.time), function() {

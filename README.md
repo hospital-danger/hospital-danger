@@ -1,4 +1,4 @@
-# Your Hospital May Be Hazardous to Your Health
+![Your Hospital May Be Hazardous to Your Health](https://raw.github.com/storytellinginnovationlab2013/hazardoushospitals/master/img/header.png)
 
 An interactive web presentation on the dangers of in-hospital injury.
 

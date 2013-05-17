@@ -6,9 +6,12 @@
 
 // Variables.
 
-$dark: #333
+$dark: #111
 $yellow: #ffd91f
 $darkyellow: #B59200
+
+$container-width: 960px
+$container-height: 542px
 
 // Type.
 
@@ -29,9 +32,6 @@ h4
   text-transform: uppercase
 
 // Base.
-
-$container-width: 960px
-$container-height: 553px
 
 *
   position: relative
@@ -122,78 +122,108 @@ video
   z-index: 2
 
   .playpause
-    background-size: contain
-    background-image: image-url("pause.png")
+    background: rgba(255, 255, 255, .3) image-url("pause.png") center no-repeat
     position: absolute
     left: 15px
     top: 0
-    width: 75px
-    height: 45px
+    width: 70px
+    height: 50px
+    @include border-radius(2px)
+    @include opacity(.5)
+    @include transition(opacity, .15s)
 
     &.paused
       background-image: image-url("play.png")
+      background-position: 27px
+
+  &:hover .playpause
+    @include opacity(1)
+
+  .time,
+  .progress
+    position: absolute
+    height: 7px
+
+  .time
+    top: 43px
+    background: rgba(255, 255, 255, .25)
+    overflow: hidden
+    margin-left: 100px
+    width: 845px
 
   .progress
-    overflow: hidden
-    height: 50px
-    margin-left: 100px
-    padding: .5em
-    font-weight: bold
-
-  .buffer-bar,
-  .time-bar
-    position: absolute
     top: 0
-    left: 0
+    background: rgba(255, 255, 255, .5)
     margin-left: -100%
-    width: 98.5%
+    width: 100%
     @include transition(left .5s)
-
-  .time-bar
-    top: 30px
-    border-top: 3px solid rgba(255, 255, 255, .5)
-
-  .buffer-bar
-    background-color: $dark
+    @include opacity(.5)
 
 .chapter-list
   position: absolute
   z-index: 3
-  bottom: 31px
-  left: 76px
-  float: left
-  padding: .5em 1em
-  width: 100%
+  left: 100px
+  bottom: 7px
+  width: 845px
+  height: 60px
+  overflow: hidden
 
   ul
-    left: .5em
-    width: 90%
+    position: absolute
+    left: 0
+    top: 0
+    width: 845px
+    height: 60px
 
   li
     position: absolute
-    // margin: 0 .5em
-    top: -20px
+    bottom: 15px
+    @include transition(opacity, .15s)
+    @include opacity(.25)
+
+    a
+      background: $yellow
+      color: $dark
+      display: block
+      font-family: "League Gothic"
+      font-size: 32px
+      line-height: 0
+      text-transform: uppercase
+      @include border-radius(2px)
+      @include bottom-triangle(6px, $yellow, down)
 
     span
       display: none
-    &:hover span
-      display: block
+      line-height: 0
+      margin-top: -15px
+      padding: 0 5px 15px 35px
 
-  a
-    background: rgba(255, 255, 255, .5)
-    color: rgba(255, 255, 255, .5)
-    font-size: 11px
-    font-weight: bold
-    display: block
-    letter-spacing: -1px
-    padding: .4em .5em .25em .5em
-    text-transform: uppercase
-    @include border-radius(5px 5px 0 0)
-    @include transition(color .1s)
+    &:hover
+      @include opacity(1)
 
-  a:hover,
-  .current-chapter
-    color: $dark
+      a
+        z-index: 99
+
+        &:after
+          left: 11px
+          margin-left: 0
+
+        span
+          display: block
+
+  // Final chapter marker needs its label going left, not right, since it's at the edge of the screen.
+  li:last-child
+    span
+      margin-left: -238px
+
+    &:hover
+      a
+        margin-left: -208px
+        padding-left: 208px
+
+        &:after
+          right: 11px
+          margin-left: 208px
 
 // Chapters.
 
