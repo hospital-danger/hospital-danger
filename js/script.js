@@ -173,9 +173,11 @@
         time: "03:25"
       }, {
         type: "chapter",
-        title: "Outro",
+        title: "",
         target: "#outro",
-        time: "03:25:50"
+        time: "03:26",
+        image: "#",
+        no_marker: true
       }, {
         type: "citation",
         title: "AHRQ: Hospital survey on patient safety culture...",
@@ -183,7 +185,7 @@
         time: "03:27"
       }, {
         type: "element",
-        target: "#outro",
+        target: "#now-what",
         time: "03:33"
       }
     ];
@@ -212,7 +214,9 @@
     build_chapter_markers = function(chapter) {
       var $el;
       $el = $("<li style='left: " + (to_s(chapter.time) / 240 * 100) + "%;'><a href='" + chapter.target + "'><img src='" + chapter.image + "'><span>" + chapter.title + "</span></a></li>");
-      $('ul', '.chapter-list').append($el);
+      if (!chapter.no_marker) {
+        $('ul', '.chapter-list').append($el);
+      }
       return $video.cue(to_s(chapter.time) - 1, function() {
         if (!chapter.no_pause) {
           $video.pause();
@@ -310,7 +314,7 @@
       $('header').removeClass('intro');
       $('.introduction').addClass('finished');
       music = $('#the-music')[0];
-      music.volume = 0.6;
+      music.volume = 0.4;
       music.play();
       setTimeout(function() {
         return $video.play();
