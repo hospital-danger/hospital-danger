@@ -11,7 +11,7 @@ $yellow: #ffd91f
 $darkyellow: #B59200
 
 $container-width: 960px
-$container-height: 542px
+$container-height: 540px
 
 // Type.
 
@@ -116,7 +116,7 @@ video
 
 .video-controls
   cursor: pointer
-  margin-top: -60px
+  margin-top: -64px
   position: relative
   z-index: 2
 
@@ -162,7 +162,7 @@ video
   position: absolute
   z-index: 3
   left: 100px
-  bottom: 7px
+  bottom: 8px
   width: 845px
   height: 60px
   overflow: hidden
@@ -224,17 +224,16 @@ video
           right: 11px
           margin-left: 208px
 
-
 .citations
   z-index: 100
-  color: $yellow
-  text-align: center
+  color: rgba(255, 255, 255, .75)
+  text-align: left
   font-size: .8em
   font-style: italic
   position: absolute
-  bottom: 70px
-  width: 70%
-
+  bottom: 75px
+  left: 15px
+  width: 950px
 
 
 // Chapters.
@@ -264,7 +263,7 @@ aside
   top: 0
   right: 0
   width: 480px
-  height: 542px
+  height: $container-height
   z-index: 10
 
   .aside-content
@@ -274,7 +273,7 @@ aside
     color: #fff
     overflow: hidden
     width: 480px
-    height: 542px
+    height: $container-height
     padding: 20px
     @include box-shadow(rgba(0, 0, 0, .5) -5px 0 15px)
     @include transition(transform 1s)
@@ -521,7 +520,7 @@ aside
   height: 500px
   @include opacity(0)
   width: 780px
-  height: 540px
+  height: $container-height
 
   &.current
     @include opacity(1)
@@ -557,7 +556,7 @@ aside
   .images
     img
       width: 480px
-      height: 542px
+      height: $container-height
       position: absolute
       opacity: 0
       @include transition(opacity .75s)
