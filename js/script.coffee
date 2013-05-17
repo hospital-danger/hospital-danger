@@ -175,7 +175,9 @@ $ ()->
       $video.play()
     , 1000
     setTimeout ()->
-      $('.introduction').hide()
+      $('.introduction').remove()
+      $('header p').remove()
+      $('header .start-button').remove()
     , 5000
 
   # Nodes

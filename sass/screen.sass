@@ -64,7 +64,6 @@ header
   height: 80px
   top: 0
   text-align: center
-
   @include transition(top 1s)
 
   p
@@ -73,16 +72,32 @@ header
     font-family: 'League Gothic'
     font-size: 28px
     margin-top: 3.25em
-    padding-left: 4.5em
+    text-align: center
     text-transform: uppercase
     text-shadow: 1px 1px 3px black
+    @include transition(opacity 1s)
+
+  div
+    opacity: 0
+    background: $yellow
+    color: $dark
+    border-radius: 3px
+    font-family: 'League Gothic'
+    font-size: 36px
+    margin: 1.5em auto
+    padding: .35em 1em
+    line-height: 1
+    text-align: center
+    text-transform: uppercase
+    width: 135px
     @include transition(opacity 1s)
 
   &.intro
     top: 350px
     cursor: pointer
 
-    p
+    p,
+    .start-button
       opacity: 1
 
 .introduction
@@ -226,7 +241,7 @@ video
 
 .citations
   z-index: 100
-  color: rgba(255, 255, 255, .75)
+  color: rgba(255, 255, 255, .5)
   text-align: left
   font-size: .8em
   font-style: italic
@@ -341,13 +356,13 @@ aside
         color: $dark
 
 .next-chapter
-  background-color: rgba(0,0,0, .2)
+  background-color: rgba(0, 0, 0, .2)
   text-align: center
   position: absolute
   bottom: 90px
   width: 200px
-  margin-left: 35%
-  left: -100px
+
+
   z-index: 10
   padding: 1em
   color: white
