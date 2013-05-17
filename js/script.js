@@ -99,12 +99,12 @@
       }, {
         type: "element",
         target: "#bacteria",
-        time: "01:43"
+        time: "01:54"
       }, {
         type: "chapter",
         title: "Deny & Defend",
         target: "#chapter4",
-        time: "01:56",
+        time: "01:55",
         image: 'img/chapter-4.png'
       }, {
         type: "citation",
