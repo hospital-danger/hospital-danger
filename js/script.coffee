@@ -44,7 +44,6 @@ $ ()->
 
     {type: "chapter", title: "The Malpractice Myth" , target: "#chapter5", time: "02:26", image: 'img/chapter-5.png'}
     {type: "citation", title: "Shepherd, J.: Uncovering the Silent Victims..", target: "https://www.documentcloud.org/documents/698248-emory-med-mal-study.html#document/p36/a103236", time: "02:31"}
-
     {type: "element", target: "#lawsuits", time: "02:38"}
     {type: "citation", title: "Shepherd, J.: Uncovering the Silent Victims..", target: "https://www.documentcloud.org/documents/698248-emory-med-mal-study.html#document/p36/a103236", time: "02:38"}
 
@@ -55,7 +54,7 @@ $ ()->
     {type: "citation", title: "American Nurse Today: Break the bullying cycle", target: "http://www.americannursetoday.com/article.aspx?id=8648", time: "03:13"}
     {type: "citation", title: "AIG: Patient Safety; Hospital Risk", target: "https://www.documentcloud.org/documents/690849-aig-patient-safety-hospital-risk-white-paper.html", time: "03:15"}
     {type: "citation", title: "McGuckin, M.: Hand Hygiene Compliance in the United States...", target: "https://www.documentcloud.org/documents/699985-hand-hygiene-compliance-rates-in-the-u-am-j-med.html#document/p1/a102851", time: "03:20"}
-    {type: "element", target: "#dollar", time: "03:25"}
+    {type: "element", target: "#hand", time: "03:24"}
 
     {type: "chapter", title: "" , target: "#outro", time: "03:26", image: "#", no_marker: true}
     {type: "citation", title: "AHRQ: Hospital survey on patient safety culture...", target: "https://www.documentcloud.org/documents/215362-ahrq-hospital-safety-culture-survey-2011-part-one.html#document/p8/a103237", time: "03:27"}
