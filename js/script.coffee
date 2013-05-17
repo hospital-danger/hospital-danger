@@ -268,6 +268,9 @@ $ ()->
     target = $(this).attr('href')
     $('.decision-tree').scrollTo(target, 1000)
 
+  # start decision tree at the right coords
+  $('.decision-tree').scrollTo('#decision-1', 0)
+
   $('#end-decision-tree').on "click", (e)->
 
     e.preventDefault()

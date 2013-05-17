@@ -76,7 +76,6 @@ header
     padding-left: 4.5em
     text-transform: uppercase
     text-shadow: 1px 1px 3px black
-
     @include transition(opacity 1s)
 
   &.intro
@@ -260,7 +259,7 @@ aside
     z-index: 1
     background: rgba(0, 0, 0, .85)
     color: #fff
-    overflow: auto
+    overflow: hidden
     width: 480px
     height: 542px
     padding: 20px
@@ -274,6 +273,7 @@ aside
     p
       font-size: 13px
       font-weight: bold
+      line-height: 1.5
       margin: 1em 0
 
     blockquote
@@ -563,79 +563,92 @@ aside
   top: 80px
   left: 570px
 
-.decision-tree-container
-  background: image-url("paper.png")
-  width: 1248px
-  height: 1224px
+#can-you-sue
+  p
+    font-size: 14px
+    line-height: 1.4
 
-  .decision-tree
-    background: image-url("tree.png") 0 300px no-repeat
-    width: 1600px
-    height: 1600px
-    // width: 400px
-    // height: 150px
-    // overflow: hidden
+  .decision-tree-container
+    background: image-url("paper.png")
+    border: 4px solid $yellow
+    width: 448px
+    height: 220px
+    margin-top: 1.5em
+    overflow: hidden
+    border-radius: 3px
+    position: relative
 
-    .decision
+    .decision-lines
+      background: image-url("tree.png") 100px 60px no-repeat
+      position: absolute
+      left: 0
+      top: 0
+      width: 1500px
+      height: 1500px
+
+    .decision-tree
+      color: $dark
+      width: 448px
+      height: 220px
       overflow: hidden
 
-      p
-        font-size: 15px
-        margin: .5em 0
+      .decision,    
+      .outcome
+        padding: 20px
+        width: 448px
+        height: 220px
+        position: absolute
 
-      a
-        background: $yellow
-        float: left
-        margin: .5em 20px .5em 0
-        padding: 10px
-        width: 190px
+      .decision
+        overflow: hidden
 
-        &:nth-child(odd)
-          margin-right: 0
+        p
+          font-family: "Open Sans Bold"
+          font-size: 18px
+          margin: 0 0 .5em 0
 
-    .decision
-      background: pink
-      padding: 20px
-      width: 440px
+        a
+          background: $yellow
+          border-bottom: 4px solid $darkyellow
+          float: left
+          font-family: "Open Sans Bold"
+          margin: .5em 20px .3em 0
+          padding: 10px
+          text-transform: uppercase
+          width: 190px
 
-    #decision-1
+          &:nth-child(odd)
+            margin-right: 0
 
+          &.condensed
+            letter-spacing: -1px
 
-    #decision-2
-      display: none
+          &:hover
+            border-bottom-color: $dark
 
-    #decision-3
-      display: none
+      #decision-1
+        left: 500px
+        top: 0
 
-    #decision-4
-      display: none
+      #decision-2
+        left: 0
+        top: 330px
 
-    #outcome-positive
-      display: none
+      #decision-3
+        left: 1026px
+        top: 660px
 
-    #outcome-negative
-      display: none
+      #decision-4
+        left: 500px
+        top: 1120px
 
-    .decision-end
+      #outcome-positive
+        left: 1250px
+        top: 1115px
 
-    .outcome
-      padding: 1em
-      height: 150px
-
-      p
-        font-size: 18px
-        font-style: italic
-        font-weight: bold
-
-      a
-        float: left
-        font-weight: bold
-
-    #outcome-positive
-      //
-
-    #outcome-negative
-      //
+      #outcome-negative
+        left: 150px
+        top: 980px
 
 #dollar
   width: 100px
