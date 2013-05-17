@@ -23,25 +23,25 @@ $ ()->
 
   cues = [
     {type: "chapter", title: "A Safe Place?", target: "#chapter1", time: "00:20", image: 'img/chapter-1.png'}
+    {type: "element", target: "#people", time: "00:37"}
 
-    {type: "element", target: "#people", time: "00:33"}
-    {type: "element-next", target: "#people", time: "00:40"}
+    {type: "chapter", title: "No One Watching", target: "#chapter2", time: "00:47", image: 'img/chapter-2.png'}
+    {type: "element", target: "#show-map", time: "01:13"}
 
-    {type: "chapter", title: "No One Watching", target: "#chapter2", time: "00:52", image: 'img/chapter-2.png'}
-    {type: "element", target: "#show-map", time: "01:11"}
-
-    {type: "chapter", title: "No Simple Surgery", target: "#chapter3", time: "01:33", image: 'img/chapter-3.png'}
+    {type: "chapter", title: "No Simple Surgery", target: "#chapter3", time: "01:23", image: 'img/chapter-3.png'}
     {type: "element", target: "#bacteria", time: "01:43"}
 
-    {type: "chapter", title: "Deny & Defend", target: "#chapter4", time: "02:10", image: 'img/chapter-4.png'}
-    {type: "element", target: "#slashed-circle", time: "02:22"}
-    {type: "element", target: "#take-responsibility", time: "02:34"}
+    {type: "chapter", title: "Deny & Defend", target: "#chapter4", time: "01:55", image: 'img/chapter-4.png'}
+    {type: "element", target: "#slashed-circle", time: "02:23"}
 
-    {type: "chapter", title: "The Malpractice Myth" , target: "#chapter5", time: "02:44", image: 'img/chapter-5.png'}
-    {type: "element", target: "#lawsuits", time: "02:52"}
+    {type: "chapter", title: "The Malpractice Myth" , target: "#chapter5", time: "02:25:50", image: 'img/chapter-5.png'}
+    {type: "element", target: "#lawsuits", time: "02:38"}
 
-    {type: "chapter", title: "Result: Patient Harm" , target: "#chapter6", time: "03:10", image: 'img/chapter-6.png'}
-    {type: "element", target: "#dollar", time: "03:28"}
+    {type: "chapter", title: "Result: Patient Harm" , target: "#chapter6", time: "02:47", image: 'img/chapter-6.png'}
+    {type: "element", target: "#dollar", time: "03:25"}
+
+    {type: "chapter", title: "Outro" , target: "#outro", time: "03:25:50"}
+    {type: "element", target: "#outro", time: "03:33"}
   ]
 
   chapters = (cue for cue in cues when (cue.type is "chapter"))
@@ -129,9 +129,6 @@ $ ()->
           $("[href='#{cue_item.target}']").addClass "current-chapter"
         when "element"
           $(cue_item.target).addClass('current')
-          node_callbacks[cue_item.callback]?()
-        when "element-next"
-          $(cue_item.target).addClass('current-2')
           node_callbacks[cue_item.callback]?()
 
   $(".element").on "click", (e)->
