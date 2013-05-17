@@ -55,7 +55,7 @@
       }, {
         type: "element",
         target: "#people",
-        time: "00:37"
+        time: "00:38"
       }, {
         type: "citation",
         title: "CDC: Leading Causes of Death",
@@ -63,7 +63,7 @@
         time: "00:43"
       }, {
         type: "chapter",
-        title: "No One Watching",
+        title: "Unchecked Errors",
         target: "#chapter2",
         time: "00:47",
         image: 'img/chapter-2.png'

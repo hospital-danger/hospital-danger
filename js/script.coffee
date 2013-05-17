@@ -26,10 +26,10 @@ $ ()->
     {type: "citation", title: "OIG: Adverse Events in Hospitals", target: "https://www.documentcloud.org/documents/436100-oig-adverse-events-in-hospitals.html#document/p3/a74093", time: "00:33"}
     {type: "citation", title: "CDC: Estimating Healthcare-Associated Infections...", target: "https://www.documentcloud.org/documents/701516-cdc-hai-infections-deaths.html#document/p1/a103231", time: "00:35"}
     {type: "citation", title: "IOM: To Err Is Human", target: "https://www.documentcloud.org/documents/436100-oig-adverse-events-in-hospitals.html#document/p3/a74093", time: "00:37"}
-    {type: "element", target: "#people", time: "00:37"}
+    {type: "element", target: "#people", time: "00:38"}
     {type: "citation", title: "CDC: Leading Causes of Death", target: "http://www.cdc.gov/nchs/fastats/lcod.htm", time: "00:43"}
 
-    {type: "chapter", title: "No One Watching", target: "#chapter2", time: "00:47", image: 'img/chapter-2.png'}
+    {type: "chapter", title: "Unchecked Errors", target: "#chapter2", time: "00:47", image: 'img/chapter-2.png'}
     {type: "citation", title: "IOM: To Err Is Human", target: "https://www.documentcloud.org/documents/286678-to-err-is-human-download.html#document/p112/a74097", time: "00:52"}
     {type: "citation", title: "Makary, M.: Testimony Before Committee on Oversight and Government Reform...", target: "https://www.documentcloud.org/documents/693471-house-transparency-hearing-makary-testimony.html#document/p2/a103232", time: "01:12"}
     {type: "element", target: "#show-map", time: "01:13"}
