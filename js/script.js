@@ -470,6 +470,7 @@
       var target;
       e.preventDefault();
       target = $(this).attr('href');
+      $('.explanation').html($(this).closest('.decision').data("failure-explanation"));
       return $('.decision-tree-container').scrollTo(target, 1000);
     });
     return $('.decision-tree-container').scrollTo('#decision-1', 0);

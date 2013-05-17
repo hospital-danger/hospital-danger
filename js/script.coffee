@@ -289,6 +289,7 @@ $ ()->
   $('a', '.decision-tree').on "click", (e)->
     e.preventDefault()
     target = $(this).attr('href')
+    $('.explanation').html $(this).closest('.decision').data("failure-explanation")
     $('.decision-tree-container').scrollTo(target, 1000)
 
   # start decision tree at the right coords
