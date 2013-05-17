@@ -1,4 +1,4 @@
-/* line 17, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,38 +19,38 @@ time, mark, audio, video {
   font-size: 100%;
   vertical-align: baseline; }
 
-/* line 22, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1; }
 
-/* line 24, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none; }
 
-/* line 26, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 28, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle; }
 
-/* line 30, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none; }
-  /* line 103, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  /* line 103, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
   q:before, q:after, blockquote:before, blockquote:after {
     content: "";
     content: none; }
 
-/* line 32, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none; }
 
-/* line 116, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
@@ -152,7 +152,7 @@ a {
 
 /* line 59, ../sass/screen.sass */
 header {
-  background: #ffd91f url('../img/header.png?1368735093') center no-repeat;
+  background: #ffd91f url('../img/header.png?1368724677') center no-repeat;
   border-bottom: 4px solid #b59200;
   padding: 0.75em 0;
   z-index: 100;
@@ -248,7 +248,7 @@ video {
   z-index: 2; }
   /* line 138, ../sass/screen.sass */
   .video-controls .playpause {
-    background: rgba(255, 255, 255, 0.3) url('../img/pause.png?1368773284') center no-repeat;
+    background: rgba(255, 255, 255, 0.3) url('../img/pause.png?1368765222') center no-repeat;
     position: absolute;
     left: 15px;
     top: 0;
@@ -267,7 +267,7 @@ video {
     transition: opacity, 0.15s; }
     /* line 149, ../sass/screen.sass */
     .video-controls .playpause.paused {
-      background-image: url('../img/play.png?1368773284');
+      background-image: url('../img/play.png?1368764320');
       background-position: 27px; }
   /* line 153, ../sass/screen.sass */
   .video-controls:hover .playpause {
@@ -937,7 +937,7 @@ aside {
 /* line 695, ../sass/screen.sass */
 #deny-and-defend .next {
   right: 0;
-  background: url('../img/right_arrow.png?1368798588') center no-repeat; }
+  background: url('../img/right_arrow.png?1368796860') center no-repeat; }
 /* line 699, ../sass/screen.sass */
 #deny-and-defend .papers-container {
   width: 6850px;
@@ -1047,7 +1047,7 @@ aside {
   width: 400px;
   padding: 100px 40px;
   z-index: 20;
-  background-image: url('../img/content/putten-doctor_letter.png?1368725366');
+  background-image: url('../img/content/putten-doctor_letter.png?1368723878');
   -webkit-transform: translateY(-2000px);
   -moz-transform: translateY(-2000px);
   -ms-transform: translateY(-2000px);
@@ -1131,14 +1131,14 @@ aside {
   overflow: hidden; }
 /* line 851, ../sass/screen.sass */
 #can-you-sue .decision-tree-container {
-  background: url('../img/paper.png?1368735093');
+  background: url('../img/paper.png?1342797512');
   width: 458px;
   height: 230px;
   overflow: scroll;
   position: relative; }
   /* line 858, ../sass/screen.sass */
   #can-you-sue .decision-tree-container .decision-tree {
-    background: url('../img/tree.png?1368784500') 100px 60px no-repeat;
+    background: url('../img/tree.png?1368781077') 100px 60px no-repeat;
     width: 1700px;
     height: 1700px;
     position: absolute;
@@ -1397,22 +1397,31 @@ aside {
       padding-bottom: 10px; }
 
 /* line 1117, ../sass/screen.sass */
-.go-to-credits-container {
+.extra-stuff-container {
   width: 960px;
-  margin: 0 auto; }
+  margin: 1em auto;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 1.5; }
 
-/* line 1121, ../sass/screen.sass */
+/* line 1124, ../sass/screen.sass */
+p.browser {
+  color: #777777;
+  float: left;
+  width: 50%; }
+
+/* line 1129, ../sass/screen.sass */
 #go-to-credits {
   display: block;
   clear: both;
   color: white;
   font-family: "Open Sans Bold";
-  font-size: 13px;
-  margin-top: 1em;
   text-align: right;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  float: right;
+  width: 100px; }
 
-/* line 1131, ../sass/screen.sass */
+/* line 1139, ../sass/screen.sass */
 #credits {
   background: white;
   position: absolute;
@@ -1420,21 +1429,23 @@ aside {
   left: 50%;
   margin-left: -400px;
   width: 800px;
+  height: 500px;
+  overflow: auto;
   padding: 20px;
   z-index: 99;
   display: none; }
-  /* line 1142, ../sass/screen.sass */
+  /* line 1152, ../sass/screen.sass */
   #credits h2 {
     font-size: 64px; }
-  /* line 1145, ../sass/screen.sass */
+  /* line 1155, ../sass/screen.sass */
   #credits p {
     margin: 1em 0; }
-    /* line 1148, ../sass/screen.sass */
+    /* line 1158, ../sass/screen.sass */
     #credits p strong {
       display: block;
       margin-top: 2em; }
 
-/* line 1152, ../sass/screen.sass */
+/* line 1162, ../sass/screen.sass */
 #close-credits {
   z-index: 10;
   position: absolute;
