@@ -298,3 +298,11 @@ $ ()->
 
   # start decision tree at the right coords
   $('.decision-tree-container').scrollTo('#decision-1', 0)
+
+
+  $('#go-to-credits').on "click", ()->
+    $('#credits').show()
+
+  $('#close-credits','#credits').on "click", (e)->
+    e.preventDefault()
+    $('#credits').hide()
