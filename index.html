@@ -68,7 +68,6 @@
     #     #     #     # #     # #       #          #       #       #     # #     # #
     #     #      #####  #     # #       #######    #       ####### #     #  #####  #######    #
     -->
-    <div class="element" id="million">million</div>
     <div class="element" id="people">
       <div class="person">
         Person!
@@ -82,7 +81,6 @@
           This person died a horrible death
         </blockquote>
       </div>
-      <!-- person icon, which will be duplicated -->
     </div>
     <div class="element" id="causes-of-death">
       <div class="citation">http://www.cdc.gov/nchs/fastats/lcod.htm</div> <!-- TODO: how to represent our citations and external resources -->
@@ -114,9 +112,7 @@
     #     # #######      ####### #     # #######     ## ##  #     #    #     #####  #     # ### #     #  #####
 -->
     <a class="element" id="show-map" href="#us-map" ></a>
-
     <object id="us-map" type="image/svg+xml" data="img/usa_map.svg"></object>
-
     <div id="state-info">
       <h2 id="state-name"></h2>
       <ul id="state-positive"></ul>
@@ -132,8 +128,7 @@
     #    ## #     #     #     #  #  #     # #       #       #          #     # #     # #    #  #     # #       #    #     #
     #     # #######      #####  ### #     # #       ####### #######     #####   #####  #     #  #####  ####### #     #    #
 -->
-    <a class="element" id="bacteria" href="#judy-gaines"></a> <!-- bacteria; three are drawn, then we replicate and animate -->
-
+    <a class="element" id="bacteria" href="#judy-gaines"></a>
     <aside id="judy-gaines" class="white-background">
       <a href="#" class="close-aside"><span>&times;</span></a>
       <div class="aside-content">
@@ -180,12 +175,7 @@
     #     # #       #    ##    #       #    #     #     # #       #       #       #    ## #     #
     ######  ####### #     #    #        ###  #    ######  ####### #       ####### #     # ######
 -->
-    <a class="element" id="slashed-circle" href="#deny-and-defend">
-      <!-- represents "deny and defend"; we can show those words on either side or animate other things into the slashed circle -->
-    </a>
-    <div class="element" id="open-circle">
-      <!-- represents the hospitals that are trying to take responsibility; we'll show a logo or a map here... -->
-    </div>
+    <a class="element" id="slashed-circle" href="#deny-and-defend"></a>
     <aside id="deny-and-defend">
       <a href="#" class="close-aside"><span>&times;</span></a>
       <div class="prev">&nbsp;</div>
@@ -281,9 +271,7 @@
        #    #    # #          #     # #     # #     #      #   #  #     # #    #    #     #  #    # #          #     #    #       #    #    #
        #    #    # ######     #     # #     # ##### #      #    # #     #  ####     #    ###  ####  ######     #     #    #       #    #    #
 -->
-    <a class="element" href="#can-you-sue" id="lawsuits">
-      <!-- lawsuit icon; one rectangle is drawn, then we replicate 49 times and cross out 49 of the 50 -->
-    </a>
+    <a class="element" href="#can-you-sue" id="lawsuits"></a>
     <aside id="can-you-sue">
       <a href="#" class="close-aside"><span>&times;</span></a>
       <div class="aside-content">
@@ -342,9 +330,7 @@
     #    #  #       #     # #     # #        #    #     #       #     #    #     #  #       #    ##    #       #     # #     # #    #  #     #
     #     # #######  #####   #####  ######   #          #       #     #    #    ### ####### #     #    #       #     # #     # #     # #     #
 -->
-    <a class="element" href="#by-the-numbers" id="dollar">
-      <!-- dollar icon -->
-    </a>
+    <a class="element" href="#by-the-numbers" id="dollar"></a>
     <aside id="by-the-numbers">
       <a href="#" class="close-aside"><span>&times;</span></a>
       <div class="aside-content">
@@ -374,6 +360,7 @@
     </div>
 
   </div>
+
   <script src="js/vendor/jquery-1.9.1.min.js"></script>
   <script src="js/vendor/popcorn.js"></script>
   <script src="js/vendor/jquery.scrollTo.js"></script>
