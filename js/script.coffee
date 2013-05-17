@@ -217,7 +217,8 @@ $ ()->
     $deny = $('#deny-and-defend')
     $container = $('.aside-content', $deny)
     $papers = $('.papers', $deny)
-    $quotes = $('.quotes', $deny)
+    $events = $('.events', $deny)
+    event_count = $('.event', $deny).length
     width = 6850
 
     pos = 0
@@ -251,26 +252,22 @@ $ ()->
 
     papers_count = $('img', $papers).length
 
+    $('#hospital-envelope').on "click", ()->
+
+
+      # slide down response from hospital
+      # something cheesy like askew paper with courier text
+      $('.hospital-response').addClass("visible").on "click", ()->
+        $('.visible', $deny).removeClass('visible')
+        $container.scrollLeft(0)
+
     $container.on "scroll", ()->
       pos = $container.scrollLeft()
-      index = 0
 
+      index = Math.round pos / (width - 200) * event_count
 
-      if index is papers_count
-        # when the user scrolls to end of section, fade out papers
-        $container.addClass("finished")
-        $('.hospital-envelope').addClass("visible").on "click", ()->
-          # slide down response from hospital
-          # something cheesy like askew paper with courier text
-          $('.hospital-response').addClass("visible").on "click", ()->
-            $('.visible', $deny).removeClass('visible')
-            $('.finished').removeClass("finished")
-            $video.play()
-
-      else
-        # parallax scrolling goes here
-        # relevant block quotes pop up at certain points
-        $('blockquote', $quotes).removeClass('current-quote').eq(index).addClass('current-quote')
+      # events pop up at certain points
+      $('.event', $events).removeClass('current-event').eq(index).addClass('current-event')
 
   # scroll decision tree
   $('a', '.decision-tree').on "click", (e)->

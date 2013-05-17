@@ -592,33 +592,57 @@ aside {
       top: 0;
       left: 0; }
 /* line 465, ../sass/screen.sass */
-#deny-and-defend .quotes {
+#deny-and-defend .events {
   position: absolute;
   top: 0;
-  left: 0;
-  height: 1px;
-  overflow: hidden; }
-  /* line 471, ../sass/screen.sass */
-  #deny-and-defend .quotes blockquote {
+  left: 0; }
+  /* line 469, ../sass/screen.sass */
+  #deny-and-defend .events .event {
+    position: absolute;
     background-color: red;
     margin: 100px;
+    width: 300px;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
     -webkit-transform: translateY(2000px);
     -moz-transform: translateY(2000px);
     -ms-transform: translateY(2000px);
     -o-transform: translateY(2000px);
     transform: translateY(2000px); }
-/* line 479, ../sass/screen.sass */
+    /* line 477, ../sass/screen.sass */
+    #deny-and-defend .events .event q {
+      display: block; }
+    /* line 481, ../sass/screen.sass */
+    #deny-and-defend .events .event.current-event {
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+      transform: translateY(0); }
+/* line 485, ../sass/screen.sass */
 #deny-and-defend #hospital-envelope {
   float: left;
   margin-top: 80px; }
-/* line 483, ../sass/screen.sass */
+/* line 489, ../sass/screen.sass */
 #deny-and-defend .hospital-response {
+  position: absolute;
+  top: 0;
+  height: 500px;
+  width: 400px;
+  padding: 100px 40px;
+  background-image: url('../img/content/putten-doctor_letter.png?1368725366');
   -webkit-transform: translateY(-2000px);
   -moz-transform: translateY(-2000px);
   -ms-transform: translateY(-2000px);
   -o-transform: translateY(-2000px);
-  transform: translateY(-2000px); }
-  /* line 486, ../sass/screen.sass */
+  transform: translateY(-2000px);
+  -webkit-transition: -webkit-transform 3s;
+  -moz-transition: -moz-transform 3s;
+  -o-transition: -o-transform 3s;
+  transition: transform 3s; }
+  /* line 499, ../sass/screen.sass */
   #deny-and-defend .hospital-response.visible {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
@@ -626,7 +650,7 @@ aside {
     -o-transform: translateY(0);
     transform: translateY(0); }
 
-/* line 489, ../sass/screen.sass */
+/* line 502, ../sass/screen.sass */
 #lawsuits {
   width: 100px;
   height: 100px;
@@ -634,69 +658,69 @@ aside {
   top: 80px;
   left: 570px; }
 
-/* line 496, ../sass/screen.sass */
+/* line 509, ../sass/screen.sass */
 .decision-tree-container {
   background: url('../img/paper.png?1368735093');
   width: 1248px;
   height: 1224px; }
-  /* line 501, ../sass/screen.sass */
+  /* line 514, ../sass/screen.sass */
   .decision-tree-container .decision-tree {
     background: url('../img/tree.png?1368755709') 0 300px no-repeat;
     width: 1600px;
     height: 1600px; }
-    /* line 509, ../sass/screen.sass */
+    /* line 522, ../sass/screen.sass */
     .decision-tree-container .decision-tree .decision {
       overflow: hidden; }
-      /* line 512, ../sass/screen.sass */
+      /* line 525, ../sass/screen.sass */
       .decision-tree-container .decision-tree .decision p {
         font-size: 16px;
         font-weight: bold;
         margin: 0.5em 0; }
-      /* line 517, ../sass/screen.sass */
+      /* line 530, ../sass/screen.sass */
       .decision-tree-container .decision-tree .decision a {
         background: #ffd91f;
         float: left;
         margin: 0.5em 20px 0.5em 0;
         padding: 10px;
         width: 190px; }
-        /* line 524, ../sass/screen.sass */
+        /* line 537, ../sass/screen.sass */
         .decision-tree-container .decision-tree .decision a:nth-child(odd) {
           margin-right: 0; }
-    /* line 527, ../sass/screen.sass */
+    /* line 540, ../sass/screen.sass */
     .decision-tree-container .decision-tree .decision {
       background: pink;
       padding: 20px;
       width: 440px; }
-    /* line 535, ../sass/screen.sass */
+    /* line 548, ../sass/screen.sass */
     .decision-tree-container .decision-tree #decision-2 {
       display: none; }
-    /* line 538, ../sass/screen.sass */
+    /* line 551, ../sass/screen.sass */
     .decision-tree-container .decision-tree #decision-3 {
       display: none; }
-    /* line 541, ../sass/screen.sass */
+    /* line 554, ../sass/screen.sass */
     .decision-tree-container .decision-tree #decision-4 {
       display: none; }
-    /* line 544, ../sass/screen.sass */
+    /* line 557, ../sass/screen.sass */
     .decision-tree-container .decision-tree #outcome-positive {
       display: none; }
-    /* line 547, ../sass/screen.sass */
+    /* line 560, ../sass/screen.sass */
     .decision-tree-container .decision-tree #outcome-negative {
       display: none; }
-    /* line 552, ../sass/screen.sass */
+    /* line 565, ../sass/screen.sass */
     .decision-tree-container .decision-tree .outcome {
       padding: 1em;
       height: 150px; }
-      /* line 556, ../sass/screen.sass */
+      /* line 569, ../sass/screen.sass */
       .decision-tree-container .decision-tree .outcome p {
         font-size: 18px;
         font-style: italic;
         font-weight: bold; }
-      /* line 561, ../sass/screen.sass */
+      /* line 574, ../sass/screen.sass */
       .decision-tree-container .decision-tree .outcome a {
         float: left;
         font-weight: bold; }
 
-/* line 571, ../sass/screen.sass */
+/* line 584, ../sass/screen.sass */
 #dollar {
   width: 100px;
   height: 100px;
@@ -704,19 +728,19 @@ aside {
   top: 80px;
   left: 570px; }
 
-/* line 579, ../sass/screen.sass */
+/* line 592, ../sass/screen.sass */
 #by-the-numbers p {
   font-size: 20px;
   font-weight: normal; }
-/* line 583, ../sass/screen.sass */
+/* line 596, ../sass/screen.sass */
 #by-the-numbers li {
   font-size: 14px;
   line-height: 1.8;
   margin: 2em 0 1.5em; }
-  /* line 588, ../sass/screen.sass */
+  /* line 601, ../sass/screen.sass */
   #by-the-numbers li:nth-child(2n+1) strong {
     color: #b59200; }
-  /* line 591, ../sass/screen.sass */
+  /* line 604, ../sass/screen.sass */
   #by-the-numbers li strong {
     color: #ffd91f;
     float: left;
@@ -725,16 +749,16 @@ aside {
     line-height: 1.1;
     margin: 0 0.5em 0 0;
     width: 60px; }
-  /* line 601, ../sass/screen.sass */
+  /* line 614, ../sass/screen.sass */
   #by-the-numbers li:last-child {
     margin-bottom: 0; }
 
-/* line 604, ../sass/screen.sass */
+/* line 617, ../sass/screen.sass */
 #now-what {
   position: absolute;
   left: 0;
   top: 0;
   opacity: 0; }
-  /* line 610, ../sass/screen.sass */
+  /* line 623, ../sass/screen.sass */
   #now-what.current {
     opacity: 1; }

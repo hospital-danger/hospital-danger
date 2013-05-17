@@ -347,11 +347,12 @@
       });
     })();
     (function() {
-      var $container, $deny, $papers, $quotes, papers_count, pos, prefix, width;
+      var $container, $deny, $events, $papers, event_count, papers_count, pos, prefix, width;
       $deny = $('#deny-and-defend');
       $container = $('.aside-content', $deny);
       $papers = $('.papers', $deny);
-      $quotes = $('.quotes', $deny);
+      $events = $('.events', $deny);
+      event_count = $('.event', $deny).length;
       width = 6850;
       pos = 0;
       prefix = Modernizr.prefixed('transform');
@@ -388,22 +389,17 @@
         return $container.stop();
       });
       papers_count = $('img', $papers).length;
+      $('#hospital-envelope').on("click", function() {
+        return $('.hospital-response').addClass("visible").on("click", function() {
+          $('.visible', $deny).removeClass('visible');
+          return $container.scrollLeft(0);
+        });
+      });
       return $container.on("scroll", function() {
         var index;
         pos = $container.scrollLeft();
-        index = 0;
-        if (index === papers_count) {
-          $container.addClass("finished");
-          return $('.hospital-envelope').addClass("visible").on("click", function() {
-            return $('.hospital-response').addClass("visible").on("click", function() {
-              $('.visible', $deny).removeClass('visible');
-              $('.finished').removeClass("finished");
-              return $video.play();
-            });
-          });
-        } else {
-          return $('blockquote', $quotes).removeClass('current-quote').eq(index).addClass('current-quote');
-        }
+        index = Math.round(pos / (width - 200) * event_count);
+        return $('.event', $events).removeClass('current-event').eq(index).addClass('current-event');
       });
     })();
     $('a', '.decision-tree').on("click", function(e) {
