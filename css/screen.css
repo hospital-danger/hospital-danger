@@ -1342,48 +1342,55 @@ aside {
     /* line 1055, ../sass/screen.sass */
     #now-what .join-the-conversation img {
       float: left;
-      padding-right: 20px; }
+      padding-right: 40px; }
   /* line 1059, ../sass/screen.sass */
   #now-what .patient,
   #now-what .provider {
+    padding-left: 60px;
     float: left;
     width: 50%; }
-  /* line 1064, ../sass/screen.sass */
+  /* line 1065, ../sass/screen.sass */
   #now-what .protect-yourself {
     background-color: rgba(255, 255, 255, 0.4);
     text-align: center; }
-    /* line 1073, ../sass/screen.sass */
+    /* line 1074, ../sass/screen.sass */
     #now-what .protect-yourself a,
     #now-what .protect-yourself p,
     #now-what .protect-yourself .protect-header {
       display: block;
       padding: 10px 15px; }
-    /* line 1079, ../sass/screen.sass */
+    /* line 1080, ../sass/screen.sass */
+    #now-what .protect-yourself .protect-header {
+      padding: 10px 105px; }
+    /* line 1083, ../sass/screen.sass */
     #now-what .protect-yourself p {
       font-family: "Open Sans Bold";
       font-style: italic;
       font-size: 0.9em;
       line-height: 1.3; }
-      /* line 1085, ../sass/screen.sass */
+      /* line 1089, ../sass/screen.sass */
       #now-what .protect-yourself p.surgery {
         padding: 10px 50px; }
-  /* line 1088, ../sass/screen.sass */
+      /* line 1092, ../sass/screen.sass */
+      #now-what .protect-yourself p.medication {
+        padding: 10px 30px; }
+  /* line 1095, ../sass/screen.sass */
   #now-what .simple-ways {
     overflow: hidden;
     *zoom: 1; }
-  /* line 1091, ../sass/screen.sass */
+  /* line 1098, ../sass/screen.sass */
   #now-what .protect-block {
     width: 33.33333%;
     float: left;
     height: 282px; }
-    /* line 1096, ../sass/screen.sass */
+    /* line 1103, ../sass/screen.sass */
     #now-what .protect-block img {
       display: block;
       margin: 0 auto;
       height: 60px;
       padding-bottom: 10px; }
 
-/* line 1105, ../sass/screen.sass */
+/* line 1112, ../sass/screen.sass */
 #go-to-credits {
   display: block;
   clear: both;
@@ -1394,7 +1401,7 @@ aside {
   text-align: center;
   text-transform: uppercase; }
 
-/* line 1115, ../sass/screen.sass */
+/* line 1122, ../sass/screen.sass */
 #credits {
   background: white;
   position: absolute;
@@ -1404,13 +1411,13 @@ aside {
   width: 800px;
   padding: 20px;
   z-index: 99; }
-  /* line 1125, ../sass/screen.sass */
+  /* line 1132, ../sass/screen.sass */
   #credits h2 {
     font-size: 64px; }
-  /* line 1128, ../sass/screen.sass */
+  /* line 1135, ../sass/screen.sass */
   #credits p {
     margin: 1em 0; }
-    /* line 1131, ../sass/screen.sass */
+    /* line 1138, ../sass/screen.sass */
     #credits p strong {
       display: block;
       margin-top: 2em; }
