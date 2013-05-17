@@ -22,7 +22,7 @@
   };
 
   $(function() {
-    var $buffer_bar, $el, $play_button, $time_bar, $time_elapsed, $time_left, $video, chapter_index, chapters, citations, cue, cues, current_time, duration, goto_chapter, node_callbacks, toggle_play, _i, _len;
+    var $buffer_bar, $play_button, $time_bar, $time_elapsed, $time_left, $video, build_chapter_markers, chapter, chapter_index, chapters, citations, cue, cues, current_time, duration, goto_chapter, node_callbacks, toggle_play, _i, _len;
     $video = Popcorn('#the-video');
     $play_button = $('.playpause');
     $time_bar = $('.time-bar');
@@ -45,7 +45,8 @@
         title: "A Safe Place?",
         target: "#chapter1",
         time: "00:20",
-        image: '#'
+        image: '#',
+        no_pause: true
       }, {
         type: "element",
         target: "#people",
@@ -59,9 +60,6 @@
         target: "#causes-of-death",
         time: "00:42"
       }, {
-        type: "chapter_end",
-        time: "00:48"
-      }, {
         type: "chapter",
         title: "No One Watching",
         target: "#chapter2",
@@ -72,9 +70,6 @@
         target: "#show-map",
         time: "01:11"
       }, {
-        type: "chapter_end",
-        time: "01:29"
-      }, {
         type: "chapter",
         title: "No Simple Surgery",
         target: "#chapter3",
@@ -84,9 +79,6 @@
         type: "element",
         target: "#bacteria",
         time: "01:43"
-      }, {
-        type: "chapter_end",
-        time: "02:08"
       }, {
         type: "chapter",
         title: "Deny & Defend",
@@ -102,9 +94,6 @@
         target: "#take-responsibility",
         time: "02:34"
       }, {
-        type: "chapter_end",
-        time: "02:41"
-      }, {
         type: "chapter",
         title: "The Malpractice Myth",
         target: "#chapter5",
@@ -114,9 +103,6 @@
         type: "element",
         target: "#lawsuits",
         time: "02:52"
-      }, {
-        type: "chapter_end",
-        time: "03:06"
       }, {
         type: "chapter",
         title: "Result: Patient Harm",
@@ -162,12 +148,26 @@
       }
       return _results;
     })();
-    for (_i = 0, _len = chapters.length; _i < _len; _i++) {
-      cue = chapters[_i];
-      $el = $("<li style='left: " + (to_s(cue.time) / 240 * 100) + "%;'><a href='" + cue.target + "'><img src='" + cue.image + "'><span>" + cue.title + "</span></a></li>");
+    build_chapter_markers = function(chapter) {
+      var $el;
+      $el = $("<li style='left: " + (to_s(chapter.time) / 240 * 100) + "%;'><a href='" + chapter.target + "'><img src='" + chapter.image + "'><span>" + chapter.title + "</span></a></li>");
       $('ul', '.chapter-list').append($el);
+      return $video.cue(to_s(chapter.time) - 1, function() {
+        if (!chapter.no_pause) {
+          $video.pause();
+          return $(".next-chapter").addClass("show-next");
+        }
+      });
+    };
+    for (_i = 0, _len = chapters.length; _i < _len; _i++) {
+      chapter = chapters[_i];
+      build_chapter_markers(chapter);
     }
+    $(".next-chapter").on("click", function() {
+      return $video.play();
+    });
     $video.on("play", function() {
+      $(".next-chapter").removeClass("show-next");
       $play_button.removeClass("paused");
       return $('aside.current').removeClass('current');
     });
@@ -229,8 +229,6 @@
           case "element-next":
             $(cue_item.target).addClass('current-2');
             return typeof node_callbacks[_name1 = cue_item.callback] === "function" ? node_callbacks[_name1]() : void 0;
-          case "chapter_end":
-            return $video.pause();
         }
       });
     });

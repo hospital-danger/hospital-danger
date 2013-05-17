@@ -27,28 +27,23 @@ $ ()->
   cues = [
     {type: "chapter", title: "", target: "#intro", time: "00:00", hide_title: true , image:'#'}
 
-    {type: "chapter", title: "A Safe Place?", target: "#chapter1", time: "00:20", image:'#'}
+    {type: "chapter", title: "A Safe Place?", target: "#chapter1", time: "00:20", image:'#', no_pause: true}
     {type: "element", target: "#people", time: "00:33"}
     {type: "element-next", target: "#people", time: "00:40"}
     {type: "element", target: "#causes-of-death", time: "00:42"}
-    {type: "chapter_end", time: "00:48"}
 
     {type: "chapter", title: "No One Watching", target: "#chapter2", time: "00:52", image:'#'}
     {type: "element", target: "#show-map", time: "01:11"}
-    {type: "chapter_end", time: "01:29"}
 
     {type: "chapter", title: "No Simple Surgery", target: "#chapter3", time: "01:33", image:'#'}
     {type: "element", target: "#bacteria", time: "01:43"}
-    {type: "chapter_end", time: "02:08"}
 
     {type: "chapter", title: "Deny & Defend", target: "#chapter4", time: "02:10", image:'#'}
     {type: "element", target: "#slashed-circle", time: "02:22"}
     {type: "element", target: "#take-responsibility", time: "02:34"}
-    {type: "chapter_end", time: "02:41"}
 
     {type: "chapter", title: "The Malpractice Myth" , target: "#chapter5", time: "02:44", image:'#'}
     {type: "element", target: "#lawsuits", time: "02:52"}
-    {type: "chapter_end", time:"03:06"}
 
     {type: "chapter", title: "Result: Patient Harm" , target: "#chapter6", time: "03:10", image:'#'}
     {type: "element", target: "#dollar", time: "03:28"}
@@ -61,11 +56,21 @@ $ ()->
   citations = (cue for cue in cues when (cue.type is "citation"))
 
   # build chapter markers
-  for cue in chapters
-    $el = $( "<li style='left: #{to_s(cue.time) / 240 * 100}%;'><a href='#{cue.target}'><img src='#{cue.image}'><span>#{cue.title}</span></a></li>")
+  build_chapter_markers = (chapter)->
+    $el = $( "<li style='left: #{to_s(chapter.time) / 240 * 100}%;'><a href='#{chapter.target}'><img src='#{chapter.image}'><span>#{chapter.title}</span></a></li>")
     $('ul', '.chapter-list').append $el
+    $video.cue to_s(chapter.time) - 1, ()->
+      unless chapter.no_pause
+        $video.pause()
+        $(".next-chapter").addClass("show-next")
+
+  build_chapter_markers(chapter) for chapter in chapters
+
+  $(".next-chapter").on "click", ()->
+    $video.play()
 
   $video.on "play", ()->
+    $(".next-chapter").removeClass("show-next")
     $play_button.removeClass("paused")
     $('aside.current').removeClass('current')
 
@@ -136,9 +141,6 @@ $ ()->
         when "element-next"
           $(cue_item.target).addClass('current-2')
           node_callbacks[cue_item.callback]?()
-        when "chapter_end"
-          # pause between chapters
-          $video.pause()
 
   $(".element").on "click", (e)->
     e.preventDefault()
