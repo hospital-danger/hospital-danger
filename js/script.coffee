@@ -57,10 +57,10 @@ $ ()->
     {type: "citation", title: "McGuckin, M.: Hand Hygiene Compliance in the United States...", target: "https://www.documentcloud.org/documents/699985-hand-hygiene-compliance-rates-in-the-u-am-j-med.html#document/p1/a102851", time: "03:20"}
     {type: "element", target: "#dollar", time: "03:25"}
 
-    {type: "chapter", title: "Outro" , target: "#outro", time: "03:25:50"}
+    {type: "chapter", title: "" , target: "#outro", time: "03:26", image: "#", no_marker: true}
     {type: "citation", title: "AHRQ: Hospital survey on patient safety culture...", target: "https://www.documentcloud.org/documents/215362-ahrq-hospital-safety-culture-survey-2011-part-one.html#document/p8/a103237", time: "03:27"}
 
-    {type: "element", target: "#outro", time: "03:33"}
+    {type: "element", target: "#now-what", time: "03:33"}
   ]
 
   chapters = (cue for cue in cues when (cue.type is "chapter"))
@@ -69,7 +69,7 @@ $ ()->
   # build chapter markers
   build_chapter_markers = (chapter)->
     $el = $( "<li style='left: #{to_s(chapter.time) / 240 * 100}%;'><a href='#{chapter.target}'><img src='#{chapter.image}'><span>#{chapter.title}</span></a></li>")
-    $('ul', '.chapter-list').append $el
+    $('ul', '.chapter-list').append $el unless chapter.no_marker
     $video.cue to_s(chapter.time) - 1, ()->
       unless chapter.no_pause
         $video.pause()
@@ -168,7 +168,7 @@ $ ()->
     $('header').removeClass('intro')
     $('.introduction').addClass('finished')
     music = $('#the-music')[0]
-    music.volume = 0.6
+    music.volume = 0.4
     music.play()
 
     setTimeout ()->
