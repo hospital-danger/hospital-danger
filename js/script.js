@@ -22,7 +22,7 @@
   };
 
   $(function() {
-    var $buffer_bar, $play_button, $time_bar, $time_elapsed, $time_left, $video, chapter_index, chapters, citations, cue, cues, current_time, duration, goto_chapter, node_callbacks, toggle_play, _i, _len;
+    var $buffer_bar, $el, $play_button, $time_bar, $time_elapsed, $time_left, $video, chapter_index, chapters, citations, cue, cues, current_time, duration, goto_chapter, node_callbacks, toggle_play, _i, _len;
     $video = Popcorn('#the-video');
     $play_button = $('.playpause');
     $time_bar = $('.time-bar');
@@ -35,15 +35,17 @@
     cues = [
       {
         type: "chapter",
-        title: "&diams;",
+        title: "",
         target: "#intro",
         time: "00:00",
-        hide_title: true
+        hide_title: true,
+        image: '#'
       }, {
         type: "chapter",
         title: "A Safe Place?",
         target: "#chapter1",
-        time: "00:20"
+        time: "00:20",
+        image: '#'
       }, {
         type: "element",
         target: "#people",
@@ -63,7 +65,8 @@
         type: "chapter",
         title: "No One Watching",
         target: "#chapter2",
-        time: "00:52"
+        time: "00:52",
+        image: '#'
       }, {
         type: "element",
         target: "#show-map",
@@ -75,7 +78,8 @@
         type: "chapter",
         title: "No Simple Surgery",
         target: "#chapter3",
-        time: "01:33"
+        time: "01:33",
+        image: '#'
       }, {
         type: "element",
         target: "#bacteria",
@@ -87,7 +91,8 @@
         type: "chapter",
         title: "Deny & Defend",
         target: "#chapter4",
-        time: "02:10"
+        time: "02:10",
+        image: '#'
       }, {
         type: "element",
         target: "#slashed-circle",
@@ -103,7 +108,8 @@
         type: "chapter",
         title: "The Malpractice Myth",
         target: "#chapter5",
-        time: "02:44"
+        time: "02:44",
+        image: '#'
       }, {
         type: "element",
         target: "#lawsuits",
@@ -115,17 +121,19 @@
         type: "chapter",
         title: "Result: Patient Harm",
         target: "#chapter6",
-        time: "03:10"
+        time: "03:10",
+        image: '#'
       }, {
         type: "element",
         target: "#dollar",
         time: "03:28"
       }, {
         type: "chapter",
-        title: "&diams;",
+        title: "",
         target: "#outro",
         time: "03:58",
-        hide_title: true
+        hide_title: true,
+        image: '#'
       }, {
         type: "element",
         target: "#now-what",
@@ -156,7 +164,8 @@
     })();
     for (_i = 0, _len = chapters.length; _i < _len; _i++) {
       cue = chapters[_i];
-      $('ul', '.chapter-list').append("<li><a href='" + cue.target + "'>" + cue.title + "</a></li>");
+      $el = $("<li style='left: " + (to_s(cue.time) / 240 * 100) + "%;'><a href='" + cue.target + "'><img src='" + cue.image + "'><span>" + cue.title + "</span></a></li>");
+      $('ul', '.chapter-list').append($el);
     }
     $video.on("play", function() {
       $play_button.removeClass("paused");
@@ -253,7 +262,6 @@
     node_callbacks = {};
     $(window).load(function() {
       var data, state, states, _j, _len1, _ref2, _results;
-      console.log("window loaded");
       data = window.state_data;
       states = $('#us-map')[0].contentDocument;
       _ref2 = states.getElementsByClassName("state");
