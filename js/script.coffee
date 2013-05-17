@@ -34,7 +34,7 @@ $ ()->
     {type: "chapter", title: "Deny & Defend", target: "#chapter4", time: "01:55", image: 'img/chapter-4.png'}
     {type: "element", target: "#slashed-circle", time: "02:23"}
 
-    {type: "chapter", title: "The Malpractice Myth" , target: "#chapter5", time: "02:25:50", image: 'img/chapter-5.png'}
+    {type: "chapter", title: "The Malpractice Myth" , target: "#chapter5", time: "02:26", image: 'img/chapter-5.png'}
     {type: "element", target: "#lawsuits", time: "02:38"}
 
     {type: "chapter", title: "Result: Patient Harm" , target: "#chapter6", time: "02:47", image: 'img/chapter-6.png'}
