@@ -815,68 +815,73 @@ aside {
   top: 80px;
   left: 570px; }
 
-/* line 599, ../sass/screen.sass */
+/* line 600, ../sass/screen.sass */
+#can-you-sue .aside-content {
+  overflow: visible; }
+
+/* line 603, ../sass/screen.sass */
 .decision-tree-container {
   background: url('../img/paper.png?1368735093');
-  width: 1248px;
-  height: 1224px; }
-  /* line 604, ../sass/screen.sass */
+  width: 440px;
+  height: 300px;
+  overflow: scroll; }
+  /* line 609, ../sass/screen.sass */
   .decision-tree-container .decision-tree {
     background: url('../img/tree.png?1368755709') 0 300px no-repeat;
     width: 1600px;
     height: 1600px; }
-    /* line 612, ../sass/screen.sass */
+    /* line 617, ../sass/screen.sass */
     .decision-tree-container .decision-tree .decision {
       overflow: hidden; }
-      /* line 615, ../sass/screen.sass */
+      /* line 620, ../sass/screen.sass */
       .decision-tree-container .decision-tree .decision p {
         font-size: 15px;
         margin: 0.5em 0; }
-      /* line 619, ../sass/screen.sass */
+      /* line 624, ../sass/screen.sass */
       .decision-tree-container .decision-tree .decision a {
         background: #ffd91f;
         float: left;
         margin: 0.5em 20px 0.5em 0;
         padding: 10px;
         width: 190px; }
-        /* line 626, ../sass/screen.sass */
+        /* line 631, ../sass/screen.sass */
         .decision-tree-container .decision-tree .decision a:nth-child(odd) {
           margin-right: 0; }
-    /* line 629, ../sass/screen.sass */
+    /* line 634, ../sass/screen.sass */
     .decision-tree-container .decision-tree .decision {
       background: pink;
       padding: 20px;
       width: 440px; }
-    /* line 637, ../sass/screen.sass */
+    /* line 642, ../sass/screen.sass */
     .decision-tree-container .decision-tree #decision-2 {
       display: none; }
-    /* line 640, ../sass/screen.sass */
+    /* line 645, ../sass/screen.sass */
     .decision-tree-container .decision-tree #decision-3 {
       display: none; }
-    /* line 643, ../sass/screen.sass */
+    /* line 648, ../sass/screen.sass */
     .decision-tree-container .decision-tree #decision-4 {
       display: none; }
-    /* line 646, ../sass/screen.sass */
+    /* line 651, ../sass/screen.sass */
     .decision-tree-container .decision-tree #outcome-positive {
       display: none; }
-    /* line 649, ../sass/screen.sass */
+    /* line 654, ../sass/screen.sass */
     .decision-tree-container .decision-tree #outcome-negative {
       display: none; }
-    /* line 654, ../sass/screen.sass */
+    /* line 659, ../sass/screen.sass */
     .decision-tree-container .decision-tree .outcome {
       padding: 1em;
       height: 150px; }
-      /* line 658, ../sass/screen.sass */
+      /* line 663, ../sass/screen.sass */
       .decision-tree-container .decision-tree .outcome p {
         font-size: 18px;
         font-style: italic;
         font-weight: bold; }
-      /* line 663, ../sass/screen.sass */
+      /* line 668, ../sass/screen.sass */
       .decision-tree-container .decision-tree .outcome a {
         float: left;
         font-weight: bold; }
 
-/* line 673, ../sass/screen.sass */
+/* line 678, ../sass/screen.sass */
 #dollar {
   width: 100px;
   height: 100px;
@@ -884,19 +889,19 @@ aside {
   top: 80px;
   left: 570px; }
 
-/* line 681, ../sass/screen.sass */
+/* line 686, ../sass/screen.sass */
 #by-the-numbers p {
   font-size: 20px;
   font-weight: normal; }
-/* line 685, ../sass/screen.sass */
+/* line 690, ../sass/screen.sass */
 #by-the-numbers li {
   font-size: 14px;
   line-height: 1.7;
   margin: 2em 0 1.5em; }
-  /* line 690, ../sass/screen.sass */
+  /* line 695, ../sass/screen.sass */
   #by-the-numbers li:nth-child(2n+1) strong {
     color: #b59200; }
-  /* line 693, ../sass/screen.sass */
+  /* line 698, ../sass/screen.sass */
   #by-the-numbers li strong {
     color: #ffd91f;
     float: left;
@@ -905,94 +910,94 @@ aside {
     line-height: 1.1;
     margin: 0 0.5em 0 0;
     width: 60px; }
-  /* line 703, ../sass/screen.sass */
+  /* line 708, ../sass/screen.sass */
   #by-the-numbers li:last-child {
     margin-bottom: 0; }
 
-/* line 706, ../sass/screen.sass */
+/* line 711, ../sass/screen.sass */
 #now-what {
   position: absolute;
   left: 0;
   top: 0;
   opacity: 0;
   z-index: 1; }
-  /* line 713, ../sass/screen.sass */
+  /* line 718, ../sass/screen.sass */
   #now-what .join-the-conversation a, #now-what .join-the-conversation p, #now-what .protect-yourself a, #now-what .protect-yourself .protect-header {
     font-family: "Open Sans Bold";
     text-transform: uppercase; }
-  /* line 717, ../sass/screen.sass */
+  /* line 722, ../sass/screen.sass */
   #now-what h1, #now-what h2, #now-what .protect-yourself a, #now-what .protect-yourself .protect-header {
     color: #ffd91f;
     text-shadow: 1px 1px 3px #111111; }
-  /* line 721, ../sass/screen.sass */
+  /* line 726, ../sass/screen.sass */
   #now-what h1, #now-what h2 {
     font-style: italic; }
-  /* line 725, ../sass/screen.sass */
+  /* line 730, ../sass/screen.sass */
   #now-what h1 {
     font-size: 3em; }
-  /* line 728, ../sass/screen.sass */
+  /* line 733, ../sass/screen.sass */
   #now-what h2 {
     font-size: 2em;
     text-align: center; }
-  /* line 732, ../sass/screen.sass */
+  /* line 737, ../sass/screen.sass */
   #now-what.current {
     opacity: 1; }
-  /* line 735, ../sass/screen.sass */
+  /* line 740, ../sass/screen.sass */
   #now-what .divider {
     width: 100%;
     height: 5px;
     background-color: #ffd91f; }
-  /* line 740, ../sass/screen.sass */
+  /* line 745, ../sass/screen.sass */
   #now-what .join-the-conversation {
     overflow: hidden;
     *zoom: 1;
     margin: 20px 0; }
-    /* line 747, ../sass/screen.sass */
+    /* line 752, ../sass/screen.sass */
     #now-what .join-the-conversation p {
       font-style: italic;
       margin: 8px 0;
       font-size: 0.8em; }
-    /* line 753, ../sass/screen.sass */
+    /* line 758, ../sass/screen.sass */
     #now-what .join-the-conversation a {
       display: inline-block;
       padding: 4px 10px;
       background-color: #ffd91f;
       border-bottom: 4px solid #b59200; }
-    /* line 759, ../sass/screen.sass */
+    /* line 764, ../sass/screen.sass */
     #now-what .join-the-conversation img {
       float: left;
       padding-right: 20px; }
-  /* line 763, ../sass/screen.sass */
+  /* line 768, ../sass/screen.sass */
   #now-what .patient, #now-what .provider {
     float: left;
     width: 50%; }
-  /* line 767, ../sass/screen.sass */
+  /* line 772, ../sass/screen.sass */
   #now-what .protect-yourself {
     background-color: rgba(255, 255, 255, 0.4);
     text-align: center; }
-    /* line 775, ../sass/screen.sass */
+    /* line 780, ../sass/screen.sass */
     #now-what .protect-yourself a, #now-what .protect-yourself p, #now-what .protect-yourself .protect-header {
       display: block;
       padding: 10px 15px; }
-    /* line 779, ../sass/screen.sass */
+    /* line 784, ../sass/screen.sass */
     #now-what .protect-yourself p {
       font-family: "Open Sans Bold";
       font-style: italic;
       font-size: 0.9em;
       line-height: 1.3; }
-      /* line 785, ../sass/screen.sass */
+      /* line 790, ../sass/screen.sass */
       #now-what .protect-yourself p.surgery {
         padding: 10px 50px; }
-  /* line 788, ../sass/screen.sass */
+  /* line 793, ../sass/screen.sass */
   #now-what .simple-ways {
     overflow: hidden;
     *zoom: 1; }
-  /* line 791, ../sass/screen.sass */
+  /* line 796, ../sass/screen.sass */
   #now-what .protect-block {
     width: 33.33333%;
     float: left;
     height: 282px; }
-    /* line 795, ../sass/screen.sass */
+    /* line 800, ../sass/screen.sass */
     #now-what .protect-block img {
       display: block;
       margin: 0 auto;
