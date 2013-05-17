@@ -474,26 +474,39 @@ aside
         top: 0
         left: 0
 
-  .quotes
+  .events
     position: absolute
     top: 0
     left: 0
-    height: 1px
-    overflow: hidden
-    blockquote
+    .event
+      position: absolute
       background-color: red
       margin: 100px
+      width: 300px
+      @include transition(transform 1s)
       @include translateY(2000px)
 
-      &.current-quote
-        // @include translateY(0)
+      q
+        display: block
+
+
+      &.current-event
+        @include translateY(0)
+
 
   #hospital-envelope
     float: left
     margin-top: 80px
 
   .hospital-response
+    position: absolute
+    top: 0
+    height: 500px
+    width: 400px
+    padding: 100px 40px
+    background-image: image-url("content/putten-doctor_letter.png")
     @include translateY(-2000px)
+    @include transition(transform 3s)
 
     &.visible
       @include translateY(0)
