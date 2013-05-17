@@ -80,7 +80,11 @@
       }, {
         type: "element",
         target: "#us-map",
-        time: "01:13"
+        time: "01:11"
+      }, {
+        type: "element",
+        target: "#show-map",
+        time: "01:12"
       }, {
         type: "chapter",
         title: "No Simple Surgery",
@@ -169,8 +173,8 @@
         time: "03:20"
       }, {
         type: "element",
-        target: "#dollar",
-        time: "03:25"
+        target: "#hand",
+        time: "03:24"
       }, {
         type: "chapter",
         title: "",
@@ -312,7 +316,7 @@
       $('header').removeClass('intro');
       $('.introduction').addClass('finished');
       music = $('#the-music')[0];
-      music.volume = 0.4;
+      music.volume = 0.3;
       music.play();
       setTimeout(function() {
         return $video.play();
@@ -383,8 +387,14 @@
           return $('#state-info').hide();
         });
         _results.push($(state).on("click", function() {
+          $('.instruction').removeClass('show-instruction');
+          if ($('#us-map').hasClass('expanded')) {
+            $video.play();
+          } else {
+            $video.pause();
+          }
           $video.pause();
-          return $('#us-map').addClass("expanded");
+          return $('#us-map').toggleClass("expanded");
         }));
       }
       return _results;

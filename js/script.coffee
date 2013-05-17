@@ -32,7 +32,8 @@ $ ()->
     {type: "chapter", title: "Unchecked Errors", target: "#chapter2", time: "00:47", image: 'img/chapter-2.png'}
     {type: "citation", title: "IOM: To Err Is Human", target: "https://www.documentcloud.org/documents/286678-to-err-is-human-download.html#document/p112/a74097", time: "00:52"}
     {type: "citation", title: "Makary, M.: Testimony Before Committee on Oversight and Government Reform...", target: "https://www.documentcloud.org/documents/693471-house-transparency-hearing-makary-testimony.html#document/p2/a103232", time: "01:12"}
-    {type: "element", target: "#us-map", time: "01:13"}
+    {type: "element", target: "#us-map", time: "01:11"}
+    {type: "element", target: "#show-map", time: "01:12"}
 
     {type: "chapter", title: "No Simple Surgery", target: "#chapter3", time: "01:23", image: 'img/chapter-3.png'}
     {type: "citation", title: "CDC: Estimating Healthcare-Associated Infections..", target: "https://www.documentcloud.org/documents/701516-cdc-hai-infections-deaths.html#document/p1/a103231", time: "01:34"}
@@ -44,7 +45,6 @@ $ ()->
 
     {type: "chapter", title: "The Malpractice Myth" , target: "#chapter5", time: "02:26", image: 'img/chapter-5.png'}
     {type: "citation", title: "Shepherd, J.: Uncovering the Silent Victims..", target: "https://www.documentcloud.org/documents/698248-emory-med-mal-study.html#document/p36/a103236", time: "02:31"}
-
     {type: "element", target: "#lawsuits", time: "02:38"}
     {type: "citation", title: "Shepherd, J.: Uncovering the Silent Victims..", target: "https://www.documentcloud.org/documents/698248-emory-med-mal-study.html#document/p36/a103236", time: "02:38"}
 
@@ -55,7 +55,7 @@ $ ()->
     {type: "citation", title: "American Nurse Today: Break the bullying cycle", target: "http://www.americannursetoday.com/article.aspx?id=8648", time: "03:13"}
     {type: "citation", title: "AIG: Patient Safety; Hospital Risk", target: "https://www.documentcloud.org/documents/690849-aig-patient-safety-hospital-risk-white-paper.html", time: "03:15"}
     {type: "citation", title: "McGuckin, M.: Hand Hygiene Compliance in the United States...", target: "https://www.documentcloud.org/documents/699985-hand-hygiene-compliance-rates-in-the-u-am-j-med.html#document/p1/a102851", time: "03:20"}
-    {type: "element", target: "#dollar", time: "03:25"}
+    {type: "element", target: "#hand", time: "03:24"}
 
     {type: "chapter", title: "" , target: "#outro", time: "03:26", image: "#", no_marker: true}
     {type: "citation", title: "AHRQ: Hospital survey on patient safety culture...", target: "https://www.documentcloud.org/documents/215362-ahrq-hospital-safety-culture-survey-2011-part-one.html#document/p8/a103237", time: "03:27"}
@@ -167,7 +167,7 @@ $ ()->
     $('header').removeClass('intro')
     $('.introduction').addClass('finished')
     music = $('#the-music')[0]
-    music.volume = 0.4
+    music.volume = 0.3
     music.play()
 
     setTimeout ()->
@@ -209,8 +209,10 @@ $ ()->
         $('#state-info').hide()
 
       $(state).on "click", ()->
+        $('.instruction').removeClass('show-instruction')
+        if $('#us-map').hasClass('expanded') then $video.play() else $video.pause()
         $video.pause()
-        $('#us-map').addClass("expanded")
+        $('#us-map').toggleClass("expanded")
 
 
   do ()->

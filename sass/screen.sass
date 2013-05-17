@@ -178,7 +178,7 @@ video
   z-index: 3
   left: 100px
   bottom: 8px
-  width: 845px
+  width: 920px
   height: 60px
   overflow: hidden
 
@@ -186,7 +186,7 @@ video
     position: absolute
     left: 0
     top: 0
-    width: 845px
+    width: 920px
     height: 60px
 
   li
@@ -380,6 +380,9 @@ aside
 
 // Animated elements.
 
+.element
+  cursor: pointer
+
 .element,
 aside
   display: block
@@ -527,11 +530,15 @@ aside
   &.current
     bottom: 100%
 
-// #show-map
-//   width: 300px
-//   height: 300px
-//   top: 30px
-//   left: 580px
+#show-map
+  width: 300px
+  height: 200px
+  top: -180px
+  left: 610px
+
+  .instruction
+    z-index: 1
+    @include top-triangle(6px, rgba(255, 255, 255, .75))
 
 #us-map
   position: absolute
@@ -541,10 +548,8 @@ aside
   height: 500px
   width: 780px
   z-index: 1
-  @include simple-transform(.5, 0, 300px, -280px)
-  @include transition(transform 2s)
-
-
+  @include simple-transform(.5, 0, 450px, -200px)
+  @include transition(all 2s)
 
   &.current
     opacity: 1
@@ -552,7 +557,6 @@ aside
   &.expanded
     z-index: 10
     @include simple-transform(.9, 0, 0, 0)
-
 
 #state-info
   font-size: .8em
@@ -588,7 +592,18 @@ aside
   width: 250px
   height: 440px
 
+  .instruction
+    position: absolute
+    left: -50px
+    top: 325px
+    height: 28px
+    display: block
+    font-size: 14px
+    text-align: center
+    @include top-triangle(6px, rgba(255, 255, 255, .75))
+
 #judy-gaines
+
   .images,
   .sections
     position: absolute
@@ -599,6 +614,8 @@ aside
     overflow: auto
 
   .images
+    background: #fff
+
     img
       width: 480px
       height: $container-height
@@ -607,7 +624,7 @@ aside
       @include transition(opacity .75s)
 
       &.current-image
-        opacity: 1
+        opacity: .6
 
   .sections
     padding: 20px
@@ -620,12 +637,6 @@ aside
       &:nth-child(2n)
         margin-top: 0
 
-      &.left
-        float: left
-
-      &.right
-        float: right
-
       p
         color: #333
         line-height: 1.6em
@@ -636,10 +647,23 @@ aside
   top: 60px
   left: 650px
 
+  .instruction
+    position: absolute
+    left: -25px
+    top: 200px
+    height: 95px
+    display: block
+    font-size: 14px
+    text-align: center
+    line-height: 1.4
+    @include top-triangle(6px, rgba(255, 255, 255, .75))
+
+    a
+      text-decoration: underline
+
 #deny-and-defend
   a
     text-decoration: underline
-
 
   .aside-content
     height: 550px
@@ -745,10 +769,24 @@ aside
       @include translateY(0)
 
 #lawsuits
-  width: 360px
-  height: 260px
+  width: 400px
+  height: 340px
   top: 80px
   left: 460px
+
+  .instruction
+    position: absolute
+    right: -35px
+    top: 260px
+    height: 82px
+    display: block
+    font-size: 14px
+    text-align: center
+    line-height: 1.4
+    @include top-triangle(6px, rgba(255, 255, 255, .75))
+
+    a
+      text-decoration: underline
 
 #can-you-sue
   .aside-content
@@ -876,12 +914,25 @@ aside
         .explanation
           font-size: .7em
 
-
-#dollar
+#hand
   width: 300px
-  height: 290px
-  top: 180px
-  left: 470px
+  height: 365px
+  top: 110px
+  left: 485px
+
+  .instruction
+    position: absolute
+    left: 25px
+    top: 0
+    height: 75px
+    display: block
+    font-size: 14px
+    text-align: center
+    line-height: 1.4
+    @include bottom-triangle(6px, rgba(255, 255, 255, .75), down)
+
+    a
+      text-decoration: underline
 
 #by-the-numbers
   p
