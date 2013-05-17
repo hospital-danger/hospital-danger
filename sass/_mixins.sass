@@ -25,3 +25,31 @@
       margin-bottom: - $size
     @else
       border-bottom: $size solid $color
+
+
+@mixin left-triangle($size, $color)
+  &:before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 0
+    margin-top: - $size
+    border-top: $size solid transparent
+    border-bottom: $size solid transparent
+    border-right: $size solid $color
+    margin-left: - ($size - 1)
+
+
+
+@mixin right-triangle($size, $color)
+  &:before
+    content: ""
+    position: absolute
+    top: 50%
+    right: 0
+    margin-top: - $size
+    border-top: $size solid transparent
+    border-bottom: $size solid transparent
+    border-left: $size solid $color
+    margin-right: - ($size - 1)
+

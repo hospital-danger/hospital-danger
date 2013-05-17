@@ -22,25 +22,44 @@ $ ()->
   chapter_index = 0
 
   cues = [
-    {type: "chapter", title: "A Safe Place?", target: "#chapter1", time: "00:20", image: 'img/chapter-1.png'}
+    {type: "chapter", title: "A Safe Place?", target: "#chapter1", time: "00:20", image: 'img/chapter-1.png', no_pause: true}
+    {type: "citation", title: "OIG: Adverse Events in Hospitals", target: "https://www.documentcloud.org/documents/436100-oig-adverse-events-in-hospitals.html#document/p3/a74093", time: "00:33"}
+    {type: "citation", title: "CDC: Estimating Healthcare-Associated Infections...", target: "https://www.documentcloud.org/documents/701516-cdc-hai-infections-deaths.html#document/p1/a103231", time: "00:35"}
+    {type: "citation", title: "IOM: To Err Is Human", target: "https://www.documentcloud.org/documents/436100-oig-adverse-events-in-hospitals.html#document/p3/a74093", time: "00:37"}
     {type: "element", target: "#people", time: "00:37"}
+    {type: "citation", title: "CDC: Leading Causes of Death", target: "http://www.cdc.gov/nchs/fastats/lcod.htm", time: "00:43"}
 
     {type: "chapter", title: "No One Watching", target: "#chapter2", time: "00:47", image: 'img/chapter-2.png'}
+    {type: "citation", title: "IOM: To Err Is Human", target: "https://www.documentcloud.org/documents/286678-to-err-is-human-download.html#document/p112/a74097", time: "00:52"}
+    {type: "citation", title: "Makary, M.: Testimony Before Committee on Oversight and Government Reform...", target: "https://www.documentcloud.org/documents/693471-house-transparency-hearing-makary-testimony.html#document/p2/a103232", time: "01:12"}
     {type: "element", target: "#show-map", time: "01:13"}
 
     {type: "chapter", title: "No Simple Surgery", target: "#chapter3", time: "01:23", image: 'img/chapter-3.png'}
+    {type: "citation", title: "CDC: Estimating Healthcare-Associated Infections..", target: "https://www.documentcloud.org/documents/701516-cdc-hai-infections-deaths.html#document/p1/a103231", time: "01:34"}
     {type: "element", target: "#bacteria", time: "01:43"}
 
     {type: "chapter", title: "Deny & Defend", target: "#chapter4", time: "01:55", image: 'img/chapter-4.png'}
+    {type: "citation", title: "Boothman, R.: Nurturing a culture of patient safety...", target: "https://www.documentcloud.org/documents/701526-boothman-ache-frontiers.html#document/p2/a103234", time: "02:05"}
     {type: "element", target: "#slashed-circle", time: "02:23"}
 
     {type: "chapter", title: "The Malpractice Myth" , target: "#chapter5", time: "02:26", image: 'img/chapter-5.png'}
+    {type: "citation", title: "Shepherd, J.: Uncovering the Silent Victims..", target: "https://www.documentcloud.org/documents/698248-emory-med-mal-study.html#document/p36/a103236", time: "02:31"}
+
     {type: "element", target: "#lawsuits", time: "02:38"}
+    {type: "citation", title: "Shepherd, J.: Uncovering the Silent Victims..", target: "https://www.documentcloud.org/documents/698248-emory-med-mal-study.html#document/p36/a103236", time: "02:38"}
 
     {type: "chapter", title: "Result: Patient Harm" , target: "#chapter6", time: "02:47", image: 'img/chapter-6.png'}
+    {type: "citation", title: "AIG: Patient Safety; Hospital Risk", target: "https://www.documentcloud.org/documents/690849-aig-patient-safety-hospital-risk-white-paper.html#document/p4/a99951", time: "03:03"}
+    {type: "citation", title: "AHRQ: Hospital survey on patient safety culture...", target: "https://www.documentcloud.org/documents/215362-ahrq-hospital-safety-culture-survey-2011-part-one.html#document/p41/a26651", time: "03:05"}
+    {type: "citation", title: "AHRQ: Hospital Nurse Staffing and Quality of Care", target: "https://www.documentcloud.org/documents/700433-nurse-staffing-study-and-infections.html#document/p1/a102854", time: "03:08"}
+    {type: "citation", title: "American Nurse Today: Break the bullying cycle", target: "http://www.americannursetoday.com/article.aspx?id=8648", time: "03:13"}
+    {type: "citation", title: "AIG: Patient Safety; Hospital Risk", target: "https://www.documentcloud.org/documents/690849-aig-patient-safety-hospital-risk-white-paper.html", time: "03:15"}
+    {type: "citation", title: "McGuckin, M.: Hand Hygiene Compliance in the United States...", target: "https://www.documentcloud.org/documents/699985-hand-hygiene-compliance-rates-in-the-u-am-j-med.html#document/p1/a102851", time: "03:20"}
     {type: "element", target: "#dollar", time: "03:25"}
 
     {type: "chapter", title: "Outro" , target: "#outro", time: "03:25:50"}
+    {type: "citation", title: "AHRQ: Hospital survey on patient safety culture...", target: "https://www.documentcloud.org/documents/215362-ahrq-hospital-safety-culture-survey-2011-part-one.html#document/p8/a103237", time: "03:27"}
+
     {type: "element", target: "#outro", time: "03:33"}
   ]
 
@@ -120,7 +139,9 @@ $ ()->
     $video.cue to_s(cue_item.time), ()->
       switch cue_item.type
         when "citation"
-          $('.citations').html "<a href='#{cue_item.target}' target='_blank'>#{cue_item.title}</a>"
+          $('.citations')
+            .html( "<a href='#{cue_item.target}' target='_blank'>#{cue_item.title}</a>")
+            .stop().show().delay(2000).fadeOut(1000)
         when "chapter"
           $('.current').removeClass("current")
           $('.current-2').removeClass("current-2")
