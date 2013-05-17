@@ -611,18 +611,14 @@ aside
     border-radius: 3px
     position: relative
 
-    .decision-lines
-      background: image-url("tree.png") 100px 60px no-repeat
+    .decision-tree
+      background: image-url("tree.png") -400px 60px no-repeat
+      width: 1500px
+      height: 1500px
       position: absolute
       left: 0
       top: 0
-      width: 1500px
-      height: 1500px
-
-    .decision-tree
       color: $dark
-      width: 448px
-      height: 220px
       overflow: hidden
 
       .decision,    
@@ -754,14 +750,14 @@ aside
     @include clearfix
     margin: 20px 0
 
-    a, p
+    a,
+    p
       @extend %open-bold
 
     p
       font-style: italic
       margin: 8px 0
       font-size: .8em
-
 
     a
       display: inline-block
@@ -773,7 +769,8 @@ aside
       float: left
       padding-right: 20px
 
-  .patient, .provider
+  .patient,
+  .provider
     float: left
     width: 50%
 
@@ -781,11 +778,14 @@ aside
     background-color: rgba(255,255,255,.4)
     text-align: center
 
-    a, .protect-header
+    a,
+    .protect-header
       @extend %open-bold
       @extend %yellow-shadow
 
-    a, p, .protect-header
+    a,
+    p,
+    .protect-header
       display: block
       padding: 10px 15px
 
@@ -805,10 +805,9 @@ aside
     width: 33.33333%
     float: left
     height: 282px
+
     img
       display: block
       margin: 0 auto
       height: 60px
       padding-bottom: 10px
-
-
