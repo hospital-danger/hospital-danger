@@ -584,21 +584,21 @@ aside {
 #judy-gaines .sections {
   padding: 20px; }
   /* line 424, ../sass/screen.sass */
-  #judy-gaines .sections .section {
+  #judy-gaines .sections section {
     clear: both;
     margin: 3em 0;
     width: 185px; }
     /* line 429, ../sass/screen.sass */
-    #judy-gaines .sections .section:nth-child(2n) {
+    #judy-gaines .sections section:nth-child(2n) {
       margin-top: 0; }
     /* line 432, ../sass/screen.sass */
-    #judy-gaines .sections .section.left {
+    #judy-gaines .sections section.left {
       float: left; }
     /* line 435, ../sass/screen.sass */
-    #judy-gaines .sections .section.right {
+    #judy-gaines .sections section.right {
       float: right; }
     /* line 438, ../sass/screen.sass */
-    #judy-gaines .sections .section p {
+    #judy-gaines .sections section p {
       color: #333333;
       line-height: 1.6em; }
 
