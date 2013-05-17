@@ -206,12 +206,12 @@ video
         &:after
           left: 11px
           margin-left: 0
-  
+
         span
           display: block
 
   // Final chapter marker needs its label going left, not right, since it's at the edge of the screen.
-  li:last-child     
+  li:last-child
     span
       margin-left: -238px
 
@@ -353,32 +353,65 @@ aside
   display: block
   position: absolute
   z-index: 4
-  @include transition(transform 1s)
   @include translateX(2000px)
 
   &.current
     @include translateX(0)
 
+aside
+  @include transition(transform 1s)
+
+.instruction
+  display: none
+  color: $yellow
+  position: absolute
+  bottom: - 1.5em
+  width: 300px
+  &.show-instruction
+    display: block
+
 #people
+  border: 1px solid yellow
   position: absolute
   width: 100%
   top: 300px
   left: 0
 
+  .instruction
+    display: block
+    width: auto
+    bottom: -3em
+    span
+      line-height: 1.5
+      color: $dark
+      display: block
+      font-size: .8em
+
   .person
-    min-width: 50px
-    min-height: 50px
+    width: 50px
+    height: 50px
     float: left
-    border: 1px solid yellow
+    opacity: 0
 
     blockquote
       position: absolute
+      top: 100%
+      margin-top: 10px
+      left: -80px
       width: 200px
-      background-color: white
-      display: none
+      background-color: $yellow
+      padding: 10px
+      border-radius: 2px
+      @include top-triangle(6px, $yellow)
 
-  .person:hover blockquote
-    display: block
+
+    cite
+      display: block
+      text-align: right
+      font-family: "Open Sans Bold"
+      text-transform: uppercase
+  .person:hover
+    opacity: 1
 
   &.current-2 .dead
     border-color: red
@@ -688,6 +721,94 @@ aside
   left: 0
   top: 0
   opacity: 0
+  z-index: 1
+
+  %open-bold
+    font-family: "Open Sans Bold"
+    text-transform: uppercase
+
+  %yellow-shadow
+    color: $yellow
+    text-shadow: 1px 1px 3px $dark
+
+  h1, h2
+    font-style: italic
+    @extend %yellow-shadow
+
+  h1
+    font-size: 3em
+
+  h2
+    font-size: 2em
+    text-align: center
 
   &.current
     opacity: 1
+
+  .divider
+    width: 100%
+    height: 5px
+    background-color: $yellow
+
+  .join-the-conversation
+    @include clearfix
+    margin: 20px 0
+
+    a, p
+      @extend %open-bold
+
+    p
+      font-style: italic
+      margin: 8px 0
+      font-size: .8em
+
+
+    a
+      display: inline-block
+      padding: 4px 10px
+      background-color: $yellow
+      border-bottom: 4px solid ($darkyellow)
+
+    img
+      float: left
+      padding-right: 20px
+
+  .patient, .provider
+    float: left
+    width: 50%
+
+  .protect-yourself
+    background-color: rgba(255,255,255,.4)
+    text-align: center
+
+    a, .protect-header
+      @extend %open-bold
+      @extend %yellow-shadow
+
+    a, p, .protect-header
+      display: block
+      padding: 10px 15px
+
+    p
+      font-family: "Open Sans Bold"
+      font-style: italic
+      font-size: .9em
+      line-height: 1.3
+
+      &.surgery
+        padding: 10px 50px
+
+  .simple-ways
+    @include clearfix
+
+  .protect-block
+    width: 33.33333%
+    float: left
+    height: 282px
+    img
+      display: block
+      margin: 0 auto
+      height: 60px
+      padding-bottom: 10px
+
+
