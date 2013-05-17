@@ -662,6 +662,24 @@ aside
           &:hover
             border-bottom-color: $dark
 
+      .outcome
+        background: #fff
+        border-radius: 3px
+
+        p
+          text-align: center
+
+        a
+          background: $yellow
+          border-bottom: 4px solid $darkyellow
+          display: block
+          font-family: "Open Sans Bold"
+          margin: 1em auto
+          padding: 10px
+          text-align: center
+          text-transform: uppercase
+          width: 110px
+
       #decision-1
         left: 500px
         top: 0
@@ -676,15 +694,30 @@ aside
 
       #decision-4
         left: 500px
-        top: 1120px
+        top: 1100px
 
       #outcome-positive
-        left: 1250px
+        left: 1230px
         top: 1115px
+        margin-left: -10px
+
+        p
+          font-size: 16px
+          margin-top: .25em
+
+          strong
+            font-family: 'Open Sans Bold'
 
       #outcome-negative
-        left: 150px
-        top: 980px
+        left: 0
+        top: 858px
+
+        p
+          color: maroon
+          font-family: 'League Gothic'
+          font-size: 38px
+          margin: 0
+          text-transform: uppercase
 
 #dollar
   width: 100px
