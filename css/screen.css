@@ -1384,5 +1384,33 @@ aside {
       padding-bottom: 10px; }
 
 /* line 1105, ../sass/screen.sass */
+#go-to-credits {
+  display: block;
+  clear: both;
+  color: white;
+  font-family: "Open Sans Bold";
+  font-size: 13px;
+  margin-top: 1em;
+  text-align: center;
+  text-transform: uppercase; }
+
+/* line 1115, ../sass/screen.sass */
 #credits {
-  display: none; }
+  background: white;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -400px;
+  width: 800px;
+  padding: 20px;
+  z-index: 99; }
+  /* line 1125, ../sass/screen.sass */
+  #credits h2 {
+    font-size: 64px; }
+  /* line 1128, ../sass/screen.sass */
+  #credits p {
+    margin: 1em 0; }
+    /* line 1131, ../sass/screen.sass */
+    #credits p strong {
+      display: block;
+      margin-top: 2em; }
