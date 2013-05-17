@@ -63,29 +63,42 @@ header
   z-index: 100
   height: 80px
   top: 0
+  text-align: center
+
   @include transition(top 1s)
+
+  p
+    opacity: 0
+    color: #fff
+    font-family: 'League Gothic'
+    font-size: 28px
+    margin-top: 3.25em
+    padding-left: 4.5em
+    text-transform: uppercase
+    text-shadow: 1px 1px 3px black
+
+    @include transition(opacity 1s)
 
   &.intro
     top: 350px
     cursor: pointer
-    text-align: center
 
     p
-      color: #fff
-      font-family: 'League Gothic'
-      font-size: 28px
-      margin-top: 3.25em
-      padding-left: 4.5em
-      text-transform: uppercase
-      text-shadow: 1px 1px 3px black
+      opacity: 1
 
 .introduction
-  position: absolute
+  position: fixed
+  top: 0
+  left: 0
   width: 100%
   height: 100%
   z-index: 100
   opacity: 1
   @include transition(opacity 3s ease 1s)
+
+  video
+    min-height: 100%
+    width: auto
 
   &.finished
     opacity: 0
@@ -396,33 +409,69 @@ aside
   left: 650px
 
 #deny-and-defend
+  .aside-content
+    height: 550px
+    overflow: auto
+    padding: 0
+    margin: 0
+  .prev,
+  .next
+    width: 25%
+    height: 100%
+    position: absolute
+    top: 0
+    z-index: 10
+
+  .prev
+    left: 0
+
+  .next
+    right: 0
 
   .papers-container
+    width: 6850px
+    height: 450px
 
     &.finished
+      display: none
 
-    .prev
-
-    .next
+    .intro
+      width: 400px
+      float: left
 
     .papers
+      width: 6000px
+      height: 100%
+      float: left
 
       img
+        position: absolute
+        top: 0
+        left: 0
 
   .quotes
-
+    position: absolute
+    top: 0
+    left: 0
+    height: 1px
+    overflow: hidden
     blockquote
+      background-color: red
+      margin: 100px
+      @include translateY(2000px)
 
       &.current-quote
+        // @include translateY(0)
 
-  .hospital-envelope
-
-    &.visible
+  #hospital-envelope
+    float: left
+    margin-top: 80px
 
   .hospital-response
+    @include translateY(-2000px)
 
     &.visible
-
+      @include translateY(0)
 
 #lawsuits
   width: 100px
