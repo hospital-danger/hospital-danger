@@ -30,7 +30,6 @@ $ ()->
     {type: "chapter", title: "A Safe Place?", target: "#chapter1", time: "00:20", image:'#', no_pause: true}
     {type: "element", target: "#people", time: "00:33"}
     {type: "element-next", target: "#people", time: "00:40"}
-    {type: "element", target: "#causes-of-death", time: "00:42"}
 
     {type: "chapter", title: "No One Watching", target: "#chapter2", time: "00:52", image:'#'}
     {type: "element", target: "#show-map", time: "01:11"}
@@ -63,6 +62,7 @@ $ ()->
       unless chapter.no_pause
         $video.pause()
         $(".next-chapter").addClass("show-next")
+        $(".instruction").addClass("show-instruction")
 
   build_chapter_markers(chapter) for chapter in chapters
 
@@ -71,6 +71,7 @@ $ ()->
 
   $video.on "play", ()->
     $(".next-chapter").removeClass("show-next")
+    $(".instruction").removeClass("show-instruction")
     $play_button.removeClass("paused")
     $('aside.current').removeClass('current')
 

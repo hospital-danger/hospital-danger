@@ -56,10 +56,6 @@
         target: "#people",
         time: "00:40"
       }, {
-        type: "element",
-        target: "#causes-of-death",
-        time: "00:42"
-      }, {
         type: "chapter",
         title: "No One Watching",
         target: "#chapter2",
@@ -155,7 +151,8 @@
       return $video.cue(to_s(chapter.time) - 1, function() {
         if (!chapter.no_pause) {
           $video.pause();
-          return $(".next-chapter").addClass("show-next");
+          $(".next-chapter").addClass("show-next");
+          return $(".instruction").addClass("show-instruction");
         }
       });
     };
@@ -168,6 +165,7 @@
     });
     $video.on("play", function() {
       $(".next-chapter").removeClass("show-next");
+      $(".instruction").removeClass("show-instruction");
       $play_button.removeClass("paused");
       return $('aside.current').removeClass('current');
     });

@@ -70,6 +70,9 @@
     #     #      #####  #     # #       #######    #       ####### #     #  #####  #######    #
     -->
     <div class="element" id="people">
+      <div class="instruction">
+        hover over the highlighted people to see their stories.
+      </div>
       <div class="person">
         Person!
         <blockquote>
@@ -83,25 +86,6 @@
         </blockquote>
       </div>
     </div>
-    <div class="element" id="causes-of-death">
-      <div class="citation">http://www.cdc.gov/nchs/fastats/lcod.htm</div> <!-- TODO: how to represent our citations and external resources -->
-      <ul> <!-- Taken from http://www.cdc.gov/nchs/data/dvs/deaths_2010_release.pdf, starting on page 14 -->
-        <li>Heart Disease</li>
-        <li>Cancer</li>
-        <li id="hospital-injury-insertion-point"></li> <!-- Here we will insert 'Hospital injury' -->
-        <li>Chronic lower respiratory disease</li>
-        <li>Stroke</li>
-        <li>Accidents</li>
-        <li>Alzheimer&rsquo;s disease</li>
-        <li>Diabetes</li>
-      </ul>
-    </div>
-    <aside id="safe-place">
-      <a href="#" class="close-aside"><span>&times;</span></a>
-      <div class="aside-content">
-        <h2>Interactive element for list of horrible diseases</h2>
-      </div>
-    </aside>
 
 <!--
     #     # #######      ####### #     # #######    #     #    #    #######  #####  #     # ### #     #  #####
@@ -112,7 +96,9 @@
     #    ## #     #      #     # #    ## #          #  #  # #     #    #    #     # #     #  #  #    ## #     #
     #     # #######      ####### #     # #######     ## ##  #     #    #     #####  #     # ### #     #  #####
 -->
-    <a class="element" id="show-map" href="#us-map" ></a>
+    <a class="element" id="show-map" href="#us-map" >
+      <div class="instruction">click on the map to see map stuff.</div>
+    </a>
     <object id="us-map" type="image/svg+xml" data="img/usa_map.svg"></object>
     <div id="state-info">
       <h2 id="state-name"></h2>
@@ -176,7 +162,9 @@
     #     # #       #    ##    #       #    #     #     # #       #       #       #    ## #     #
     ######  ####### #     #    #        ###  #    ######  ####### #       ####### #     # ######
 -->
-    <a class="element" id="slashed-circle" href="#deny-and-defend"></a>
+    <a class="element" id="slashed-circle" href="#deny-and-defend">
+      <div class="instruction">See "Deny &amp; Defend" in action</div>
+    </a>
     <aside id="deny-and-defend">
       <a href="#" class="close-aside"><span>&times;</span></a>
       <div class="prev">&nbsp;</div>
@@ -357,9 +345,47 @@
     #######  #####     #    #     # #######
 -->
     <div class="element" id="now-what">
-      <img src="img/conclusion_mockup.png">
+      <div class="join-the-conversation">
+        <div class="patient">
+          <img src="img/content/conclusion/patient.png">
+          <h1>Patient</h1>
+          <p>Are you a Patient that has been harmed?</p>
+          <a href="https://www.facebook.com/groups/patientharm">Patient Harm Facebook Group</a>
+          <p>Join the Conversation</p>
+          <a href="http://www.propublica.org/getinvolved/item/have-you-been-harmed-in-a-medical-facility-share-your-story">Patient Harm Questionnaire</a>
+        </div>
+        <div class="provider">
+          <img src="img/content/conclusion/provider.png">
+          <h1>Provider</h1>
+          <p>Are you a healthcare professional?</p>
+          <a href="http://www.propublica.org/getinvolved/item/providers-tell-us-what-you-know-about-patient-safety">Provider Questionnaire</a>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="protect-yourself">
+        <div class="protect-header">With all of the problems in today’s system, experts recommend patients take an active role in protecting their own safety.Here are some simple ways to protect yourself against harm:</div>
+        <div class="simple-ways">
+          <div class="protect-block">
+            <img src="img/content/conclusion/infection.png">
+            <h2>Infections</h2>
+            <p>A patient advocacy group called campaignZERO has a checklist with simple steps to help patients avoid common hospital-acquired infections.</p>
+            <a href="http://www.campaignzero.org/safety-checklists/prevent-staph-infections/">campaignzero.org</a>
+          </div>
+          <div class="protect-block">
+            <img src="img/content/conclusion/medication.png">
+            <h2>Medication</h2>
+            <p>The Agency for Healthcare Research and Quality has a guide to help patients protect themselves from medication errors.</p>
+            <a href="http://www.ahrq.gov/patients-consumers/care-planning/errors/20tips/index.html">ahrq.gov</a>
+          </div>
+          <div class="protect-block">
+            <img src="img/content/conclusion/surgery.png">
+            <h2>Surgery</h2>
+            <p class="surgery">The Empowered Patient Coalition has a list of 10 questions to ask your surgeon before surgery.</p>
+            <a href="http://www.empoweredpatientcoalition.org/downloads/free/ep_guides/EP_ten_things_surgical_patient_checklist.pdf">empoweredpatientcoalition.org</a>
+          </div>
+        </div>
+      </div>
     </div>
-
   </div>
 
   <script src="js/vendor/jquery-1.9.1.min.js"></script>
