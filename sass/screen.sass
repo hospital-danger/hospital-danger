@@ -12,8 +12,13 @@ $darkyellow: #B59200
 // Type.
 
 html
-  font-family: 'Open Sans', sans-serif
-  -webkit-font-smoothing: antialiased
+  font-family: 'Open Sans Regular', sans-serif
+
+em
+  font-family: 'Open Sans Italic', sans-serif
+
+strong
+  font-family: 'Open Sans Bold', sans-serif
 
 h1,
 h2,
@@ -41,12 +46,6 @@ body
 a
   text-decoration: none
   color: inherit
-
-em
-  font-style: italic
-
-strong
-  font-weight: bold
 
 // Layout.
 
@@ -169,7 +168,7 @@ video
   a
     background: rgba(255, 255, 255, .5)
     color: rgba(255, 255, 255, .5)
-    font-size: 12px
+    font-size: 11px
     font-weight: bold
     display: block
     letter-spacing: -1px
@@ -229,7 +228,7 @@ aside
       margin: 0 0 0.5em 0
 
     p
-      font-size: 14px
+      font-size: 13px
       font-weight: bold
       margin: 1em 0
 
@@ -251,7 +250,7 @@ aside
     top: 27px
     width: 30px
     height: 30px
-    font-size: 38px
+    font-size: 33px
     font-weight: bold
     @include box-shadow(rgba(0, 0, 0, .5) -2px 2px 15px)
     @include border-radius(4px 0 0 4px)
@@ -497,8 +496,7 @@ aside
       overflow: hidden
 
       p
-        font-size: 16px
-        font-weight: bold
+        font-size: 15px
         margin: .5em 0
 
       a
@@ -569,7 +567,7 @@ aside
 
   li
     font-size: 14px
-    line-height: 1.8
+    line-height: 1.7
     margin: 2em 0 1.5em
 
     &:nth-child(2n+1) strong
