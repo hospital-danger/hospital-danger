@@ -536,6 +536,7 @@ aside
   top: -380px
   left: 610px
   display: none
+  cursor: pointer
 
   &.current
     display: block
@@ -545,6 +546,7 @@ aside
     @include top-triangle(6px, rgba(255, 255, 255, .75))
 
 #us-map
+  cursor: pointer !important
   position: absolute
   opacity: 0
   top: -20px
@@ -571,14 +573,13 @@ aside
   min-height: 100px
   background-color: $yellow
   border-radius: 2px
-  padding: 4px
+  padding: 10px
 
   h2
     font-size: 24px
 
   li
-    margin-bottom: 2px
-
+    margin: .75em .25em 0 .2em
 
 
   #state-positive li:before
@@ -659,7 +660,7 @@ aside
     position: absolute
     left: -25px
     top: 200px
-    height: 95px
+    height: 34px
     display: block
     font-size: 14px
     text-align: center
@@ -817,7 +818,7 @@ aside
     position: absolute
     right: -35px
     top: 260px
-    height: 82px
+    height: 36px
     display: block
     font-size: 14px
     text-align: center
@@ -834,6 +835,9 @@ aside
   p
     font-size: 14px
     line-height: 1.4
+
+    a
+      text-decoration: underline
 
   .decision-tree-container-container
     border: 4px solid $yellow
