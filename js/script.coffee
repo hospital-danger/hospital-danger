@@ -149,6 +149,10 @@ $ ()->
     $('#noise').remove()
     $('header').removeClass('intro')
     $('.introduction').addClass('finished')
+    music = $('#the-music')[0]
+    music.volume = 0.6
+    music.play()
+
     setTimeout ()->
       $video.play()
     , 1000

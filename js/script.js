@@ -221,9 +221,13 @@
       return $video.play();
     });
     $('header.intro, .introduction').on("click", function() {
+      var music;
       $('#noise').remove();
       $('header').removeClass('intro');
       $('.introduction').addClass('finished');
+      music = $('#the-music')[0];
+      music.volume = 0.6;
+      music.play();
       setTimeout(function() {
         return $video.play();
       }, 1000);
