@@ -1,12 +1,12 @@
 %triangle-base
   content: ""
-  left: 50%
   position: absolute
 
 @mixin bottom-triangle($size, $color, $direction)
   &:after
     @extend %triangle-base
     bottom: 0
+    left: 50%
     margin-left: - $size
     border-left: $size solid transparent
     border-right: $size solid transparent

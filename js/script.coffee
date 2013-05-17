@@ -25,36 +25,31 @@ $ ()->
   chapter_index = 0
 
   cues = [
-    {type: "chapter", title: "", target: "#intro", time: "00:00", hide_title: true , image:'#'}
-
-    {type: "chapter", title: "A Safe Place?", target: "#chapter1", time: "00:20", image:'#'}
+    {type: "chapter", title: "A Safe Place?", target: "#chapter1", time: "00:20", image: 'img/chapter-1.png'}
     {type: "element", target: "#people", time: "00:33"}
     {type: "element-next", target: "#people", time: "00:40"}
     {type: "element", target: "#causes-of-death", time: "00:42"}
     {type: "chapter_end", time: "00:48"}
 
-    {type: "chapter", title: "No One Watching", target: "#chapter2", time: "00:52", image:'#'}
+    {type: "chapter", title: "No One Watching", target: "#chapter2", time: "00:52", image: 'img/chapter-2.png'}
     {type: "element", target: "#show-map", time: "01:11"}
     {type: "chapter_end", time: "01:29"}
 
-    {type: "chapter", title: "No Simple Surgery", target: "#chapter3", time: "01:33", image:'#'}
+    {type: "chapter", title: "No Simple Surgery", target: "#chapter3", time: "01:33", image: 'img/chapter-3.png'}
     {type: "element", target: "#bacteria", time: "01:43"}
     {type: "chapter_end", time: "02:08"}
 
-    {type: "chapter", title: "Deny & Defend", target: "#chapter4", time: "02:10", image:'#'}
+    {type: "chapter", title: "Deny & Defend", target: "#chapter4", time: "02:10", image: 'img/chapter-4.png'}
     {type: "element", target: "#slashed-circle", time: "02:22"}
     {type: "element", target: "#take-responsibility", time: "02:34"}
     {type: "chapter_end", time: "02:41"}
 
-    {type: "chapter", title: "The Malpractice Myth" , target: "#chapter5", time: "02:44", image:'#'}
+    {type: "chapter", title: "The Malpractice Myth" , target: "#chapter5", time: "02:44", image: 'img/chapter-5.png'}
     {type: "element", target: "#lawsuits", time: "02:52"}
     {type: "chapter_end", time:"03:06"}
 
-    {type: "chapter", title: "Result: Patient Harm" , target: "#chapter6", time: "03:10", image:'#'}
+    {type: "chapter", title: "Result: Patient Harm" , target: "#chapter6", time: "03:10", image: 'img/chapter-6.png'}
     {type: "element", target: "#dollar", time: "03:28"}
-
-    {type: "chapter", title: "", target: "#outro", time: "03:58", hide_title: true , image:'#'}
-    {type: "element", target: "#now-what", time: "03:59"}
   ]
 
   chapters = (cue for cue in cues when (cue.type is "chapter"))

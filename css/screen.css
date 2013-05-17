@@ -96,19 +96,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-weight: normal;
   font-style: normal; }
 
-/* line 15, ../sass/screen.sass */
+/* line 1, ../sass/_mixins.sass */
+.chapter-list li a:after {
+  content: "";
+  position: absolute; }
+
+/* line 18, ../sass/screen.sass */
 html {
   font-family: "Open Sans Regular", sans-serif; }
 
-/* line 18, ../sass/screen.sass */
+/* line 21, ../sass/screen.sass */
 em {
   font-family: "Open Sans Italic", sans-serif; }
 
-/* line 21, ../sass/screen.sass */
+/* line 24, ../sass/screen.sass */
 strong {
   font-family: "Open Sans Bold", sans-serif; }
 
-/* line 24, ../sass/screen.sass */
+/* line 27, ../sass/screen.sass */
 h1,
 h2,
 h3,
@@ -139,7 +144,7 @@ a {
 
 /* line 53, ../sass/screen.sass */
 .container {
-  height: 553px;
+  height: 542px;
   margin: 0 auto;
   overflow: hidden;
   max-width: 960px; }
@@ -223,24 +228,39 @@ video {
   z-index: 2; }
   /* line 124, ../sass/screen.sass */
   .video-controls .playpause {
-    background-size: contain;
-    background-image: url('../img/pause.png?1368635926');
+    background: rgba(255, 255, 255, 0.3) url('../img/pause.png?1368765222') center no-repeat;
     position: absolute;
     left: 15px;
     top: 0;
-    width: 75px;
-    height: 45px; }
-    /* line 133, ../sass/screen.sass */
+    width: 70px;
+    height: 50px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    opacity: 0.5;
+    -webkit-transition: opacity, 0.15s;
+    -moz-transition: opacity, 0.15s;
+    -o-transition: opacity, 0.15s;
+    transition: opacity, 0.15s; }
+    /* line 135, ../sass/screen.sass */
     .video-controls .playpause.paused {
-      background-image: url('../img/play.png?1368635603'); }
-  /* line 136, ../sass/screen.sass */
+      background-image: url('../img/play.png?1368764320');
+      background-position: 27px; }
+  /* line 139, ../sass/screen.sass */
+  .video-controls:hover .playpause {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; }
+  /* line 142, ../sass/screen.sass */
   .video-controls .progress {
     overflow: hidden;
     height: 50px;
     margin-left: 100px;
     padding: 0.5em;
     font-weight: bold; }
-  /* line 143, ../sass/screen.sass */
+  /* line 149, ../sass/screen.sass */
   .video-controls .buffer-bar,
   .video-controls .time-bar {
     position: absolute;
@@ -252,62 +272,98 @@ video {
     -moz-transition: left 0.5s;
     -o-transition: left 0.5s;
     transition: left 0.5s; }
-  /* line 152, ../sass/screen.sass */
+  /* line 158, ../sass/screen.sass */
   .video-controls .time-bar {
-    top: 30px;
-    border-top: 3px solid rgba(255, 255, 255, 0.5); }
-  /* line 156, ../sass/screen.sass */
+    top: 43px;
+    border-top: 7px solid rgba(255, 255, 255, 0.5);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    opacity: 0.5; }
+  /* line 163, ../sass/screen.sass */
   .video-controls .buffer-bar {
-    background-color: #333333; }
+    background-color: #111111; }
 
-/* line 159, ../sass/screen.sass */
+/* line 166, ../sass/screen.sass */
 .chapter-list {
   position: absolute;
   z-index: 3;
-  bottom: 31px;
-  left: 76px;
-  float: left;
-  padding: 0.5em 1em;
-  width: 100%; }
-  /* line 168, ../sass/screen.sass */
+  left: 100px;
+  bottom: 7px;
+  width: 845px;
+  height: 60px;
+  overflow: hidden; }
+  /* line 175, ../sass/screen.sass */
   .chapter-list ul {
-    left: 0.5em;
-    width: 90%; }
-  /* line 172, ../sass/screen.sass */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 845px;
+    height: 60px; }
+  /* line 182, ../sass/screen.sass */
   .chapter-list li {
     position: absolute;
-    top: -20px; }
-    /* line 177, ../sass/screen.sass */
+    bottom: 15px;
+    -webkit-transition: opacity, 0.15s;
+    -moz-transition: opacity, 0.15s;
+    -o-transition: opacity, 0.15s;
+    transition: opacity, 0.15s;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
+    opacity: 0.25; }
+    /* line 188, ../sass/screen.sass */
+    .chapter-list li a {
+      background: #ffd91f;
+      color: #111111;
+      display: block;
+      font-family: "League Gothic";
+      font-size: 32px;
+      line-height: 0;
+      text-transform: uppercase;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px; }
+      /* line 6, ../sass/_mixins.sass */
+      .chapter-list li a:after {
+        bottom: 0;
+        left: 50%;
+        margin-left: -6px;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #ffd91f;
+        margin-bottom: -6px; }
+    /* line 199, ../sass/screen.sass */
     .chapter-list li span {
-      display: none; }
-    /* line 179, ../sass/screen.sass */
-    .chapter-list li:hover span {
-      display: block; }
-  /* line 182, ../sass/screen.sass */
-  .chapter-list a {
-    background: rgba(255, 255, 255, 0.5);
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 11px;
-    font-weight: bold;
-    display: block;
-    letter-spacing: -1px;
-    padding: 0.4em 0.5em 0.25em 0.5em;
-    text-transform: uppercase;
-    -webkit-border-radius: 5px 5px 0 0;
-    -moz-border-radius: 5px 5px 0 0;
-    -ms-border-radius: 5px 5px 0 0;
-    -o-border-radius: 5px 5px 0 0;
-    border-radius: 5px 5px 0 0;
-    -webkit-transition: color 0.1s;
-    -moz-transition: color 0.1s;
-    -o-transition: color 0.1s;
-    transition: color 0.1s; }
-  /* line 194, ../sass/screen.sass */
-  .chapter-list a:hover,
-  .chapter-list .current-chapter {
-    color: #333333; }
+      display: none;
+      line-height: 0;
+      margin-top: -15px;
+      padding: 0 5px 15px 35px; }
+    /* line 205, ../sass/screen.sass */
+    .chapter-list li:hover {
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+      opacity: 1; }
+      /* line 208, ../sass/screen.sass */
+      .chapter-list li:hover a {
+        z-index: 99; }
+        /* line 211, ../sass/screen.sass */
+        .chapter-list li:hover a:after {
+          left: 11px;
+          margin-left: 0; }
+        /* line 215, ../sass/screen.sass */
+        .chapter-list li:hover a span {
+          display: block; }
+  /* line 220, ../sass/screen.sass */
+  .chapter-list li:last-child span {
+    margin-left: -238px; }
+  /* line 224, ../sass/screen.sass */
+  .chapter-list li:last-child:hover a {
+    margin-left: -208px;
+    padding-left: 208px; }
+    /* line 228, ../sass/screen.sass */
+    .chapter-list li:last-child:hover a:after {
+      right: 11px;
+      margin-left: 208px; }
 
-/* line 200, ../sass/screen.sass */
+/* line 234, ../sass/screen.sass */
 .chapter {
   height: 500px;
   overflow: auto;
@@ -317,7 +373,7 @@ video {
   width: 100%;
   height: 560px; }
 
-/* line 209, ../sass/screen.sass */
+/* line 243, ../sass/screen.sass */
 .chapter-title {
   position: absolute;
   top: 40%;
@@ -329,7 +385,7 @@ video {
   width: 40%;
   z-index: 1; }
 
-/* line 220, ../sass/screen.sass */
+/* line 254, ../sass/screen.sass */
 aside {
   position: absolute;
   top: 0;
@@ -337,7 +393,7 @@ aside {
   width: 480px;
   height: 542px;
   z-index: 10; }
-  /* line 228, ../sass/screen.sass */
+  /* line 262, ../sass/screen.sass */
   aside .aside-content {
     position: relative;
     z-index: 1;
@@ -354,27 +410,27 @@ aside {
     -moz-transition: -moz-transform 1s;
     -o-transition: -o-transform 1s;
     transition: transform 1s; }
-    /* line 240, ../sass/screen.sass */
+    /* line 274, ../sass/screen.sass */
     aside .aside-content h2 {
       font-size: 48px;
       margin: 0 0 0.15em 0; }
-    /* line 244, ../sass/screen.sass */
+    /* line 278, ../sass/screen.sass */
     aside .aside-content p {
       font-size: 13px;
       font-weight: bold;
       margin: 1em 0; }
-    /* line 249, ../sass/screen.sass */
+    /* line 283, ../sass/screen.sass */
     aside .aside-content blockquote {
       font-family: Georgia, serif;
       font-style: italic;
       margin: 1.25em 0; }
-      /* line 254, ../sass/screen.sass */
+      /* line 288, ../sass/screen.sass */
       aside .aside-content blockquote:before {
         content: "“";
         font-size: 64px;
         opacity: 0.5;
         padding: 0 0.2em 0 0; }
-  /* line 260, ../sass/screen.sass */
+  /* line 294, ../sass/screen.sass */
   aside .close-aside {
     position: absolute;
     z-index: 2;
@@ -394,7 +450,7 @@ aside {
     -ms-border-radius: 4px 0 0 4px;
     -o-border-radius: 4px 0 0 4px;
     border-radius: 4px 0 0 4px; }
-    /* line 274, ../sass/screen.sass */
+    /* line 308, ../sass/screen.sass */
     aside .close-aside span {
       pointer: cursor;
       color: white;
@@ -408,27 +464,27 @@ aside {
       transition: opacity 0.2s;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
       opacity: 0.5; }
-    /* line 284, ../sass/screen.sass */
+    /* line 318, ../sass/screen.sass */
     aside .close-aside:hover span {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       opacity: 1; }
-  /* line 288, ../sass/screen.sass */
+  /* line 322, ../sass/screen.sass */
   aside.white-background h2 {
-    color: #333333; }
-  /* line 291, ../sass/screen.sass */
+    color: #111111; }
+  /* line 325, ../sass/screen.sass */
   aside.white-background p {
     font-family: "Open Sans Semibold"; }
-  /* line 294, ../sass/screen.sass */
+  /* line 328, ../sass/screen.sass */
   aside.white-background .close-aside {
     background: white;
     -webkit-box-shadow: rgba(0, 0, 0, 0.5) -5px 2px 10px;
     -moz-box-shadow: rgba(0, 0, 0, 0.5) -5px 2px 10px;
     box-shadow: rgba(0, 0, 0, 0.5) -5px 2px 10px; }
-    /* line 298, ../sass/screen.sass */
+    /* line 332, ../sass/screen.sass */
     aside.white-background .close-aside span {
-      color: #333333; }
+      color: #111111; }
 
-/* line 301, ../sass/screen.sass */
+/* line 335, ../sass/screen.sass */
 .next-chapter {
   background-color: rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -449,7 +505,7 @@ aside {
   -ms-transform: translateY(500px);
   -o-transform: translateY(500px);
   transform: translateY(500px); }
-  /* line 315, ../sass/screen.sass */
+  /* line 349, ../sass/screen.sass */
   .next-chapter.show-next {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
@@ -457,7 +513,7 @@ aside {
     -o-transform: translateY(0);
     transform: translateY(0); }
 
-/* line 320, ../sass/screen.sass */
+/* line 354, ../sass/screen.sass */
 .element,
 aside {
   display: block;
@@ -472,7 +528,7 @@ aside {
   -ms-transform: translateX(2000px);
   -o-transform: translateX(2000px);
   transform: translateX(2000px); }
-  /* line 328, ../sass/screen.sass */
+  /* line 362, ../sass/screen.sass */
   .element.current,
   aside.current {
     -webkit-transform: translateX(0);
@@ -481,41 +537,41 @@ aside {
     -o-transform: translateX(0);
     transform: translateX(0); }
 
-/* line 331, ../sass/screen.sass */
+/* line 365, ../sass/screen.sass */
 #people {
   position: absolute;
   width: 100%;
   top: 300px;
   left: 0; }
-  /* line 337, ../sass/screen.sass */
+  /* line 371, ../sass/screen.sass */
   #people .person {
     min-width: 50px;
     min-height: 50px;
     float: left;
     border: 1px solid yellow; }
-    /* line 343, ../sass/screen.sass */
+    /* line 377, ../sass/screen.sass */
     #people .person blockquote {
       position: absolute;
       width: 200px;
       background-color: white;
       display: none; }
-  /* line 349, ../sass/screen.sass */
+  /* line 383, ../sass/screen.sass */
   #people .person:hover blockquote {
     display: block; }
-  /* line 352, ../sass/screen.sass */
+  /* line 386, ../sass/screen.sass */
   #people.current-2 .dead {
     border-color: red; }
 
-/* line 355, ../sass/screen.sass */
+/* line 389, ../sass/screen.sass */
 #causes-of-death {
   position: absolute;
   right: 0;
   bottom: 0; }
-  /* line 360, ../sass/screen.sass */
+  /* line 394, ../sass/screen.sass */
   #causes-of-death.current {
     bottom: 100%; }
 
-/* line 363, ../sass/screen.sass */
+/* line 397, ../sass/screen.sass */
 #show-map {
   width: 300px;
   height: 300px;
@@ -523,7 +579,7 @@ aside {
   top: 30px;
   left: 580px; }
 
-/* line 370, ../sass/screen.sass */
+/* line 404, ../sass/screen.sass */
 #us-map {
   position: absolute;
   top: -60px;
@@ -533,13 +589,13 @@ aside {
   opacity: 0;
   width: 780px;
   height: 540px; }
-  /* line 379, ../sass/screen.sass */
+  /* line 413, ../sass/screen.sass */
   #us-map.current {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     z-index: 10; }
 
-/* line 383, ../sass/screen.sass */
+/* line 417, ../sass/screen.sass */
 #state-info {
   font-size: 0.8em;
   display: none;
@@ -549,7 +605,7 @@ aside {
   min-height: 100px;
   background-color: white; }
 
-/* line 392, ../sass/screen.sass */
+/* line 426, ../sass/screen.sass */
 #bacteria {
   position: absolute;
   top: 0;
@@ -558,7 +614,7 @@ aside {
   height: 480px;
   border: 1px solid #ffd91f; }
 
-/* line 401, ../sass/screen.sass */
+/* line 435, ../sass/screen.sass */
 #judy-gaines .images,
 #judy-gaines .sections {
   position: absolute;
@@ -567,7 +623,7 @@ aside {
   width: 100%;
   height: 100%;
   overflow: auto; }
-/* line 411, ../sass/screen.sass */
+/* line 445, ../sass/screen.sass */
 #judy-gaines .images img {
   width: 480px;
   height: 542px;
@@ -577,32 +633,32 @@ aside {
   -moz-transition: opacity 0.75s;
   -o-transition: opacity 0.75s;
   transition: opacity 0.75s; }
-  /* line 418, ../sass/screen.sass */
+  /* line 452, ../sass/screen.sass */
   #judy-gaines .images img.current-image {
     opacity: 1; }
-/* line 421, ../sass/screen.sass */
+/* line 455, ../sass/screen.sass */
 #judy-gaines .sections {
   padding: 20px; }
-  /* line 424, ../sass/screen.sass */
+  /* line 458, ../sass/screen.sass */
   #judy-gaines .sections section {
     clear: both;
     margin: 3em 0;
     width: 185px; }
-    /* line 429, ../sass/screen.sass */
+    /* line 463, ../sass/screen.sass */
     #judy-gaines .sections section:nth-child(2n) {
       margin-top: 0; }
-    /* line 432, ../sass/screen.sass */
+    /* line 466, ../sass/screen.sass */
     #judy-gaines .sections section.left {
       float: left; }
-    /* line 435, ../sass/screen.sass */
+    /* line 469, ../sass/screen.sass */
     #judy-gaines .sections section.right {
       float: right; }
-    /* line 438, ../sass/screen.sass */
+    /* line 472, ../sass/screen.sass */
     #judy-gaines .sections section p {
       color: #333333;
       line-height: 1.6em; }
 
-/* line 442, ../sass/screen.sass */
+/* line 476, ../sass/screen.sass */
 #slashed-circle {
   width: 200px;
   height: 200px;
@@ -610,13 +666,13 @@ aside {
   top: 60px;
   left: 650px; }
 
-/* line 450, ../sass/screen.sass */
+/* line 484, ../sass/screen.sass */
 #deny-and-defend .aside-content {
   height: 550px;
   overflow: auto;
   padding: 0;
   margin: 0; }
-/* line 456, ../sass/screen.sass */
+/* line 490, ../sass/screen.sass */
 #deny-and-defend .prev,
 #deny-and-defend .next {
   width: 25%;
@@ -624,39 +680,39 @@ aside {
   position: absolute;
   top: 0;
   z-index: 10; }
-/* line 464, ../sass/screen.sass */
+/* line 498, ../sass/screen.sass */
 #deny-and-defend .prev {
   left: 0; }
-/* line 467, ../sass/screen.sass */
+/* line 501, ../sass/screen.sass */
 #deny-and-defend .next {
   right: 0; }
-/* line 470, ../sass/screen.sass */
+/* line 504, ../sass/screen.sass */
 #deny-and-defend .papers-container {
   width: 6850px;
   height: 450px; }
-  /* line 474, ../sass/screen.sass */
+  /* line 508, ../sass/screen.sass */
   #deny-and-defend .papers-container.finished {
     display: none; }
-  /* line 477, ../sass/screen.sass */
+  /* line 511, ../sass/screen.sass */
   #deny-and-defend .papers-container .intro {
     width: 400px;
     float: left; }
-  /* line 481, ../sass/screen.sass */
+  /* line 515, ../sass/screen.sass */
   #deny-and-defend .papers-container .papers {
     width: 6000px;
     height: 100%;
     float: left; }
-    /* line 486, ../sass/screen.sass */
+    /* line 520, ../sass/screen.sass */
     #deny-and-defend .papers-container .papers img {
       position: absolute;
       top: 0;
       left: 0; }
-/* line 491, ../sass/screen.sass */
+/* line 525, ../sass/screen.sass */
 #deny-and-defend .events {
   position: absolute;
   top: 0;
   left: 0; }
-  /* line 495, ../sass/screen.sass */
+  /* line 529, ../sass/screen.sass */
   #deny-and-defend .events .event {
     position: absolute;
     background-color: red;
@@ -671,21 +727,21 @@ aside {
     -ms-transform: translateY(2000px);
     -o-transform: translateY(2000px);
     transform: translateY(2000px); }
-    /* line 503, ../sass/screen.sass */
+    /* line 537, ../sass/screen.sass */
     #deny-and-defend .events .event q {
       display: block; }
-    /* line 507, ../sass/screen.sass */
+    /* line 541, ../sass/screen.sass */
     #deny-and-defend .events .event.current-event {
       -webkit-transform: translateY(0);
       -moz-transform: translateY(0);
       -ms-transform: translateY(0);
       -o-transform: translateY(0);
       transform: translateY(0); }
-/* line 511, ../sass/screen.sass */
+/* line 545, ../sass/screen.sass */
 #deny-and-defend #hospital-envelope {
   float: left;
   margin-top: 80px; }
-/* line 515, ../sass/screen.sass */
+/* line 549, ../sass/screen.sass */
 #deny-and-defend .hospital-response {
   position: absolute;
   top: 0;
@@ -702,7 +758,7 @@ aside {
   -moz-transition: -moz-transform 3s;
   -o-transition: -o-transform 3s;
   transition: transform 3s; }
-  /* line 525, ../sass/screen.sass */
+  /* line 559, ../sass/screen.sass */
   #deny-and-defend .hospital-response.visible {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
@@ -710,7 +766,7 @@ aside {
     -o-transform: translateY(0);
     transform: translateY(0); }
 
-/* line 528, ../sass/screen.sass */
+/* line 562, ../sass/screen.sass */
 #lawsuits {
   width: 100px;
   height: 100px;
@@ -718,68 +774,68 @@ aside {
   top: 80px;
   left: 570px; }
 
-/* line 535, ../sass/screen.sass */
+/* line 569, ../sass/screen.sass */
 .decision-tree-container {
   background: url('../img/paper.png?1342797512');
   width: 1248px;
   height: 1224px; }
-  /* line 540, ../sass/screen.sass */
+  /* line 574, ../sass/screen.sass */
   .decision-tree-container .decision-tree {
     background: url('../img/tree.png?1368746830') 0 300px no-repeat;
     width: 1600px;
     height: 1600px; }
-    /* line 548, ../sass/screen.sass */
+    /* line 582, ../sass/screen.sass */
     .decision-tree-container .decision-tree .decision {
       overflow: hidden; }
-      /* line 551, ../sass/screen.sass */
+      /* line 585, ../sass/screen.sass */
       .decision-tree-container .decision-tree .decision p {
         font-size: 15px;
         margin: 0.5em 0; }
-      /* line 555, ../sass/screen.sass */
+      /* line 589, ../sass/screen.sass */
       .decision-tree-container .decision-tree .decision a {
         background: #ffd91f;
         float: left;
         margin: 0.5em 20px 0.5em 0;
         padding: 10px;
         width: 190px; }
-        /* line 562, ../sass/screen.sass */
+        /* line 596, ../sass/screen.sass */
         .decision-tree-container .decision-tree .decision a:nth-child(odd) {
           margin-right: 0; }
-    /* line 565, ../sass/screen.sass */
+    /* line 599, ../sass/screen.sass */
     .decision-tree-container .decision-tree .decision {
       background: pink;
       padding: 20px;
       width: 440px; }
-    /* line 573, ../sass/screen.sass */
+    /* line 607, ../sass/screen.sass */
     .decision-tree-container .decision-tree #decision-2 {
       display: none; }
-    /* line 576, ../sass/screen.sass */
+    /* line 610, ../sass/screen.sass */
     .decision-tree-container .decision-tree #decision-3 {
       display: none; }
-    /* line 579, ../sass/screen.sass */
+    /* line 613, ../sass/screen.sass */
     .decision-tree-container .decision-tree #decision-4 {
       display: none; }
-    /* line 582, ../sass/screen.sass */
+    /* line 616, ../sass/screen.sass */
     .decision-tree-container .decision-tree #outcome-positive {
       display: none; }
-    /* line 585, ../sass/screen.sass */
+    /* line 619, ../sass/screen.sass */
     .decision-tree-container .decision-tree #outcome-negative {
       display: none; }
-    /* line 590, ../sass/screen.sass */
+    /* line 624, ../sass/screen.sass */
     .decision-tree-container .decision-tree .outcome {
       padding: 1em;
       height: 150px; }
-      /* line 594, ../sass/screen.sass */
+      /* line 628, ../sass/screen.sass */
       .decision-tree-container .decision-tree .outcome p {
         font-size: 18px;
         font-style: italic;
         font-weight: bold; }
-      /* line 599, ../sass/screen.sass */
+      /* line 633, ../sass/screen.sass */
       .decision-tree-container .decision-tree .outcome a {
         float: left;
         font-weight: bold; }
 
-/* line 609, ../sass/screen.sass */
+/* line 643, ../sass/screen.sass */
 #dollar {
   width: 100px;
   height: 100px;
@@ -787,19 +843,19 @@ aside {
   top: 80px;
   left: 570px; }
 
-/* line 617, ../sass/screen.sass */
+/* line 651, ../sass/screen.sass */
 #by-the-numbers p {
   font-size: 20px;
   font-weight: normal; }
-/* line 621, ../sass/screen.sass */
+/* line 655, ../sass/screen.sass */
 #by-the-numbers li {
   font-size: 14px;
   line-height: 1.7;
   margin: 2em 0 1.5em; }
-  /* line 626, ../sass/screen.sass */
+  /* line 660, ../sass/screen.sass */
   #by-the-numbers li:nth-child(2n+1) strong {
     color: #b59200; }
-  /* line 629, ../sass/screen.sass */
+  /* line 663, ../sass/screen.sass */
   #by-the-numbers li strong {
     color: #ffd91f;
     float: left;
@@ -808,16 +864,16 @@ aside {
     line-height: 1.1;
     margin: 0 0.5em 0 0;
     width: 60px; }
-  /* line 639, ../sass/screen.sass */
+  /* line 673, ../sass/screen.sass */
   #by-the-numbers li:last-child {
     margin-bottom: 0; }
 
-/* line 642, ../sass/screen.sass */
+/* line 676, ../sass/screen.sass */
 #now-what {
   position: absolute;
   left: 0;
   top: 0;
   opacity: 0; }
-  /* line 648, ../sass/screen.sass */
+  /* line 682, ../sass/screen.sass */
   #now-what.current {
     opacity: 1; }
