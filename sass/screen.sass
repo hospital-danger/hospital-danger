@@ -93,11 +93,14 @@ header
   height: 100%
   z-index: 100
   opacity: 1
+  background-color: black
   @include transition(opacity 3s ease 1s)
 
   video
+    display: block
     min-height: 100%
     width: auto
+    margin: 0 auto
 
   &.finished
     opacity: 0
@@ -161,9 +164,19 @@ video
   padding: .5em 1em
   width: 100%
 
+  ul
+    left: .5em
+    width: 90%
+
   li
-    float: left
-    margin: 0 .5em
+    position: absolute
+    // margin: 0 .5em
+    top: -20px
+
+    span
+      display: none
+    &:hover span
+      display: block
 
   a
     background: rgba(255, 255, 255, .5)
