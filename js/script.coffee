@@ -38,7 +38,7 @@ $ ()->
     {type: "citation", title: "CDC: Estimating Healthcare-Associated Infections..", target: "https://www.documentcloud.org/documents/701516-cdc-hai-infections-deaths.html#document/p1/a103231", time: "01:34"}
     {type: "element", target: "#bacteria", time: "01:43"}
 
-    {type: "chapter", title: "Deny & Defend", target: "#chapter4", time: "01:55", image: 'img/chapter-4.png'}
+    {type: "chapter", title: "Deny & Defend", target: "#chapter4", time: "01:56", image: 'img/chapter-4.png'}
     {type: "citation", title: "Boothman, R.: Nurturing a culture of patient safety...", target: "https://www.documentcloud.org/documents/701526-boothman-ache-frontiers.html#document/p2/a103234", time: "02:05"}
     {type: "element", target: "#slashed-circle", time: "02:23"}
 
