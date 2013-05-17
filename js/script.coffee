@@ -142,7 +142,7 @@ $ ()->
         when "citation"
           $('.citations')
             .html( "<a href='#{cue_item.target}' target='_blank'>#{cue_item.title}</a>")
-            .stop().show().delay(2000).fadeOut(1000)
+            .stop().show().delay(2000).fadeOut(3000)
         when "chapter"
           $('.current').removeClass("current")
           $('.current-2').removeClass("current-2")
@@ -169,6 +169,7 @@ $ ()->
     $('header').removeClass('intro')
     $('.introduction').addClass('finished')
     music = $('#the-music')[0]
+    # music.volume = 0.3
     music.play()
 
     setTimeout ()->
