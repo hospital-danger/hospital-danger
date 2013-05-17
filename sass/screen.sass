@@ -362,11 +362,21 @@ aside
   @include transition(transform 1s)
 
 .instruction
+  background: rgba(255, 255, 255, .75)
   display: none
-  color: $yellow
+  color: $dark
+  padding: .5em
   position: absolute
-  bottom: - 1.5em
-  width: 300px
+  bottom: -1.5em
+  width: 250px
+  border-radius: 3px
+  // @include triangle
+
+  span
+    display: block
+    font-size: 10px
+    margin-top: .25em
+
   &.show-instruction
     display: block
 
@@ -379,14 +389,20 @@ aside
 
   .instruction
     display: block
+    font-family: 'Open Sans Bold'
+    font-size: 14px
     width: auto
-    left: -28em
+    height: 47px
+    left: -425px
+    top: 110px
+    text-align: right
 
     span
+      font-family: 'Open Sans Regular'
       line-height: 1.5
       color: $dark
       display: block
-      font-size: .8em
+      font-size: 11px
 
   .person
     width: 35px
