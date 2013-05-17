@@ -146,6 +146,10 @@ $ ()->
     $('#noise').remove()
     $('header').removeClass('intro')
     $('.introduction').addClass('finished')
+    music = $('#the-music')[0]
+    music.volume = 0.6
+    music.play()
+
     setTimeout ()->
       $video.play()
     , 1000
@@ -264,7 +268,7 @@ $ ()->
   $('a', '.decision-tree').on "click", (e)->
     e.preventDefault()
     target = $(this).attr('href')
-    $('.decision-tree').scrollTo(target, 1000)
+    $('.decision-tree-container').scrollTo(target, 1000)
 
   # start decision tree at the right coords
-  $('.decision-tree').scrollTo('#decision-1', 0)
+  $('.decision-tree-container').scrollTo('#decision-1', 0)
