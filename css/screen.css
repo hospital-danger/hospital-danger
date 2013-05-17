@@ -1415,14 +1415,26 @@ aside {
   margin-left: -400px;
   width: 800px;
   padding: 20px;
-  z-index: 99; }
-  /* line 1136, ../sass/screen.sass */
+  z-index: 99;
+  display: none; }
+  /* line 1137, ../sass/screen.sass */
   #credits h2 {
     font-size: 64px; }
-  /* line 1139, ../sass/screen.sass */
+  /* line 1140, ../sass/screen.sass */
   #credits p {
     margin: 1em 0; }
-    /* line 1142, ../sass/screen.sass */
+    /* line 1143, ../sass/screen.sass */
     #credits p strong {
       display: block;
       margin-top: 2em; }
+
+/* line 1147, ../sass/screen.sass */
+#close-credits {
+  z-index: 10;
+  position: absolute;
+  font-size: 32px;
+  font-weight: bold;
+  top: 0;
+  right: 0;
+  display: block;
+  margin: 10px 20px; }
