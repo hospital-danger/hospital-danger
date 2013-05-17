@@ -265,10 +265,12 @@ aside
     height: 30px
     font-size: 33px
     font-weight: bold
+    pointer: cursor
     @include box-shadow(rgba(0, 0, 0, .5) -2px 2px 15px)
     @include border-radius(4px 0 0 4px)
 
     span
+      pointer: cursor
       color: #fff
       display: block
       position: absolute
@@ -281,6 +283,23 @@ aside
       @include opacity(1)
 
 
+.next-chapter
+  background-color: rgba(0,0,0, .2)
+  text-align: center
+  position: absolute
+  bottom: 100px
+  width: 200px
+  margin-left: 50%
+  left: -100px
+  z-index: 10
+  padding: 1em
+  color: white
+  @include transition(transform .4s)
+  @include translateY(500px)
+
+  &.show-next
+    @include translateY(0)
+
 // Animated elements.
 
 .element,
@@ -288,6 +307,7 @@ aside
   display: block
   position: absolute
   z-index: 4
+  @include transition(transform 1s)
   @include translateX(2000px)
 
   &.current
