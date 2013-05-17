@@ -527,24 +527,32 @@ aside
   &.current
     bottom: 100%
 
-#show-map
-  width: 300px
-  height: 300px
-  top: 30px
-  left: 580px
+// #show-map
+//   width: 300px
+//   height: 300px
+//   top: 30px
+//   left: 580px
 
 #us-map
   position: absolute
-  top: -60px
-  left: 100px
+  opacity: 0
+  top: -20px
+  left: 120px
   height: 500px
-  @include opacity(0)
   width: 780px
-  height: $container-height
+  z-index: 1
+  @include simple-transform(.5, 0, 300px, -280px)
+  @include transition(transform 2s)
+
+
 
   &.current
-    @include opacity(1)
+    opacity: 1
+
+  &.expanded
     z-index: 10
+    @include simple-transform(.9, 0, 0, 0)
+
 
 #state-info
   font-size: .8em
@@ -553,7 +561,25 @@ aside
   position: absolute
   width: 200px
   min-height: 100px
-  background-color: white
+  background-color: $yellow
+  border-radius: 2px
+  padding: 4px
+
+  h2
+    font-size: 24px
+
+  li
+    margin-bottom: 2px
+
+
+
+  #state-positive li:before
+    content: "✓ "
+    color: green
+
+  #state-negative li:before
+    content: "✗ "
+    color: red
 
 #bacteria
   position: absolute

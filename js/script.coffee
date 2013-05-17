@@ -32,7 +32,7 @@ $ ()->
     {type: "chapter", title: "Unchecked Errors", target: "#chapter2", time: "00:47", image: 'img/chapter-2.png'}
     {type: "citation", title: "IOM: To Err Is Human", target: "https://www.documentcloud.org/documents/286678-to-err-is-human-download.html#document/p112/a74097", time: "00:52"}
     {type: "citation", title: "Makary, M.: Testimony Before Committee on Oversight and Government Reform...", target: "https://www.documentcloud.org/documents/693471-house-transparency-hearing-makary-testimony.html#document/p2/a103232", time: "01:12"}
-    {type: "element", target: "#show-map", time: "01:13"}
+    {type: "element", target: "#us-map", time: "01:13"}
 
     {type: "chapter", title: "No Simple Surgery", target: "#chapter3", time: "01:23", image: 'img/chapter-3.png'}
     {type: "citation", title: "CDC: Estimating Healthcare-Associated Infections..", target: "https://www.documentcloud.org/documents/701516-cdc-hai-infections-deaths.html#document/p1/a103231", time: "01:34"}
@@ -150,7 +150,6 @@ $ ()->
           $("[href='#{cue_item.target}']").addClass "current-chapter"
         when "element"
           $(cue_item.target).addClass('current')
-          node_callbacks[cue_item.callback]?()
 
   $(".element").on "click", (e)->
     e.preventDefault()
@@ -182,37 +181,36 @@ $ ()->
 
   # Nodes
 
-  node_callbacks = {}
-
-  #
-
   $(window).load ()->
     data = window.state_data
 
     states = $('#us-map')[0].contentDocument
-    for state in states.getElementsByClassName "state"
+    for state in states.getElementsByTagName "path"
       $(state).on "mouseenter", (e)->
-        state_info = state for state in data.states when (state.state_abbreviation is @id)
-        positive = ("<li>#{data.state_information_flags[key][value]}</li>" for key, value of state_info when (value is 2 and key isnt "score"))
-        negative = ("<li>#{data.state_information_flags[key][value]}</li>" for key, value of state_info when (value is 1 and key isnt "score"))
+        if $('#us-map').hasClass('expanded')
+          state_info = state for state in data.states when ("#{state.state_abbreviation}_1_" is @id)
+          positive = ("<li>#{data.state_information_flags[key][value]}</li>" for key, value of state_info when (value is 2 and key isnt "score"))
+          negative = ("<li>#{data.state_information_flags[key][value]}</li>" for key, value of state_info when (value is 1 and key isnt "score"))
 
 
-        left_offset = e.offsetX
-        left_offset += 50 if left_offset > 400
-        top_offset = e.offsetY
-        if top_offset > 300 then top_offset -= 200 #else top_offset += 100
-        $("#state-info")
-          .show()
-          .css({top: top_offset, left: left_offset })
-          .find('#state-name').text(state_info.state_title)
+          left_offset = e.offsetX
+          left_offset += 50 if left_offset > 400
+          top_offset = e.offsetY
+          if top_offset > 300 then top_offset -= 200 #else top_offset += 100
+          $("#state-info")
+            .show()
+            .css({top: top_offset, left: left_offset })
+            .find('#state-name').text(state_info.state_title)
 
-        $('#state-positive').html positive.join ""
-        $('#state-negative').html negative.join ""
+          $('#state-positive').html positive.join ""
+          $('#state-negative').html negative.join ""
 
       $(state).on "mouseleave", ()->
         $('#state-info').hide()
 
-
+      $(state).on "click", ()->
+        $video.pause()
+        $('#us-map').addClass("expanded")
 
 
   do ()->
