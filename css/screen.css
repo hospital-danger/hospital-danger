@@ -549,14 +549,8 @@ aside {
   width: 200px;
   min-height: 100px;
   background-color: white; }
-  /* line 393, ../sass/screen.sass */
-  #state-info #state-positive {
-    color: green; }
-  /* line 396, ../sass/screen.sass */
-  #state-info #state-negative {
-    color: red; }
 
-/* line 399, ../sass/screen.sass */
+/* line 393, ../sass/screen.sass */
 #bacteria {
   position: absolute;
   top: 0;
@@ -565,7 +559,7 @@ aside {
   height: 480px;
   border: 1px solid #ffd91f; }
 
-/* line 408, ../sass/screen.sass */
+/* line 402, ../sass/screen.sass */
 #judy-gaines .images,
 #judy-gaines .sections {
   position: absolute;
@@ -574,7 +568,7 @@ aside {
   width: 100%;
   height: 100%;
   overflow: auto; }
-/* line 418, ../sass/screen.sass */
+/* line 412, ../sass/screen.sass */
 #judy-gaines .images img {
   width: 480px;
   height: 542px;
@@ -584,32 +578,32 @@ aside {
   -moz-transition: opacity 0.75s;
   -o-transition: opacity 0.75s;
   transition: opacity 0.75s; }
-  /* line 425, ../sass/screen.sass */
+  /* line 419, ../sass/screen.sass */
   #judy-gaines .images img.current-image {
     opacity: 1; }
-/* line 428, ../sass/screen.sass */
+/* line 422, ../sass/screen.sass */
 #judy-gaines .sections {
   padding: 20px; }
-  /* line 431, ../sass/screen.sass */
-  #judy-gaines .sections .section {
+  /* line 425, ../sass/screen.sass */
+  #judy-gaines .sections section {
     clear: both;
     margin: 3em 0;
     width: 185px; }
-    /* line 436, ../sass/screen.sass */
-    #judy-gaines .sections .section:nth-child(2n) {
+    /* line 430, ../sass/screen.sass */
+    #judy-gaines .sections section:nth-child(2n) {
       margin-top: 0; }
-    /* line 439, ../sass/screen.sass */
-    #judy-gaines .sections .section.left {
+    /* line 433, ../sass/screen.sass */
+    #judy-gaines .sections section.left {
       float: left; }
-    /* line 442, ../sass/screen.sass */
-    #judy-gaines .sections .section.right {
+    /* line 436, ../sass/screen.sass */
+    #judy-gaines .sections section.right {
       float: right; }
-    /* line 445, ../sass/screen.sass */
-    #judy-gaines .sections .section p {
+    /* line 439, ../sass/screen.sass */
+    #judy-gaines .sections section p {
       color: #333333;
       line-height: 1.6em; }
 
-/* line 449, ../sass/screen.sass */
+/* line 443, ../sass/screen.sass */
 #slashed-circle {
   width: 200px;
   height: 200px;
@@ -617,13 +611,13 @@ aside {
   top: 60px;
   left: 650px; }
 
-/* line 457, ../sass/screen.sass */
+/* line 451, ../sass/screen.sass */
 #deny-and-defend .aside-content {
   height: 550px;
   overflow: auto;
   padding: 0;
   margin: 0; }
-/* line 463, ../sass/screen.sass */
+/* line 457, ../sass/screen.sass */
 #deny-and-defend .prev,
 #deny-and-defend .next {
   width: 25%;
@@ -631,39 +625,39 @@ aside {
   position: absolute;
   top: 0;
   z-index: 10; }
-/* line 471, ../sass/screen.sass */
+/* line 465, ../sass/screen.sass */
 #deny-and-defend .prev {
   left: 0; }
-/* line 474, ../sass/screen.sass */
+/* line 468, ../sass/screen.sass */
 #deny-and-defend .next {
   right: 0; }
-/* line 477, ../sass/screen.sass */
+/* line 471, ../sass/screen.sass */
 #deny-and-defend .papers-container {
   width: 6850px;
   height: 450px; }
-  /* line 481, ../sass/screen.sass */
+  /* line 475, ../sass/screen.sass */
   #deny-and-defend .papers-container.finished {
     display: none; }
-  /* line 484, ../sass/screen.sass */
+  /* line 478, ../sass/screen.sass */
   #deny-and-defend .papers-container .intro {
     width: 400px;
     float: left; }
-  /* line 488, ../sass/screen.sass */
+  /* line 482, ../sass/screen.sass */
   #deny-and-defend .papers-container .papers {
     width: 6000px;
     height: 100%;
     float: left; }
-    /* line 493, ../sass/screen.sass */
+    /* line 487, ../sass/screen.sass */
     #deny-and-defend .papers-container .papers img {
       position: absolute;
       top: 0;
       left: 0; }
-/* line 498, ../sass/screen.sass */
+/* line 492, ../sass/screen.sass */
 #deny-and-defend .events {
   position: absolute;
   top: 0;
   left: 0; }
-  /* line 502, ../sass/screen.sass */
+  /* line 496, ../sass/screen.sass */
   #deny-and-defend .events .event {
     position: absolute;
     background-color: red;
@@ -678,21 +672,21 @@ aside {
     -ms-transform: translateY(2000px);
     -o-transform: translateY(2000px);
     transform: translateY(2000px); }
-    /* line 510, ../sass/screen.sass */
+    /* line 504, ../sass/screen.sass */
     #deny-and-defend .events .event q {
       display: block; }
-    /* line 514, ../sass/screen.sass */
+    /* line 508, ../sass/screen.sass */
     #deny-and-defend .events .event.current-event {
       -webkit-transform: translateY(0);
       -moz-transform: translateY(0);
       -ms-transform: translateY(0);
       -o-transform: translateY(0);
       transform: translateY(0); }
-/* line 518, ../sass/screen.sass */
+/* line 512, ../sass/screen.sass */
 #deny-and-defend #hospital-envelope {
   float: left;
   margin-top: 80px; }
-/* line 522, ../sass/screen.sass */
+/* line 516, ../sass/screen.sass */
 #deny-and-defend .hospital-response {
   position: absolute;
   top: 0;
@@ -709,7 +703,7 @@ aside {
   -moz-transition: -moz-transform 3s;
   -o-transition: -o-transform 3s;
   transition: transform 3s; }
-  /* line 532, ../sass/screen.sass */
+  /* line 526, ../sass/screen.sass */
   #deny-and-defend .hospital-response.visible {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
@@ -717,7 +711,7 @@ aside {
     -o-transform: translateY(0);
     transform: translateY(0); }
 
-/* line 535, ../sass/screen.sass */
+/* line 529, ../sass/screen.sass */
 #lawsuits {
   width: 100px;
   height: 100px;
@@ -725,68 +719,68 @@ aside {
   top: 80px;
   left: 570px; }
 
-/* line 542, ../sass/screen.sass */
+/* line 536, ../sass/screen.sass */
 .decision-tree-container {
   background: url('../img/paper.png?1368735093');
   width: 1248px;
   height: 1224px; }
-  /* line 547, ../sass/screen.sass */
+  /* line 541, ../sass/screen.sass */
   .decision-tree-container .decision-tree {
     background: url('../img/tree.png?1368755709') 0 300px no-repeat;
     width: 1600px;
     height: 1600px; }
-    /* line 555, ../sass/screen.sass */
+    /* line 549, ../sass/screen.sass */
     .decision-tree-container .decision-tree .decision {
       overflow: hidden; }
-      /* line 558, ../sass/screen.sass */
+      /* line 552, ../sass/screen.sass */
       .decision-tree-container .decision-tree .decision p {
         font-size: 15px;
         margin: 0.5em 0; }
-      /* line 562, ../sass/screen.sass */
+      /* line 556, ../sass/screen.sass */
       .decision-tree-container .decision-tree .decision a {
         background: #ffd91f;
         float: left;
         margin: 0.5em 20px 0.5em 0;
         padding: 10px;
         width: 190px; }
-        /* line 569, ../sass/screen.sass */
+        /* line 563, ../sass/screen.sass */
         .decision-tree-container .decision-tree .decision a:nth-child(odd) {
           margin-right: 0; }
-    /* line 572, ../sass/screen.sass */
+    /* line 566, ../sass/screen.sass */
     .decision-tree-container .decision-tree .decision {
       background: pink;
       padding: 20px;
       width: 440px; }
-    /* line 580, ../sass/screen.sass */
+    /* line 574, ../sass/screen.sass */
     .decision-tree-container .decision-tree #decision-2 {
       display: none; }
-    /* line 583, ../sass/screen.sass */
+    /* line 577, ../sass/screen.sass */
     .decision-tree-container .decision-tree #decision-3 {
       display: none; }
-    /* line 586, ../sass/screen.sass */
+    /* line 580, ../sass/screen.sass */
     .decision-tree-container .decision-tree #decision-4 {
       display: none; }
-    /* line 589, ../sass/screen.sass */
+    /* line 583, ../sass/screen.sass */
     .decision-tree-container .decision-tree #outcome-positive {
       display: none; }
-    /* line 592, ../sass/screen.sass */
+    /* line 586, ../sass/screen.sass */
     .decision-tree-container .decision-tree #outcome-negative {
       display: none; }
-    /* line 597, ../sass/screen.sass */
+    /* line 591, ../sass/screen.sass */
     .decision-tree-container .decision-tree .outcome {
       padding: 1em;
       height: 150px; }
-      /* line 601, ../sass/screen.sass */
+      /* line 595, ../sass/screen.sass */
       .decision-tree-container .decision-tree .outcome p {
         font-size: 18px;
         font-style: italic;
         font-weight: bold; }
-      /* line 606, ../sass/screen.sass */
+      /* line 600, ../sass/screen.sass */
       .decision-tree-container .decision-tree .outcome a {
         float: left;
         font-weight: bold; }
 
-/* line 616, ../sass/screen.sass */
+/* line 610, ../sass/screen.sass */
 #dollar {
   width: 100px;
   height: 100px;
@@ -794,19 +788,19 @@ aside {
   top: 80px;
   left: 570px; }
 
-/* line 624, ../sass/screen.sass */
+/* line 618, ../sass/screen.sass */
 #by-the-numbers p {
   font-size: 20px;
   font-weight: normal; }
-/* line 628, ../sass/screen.sass */
+/* line 622, ../sass/screen.sass */
 #by-the-numbers li {
   font-size: 14px;
   line-height: 1.7;
   margin: 2em 0 1.5em; }
-  /* line 633, ../sass/screen.sass */
+  /* line 627, ../sass/screen.sass */
   #by-the-numbers li:nth-child(2n+1) strong {
     color: #b59200; }
-  /* line 636, ../sass/screen.sass */
+  /* line 630, ../sass/screen.sass */
   #by-the-numbers li strong {
     color: #ffd91f;
     float: left;
@@ -815,16 +809,16 @@ aside {
     line-height: 1.1;
     margin: 0 0.5em 0 0;
     width: 60px; }
-  /* line 646, ../sass/screen.sass */
+  /* line 640, ../sass/screen.sass */
   #by-the-numbers li:last-child {
     margin-bottom: 0; }
 
-/* line 649, ../sass/screen.sass */
+/* line 643, ../sass/screen.sass */
 #now-what {
   position: absolute;
   left: 0;
   top: 0;
   opacity: 0; }
-  /* line 655, ../sass/screen.sass */
+  /* line 649, ../sass/screen.sass */
   #now-what.current {
     opacity: 1; }

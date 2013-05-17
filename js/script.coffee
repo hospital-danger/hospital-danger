@@ -205,7 +205,7 @@ $ ()->
     image_count = $images.length
     # get heights of all paragraphs
     heights = [0]
-    $('.sections', $judy).find('div.section').map (index)->
+    $('.sections', $judy).find('section').map (index)->
       heights.push $(this).height() + heights[index]
 
     $('.sections', $judy).on "scroll", ()->

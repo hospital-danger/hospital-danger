@@ -324,7 +324,7 @@
       $images = $('img', $judy);
       image_count = $images.length;
       heights = [0];
-      $('.sections', $judy).find('div.section').map(function(index) {
+      $('.sections', $judy).find('section').map(function(index) {
         return heights.push($(this).height() + heights[index]);
       });
       return $('.sections', $judy).on("scroll", function() {
