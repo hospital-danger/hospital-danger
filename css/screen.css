@@ -1382,3 +1382,7 @@ aside {
       margin: 0 auto;
       height: 60px;
       padding-bottom: 10px; }
+
+/* line 1105, ../sass/screen.sass */
+#credits {
+  display: none; }
