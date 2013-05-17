@@ -326,18 +326,18 @@
       $images = $('img', $judy);
       image_count = $images.length;
       heights = [0];
-      $('.text-container', $judy).find('p').map(function(index) {
+      $('.sections', $judy).find('div.section').map(function(index) {
         return heights.push($(this).height() + heights[index]);
       });
-      return $('.text-container', $judy).on("scroll", function() {
+      return $('.sections', $judy).on("scroll", function() {
         var h, i, index, pos, _ref2;
         pos = $(this).scrollTop();
         index = (_ref2 = (function() {
-          var _j, _len1, _results;
+          var _j, _len1, _ref3, _results;
           _results = [];
           for (i = _j = 0, _len1 = heights.length; _j < _len1; i = ++_j) {
             h = heights[i];
-            if (((heights[i - 1] || 0) < pos && pos < h)) {
+            if (((heights[i - 1] || 0) < (_ref3 = pos + 300) && _ref3 < h)) {
               _results.push(i);
             }
           }
