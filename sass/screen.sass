@@ -384,16 +384,17 @@ aside
     display: block
 
 #people
-  border: 1px solid yellow
   position: absolute
-  width: 100%
-  top: 300px
-  left: 0
+  width: 420px
+  height: 305px
+  left: 450px
+  top: 170px
 
   .instruction
     display: block
     width: auto
-    bottom: -3em
+    left: -28em
+
     span
       line-height: 1.5
       color: $dark
@@ -401,33 +402,85 @@ aside
       font-size: .8em
 
   .person
-    width: 50px
-    height: 50px
-    float: left
-    opacity: 0
+    width: 35px
+    height: 45px
+    position: absolute
+    @include transition(opacity, .1s)
 
     blockquote
+      display: none
       position: absolute
-      top: 100%
       margin-top: 10px
+      line-height: 1.3
       left: -80px
       width: 200px
       background-color: $yellow
       padding: 10px
       border-radius: 2px
-      @include top-triangle(6px, $yellow)
-
+      @include bottom-triangle(6px, $yellow, "down")
 
     cite
       display: block
-      text-align: right
+      text-align: left
       font-family: "Open Sans Bold"
       text-transform: uppercase
-  .person:hover
-    opacity: 1
+      margin-top: .5em
 
-  &.current-2 .dead
-    border-color: red
+      &:before
+        color: rgba(0, 0, 0, .75)
+        content: "— "
+
+  .person:hover blockquote
+    display: block
+
+  #person-1
+    left: 277px
+    top: 63px
+
+    blockquote
+      top: -150px
+
+  #person-2
+    left: 108px
+    top: 121px
+
+    blockquote
+      top: -165px
+
+  #person-3
+    left: 110px
+    top: 180px
+
+    blockquote
+      top: -188px
+
+  #person-4
+    left: 290px
+    top: 176px
+
+    blockquote
+      top: -165px
+
+  #person-5
+    left: 148px
+    top: 237px
+
+    blockquote
+      top: -144px
+
+  #person-6
+    left: 259px
+    top: 228px
+
+    blockquote
+      top: -136px
+
+  #person-7
+    left: 112px
+    top: 271px
+
+    blockquote
+      top: -185px
 
 #causes-of-death
   position: absolute
@@ -617,20 +670,25 @@ aside
     font-size: 14px
     line-height: 1.4
 
-  .decision-tree-container
-    background: image-url("paper.png")
+  .decision-tree-container-container
     border: 4px solid $yellow
+    border-radius: 3px
+    margin-top: 1.5em
     width: 448px
     height: 220px
-    margin-top: 1.5em
+    overflow: hidden
+
+  .decision-tree-container
+    background: image-url("paper.png")
+    width: 458px
+    height: 230px
     overflow: scroll
-    border-radius: 3px
     position: relative
 
     .decision-tree
       background: image-url("tree.png") 100px 60px no-repeat
-      width: 1500px
-      height: 1500px
+      width: 1600px
+      height: 1600px
       position: absolute
       left: 0
       top: 0
@@ -670,6 +728,24 @@ aside
           &:hover
             border-bottom-color: $dark
 
+      .outcome
+        background: #fff
+        border-radius: 3px
+
+        p
+          text-align: center
+
+        a
+          background: $yellow
+          border-bottom: 4px solid $darkyellow
+          display: block
+          font-family: "Open Sans Bold"
+          margin: 1em auto
+          padding: 10px
+          text-align: center
+          text-transform: uppercase
+          width: 110px
+
       #decision-1
         left: 500px
         top: 0
@@ -684,15 +760,29 @@ aside
 
       #decision-4
         left: 500px
-        top: 1120px
+        top: 1100px
 
       #outcome-positive
-        left: 1250px
+        left: 1230px
         top: 1115px
 
+        p
+          font-size: 16px
+          margin-top: .25em
+
+          strong
+            font-family: 'Open Sans Bold'
+
       #outcome-negative
-        left: 150px
-        top: 980px
+        left: 0
+        top: 858px
+
+        p
+          color: maroon
+          font-family: 'League Gothic'
+          font-size: 38px
+          margin: 0
+          text-transform: uppercase
 
 #dollar
   width: 100px

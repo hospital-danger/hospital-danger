@@ -79,46 +79,46 @@
         Hover over the highlighted people to hear their stories
         <span>First person accounts from ProPublica's Patient Harm Facebook Community</span>
       </div>
-      <div class="person">
+      <div class="person" id="person-1">
         <blockquote>
-          I didn’t need my surgery nor did I consent to it. Now I’m disabled.
+          I didn&rsquo;t need my surgery nor did I consent to it. Now I&rsquo;m disabled.
           <cite>Robin Karr</cite>
         </blockquote>
       </div>
-      <div class="person">
+      <div class="person" id="person-2">
         <blockquote>
           It was not just the improper surgery injury, but their denial of the injury no matter how obvious.
-        <cite>Garrick Sitongia</cite>
+          <cite>Garrick Sitongia</cite>
         </blockquote>
       </div>
-      <div class="person">
+      <div class="person" id="person-3">
         <blockquote>
-          I was supposed to return to work the next day. It’s now been more than seven years and I’ll NEVER be able to return to working.
-        <cite>Janiece Staton</cite>
+          I was supposed to return to work the next day. It&rsquo;s now been more than seven years and I&rsquo;ll NEVER be able to return to working.
+          <cite>Janiece Staton</cite>
         </blockquote>
       </div>
-      <div class="person">
+      <div class="person" id="person-4">
         <blockquote>
-          I was released crippled... 16 pounds lighter and told a bad infection did this.
-        <cite>Michelin Anderson</cite>
+          I was released crippled&hellip; 16 pounds lighter and told a bad infection did this.
+          <cite>Michelin Anderson</cite>
         </blockquote>
       </div>
-      <div class="person dead">
+      <div class="person dead" id="person-5">
         <blockquote>
-          Bottom line: the nurses didn’t have time to sit and feed my father.
-        <cite>Vicki Del Valle Schneider</cite>
+          Bottom line: the nurses didn&rsquo;t have time to sit and feed my father.
+          <cite>Vicki Del Valle Schneider</cite>
         </blockquote>
       </div>
-      <div class="person dead">
+      <div class="person dead" id="person-6">
         <blockquote>
-          My daughter meant nothing... All she needed was an antibiotic.
-        <cite>Michelle Massey</cite>
+          My daughter meant nothing&hellip; All she needed was an antibiotic.
+          <cite>Michelle Massey</cite>
         </blockquote>
       </div>
-      <div class="person dead">
+      <div class="person dead" id="person-7">
         <blockquote>
           Dad died 11 weeks after his infection was diagnosed. He was about 50 lbs lighter and he never walked again after his infection.
-        <cite>Kathy Day</cite>
+          <cite>Kathy Day</cite>
         </blockquote>
       </div>
     </div>
@@ -320,40 +320,42 @@
         <p>In theory, the courts are a place where people who&rsquo;ve suffered harm can seek compensation. But it&rsquo;s harder than you might think.</p>
         <p>Some patients suffer injuries that are not clearly negligent; others can&rsquo;t prove economic losses high enough to make it worthwhile for an attorney to take their case.</p>
         <p>How does it play out? Create a test case by answering the questions, then see the result.</p>
-        <div class="decision-tree-container">
-          <div class="decision-tree">
-            <div class="decision" id="decision-1" data-failure_explanation="If infection: Being harmed in the hospital is not enough to build a case. There also has to be proof that the hospital was at fault. The difficulty of proving an infection was the result of negligence deters many attorneys from taking infection cases, though they are a very common type of harm.">
-              <p>What happened to you?</p>
-              <a href="#outcome-negative">Infection</a>
-              <a href="#decision-2">Medication error</a>
-              <a href="#decision-2">Surgical error</a>
-            </div>
-            <div class="decision" id="decision-2" data-failure_explanation="Because the poor, minorities, elderly and children typically have less lost income than other groups, it is much more difficult for them to find an attorney to take their case, even if the harm they suffered was the same.">
-              <p>What is your identity?</p>
-              <a href="#outcome-negative">Low Income</a>
-              <a href="#outcome-negative">Elderly</a>
-              <a href="#outcome-negative">Non-white</a>
-              <a class="condensed" href="#decision-3">Wealthy white male</a>
-            </div>
-            <div class="decision" id="decision-3" data-failure_explanation="If a patient dies, or fully physically heals after the harm occurs, they may not incur enough lifetime expenses and losses to make their case worthwhile for an attorney.">
-              <p>How severe was the injury?</p>
-              <a class="condensed" href="#outcome-negative">Emotional distress</a>
-              <a href="#outcome-negative">Minor injury</a>
-              <a href="#decision-4">Permanent injury</a>
-              <a href="#outcome-negative">Death</a>
-            </div>
-            <div class="decision" id="decision-4" data-failure_explanation="When the amount of money a patient can be awarded due to medical malpractice is limited by state law, attorneys may not find it worthwhile to take a patient&rsquo;s case, even if the case is strong.">
-              <p>Some states have passed laws that limit the amount of money patients can receive in malpractice cases. Do you live in one of these states?</p>
-              <a href="#outcome-negative">Yes</a>
-              <a href="#outcome-positive">No</a>
-            </div>
-            <div class="outcome" id="outcome-negative">
-              <p>Case denied.</p>
-              <a href="#decision-1">Try again</a>
-            </div>
-            <div class="outcome" id="outcome-positive">
-              <p>Looks like you&rsquo;ve found an attorney to take your case. You&rsquo;re the one out of 50 with the right kind of error, the right demographic (upperclass white male), the right degree of harm and in the right state.</p>
-              <a href="#decision-1">Try again</a>
+        <div class="decision-tree-container-container">
+          <div class="decision-tree-container">
+            <div class="decision-tree">
+              <div class="decision" id="decision-1" data-failure_explanation="If infection: Being harmed in the hospital is not enough to build a case. There also has to be proof that the hospital was at fault. The difficulty of proving an infection was the result of negligence deters many attorneys from taking infection cases, though they are a very common type of harm.">
+                <p>What happened to you?</p>
+                <a href="#outcome-negative">Infection</a>
+                <a href="#decision-2">Medication error</a>
+                <a href="#decision-2">Surgical error</a>
+              </div>
+              <div class="decision" id="decision-2" data-failure_explanation="Because the poor, minorities, elderly and children typically have less lost income than other groups, it is much more difficult for them to find an attorney to take their case, even if the harm they suffered was the same.">
+                <p>What is your identity?</p>
+                <a href="#outcome-negative">Low Income</a>
+                <a href="#outcome-negative">Elderly</a>
+                <a href="#outcome-negative">Non-white</a>
+                <a class="condensed" href="#decision-3">Wealthy white male</a>
+              </div>
+              <div class="decision" id="decision-3" data-failure_explanation="If a patient dies, or fully physically heals after the harm occurs, they may not incur enough lifetime expenses and losses to make their case worthwhile for an attorney.">
+                <p>How severe was the injury?</p>
+                <a class="condensed" href="#outcome-negative">Emotional distress</a>
+                <a href="#outcome-negative">Minor injury</a>
+                <a href="#decision-4">Permanent injury</a>
+                <a href="#outcome-negative">Death</a>
+              </div>
+              <div class="decision" id="decision-4" data-failure_explanation="When the amount of money a patient can be awarded due to medical malpractice is limited by state law, attorneys may not find it worthwhile to take a patient&rsquo;s case, even if the case is strong.">
+                <p>Some states have passed laws that limit the amount of money patients can receive in malpractice cases. Do you live in one of these states?</p>
+                <a href="#outcome-negative">Yes</a>
+                <a href="#outcome-positive">No</a>
+              </div>
+              <div class="outcome" id="outcome-negative">
+                <p>Case denied.</p>
+                <a href="#decision-1">Try again</a>
+              </div>
+              <div class="outcome" id="outcome-positive">
+                <p><strong>Looks like you&rsquo;ve found an attorney to take your case.</strong> You&rsquo;re the one out of fifty with the right kind of error, the right demographic (upper-class white male), the right degree of harm, and living in the right state.</p>
+                <a href="#decision-1">Try again</a>
+              </div>
             </div>
           </div>
         </div>
