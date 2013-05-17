@@ -532,55 +532,68 @@ aside {
   left: 570px; }
 
 /* line 434, ../sass/screen.sass */
-.decisiondemo {
-  background: white; }
-
-/* line 437, ../sass/screen.sass */
-.decision-tree {
-  width: 100%; }
-  /* line 442, ../sass/screen.sass */
-  .decision-tree .decision,
-  .decision-tree .decision-big {
-    overflow: hidden; }
+.decision-tree-container {
+  background: url('../img/paper.png?1342797512');
+  width: 1248px;
+  height: 1224px; }
+  /* line 439, ../sass/screen.sass */
+  .decision-tree-container .decision-tree {
+    background: url('../img/tree.png?1368746830') 0 300px no-repeat;
+    width: 1600px;
+    height: 1600px; }
     /* line 447, ../sass/screen.sass */
-    .decision-tree .decision p,
-    .decision-tree .decision-big p {
-      font-size: 16px;
-      font-weight: bold;
-      margin: 0.5em 0.25em 0.25em 0.5em; }
-    /* line 452, ../sass/screen.sass */
-    .decision-tree .decision a,
-    .decision-tree .decision-big a {
-      background: #ffd91f;
-      float: left;
-      margin: 0.5em;
-      padding: 0.5em;
-      width: 200px; }
-  /* line 459, ../sass/screen.sass */
-  .decision-tree .decision-end {
-    width: 100%; }
-  /* line 462, ../sass/screen.sass */
-  .decision-tree .outcome {
-    padding: 1em;
-    height: 150px; }
-    /* line 466, ../sass/screen.sass */
-    .decision-tree .outcome p {
-      font-size: 18px;
-      font-style: italic;
-      font-weight: bold; }
-    /* line 471, ../sass/screen.sass */
-    .decision-tree .outcome a {
-      float: left;
-      font-weight: bold;
-      width: 50%; }
-  /* line 476, ../sass/screen.sass */
-  .decision-tree #outcome-positive {
-    background: lightgreen; }
-  /* line 479, ../sass/screen.sass */
-  .decision-tree #outcome-negative {
-    background: pink; }
+    .decision-tree-container .decision-tree .decision {
+      overflow: hidden; }
+      /* line 450, ../sass/screen.sass */
+      .decision-tree-container .decision-tree .decision p {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0.5em 0; }
+      /* line 455, ../sass/screen.sass */
+      .decision-tree-container .decision-tree .decision a {
+        background: #ffd91f;
+        float: left;
+        margin: 0.5em 20px 0.5em 0;
+        padding: 10px;
+        width: 190px; }
+        /* line 462, ../sass/screen.sass */
+        .decision-tree-container .decision-tree .decision a:nth-child(odd) {
+          margin-right: 0; }
+    /* line 465, ../sass/screen.sass */
+    .decision-tree-container .decision-tree .decision {
+      background: pink;
+      padding: 20px;
+      width: 440px; }
+    /* line 473, ../sass/screen.sass */
+    .decision-tree-container .decision-tree #decision-2 {
+      display: none; }
+    /* line 476, ../sass/screen.sass */
+    .decision-tree-container .decision-tree #decision-3 {
+      display: none; }
+    /* line 479, ../sass/screen.sass */
+    .decision-tree-container .decision-tree #decision-4 {
+      display: none; }
+    /* line 482, ../sass/screen.sass */
+    .decision-tree-container .decision-tree #outcome-positive {
+      display: none; }
+    /* line 485, ../sass/screen.sass */
+    .decision-tree-container .decision-tree #outcome-negative {
+      display: none; }
+    /* line 490, ../sass/screen.sass */
+    .decision-tree-container .decision-tree .outcome {
+      padding: 1em;
+      height: 150px; }
+      /* line 494, ../sass/screen.sass */
+      .decision-tree-container .decision-tree .outcome p {
+        font-size: 18px;
+        font-style: italic;
+        font-weight: bold; }
+      /* line 499, ../sass/screen.sass */
+      .decision-tree-container .decision-tree .outcome a {
+        float: left;
+        font-weight: bold; }
 
-/* line 482, ../sass/screen.sass */
+/* line 509, ../sass/screen.sass */
 #dollar {
   width: 100px;
   height: 100px;
@@ -588,19 +601,19 @@ aside {
   top: 80px;
   left: 570px; }
 
-/* line 490, ../sass/screen.sass */
+/* line 517, ../sass/screen.sass */
 #by-the-numbers p {
   font-size: 20px;
   font-weight: normal; }
-/* line 494, ../sass/screen.sass */
+/* line 521, ../sass/screen.sass */
 #by-the-numbers li {
   font-size: 14px;
   line-height: 1.8;
   margin: 2em 0 1.5em; }
-  /* line 499, ../sass/screen.sass */
+  /* line 526, ../sass/screen.sass */
   #by-the-numbers li:nth-child(2n+1) strong {
     color: #b59200; }
-  /* line 502, ../sass/screen.sass */
+  /* line 529, ../sass/screen.sass */
   #by-the-numbers li strong {
     color: #ffd91f;
     float: left;
@@ -609,16 +622,16 @@ aside {
     line-height: 1.1;
     margin: 0 0.5em 0 0;
     width: 60px; }
-  /* line 512, ../sass/screen.sass */
+  /* line 539, ../sass/screen.sass */
   #by-the-numbers li:last-child {
     margin-bottom: 0; }
 
-/* line 515, ../sass/screen.sass */
+/* line 542, ../sass/screen.sass */
 #now-what {
   position: absolute;
   left: 0;
   top: 0;
   opacity: 0; }
-  /* line 521, ../sass/screen.sass */
+  /* line 548, ../sass/screen.sass */
   #now-what.current {
     opacity: 1; }

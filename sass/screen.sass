@@ -431,53 +431,80 @@ aside
   top: 80px
   left: 570px
 
-.decisiondemo
-  background: #fff
+.decision-tree-container
+  background: image-url("paper.png")
+  width: 1248px
+  height: 1224px
 
-.decision-tree
-  width: 100%
-  // height: 150px
-  // overflow: hidden
+  .decision-tree
+    background: image-url("tree.png") 0 300px no-repeat
+    width: 1600px
+    height: 1600px
+    // width: 400px
+    // height: 150px
+    // overflow: hidden
 
-  .decision,
-  .decision-big
-    overflow: hidden
+    .decision
+      overflow: hidden
+
+      p
+        font-size: 16px
+        font-weight: bold
+        margin: .5em 0
+
+      a
+        background: $yellow
+        float: left
+        margin: .5em 20px .5em 0
+        padding: 10px
+        width: 190px
+
+        &:nth-child(odd)
+          margin-right: 0
+
+    .decision
+      background: pink
+      padding: 20px
+      width: 440px
+
+    #decision-1
 
 
-    p
-      font-size: 16px
-      font-weight: bold
-      margin: .5em .25em .25em .5em
+    #decision-2
+      display: none
 
-    a
-      background: $yellow
-      float: left
-      margin: .5em
-      padding: .5em
-      width: 200px
+    #decision-3
+      display: none
 
-  .decision-end
-    width: 100%
+    #decision-4
+      display: none
 
-  .outcome
-    padding: 1em
-    height: 150px
+    #outcome-positive
+      display: none
 
-    p
-      font-size: 18px
-      font-style: italic
-      font-weight: bold
+    #outcome-negative
+      display: none
 
-    a
-      float: left
-      font-weight: bold
-      width: 50%
+    .decision-end
 
-  #outcome-positive
-    background: lightgreen
+    .outcome
+      padding: 1em
+      height: 150px
 
-  #outcome-negative
-    background: pink
+      p
+        font-size: 18px
+        font-style: italic
+        font-weight: bold
+
+      a
+        float: left
+        font-weight: bold
+
+    #outcome-positive
+
+
+    #outcome-negative
+
 
 #dollar
   width: 100px
