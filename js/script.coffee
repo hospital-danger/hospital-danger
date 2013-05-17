@@ -203,10 +203,10 @@ $ ()->
     image_count = $images.length
     # get heights of all paragraphs
     heights = [0]
-    $('.text-container', $judy).find('p').map (index)->
+    $('.sections', $judy).find('div.section').map (index)->
       heights.push $(this).height() + heights[index]
 
-    $('.text-container', $judy).on "scroll", ()->
+    $('.sections', $judy).on "scroll", ()->
       pos = $(this).scrollTop()
 
       index = (i for h, i in heights when ( (heights[i - 1] || 0 ) < pos < h )) ? (image_count - 1)

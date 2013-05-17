@@ -6,6 +6,7 @@
 
 // Variables.
 
+$dark: #333
 $yellow: #ffd91f
 $darkyellow: #B59200
 
@@ -153,7 +154,7 @@ video
     border-top: 3px solid rgba(255, 255, 255, .5)
 
   .buffer-bar
-    background-color: #333
+    background-color: $dark
 
 .chapter-list
   position: absolute
@@ -192,7 +193,7 @@ video
 
   a:hover,
   .current-chapter
-    color: #333
+    color: $dark
 
 // Chapters.
 
@@ -220,25 +221,25 @@ aside
   position: absolute
   top: 0
   right: 0
-  width: 50%
+  width: 480px
   height: 542px
   z-index: 10
 
   .aside-content
+    position: relative
+    z-index: 1
     background: rgba(0, 0, 0, .85)
     color: #fff
     overflow: auto
-    padding: 20px
+    width: 480px
     height: 542px
+    padding: 20px
     @include box-shadow(rgba(0, 0, 0, .5) -5px 0 15px)
     @include transition(transform 1s)
 
-    &.bleed
-      padding: 0
-
     h2
       font-size: 48px
-      margin: 0 0 0.5em 0
+      margin: 0 0 0.15em 0
 
     p
       font-size: 13px
@@ -257,8 +258,9 @@ aside
         padding: 0 .2em 0 0
 
   .close-aside
-    background: rgba(0, 0, 0, .85)
     position: absolute
+    z-index: 2
+    background: rgba(0, 0, 0, .85)
     left: -30px
     top: 27px
     width: 30px
@@ -280,6 +282,19 @@ aside
     &:hover span
       @include opacity(1)
 
+  &.white-background
+    h2
+      color: $dark
+
+    p
+      font-family: 'Open Sans Semibold'
+
+    .close-aside
+      background: #fff
+      @include box-shadow(rgba(0, 0, 0, .5) -5px 2px 10px)
+
+      span
+        color: $dark
 
 // Animated elements.
 
@@ -369,49 +384,46 @@ aside
   border: 1px solid $yellow
 
 #judy-gaines
-  padding: 20px
-
-  .image-container,
-  .text-container
+  .images,
+  .sections
+    position: absolute
+    left: 0
+    top: 0
     width: 100%
     height: 100%
-    top: 0
-    left: 0
-    position: absolute
+    overflow: auto
 
+  .images
     img
-      width: 100%
+      width: 480px
+      height: 542px
       position: absolute
       opacity: 0
-
-      @include transition(opacity 1s)
+      @include transition(opacity .75s)
 
       &.current-image
         opacity: 1
 
-    p
-      color: #333
-      line-height: 2em
+  .sections
+    padding: 20px
 
-      &.paragraph-left,
-      &.paragraph-right
-        clear: both
-        margin: 3em 0
-        width: 40%
+    .section
+      clear: both
+      margin: 3em 0
+      width: 185px
 
-        &:first-child
-          margin-top: 0
+      &:nth-child(2n)
+        margin-top: 0
 
-      &.paragraph-left
+      &.left
         float: left
 
-      &.paragraph-right
+      &.right
         float: right
 
-  .text-container
-    overflow: auto
-    top: 1em
-    left: 1em
+      p
+        color: #333
+        line-height: 1.6em
 
 #slashed-circle
   width: 200px
@@ -426,6 +438,7 @@ aside
     overflow: auto
     padding: 0
     margin: 0
+
   .prev,
   .next
     width: 25%
