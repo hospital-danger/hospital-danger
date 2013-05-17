@@ -26,7 +26,6 @@
     @else
       border-bottom: $size solid $color
 
-
 @mixin left-triangle($size, $color)
   &:before
     content: ""
@@ -39,8 +38,6 @@
     border-right: $size solid $color
     margin-left: - ($size - 1)
 
-
-
 @mixin right-triangle($size, $color)
   &:before
     content: ""
@@ -51,5 +48,4 @@
     border-top: $size solid transparent
     border-bottom: $size solid transparent
     border-left: $size solid $color
-    margin-right: - ($size - 1)
-
+    margin-right: - ($size)

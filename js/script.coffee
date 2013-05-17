@@ -26,7 +26,7 @@ $ ()->
     {type: "citation", title: "OIG: Adverse Events in Hospitals", target: "https://www.documentcloud.org/documents/436100-oig-adverse-events-in-hospitals.html#document/p3/a74093", time: "00:33"}
     {type: "citation", title: "CDC: Estimating Healthcare-Associated Infections...", target: "https://www.documentcloud.org/documents/701516-cdc-hai-infections-deaths.html#document/p1/a103231", time: "00:35"}
     {type: "citation", title: "IOM: To Err Is Human", target: "https://www.documentcloud.org/documents/436100-oig-adverse-events-in-hospitals.html#document/p3/a74093", time: "00:37"}
-    {type: "element", target: "#people", time: "00:37"}
+    {type: "element", target: "#people", time: "00:38"}
     {type: "citation", title: "CDC: Leading Causes of Death", target: "http://www.cdc.gov/nchs/fastats/lcod.htm", time: "00:43"}
 
     {type: "chapter", title: "No One Watching", target: "#chapter2", time: "00:47", image: 'img/chapter-2.png'}
