@@ -12,13 +12,13 @@ window.state_data = {
     ],
     "audits_HAI" :  [
       null,
-      "The state does not make a strong effort to verify hospitals’ self-reported infection numbers.",
-      "The state makes an effort to verify hospitals’ self-reported infection numbers."
+      "The state does not make a strong effort to verify hospitals&rsquo; self-reported infection numbers.",
+      "The state makes an effort to verify hospitals&rsquo; self-reported infection numbers."
     ],
     "audits_adverse_events" : [
       null,
-      "The state does not make a strong effort to verify hospitals’self-reported infections numbers.",
-      "The state makes an effort to verify hospitals’ self-reported adverse event numbers."
+      "The state does not make a strong effort to verify hospitals&rsquo; self-reported infections numbers.",
+      "The state makes an effort to verify hospitals&rsquo; self-reported adverse event numbers."
     ],
     "reports_HAI_per_hospital":  [
       null,
