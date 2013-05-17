@@ -237,6 +237,7 @@
       return $video.play();
     });
     $video.on("play", function() {
+      $('#us-map').removeClass("expanded");
       $(".next-chapter").removeClass("show-next");
       $(".instruction").removeClass("show-instruction");
       $play_button.removeClass("paused");
@@ -331,7 +332,8 @@
       var data, state, states, _j, _len1, _ref2, _results;
       data = window.state_data;
       states = $('#us-map')[0].contentDocument;
-      _ref2 = states.getElementsByTagName("path");
+      $(states.getElementsByTagName('g')).hide();
+      _ref2 = states.getElementsByClassName("state");
       _results = [];
       for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
         state = _ref2[_j];
@@ -386,15 +388,13 @@
         $(state).on("mouseleave", function() {
           return $('#state-info').hide();
         });
-        _results.push($(state).on("click", function() {
-          $('.instruction').removeClass('show-instructionzx');
-          if ($('#us-map').hasClass('expanded')) {
-            $video.play();
-          } else {
-            $video.pause();
-          }
-          $video.pause();
-          return $('#us-map').toggleClass("expanded");
+        $(state).on("click", function() {
+          $('#us-map').addClass("expanded");
+          $('.instruction').removeClass('show-instruction');
+          return $video.pause();
+        });
+        _results.push($(states.getElementsByTagName('g')).on("click", function() {
+          return $('#us-map').removeClass("expanded");
         }));
       }
       return _results;

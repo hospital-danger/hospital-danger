@@ -82,6 +82,7 @@ $ ()->
     $video.play()
 
   $video.on "play", ()->
+    $('#us-map').removeClass("expanded")
     $(".next-chapter").removeClass("show-next")
     $(".instruction").removeClass("show-instruction")
     $play_button.removeClass("paused")
@@ -187,7 +188,8 @@ $ ()->
     data = window.state_data
 
     states = $('#us-map')[0].contentDocument
-    for state in states.getElementsByTagName "path"
+    $(states.getElementsByTagName('g')).hide()
+    for state in states.getElementsByClassName "state"
       $(state).on "mouseenter", (e)->
         if $('#us-map').hasClass('expanded')
           state_info = state for state in data.states when ("#{state.state_abbreviation}_1_" is @id)
@@ -211,11 +213,12 @@ $ ()->
         $('#state-info').hide()
 
       $(state).on "click", ()->
-        $('.instruction').removeClass('show-instructionzx')
-        if $('#us-map').hasClass('expanded') then $video.play() else $video.pause()
+        $('#us-map').addClass("expanded")
+        $('.instruction').removeClass('show-instruction')
         $video.pause()
-        $('#us-map').toggleClass("expanded")
 
+      $(states.getElementsByTagName('g')).on "click", ()->
+        $('#us-map').removeClass("expanded")
 
   do ()->
     $judy = $('#judy-gaines')
