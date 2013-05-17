@@ -389,7 +389,8 @@
           return $('#state-info').hide();
         });
         $(state).on("click", function() {
-          $('#us-map').addClass("expanded");
+          $('#us-map.current').addClass("expanded");
+          $(states.getElementsByTagName('g')).show();
           $('.instruction').removeClass('show-instruction');
           return $video.pause();
         });

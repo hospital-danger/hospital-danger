@@ -213,7 +213,8 @@ $ ()->
         $('#state-info').hide()
 
       $(state).on "click", ()->
-        $('#us-map').addClass("expanded")
+        $('#us-map.current').addClass("expanded")
+        $(states.getElementsByTagName('g')).show()
         $('.instruction').removeClass('show-instruction')
         $video.pause()
 
