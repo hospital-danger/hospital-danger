@@ -1411,22 +1411,25 @@ aside {
 
 /* line 1130, ../sass/screen.sass */
 p.browser {
-  color: #777777;
+  color: #666666;
   float: left;
-  width: 50%; }
+  width: 80%; }
+  /* line 1135, ../sass/screen.sass */
+  p.browser a {
+    text-decoration: underline; }
 
-/* line 1135, ../sass/screen.sass */
+/* line 1138, ../sass/screen.sass */
 #go-to-credits {
   display: block;
   clear: both;
-  color: white;
+  color: #aaaaaa;
   font-family: "Open Sans Bold";
   text-align: right;
   text-transform: uppercase;
   float: right;
   width: 100px; }
 
-/* line 1145, ../sass/screen.sass */
+/* line 1148, ../sass/screen.sass */
 #credits {
   background: white;
   position: absolute;
@@ -1439,18 +1442,18 @@ p.browser {
   padding: 20px;
   z-index: 99;
   display: none; }
-  /* line 1158, ../sass/screen.sass */
+  /* line 1161, ../sass/screen.sass */
   #credits h2 {
     font-size: 64px; }
-  /* line 1161, ../sass/screen.sass */
+  /* line 1164, ../sass/screen.sass */
   #credits p {
     margin: 1em 0; }
-    /* line 1164, ../sass/screen.sass */
+    /* line 1167, ../sass/screen.sass */
     #credits p strong {
       display: block;
       margin-top: 2em; }
 
-/* line 1168, ../sass/screen.sass */
+/* line 1171, ../sass/screen.sass */
 #close-credits {
   z-index: 10;
   position: absolute;
