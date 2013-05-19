@@ -153,7 +153,7 @@ $ ()->
         when "element"
           $(cue_item.target).addClass('current')
 
-  $(".element").on "click", (e)->
+  $(".element.prevent-links").on "click", (e)->
     e.preventDefault()
     $video.pause()
     target = $(this).attr "href"
