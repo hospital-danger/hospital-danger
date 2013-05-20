@@ -20,6 +20,7 @@ $ ()->
   duration = 0
   current_time = 0
   chapter_index = 0
+  music = $('#the-music')[0]
 
   cues = [
     {type: "chapter", title: "A Safe Place?", target: "#chapter1", time: "00:20", image: 'img/chapter-1.png', no_pause: true}
@@ -88,20 +89,17 @@ $ ()->
     $play_button.removeClass("paused")
     $('aside.current').removeClass('current')
     $('#now-what').removeClass('current')
+    music.play()
 
   $video.on "pause", ()->
     $play_button.addClass("paused")
+    music.pause()
 
   toggle_play = ()->
     if $play_button.hasClass("paused") then $video.play() else $video.pause()
 
   # play-pause button
   $play_button.add('#the-video').on "click", toggle_play
-
-  # scrub timeline
-  # $('.progress').on "click", (e)->
-  #   pos = e.offsetX / $(this).width()
-  #   $video.currentTime( pos * duration )
 
   goto_chapter = (target)->
     [chapter_index, cue_time] = [index, to_s(cue.time)] for cue, index in cues when (cue.target is target)
@@ -113,22 +111,6 @@ $ ()->
   $('a', '.chapter-list').on "click", (e)->
     e.preventDefault()
     goto_chapter $(this).attr 'href'
-
-  # arrow keys to advance between chapters
-  # $(document).on "keydown", (e)->
-  #   space_bar = 32
-  #   left_arrow = 37
-  #   right_arrow = 39
-  #   if e.keyCode is space_bar
-  #     # todo -- toggle play
-  #   else if e.keyCode is left_arrow
-  #     e.preventDefault()
-  #     next_chapter = Math.max 0, chapter_index - 1
-  #   else if e.keyCode is right_arrow
-  #     e.preventDefault()
-  #     next_chapter = Math.min chapters.length - 1, chapter_index + 1
-
-  #   if next_chapter then goto_chapter chapters[next_chapter]?.target
 
   # timeline progress
   $video.on "timeupdate", ()->
@@ -164,13 +146,12 @@ $ ()->
     $(this).closest('aside').removeClass("current")
     $video.play()
 
-
   $('header.intro, .introduction').on "click", ()->
     $('#noise').remove()
     $('header').removeClass('intro')
     $('.introduction').addClass('finished')
     music = $('#the-music')[0]
-    music.volume = 0.3
+    music.volume = 0.25
     music.play()
 
     setTimeout ()->
@@ -195,7 +176,6 @@ $ ()->
           state_info = state for state in data.states when ("#{state.state_abbreviation}_1_" is @id)
           positive = ("<li>#{data.state_information_flags[key][value]}</li>" for key, value of state_info when (value is 2 and key isnt "score"))
           negative = ("<li>#{data.state_information_flags[key][value]}</li>" for key, value of state_info when (value is 1 and key isnt "score"))
-
 
           left_offset = e.offsetX
           left_offset += 50 if left_offset > 400
@@ -232,9 +212,7 @@ $ ()->
 
     $('.sections', $judy).on "scroll", ()->
       pos = $(this).scrollTop()
-
       index = (i for h, i in heights when ( (heights[i - 1] || 0 ) < (pos + 300) < h )) ? (image_count - 1)
-
       $images.removeClass('current-image').eq(index - 1).addClass('current-image')
 
   do ()->
@@ -277,10 +255,6 @@ $ ()->
     papers_count = $('img', $papers).length
 
     $('#hospital-envelope').on "click", ()->
-
-
-      # slide down response from hospital
-      # something cheesy like askew paper with courier text
       $('.hospital-response').addClass("visible").on "click", ()->
         $('.visible', $deny).removeClass('visible')
         $container.scrollLeft(0)
@@ -302,7 +276,6 @@ $ ()->
 
   # start decision tree at the right coords
   $('.decision-tree-container').scrollTo('#decision-1', 0)
-
 
   $('#go-to-credits').on "click", ()->
     $('#credits').show()
