@@ -62,6 +62,7 @@ $ ()->
     {type: "citation", title: "AHRQ: Hospital survey on patient safety culture...", target: "https://www.documentcloud.org/documents/215362-ahrq-hospital-safety-culture-survey-2011-part-one.html#document/p8/a103237", time: "03:27"}
 
     {type: "element", target: "#now-what", time: "03:33"}
+    {type: "music_stop", time: "03:33"}
   ]
 
   chapters = (cue for cue in cues when (cue.type is "chapter"))
@@ -124,7 +125,7 @@ $ ()->
       switch cue_item.type
         when "citation"
           $('.citations')
-            .html( "<a href='#{cue_item.target}' target='_blank'>#{cue_item.title}</a>")
+            .html("<a href='#{cue_item.target}' target='_blank'>#{cue_item.title}</a>")
             .stop().show().delay(2000).fadeOut(3000)
         when "chapter"
           $('.current').removeClass("current")
@@ -134,6 +135,8 @@ $ ()->
           $("[href='#{cue_item.target}']").addClass "current-chapter"
         when "element"
           $(cue_item.target).addClass('current')
+        when "music_stop"
+          music.pause()
 
   $(".element.prevent-links").on "click", (e)->
     e.preventDefault()
