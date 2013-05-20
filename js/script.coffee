@@ -42,6 +42,7 @@ $ ()->
 
     {type: "chapter", title: "Deny & Defend", target: "#chapter4", time: "01:55", image: 'img/chapter-4.png'}
     {type: "citation", title: "Boothman, R.: Nurturing a culture of patient safety...", target: "https://www.documentcloud.org/documents/701526-boothman-ache-frontiers.html#document/p2/a103234", time: "02:05"}
+    {type: "citation", title: "AHRQ: Patient Safety and Medical Liability Reform: Putting the Patient First", target: "http://www.ahrq.gov/news/newsroom/commentaries/putting-patients-first.html", time: "02:17"}
     {type: "element", target: "#slashed-circle", time: "02:23"}
 
     {type: "chapter", title: "The Malpractice Myth" , target: "#chapter5", time: "02:26", image: 'img/chapter-5.png'}
@@ -126,7 +127,7 @@ $ ()->
         when "citation"
           $('.citations')
             .html("<a href='#{cue_item.target}' target='_blank'>#{cue_item.title}</a>")
-            .stop().show().delay(2000).fadeOut(3000)
+            .stop().show().delay(2500).fadeOut(2500)
         when "chapter"
           $('.current').removeClass("current")
           $('.current-2').removeClass("current-2")
